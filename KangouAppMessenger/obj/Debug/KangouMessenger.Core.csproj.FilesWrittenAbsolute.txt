@@ -1,0 +1,38 @@
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/Cirrious.MvvmCross.dll
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/Newtonsoft.Json.dll
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/Cirrious.CrossCore.dll
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/Cirrious.MvvmCross.Localization.dll
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/Cirrious.MvvmCross.Plugins.Messenger.dll
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/Xamarin.Socket.IO.dll
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/Xamarin.Socket.IO.dll.mdb
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/WebSocket4Net.MonoTouch.dll
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/System.Net.Http.dll
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/Microsoft.Threading.Tasks.dll
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/SuperSocket.ClientEngine.Core.dll
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/SuperSocket.ClientEngine.Protocol.dll
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/SuperSocket.ClientEngine.Common.dll
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/System.Net.Http.Primitives.dll
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/KangouAppMessenger.dll.mdb
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Debug/KangouAppMessenger.dll
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/obj/Debug/KangouAppMessenger.dll
+/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/obj/Debug/KangouAppMessenger.dll.mdb
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/KangouAppMessenger.dll.mdb
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/KangouAppMessenger.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/obj/Debug/KangouAppMessenger.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/obj/Debug/KangouAppMessenger.dll.mdb
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/Cirrious.MvvmCross.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/Newtonsoft.Json.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/Cirrious.CrossCore.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/Cirrious.MvvmCross.Localization.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/Cirrious.MvvmCross.Plugins.Messenger.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/Xamarin.Socket.IO.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/Xamarin.Socket.IO.dll.mdb
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/WebSocket4Net.MonoTouch.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/System.Net.Http.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/Microsoft.Threading.Tasks.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/SuperSocket.ClientEngine.Core.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/SuperSocket.ClientEngine.Protocol.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/SuperSocket.ClientEngine.Common.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/System.Net.Http.Primitives.dll

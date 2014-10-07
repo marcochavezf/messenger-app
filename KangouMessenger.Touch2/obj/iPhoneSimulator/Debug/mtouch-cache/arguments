@@ -1,0 +1,49 @@
+# Version: 8.2.0.193 (959c1e4)
+# [first argument, ignore] # /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Touch2/bin/iPhoneSimulator/Debug/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/8.2.0.193/bin/mtouch \
+	-sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--cache \
+	"/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Touch2/obj/iPhoneSimulator/Debug/mtouch-cache" \
+	--nomanifest \
+	--nosign \
+	-sim \
+	"/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Touch2/bin/iPhoneSimulator/Debug/KangouMessengerTouch.app" \
+	-r \
+	"/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/KangouAppMessenger.dll" \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/monotouch.dll \
+	-r \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1/lib/MonoTouch/Cirrious.MvvmCross.Touch.dll" \
+	-r \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1/lib/MonoTouch/Cirrious.MvvmCross.dll" \
+	-r \
+	"/Users/marcochavezf/Google Drive/messenger-app/Components/btprogresshud-1.12/lib/ios/BTProgressHUD.dll" \
+	-r \
+	"/Users/marcochavezf/Google Drive/messenger-app/Components/mbprogresshud-0.8/lib/ios/MBProgressHUD.dll" \
+	-r \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.1/lib/MonoTouch/Cirrious.CrossCore.Touch.dll" \
+	-r \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.1/lib/MonoTouch/Cirrious.MvvmCross.Binding.Touch.dll" \
+	-r \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.1/lib/MonoTouch/Cirrious.CrossCore.dll" \
+	-r \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.1/lib/MonoTouch/Cirrious.MvvmCross.Binding.dll" \
+	-r \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.1/lib/MonoTouch/Cirrious.MvvmCross.Localization.dll" \
+	-r \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.Plugin.Messenger.3.2.1/lib/MonoTouch/Cirrious.MvvmCross.Plugins.Messenger.dll" \
+	-debug \
+	-linksdkonly \
+	-sdk \
+	8.0 \
+	-targetver \
+	7.0 \
+	--abi=i386 \
+	"/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Touch2/bin/iPhoneSimulator/Debug/KangouMessengerTouch2.exe" \

@@ -1,0 +1,23 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.0" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="KangouMessenger.Touch2/Views/ReceivingOrderView.cs">
+    <Files>
+      <File FileName="KangouMessenger.Touch2/Views/ConnectView.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Touch2/Helpers/LocationManager.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Touch2/Views/ReviewView.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Touch2/Views/DropOffRouteView.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Touch2/Views/PickUpTimerView.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Touch2/Views/DropOffTimerView.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Touch2/Views/HelpView.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Touch2/Views/LoginView.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Touch2/Views/WaitingOrderView.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Touch2/Views/ReceivingOrderView.cs" Line="4" Column="4" />
+      <File FileName="KangouMessenger.Touch2/Views/PickUpRouteView.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.KangouMessenger.Droid MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
+</Properties>

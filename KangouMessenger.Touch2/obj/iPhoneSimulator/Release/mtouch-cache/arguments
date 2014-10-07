@@ -1,0 +1,42 @@
+# Version: 7.4.0.108 (77efa3f)
+# [first argument, ignore] # /Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouMessenger.Touch2/bin/iPhoneSimulator/Release/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/7.4.0.108/bin/mtouch \
+	-sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--cache \
+	/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouMessenger.Touch2/obj/iPhoneSimulator/Release/mtouch-cache \
+	--nomanifest \
+	--nosign \
+	-sim \
+	/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouMessenger.Touch2/bin/iPhoneSimulator/Release/KangouMessengerTouch2.app \
+	-r \
+	/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouAppMessenger/bin/Release/KangouAppMessenger.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/monotouch.dll \
+	-r \
+	/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/packages/MvvmCross.HotTuna.CrossCore.3.1.1/lib/MonoTouch/Cirrious.CrossCore.Touch.dll \
+	-r \
+	/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/packages/MvvmCross.HotTuna.CrossCore.3.1.1/lib/MonoTouch/Cirrious.MvvmCross.Binding.Touch.dll \
+	-r \
+	/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/packages/MvvmCross.HotTuna.CrossCore.3.1.1/lib/MonoTouch/Cirrious.CrossCore.dll \
+	-r \
+	/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/packages/MvvmCross.HotTuna.CrossCore.3.1.1/lib/MonoTouch/Cirrious.MvvmCross.Binding.dll \
+	-r \
+	/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/packages/MvvmCross.HotTuna.CrossCore.3.1.1/lib/MonoTouch/Cirrious.MvvmCross.Localization.dll \
+	-r \
+	/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/packages/MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1/lib/MonoTouch/Cirrious.MvvmCross.Touch.dll \
+	-r \
+	/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/packages/MvvmCross.HotTuna.MvvmCrossLibraries.3.1.1/lib/MonoTouch/Cirrious.MvvmCross.dll \
+	-nolink \
+	-sdk \
+	7.1 \
+	-targetver \
+	7.0 \
+	--abi=i386 \
+	/Users/marcochavezf/Dropbox/Trabajo/Kangou/KangouAppMessenger/KangouMessenger.Touch2/bin/iPhoneSimulator/Release/KangouMessengerTouch2.exe \
