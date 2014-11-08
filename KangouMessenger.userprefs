@@ -1,18 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.0" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="KangouMessenger.Touch2/Views/ReceivingOrderView.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.1" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="KangouAppMessenger/Helpers/ConnectionManager.cs">
     <Files>
-      <File FileName="KangouMessenger.Touch2/Views/ConnectView.cs" Line="1" Column="1" />
-      <File FileName="KangouMessenger.Touch2/Helpers/LocationManager.cs" Line="1" Column="1" />
-      <File FileName="KangouMessenger.Touch2/Views/ReviewView.cs" Line="1" Column="1" />
-      <File FileName="KangouMessenger.Touch2/Views/DropOffRouteView.cs" Line="1" Column="1" />
-      <File FileName="KangouMessenger.Touch2/Views/PickUpTimerView.cs" Line="1" Column="1" />
-      <File FileName="KangouMessenger.Touch2/Views/DropOffTimerView.cs" Line="1" Column="1" />
-      <File FileName="KangouMessenger.Touch2/Views/HelpView.cs" Line="1" Column="1" />
-      <File FileName="KangouMessenger.Touch2/Views/LoginView.cs" Line="1" Column="1" />
-      <File FileName="KangouMessenger.Touch2/Views/WaitingOrderView.cs" Line="1" Column="1" />
-      <File FileName="KangouMessenger.Touch2/Views/ReceivingOrderView.cs" Line="4" Column="4" />
-      <File FileName="KangouMessenger.Touch2/Views/PickUpRouteView.cs" Line="1" Column="1" />
+      <File FileName="KangouAppMessenger/ViewModels/LoginViewModel.cs" Line="20" Column="20" />
+      <File FileName="KangouAppMessenger/Webclient/OrderStructureJson.cs" Line="14" Column="14" />
+      <File FileName="KangouAppMessenger/Webclient/KangouClient.cs" Line="4" Column="4" />
+      <File FileName="KangouAppMessenger/ViewModels/ConnectViewModel.cs" Line="31" Column="31" />
+      <File FileName="KangouMessenger.Touch2/Helpers/LocationManager.cs" Line="48" Column="48" />
+      <File FileName="KangouAppMessenger/Helpers/ConnectionManager.cs" Line="32" Column="32" />
+      <File FileName="KangouMessenger.Touch2/Views/LoginView.cs" Line="32" Column="32" />
+      <File FileName="../user-app/Kangou.Touch/Views/EditProfileView.cs" Line="6" Column="6" />
+      <File FileName="../../GitHub/Xamarin.Socket.IO/Xamarin.Socket.IO/Xamarin.Socket.IO/SocketIO.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

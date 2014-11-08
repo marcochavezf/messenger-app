@@ -54,7 +54,8 @@ namespace KangouMessenger.Core
 		private void DoPickedUpCommand ()
 		{
 			DoAsyncLongTask (() => {
-				var jsonString = String.Format( "{{ \"{0}\": {1} }}", SocketEvents.HasPickedUp, true);
+				var orderId = DataOrderManager.Instance.DataOrder.Id;
+				var jsonString = String.Format( "{{ \"{0}\": {1}, \"orderId\": \"{2}\" }}", SocketEvents.HasPickedUp, "true", orderId);
 				ConnectionManager.Emit( SocketEvents.HasPickedUp, jsonString);
 			});
 		}

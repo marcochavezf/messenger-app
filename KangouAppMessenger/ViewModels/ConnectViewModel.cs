@@ -12,7 +12,9 @@ namespace KangouMessenger.Core
     public class ConnectViewModel 
 		: BusyMvxViewModel
     {
-		public ConnectViewModel(){
+		public void Init(KangouData kangouData)
+		{
+			ConnectionManager.Instance.KangouData = kangouData;
 
 			ConnectionManager.On(SocketEvents.Connected, (data) => {
 				System.Diagnostics.Debug.WriteLine ("connected On: {0}", data["isSuccesful"] );

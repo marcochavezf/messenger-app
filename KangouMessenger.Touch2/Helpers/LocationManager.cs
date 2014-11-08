@@ -101,7 +101,10 @@ namespace KangouMessenger.Touch
 		 * * * * * * * * * * * * * * */
 
 		private string gpsPosJsonString(double lat, double lng){
-			return String.Format( "{{ \"lat\": {0}, \"lng\": {1} }}", lat, lng);
+			if (DataOrderManager.Instance.IsOrderActive)
+				return String.Format( "{{ \"lat\": {0}, \"lng\": {1}, \"orderId\": \"{2}\" }}", lat, lng,  DataOrderManager.Instance.DataOrder.Id);
+			else
+				return String.Format( "{{ \"lat\": {0}, \"lng\": {1} }}", lat, lng);
 		}
 		
 		//This will keep going in the background and the foreground

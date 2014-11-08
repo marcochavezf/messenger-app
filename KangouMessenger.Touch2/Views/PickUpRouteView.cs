@@ -121,7 +121,7 @@ namespace KangouMessenger.Touch
 				var currentLocation = new Coordinates (LocationManager.Instance.Lat, LocationManager.Instance.Lng);
 				var finalLocation = new Coordinates (destination.Latitude, destination.Longitude);
 				var distance = (int)Coordinates.DistanceBetween(currentLocation,finalLocation);
-				if (distance > 3000)
+				if (distance > 5000)
 					imNotNearAlert.Show();
 				else
 					viewModel.ImHereCommand.Execute(null);

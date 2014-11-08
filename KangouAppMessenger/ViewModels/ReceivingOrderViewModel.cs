@@ -53,6 +53,15 @@ namespace KangouMessenger.Core
 			}
 		}
 
+		private string _aproximateDistanceToFirstPoint = "Distancia al primer punto:\n" + DataOrderManager.Instance.DataOrder.AproximateDistanceToFirstPoint;
+		public string AproximateDistanceToFirstPoint { 
+			get { return _aproximateDistanceToFirstPoint; }
+			set {
+				_aproximateDistanceToFirstPoint = "Distancia al primer punto:\n" + value;
+				RaisePropertyChanged (() => AproximateDistanceToFirstPoint);
+			}
+		}
+
 		private MvxCommand _acceptCommand;
 		public ICommand AcceptCommand {
 			get {
@@ -82,7 +91,7 @@ namespace KangouMessenger.Core
 		private void DoCancelCommand()
 		{
 			DoAsyncLongTask (() => {
-				var jsonString = String.Format( "{{ \"{0}\": {1} }}", SocketEvents.CancelInfoOrder, true);
+				var jsonString = String.Format( "{{ \"{0}\": {1} }}", SocketEvents.CancelInfoOrder, "true");
 				ConnectionManager.Emit( SocketEvents.CancelInfoOrder, jsonString);
 			});
 		}

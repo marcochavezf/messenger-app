@@ -43,7 +43,8 @@ namespace KangouMessenger.Core
 		private void DoImHereCommand ()
 		{
 			DoAsyncLongTask (() => {
-				var jsonString = String.Format( "{{ \"{0}\": {1} }}", SocketEvents.ArrivedToDropOff, true);
+				var orderId = DataOrderManager.Instance.DataOrder.Id;
+				var jsonString = String.Format( "{{ \"{0}\": {1}, \"orderId\": \"{2}\" }}", SocketEvents.ArrivedToDropOff, "true", orderId);
 				ConnectionManager.Emit( SocketEvents.ArrivedToDropOff, jsonString);
 			}); 
 		}

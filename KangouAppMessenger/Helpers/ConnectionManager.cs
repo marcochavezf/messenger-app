@@ -3,14 +3,18 @@ using Xamarin.Socket.IO;
 using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace KangouMessenger.Core
 {
 	public class ConnectionManager
 	{
-		private const string _endPoint 	= "kangou-test.herokuapp.com";
+		private const string _endPoint 	= "kangou.herokuapp.com";
+		//private const string _endPoint 	= "localhost";
+		//private int port = 5000;
 
 		public SocketIO Socket { get; set; }
+		public KangouData KangouData { get; set; }
 			
 		private static ConnectionManager instance;
 		
@@ -33,7 +37,11 @@ namespace KangouMessenger.Core
 		}
 
 		public static void Connect(){
-			Instance.Socket.ConnectAsync ();
+			Instance.Socket.ConnectAsync (new Dictionary<string, string>()
+				{
+					{ "typeUser", "kangouMessenger" },
+					{ "userId", Instance.KangouData.Id.ToString() },
+				});
 		}
 				
 		public static void Disconnect(){
@@ -46,10 +54,10 @@ namespace KangouMessenger.Core
 				Instance.Socket.Emit (name, args);
 			} else {
 				Instance.TryingToReconnect (true);
-				Instance.Socket.ConnectAsync ();
 				Instance.Socket.On (SocketEvents.Connected, (data) => {
 					Instance.Socket.Emit (name, args);
 				});
+				Connect ();
 			}
 		}
 
@@ -65,12 +73,7 @@ namespace KangouMessenger.Core
 			}
 		}
 
-		private string gpsPosJsonString(double lat, double lng){
-			return String.Format( "{{ \"lat\": {0}, \"lng\": {1} }}", lat, lng);
-		}
-
 		public event Action<bool> TryingToReconnect = delegate {};
 
 	}
 }
-

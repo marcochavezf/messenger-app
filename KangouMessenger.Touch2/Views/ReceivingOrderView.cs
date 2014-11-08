@@ -77,9 +77,8 @@ namespace KangouMessenger.Touch
 			posYoffset += 55f;
 			var aproxDistanceToFirstPointTitleLabel = new UILabel(new RectangleF(posXlabel, posYoffset, widthLabel, heightLabel));
 			aproxDistanceToFirstPointTitleLabel.TextAlignment = UITextAlignment.Center;
-			aproxDistanceToFirstPointTitleLabel.Text = "Distancia al primer punto: 5km";
+			aproxDistanceToFirstPointTitleLabel.Text = "Distancia al primer punto: ";
 			Add(aproxDistanceToFirstPointTitleLabel);
-
 
 			var widthButton = WIDTH * 0.35f;
 			var posXoffsetButton = (WIDTH - widthButton * 2f) * 0.33f;
@@ -116,6 +115,7 @@ namespace KangouMessenger.Touch
 			set.Bind(pickUpShortAddressTextView).To(vm => vm.PickUpShortAddress);
 			set.Bind(dropOffShortAddressTextView).To(vm => vm.DropOffShortAddress);
 			set.Bind(aproximateDistanceTextView).To(vm => vm.AproximateDistance);
+			set.Bind(aproxDistanceToFirstPointTitleLabel).To(vm => vm.AproximateDistanceToFirstPoint);
 			set.Bind(acceptButton).To(vm => vm.AcceptCommand);
 			set.Bind(_bindableProgress).For(b => b.Visible).To(vm => vm.IsBusy);
             set.Apply();

@@ -1,6 +1,7 @@
 ﻿using System;
 using Cirrious.MvvmCross.ViewModels;
 using System.Threading.Tasks;
+using Cirrious.CrossCore.Platform;
 
 namespace KangouMessenger.Core
 {
@@ -15,7 +16,7 @@ namespace KangouMessenger.Core
 
 		protected bool _thisViewhasBeenClosed;
 
-		public BusyMvxViewModel() : base() {
+		public BusyMvxViewModel()  {
 			_thisViewhasBeenClosed = false;
 		}
 

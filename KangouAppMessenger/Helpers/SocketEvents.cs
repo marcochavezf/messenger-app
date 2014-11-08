@@ -5,18 +5,18 @@ namespace KangouMessenger.Core
 	public class SocketEvents
 	{
 		public const string Connected 				= "connected";
-		public const string InfoOrder 				= "info_order";
-		public const string GpsPosition 			= "gps_position";
-		public const string CancelInfoOrder 		= "cancel_info_order";
-		public const string AcceptInfoOrder 		= "accept_info_order";
-		public const string ArrivedToPickUp 		= "arrived_to_pick_up";
-		public const string TimerPickUpHasFinished	= "timer_pick_up_has_finished";
-		public const string HasPickedUp	 			= "has_picked_up";
-		public const string ArrivedToDropOff		= "arrived_to_drop_off";
-		public const string TimerDropOffHasFinished	= "timer_drop_off_has_finished";
-		public const string HasDroppedOff 			= "has_dropped_off";
-		public const string ClientSignatureAccepted = "client_signature_accepted";
-		public const string ReviewAccepted			= "review_accepted";
+		public const string InfoOrder 				= "infoOrder";
+		public const string GpsPosition 			= "gpsPosition";
+		public const string CancelInfoOrder 		= "cancelInfoOrder";
+		public const string AcceptInfoOrder 		= "acceptInfoOrder";
+		public const string ArrivedToPickUp 		= "arrivedToPickUp";
+		public const string TimerPickUpHasFinished	= "timerPickUpHasFinished";
+		public const string HasPickedUp	 			= "hasPickedUp";
+		public const string ArrivedToDropOff		= "arrivedToDropOff";
+		public const string TimerDropOffHasFinished	= "timerDropOffHasFinished";
+		public const string HasDroppedOff 			= "hasDroppedOff";
+		public const string ClientSignatureAccepted = "clientSignatureAccepted";
+		public const string ReviewAccepted			= "reviewAccepted";
 	}
 }
 

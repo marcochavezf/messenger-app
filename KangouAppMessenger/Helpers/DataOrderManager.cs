@@ -41,8 +41,11 @@ namespace KangouMessenger.Core
 
 	public class DataOrder
 	{
+		public string Id { get; set; }
+
 		public string ListItems { get; set; }
 		public string AproximateDistance { get; set; }
+		public string AproximateDistanceToFirstPoint { get; set; }
 
 		public string PickUpShortAdress { get; set; }
 		public string PickUpAdress { get; set; }
@@ -63,9 +66,11 @@ namespace KangouMessenger.Core
 		public string ClientPhoneNumber { get; set; }
 
 		public DataOrder(JToken data){
+			Id = data["id"].ToString();
 
 			ListItems = data ["listItems"].ToString ();
 			AproximateDistance =  data ["aproximateDistance"].ToString ();
+			AproximateDistanceToFirstPoint = data ["aproximateDistanceToFirstPoint"].ToString ();
 
 			PickUpShortAdress = data["pickUpShortAdress"].ToString ();
 			PickUpAdress = data["pickUpAdress"].ToString ();

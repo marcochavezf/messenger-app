@@ -20,6 +20,7 @@ namespace KangouMessenger.Touch
             base.ViewDidLoad();
 
 			NavigationItem.Title = "Inicio de sesión";
+			var viewModel = ViewModel as LoginViewModel;
 
 			//Constants
 			var WIDTH = UIScreen.MainScreen.Bounds.Width;
@@ -42,6 +43,7 @@ namespace KangouMessenger.Touch
 			var passwordTextField = new UITextField(new RectangleF(offsetXTextField, offsetY, widthTextField, heightTextField));
 			passwordTextField.TextAlignment = UITextAlignment.Center;
 			passwordTextField.Placeholder = "Password";
+			passwordTextField.SecureTextEntry = true;
 			Add(passwordTextField);
 
 			offsetY += 100;
@@ -51,12 +53,37 @@ namespace KangouMessenger.Touch
 			loginButton.Frame = new RectangleF (offsetXButton, offsetY, widthButton, heightButton);
 			loginButton.Layer.BorderColor = UIColor.Gray.CGColor;
 			loginButton.Layer.BorderWidth = 0.5f;
+			loginButton.TouchUpInside += delegate {
+				var emailString = emailTextField.Text.Trim ();
+				var passwordString = passwordTextField.Text.Trim();
+
+				if (emailString.Equals("")|| !StringValidator.IsValidEmail(emailString)){
+					var alert = new UIAlertView("Ingresa un correo válido", "", null, "Ok", null);
+					alert.Clicked += (object alertSender, UIButtonEventArgs e) => {
+						if(e.ButtonIndex == 0)
+							emailTextField.BecomeFirstResponder();
+					};
+					alert.Show();
+					return;
+				} 
+
+				if (String.IsNullOrWhiteSpace(passwordString)){
+					var alert = new UIAlertView("Ingresa tu contraseña", "", null, "Ok", null);
+					alert.Clicked += (object alertSender, UIButtonEventArgs e) => {
+						if(e.ButtonIndex == 0)
+							passwordTextField.BecomeFirstResponder();
+					};
+					alert.Show();
+					return;
+				}
+
+				viewModel.LoginCommand.Execute(null);
+			};
 			Add (loginButton);
 
 			var set = this.CreateBindingSet<LoginView, LoginViewModel>();
 			set.Bind(emailTextField).To(vm => vm.Email);
 			set.Bind(passwordTextField).To(vm => vm.Password);
-			set.Bind(loginButton).To(vm => vm.LoginCommand);
 			set.Bind(_bindableProgress).For(b => b.Visible).To(vm => vm.IsBusy);
             set.Apply();
         }

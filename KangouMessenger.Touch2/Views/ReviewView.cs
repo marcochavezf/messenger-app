@@ -33,17 +33,7 @@ namespace KangouMessenger.Touch
 			var posXtitle  = (WIDTH - widthLabel) * 0.5f;
 			var posYoffset = posXtitle;
 
-			//Rating
-			var titleRatingLabel = new UILabel(new RectangleF(posXtitle, posYoffset, widthLabel, heightLabel));
-			titleRatingLabel.Text = "Calificación acerca del cliente";
-			titleRatingLabel.TextAlignment = UITextAlignment.Center;
-			Add(titleRatingLabel);
-
-			posYoffset += 40f;
-			AddReviewStars (WIDTH, posYoffset, viewModel);
-
 			//Commnents
-			posYoffset += 70f;
 			var titleCommentsLabel = new UILabel(new RectangleF(posXtitle, posYoffset, widthLabel, heightLabel));
 			titleCommentsLabel.Text = "Comentarios acerca del cliente";
 			titleCommentsLabel.TextAlignment = UITextAlignment.Center;
@@ -57,7 +47,19 @@ namespace KangouMessenger.Touch
 			commentsAboutClientTextField.Font =  UIFont.FromName(Constants.LABEL_NORMAL_FONT, Constants.LABEL_FONT_SIZE);
 			commentsAboutClientTextField.Layer.BorderColor = UIColor.Gray.CGColor;
 			commentsAboutClientTextField.Layer.BorderWidth = 0.5f;
-            Add(commentsAboutClientTextField);
+			Add(commentsAboutClientTextField);
+
+			//Rating
+			posYoffset += 70f;
+			var titleRatingLabel = new UILabel(new RectangleF(posXtitle, posYoffset, widthLabel, heightLabel));
+			titleRatingLabel.Text = "Calificación acerca del cliente";
+			titleRatingLabel.TextAlignment = UITextAlignment.Center;
+			Add(titleRatingLabel);
+
+			posYoffset += 40f;
+			AddReviewStars (WIDTH, posYoffset, viewModel);
+
+
 
 			/*
 			if (!UIDevice.CurrentDevice.CheckSystemVersion (7, 8)) {

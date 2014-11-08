@@ -3,14 +3,19 @@ using System.Windows.Input;
 using Xamarin.Socket.IO;
 using System.Threading;
 using System.Threading.Tasks;
-
+using Cirrious.CrossCore.Platform;
+using System.Diagnostics;
 
 namespace KangouMessenger.Core
 {
     public class LoginViewModel 
 		: BusyMvxViewModel
     {
-		private const string endPoint = "kangou-test.herokuapp.com";
+		private readonly KangouClient _kangouClient;
+		public LoginViewModel (IMvxJsonConverter jsonConverter) : base()
+		{
+			_kangouClient = new KangouClient (jsonConverter);
+		}
 
 		private string _email;
         public string Email
@@ -41,18 +46,24 @@ namespace KangouMessenger.Core
 			IsBusy = true;
 
 			Task.Run (()=>{
-				System.Diagnostics.Debug.WriteLine ("Enter delay");
-				for(var i=0; i<100;i++){
-					System.Diagnostics.Debug.WriteLine ("Computing");
-				}
-				System.Diagnostics.Debug.WriteLine ("Exit delay");
 
+				_kangouClient.SendOrderData(Email, Password, (userId) => {
 
-				InvokeOnMainThread (delegate {  
-					IsBusy = false;
+					InvokeOnMainThread (delegate {  
+						IsBusy = false;
+					});
+
+					Debug.WriteLine("userId retrieved: {0}", userId);
+					ShowViewModel<ConnectViewModel>(new KangouData(){ Id = userId });
+
+				}, (error) => {
+
+					InvokeOnMainThread (delegate {  
+						IsBusy = false;
+					});
+
 				});
 
-				ShowViewModel<ConnectViewModel>();
 			});
 		}
 

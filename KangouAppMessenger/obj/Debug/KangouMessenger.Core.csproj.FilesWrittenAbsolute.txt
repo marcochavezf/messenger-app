@@ -36,3 +36,4 @@
 /Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/SuperSocket.ClientEngine.Protocol.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/SuperSocket.ClientEngine.Common.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/System.Net.Http.Primitives.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/Cirrious.MvvmCross.Plugins.Json.dll

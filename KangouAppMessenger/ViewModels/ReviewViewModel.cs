@@ -44,7 +44,8 @@ namespace KangouMessenger.Core
 		private void DoAcceptCommand ()
 		{
 			DoAsyncLongTask (() => {
-				var jsonString = String.Format( "{{ \"{0}\": {1}, \"commentsAboutClient\": \"{2}\", \"ratingAboutClient\": {3} }}", SocketEvents.ReviewAccepted, true, CommentsAboutClient, RatingAboutClient);
+				var orderId = DataOrderManager.Instance.DataOrder.Id;
+				var jsonString = String.Format( "{{ \"{0}\": {1}, \"commentsAboutClient\": \"{2}\", \"ratingAboutClient\": {3}, \"orderId\": \"{4}\" }}", SocketEvents.ReviewAccepted, "true", CommentsAboutClient, RatingAboutClient, orderId);
 				ConnectionManager.Emit( SocketEvents.ReviewAccepted, jsonString);
 			});
 		}
