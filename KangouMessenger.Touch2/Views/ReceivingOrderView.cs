@@ -100,6 +100,16 @@ namespace KangouMessenger.Touch
 				}
 			};
 
+			viewModel.OrderTakenFromSomeoneElse = delegate {
+				InvokeOnMainThread(delegate {
+					var orderTakenFromSomeoneElseAlert = new UIAlertView ("Lo sentimos","\nLa orden ha sido tomada por alguien más", null, "Ok");
+					orderTakenFromSomeoneElseAlert.Clicked += (object alertSender, UIButtonEventArgs eventArgsAlert) => {
+						NavigationController.PopViewControllerAnimated(true);
+					};
+					orderTakenFromSomeoneElseAlert.Show();
+				});
+			};
+
 			posXoffsetButton += widthButton + posXoffsetButton;
 			var cancelButton = new UIButton (UIButtonType.RoundedRect);
 			cancelButton.SetTitle ("Cancelar", UIControlState.Normal);

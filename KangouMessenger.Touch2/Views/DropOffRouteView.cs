@@ -27,11 +27,11 @@ namespace KangouMessenger.Touch
 
 			//Load Root View
 			base.ViewDidLoad();
-			_popNextToLastViewController = true;
+			var viewModel = (DropOffRouteViewModel)ViewModel;
+			_popNextToLastViewController = viewModel.RemoveNextToLastViewModel;
+			_hideBackButton = true;
 
 			NavigationItem.Title = "Ir a entregar";
-			var viewModel = (DropOffRouteViewModel)ViewModel;
-
 
 			//Setting origin and destiny directions
 			var dataOrder = DataOrderManager.Instance.DataOrder;

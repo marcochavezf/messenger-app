@@ -19,8 +19,8 @@ namespace KangouMessenger.Touch
         {
             base.ViewDidLoad();
 			var viewModel = (PickUpTimerViewModel)ViewModel;
-			_popNextToLastViewController = true;
-
+			_popNextToLastViewController = viewModel.RemoveNextToLastViewModel;
+			_hideBackButton = true;
 			NavigationItem.Title = "Esperando para recoger";
 
 			//Constants

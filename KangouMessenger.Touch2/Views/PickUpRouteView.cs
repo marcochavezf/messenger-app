@@ -26,7 +26,9 @@ namespace KangouMessenger.Touch
 
 			//Load Root View
 			base.ViewDidLoad();
-			_popNextToLastViewController = true;
+			var viewModel = (PickUpRouteViewModel)ViewModel;
+			_popNextToLastViewController = viewModel.RemoveNextToLastViewModel;
+			_hideBackButton = true;
 
 			NavigationItem.Title = "Ir a recoger";
 
@@ -34,7 +36,6 @@ namespace KangouMessenger.Touch
 			var dataOrder = DataOrderManager.Instance.DataOrder;
 			var origin = new CLLocationCoordinate2D (LocationManager.Instance.Lat, LocationManager.Instance.Lng);
 			var destination = new CLLocationCoordinate2D (dataOrder.PickUpLat, dataOrder.PickUpLng);
-			var viewModel = (PickUpRouteViewModel)ViewModel;
 
 			//Adding map
 			var widthMap = CONTAINER_SIZE.Width;

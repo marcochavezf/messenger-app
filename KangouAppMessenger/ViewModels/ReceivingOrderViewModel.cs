@@ -15,18 +15,32 @@ namespace KangouMessenger.Core
 		public ReceivingOrderViewModel() : base() {
 		
 			ConnectionManager.On  ( SocketEvents.AcceptInfoOrder, (data) => {
-				ConnectionManager.Off(SocketEvents.CancelInfoOrder);
-				ConnectionManager.Off( SocketEvents.AcceptInfoOrder );
-				ShowViewModel<PickUpRouteViewModel>();
+				TurnOffConnectionEvents();
+				ShowViewModel<PickUpRouteViewModel>(new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
 			});
 
 			ConnectionManager.On  ( SocketEvents.CancelInfoOrder, (data) => {
-				ConnectionManager.Off(SocketEvents.CancelInfoOrder);
-				ConnectionManager.Off( SocketEvents.AcceptInfoOrder );
+				TurnOffConnectionEvents();
 				DataOrderManager.Instance.IsOrderActive = false;
 				Close(this);
 			});
+
+			ConnectionManager.On  ( SocketEvents.OrderTakenFromSomeoneElse, (data) => {
+				Debug.WriteLine("Taken From someone else");
+				TurnOffConnectionEvents();
+				DataOrderManager.Instance.IsOrderActive = false;
+				if(OrderTakenFromSomeoneElse != null)
+					OrderTakenFromSomeoneElse();
+			});
 		}
+
+		private void TurnOffConnectionEvents(){
+			ConnectionManager.Off(SocketEvents.CancelInfoOrder);
+			ConnectionManager.Off( SocketEvents.AcceptInfoOrder );
+			ConnectionManager.Off(SocketEvents.OrderTakenFromSomeoneElse);
+		}
+
+		public Action OrderTakenFromSomeoneElse { get; set; }
 
 		private string _pickUpShortAddress = DataOrderManager.Instance.DataOrder.PickUpShortAdress;
         public string PickUpShortAddress

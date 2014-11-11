@@ -10,6 +10,7 @@ namespace KangouMessenger.Core
 	public class ConnectionManager
 	{
 		private const string _endPoint 	= "kangou.herokuapp.com";
+		private int port = 80;
 		//private const string _endPoint 	= "localhost";
 		//private int port = 5000;
 
@@ -19,7 +20,7 @@ namespace KangouMessenger.Core
 		private static ConnectionManager instance;
 		
 		private ConnectionManager() {
-			Socket =  new SocketIO (host : _endPoint);
+			Socket =  new SocketIO (host : _endPoint, port : port);
 		}
 
 		public static void FailedToConnect(Action action){

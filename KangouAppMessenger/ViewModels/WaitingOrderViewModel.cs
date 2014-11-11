@@ -46,6 +46,35 @@ namespace KangouMessenger.Core
 				}
 			});
 
+			ConnectionManager.On (SocketEvents.ResumeOrder, (data) => {
+				if(!DataOrderManager.Instance.IsOrderActive){
+					DataOrderManager.Instance.SetData( data );
+
+					switch (data["status"].ToString()) {
+						
+					case StatusOrder.KangouGoingToPickUp:
+						ShowViewModel<PickUpRouteViewModel>(new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = false });
+						break;
+
+					case StatusOrder.KangouWaitingToPickUp:
+						ShowViewModel<PickUpTimerViewModel>(new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = false });
+						break;
+
+					case StatusOrder.KangouGoingToDropOff:
+						ShowViewModel<DropOffRouteViewModel>(new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = false });
+						break;
+
+					case StatusOrder.KangouWaitingToDropOff:
+						ShowViewModel<DropOffTimerViewModel>(new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = false });
+						break;
+
+					case StatusOrder.OrderSignedByClient:
+						ShowViewModel<ReviewViewModel>(new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = false });
+						break;
+					}
+				}
+			});
+
 			ConnectionManager.Instance.TryingToReconnect += (bool obj) => {
 				IsTryingToReconnect = obj;
 				StatusConnection = obj ? "Desconectado" : "Conectado";

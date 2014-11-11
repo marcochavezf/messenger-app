@@ -14,7 +14,9 @@ namespace KangouMessenger.Core
     {
 		public CountDownTimer CountDownTimer { get; set; }
 
-		public PickUpTimerViewModel(){
+		public PickUpTimerViewModel(bool removeNextToLastViewModel = true){
+			RemoveNextToLastViewModel = removeNextToLastViewModel;
+
 			ConnectionManager.On  ( SocketEvents.HasPickedUp, (data) => {
 				ConnectionManager.Off( SocketEvents.HasPickedUp );
 
@@ -23,7 +25,7 @@ namespace KangouMessenger.Core
 					CountDownTimer = null;
 				}
 
-				ShowViewModel<DropOffRouteViewModel> ();
+				ShowViewModel<DropOffRouteViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
 			});
 
 			CountDownTimer = new CountDownTimer (13, 00);

@@ -19,8 +19,10 @@ namespace KangouMessenger.Touch
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-			_popNextToLastViewController = true;
 			var viewModel = (ReviewViewModel)ViewModel;
+			_popNextToLastViewController = viewModel.RemoveNextToLastViewModel;
+			_hideBackButton = true;
+			Console.WriteLine ("ReviewView: {0}",_popNextToLastViewController);
 
 			NavigationItem.Title = "Calificación del servicio";
 

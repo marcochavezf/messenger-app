@@ -13,7 +13,9 @@ namespace KangouMessenger.Core
     {
 		public CountDownTimer CountDownTimer { get; set; }
 		
-		public DropOffTimerViewModel(){
+		public DropOffTimerViewModel(bool removeNextToLastViewModel = true){
+			RemoveNextToLastViewModel = removeNextToLastViewModel;
+			
 			ConnectionManager.On  ( SocketEvents.HasDroppedOff, (data) => {
 				ConnectionManager.Off  ( SocketEvents.HasDroppedOff );
 
@@ -22,7 +24,7 @@ namespace KangouMessenger.Core
 					CountDownTimer = null;
 				}
 
-				ShowViewModel<ClientSignatureViewModel> ();
+				ShowViewModel<ClientSignatureViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });;
 			});
 
 			CountDownTimer = new CountDownTimer (13, 0);

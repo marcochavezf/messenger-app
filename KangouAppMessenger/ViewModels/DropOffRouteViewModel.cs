@@ -11,10 +11,12 @@ namespace KangouMessenger.Core
     public class DropOffRouteViewModel 
 		: BusyMvxViewModel
     {
-		public DropOffRouteViewModel(){
+		public DropOffRouteViewModel(bool removeNextToLastViewModel = true){
+			RemoveNextToLastViewModel = removeNextToLastViewModel;
+
 			ConnectionManager.On  ( SocketEvents.ArrivedToDropOff, (data) => {
 				ConnectionManager.Off( SocketEvents.ArrivedToDropOff );
-				ShowViewModel<DropOffTimerViewModel> ();
+				ShowViewModel<DropOffTimerViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
 			});
 		}
 			

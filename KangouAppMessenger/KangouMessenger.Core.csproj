@@ -53,6 +53,7 @@
     <Compile Include="Webclient\KangouClient.cs" />
     <Compile Include="Webclient\OrderStructureJson.cs" />
     <Compile Include="Helpers\StringValidator.cs" />
+    <Compile Include="Helpers\StatusOrder.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>

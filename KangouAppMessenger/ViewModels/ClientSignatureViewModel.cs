@@ -14,7 +14,7 @@ namespace KangouMessenger.Core
 		public ClientSignatureViewModel(){
 			ConnectionManager.On  ( SocketEvents.ClientSignatureAccepted, (data) => {
 				ConnectionManager.Off  ( SocketEvents.ClientSignatureAccepted );
-				ShowViewModel<ReviewViewModel> ();
+				ShowViewModel<ReviewViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
 			});
 		}
 
