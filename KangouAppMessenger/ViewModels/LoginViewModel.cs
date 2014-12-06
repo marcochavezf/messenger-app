@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Cirrious.CrossCore.Platform;
 using System.Diagnostics;
+using System;
 
 namespace KangouMessenger.Core
 {
@@ -40,14 +41,14 @@ namespace KangouMessenger.Core
 				return _loginCommand;
 			}
 		}
-
+			
 		private void DoLoginCommand ()
 		{
 			IsBusy = true;
 
 			Task.Run (()=>{
 
-				_kangouClient.SendOrderData(Email, Password, (userId) => {
+				_kangouClient.LoginAsMessenger(Email, Password, (userId) => {
 
 					InvokeOnMainThread (delegate {  
 						IsBusy = false;
@@ -60,12 +61,18 @@ namespace KangouMessenger.Core
 
 					InvokeOnMainThread (delegate {  
 						IsBusy = false;
+						if(LoginError != null)
+							LoginError();
 					});
 
 				});
 
 			});
 		}
+
+		/* Actions to implement in specific views */
+
+		public Action LoginError { get; set; }
 
     }
 }

@@ -14,8 +14,9 @@ namespace KangouMessenger.Core
 	public abstract class BusyMvxViewModel : MvxViewModel
 	{
 		public void Init(BusyMvxViewModelParameters parameters){
-			Debug.WriteLine ("Init: {0}", parameters.RemoveNextToLastViewModel);
+			Debug.WriteLine ("Init RemoveNextToLastViewModel: {0}", parameters.RemoveNextToLastViewModel);
 			RemoveNextToLastViewModel = parameters.RemoveNextToLastViewModel;
+			ItNeedsToBeRemoved = false;
 		}
 
 		private bool _isBusy;
@@ -26,7 +27,8 @@ namespace KangouMessenger.Core
 		}
 
 		protected bool _thisViewhasBeenClosed;
-		public bool RemoveNextToLastViewModel { get; protected set; }
+		public bool RemoveNextToLastViewModel { get; protected set; } 	//For iOS version
+		public bool ItNeedsToBeRemoved { get; set; }					//For Android version
 
 		public BusyMvxViewModel()  {
 			_thisViewhasBeenClosed = false;
@@ -35,7 +37,9 @@ namespace KangouMessenger.Core
 
 		protected void DoAsyncLongTask(Action action){
 
-			IsBusy = true;
+			InvokeOnMainThread (delegate {  
+				IsBusy = true;
+			});
 			Task.Run (() => {
 				action();
 				InvokeOnMainThread (delegate {  

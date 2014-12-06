@@ -25,6 +25,7 @@ namespace KangouMessenger.Core
 					CountDownTimer = null;
 				}
 
+				ItNeedsToBeRemoved = true;
 				ShowViewModel<DropOffRouteViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
 			});
 

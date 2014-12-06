@@ -1,6 +1,6 @@
-# Version: 8.4.0.16 (80e9ff7)
+# Version: 8.4.0.43 (840a925)
 # [first argument, ignore] # /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Touch2/bin/iPhoneSimulator/Debug/mtouch.exe
-/Library/Frameworks/Xamarin.iOS.framework/Versions/8.4.0.16/bin/mtouch \
+/Library/Frameworks/Xamarin.iOS.framework/Versions/8.4.0.43/bin/mtouch \
 	-sdkroot \
 	/Applications/Xcode.app/Contents/Developer \
 	--cache \
@@ -42,12 +42,12 @@
 	-r \
 	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.Plugin.Json.3.2.1/lib/MonoTouch/Cirrious.MvvmCross.Plugins.Json.dll" \
 	-r \
-	"/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Touch2/../packages/Newtonsoft.Json.6.0.6/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll" \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/Newtonsoft.Json.6.0.6/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll" \
 	-debug \
 	-linksdkonly \
 	-sdk \
 	8.1 \
 	-targetver \
-	7.0 \
+	8.0 \
 	--abi=i386 \
-	"/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Touch2/bin/iPhoneSimulator/Debug/KangouMessengerTouch2.exe" \
+	"/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Touch2/bin/iPhoneSimulator/Debug/KangouMessengerTouch.exe" \

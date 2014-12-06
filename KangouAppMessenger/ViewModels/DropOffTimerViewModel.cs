@@ -24,6 +24,7 @@ namespace KangouMessenger.Core
 					CountDownTimer = null;
 				}
 
+				ItNeedsToBeRemoved = true;
 				ShowViewModel<ClientSignatureViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });;
 			});
 

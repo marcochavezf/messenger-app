@@ -66,10 +66,10 @@ namespace KangouMessenger.Core
 		public string ClientPhoneNumber { get; set; }
 
 		public DataOrder(JToken data){
-			Id = data["id"].ToString();
+			Id = data["_id"].ToString();
 
 			ListItems = data ["listItems"].ToString ();
-			AproximateDistance =  data ["aproximateDistance"].ToString ();
+			AproximateDistance =  data["distancePickUpToDropOff"].ToString ();
 			AproximateDistanceToFirstPoint = data ["aproximateDistanceToFirstPoint"].ToString ();
 
 			PickUpShortAdress = data["pickUpShortAdress"].ToString ();

@@ -13,6 +13,8 @@ namespace KangouMessenger.Core
     public class WaitingOrderViewModel 
 		: BusyMvxViewModel
     {
+
+		/* Constructor */
 		public WaitingOrderViewModel(){
 
 			IsTryingToReconnect = false;
@@ -41,12 +43,13 @@ namespace KangouMessenger.Core
 
 				if(!DataOrderManager.Instance.IsOrderActive){
 					DataOrderManager.Instance.SetData( data );
-					ReceivingInfoOrder(DataOrderManager.Instance.DataOrder.PickUpAdress, DataOrderManager.Instance.DataOrder.DropOffAdress);
+					ReceivingInfoOrderToLocalNotification(DataOrderManager.Instance.DataOrder.PickUpAdress, DataOrderManager.Instance.DataOrder.DropOffAdress);
 					ShowViewModel<ReceivingOrderViewModel>();
 				}
 			});
 
 			ConnectionManager.On (SocketEvents.ResumeOrder, (data) => {
+				ConnectionManager.Emit(SocketEvents.ResumeOrder, "{}");
 				if(!DataOrderManager.Instance.IsOrderActive){
 					DataOrderManager.Instance.SetData( data );
 
@@ -80,9 +83,8 @@ namespace KangouMessenger.Core
 				StatusConnection = obj ? "Desconectado" : "Conectado";
 			};
 		}
-
-		public event Action<string, string> ReceivingInfoOrder = delegate {};
-
+			
+		/* Properties */
 		private string _statusConnection;
 		public string StatusConnection
 		{ 
@@ -109,6 +111,7 @@ namespace KangouMessenger.Core
 		{
 			IsBusy = true;
 			Task.Run (()=>{
+				ConnectionManager.IsConectedByUser = false;
 				ConnectionManager.Disconnect();
 				InvokeOnMainThread (delegate {
 					IsBusy = false;
@@ -117,5 +120,8 @@ namespace KangouMessenger.Core
 			});
 
 		}
+
+		/* Actions to implement in platform specific views */
+		public event Action<string, string> ReceivingInfoOrderToLocalNotification = delegate {};
     }
 }

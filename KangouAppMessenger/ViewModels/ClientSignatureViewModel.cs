@@ -11,13 +11,16 @@ namespace KangouMessenger.Core
     public class ClientSignatureViewModel
 		: BusyMvxViewModel
     {
+		/* Constructor */
 		public ClientSignatureViewModel(){
 			ConnectionManager.On  ( SocketEvents.ClientSignatureAccepted, (data) => {
 				ConnectionManager.Off  ( SocketEvents.ClientSignatureAccepted );
+				ItNeedsToBeRemoved = true;
 				ShowViewModel<ReviewViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
 			});
 		}
 
+		/* Properties */
 		private MvxCommand _acceptCommand;
 		public ICommand AcceptCommand {
 			get {
@@ -40,6 +43,7 @@ namespace KangouMessenger.Core
 			});
 		}
 
+		/* Actions to implement in platform specific view. */
 		public event Action SavingImage = delegate {};
 
     }

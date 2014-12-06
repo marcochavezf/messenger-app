@@ -17,7 +17,7 @@ namespace KangouMessenger.Core
 			_jsonConverter = jsonConverter;
 		}
 
-		public void SendOrderData(string username, string password, Action<string> succesAction, Action<string> errorAction)
+		public void LoginAsMessenger(string email, string password, Action<string> succesAction, Action<string> errorAction)
 		{
 			var _endPointOrderData = "https://kangou.herokuapp.com/users/loginAsKangou";
 			//var _endPointOrderData = "http://localhost:5000/users/loginAsKangou";
@@ -28,7 +28,7 @@ namespace KangouMessenger.Core
 			request.Method = "POST";
 
 			string postData = 
-				"username=" 	+ username +
+				"email=" 		+ email +
 				"&password=" 	+ password;
 				
 			// Convert the string into a byte array.
@@ -70,7 +70,10 @@ namespace KangouMessenger.Core
 									var rawDataReceived = reader.ReadToEnd();
 									var rootObj = _jsonConverter.DeserializeObject<User>(rawDataReceived);
 									var userId = rootObj.userId;
-									succesAction(userId);
+									if(userId.Equals("error") || userId.Equals("not found"))
+										errorAction(userId);
+									else
+										succesAction(userId);
 								}
 							}
 						}

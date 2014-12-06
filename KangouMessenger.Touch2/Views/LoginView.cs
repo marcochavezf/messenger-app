@@ -81,6 +81,11 @@ namespace KangouMessenger.Touch
 			};
 			Add (loginButton);
 
+			viewModel.LoginError = delegate {
+				var loginErrorAlert = new UIAlertView("Error al iniciar sesión", "\nVerifica la conexión a internet y/o que los datos ingresados sean correctos", null, "Ok", null);
+				loginErrorAlert.Show();
+			};
+
 			var set = this.CreateBindingSet<LoginView, LoginViewModel>();
 			set.Bind(emailTextField).To(vm => vm.Email);
 			set.Bind(passwordTextField).To(vm => vm.Password);

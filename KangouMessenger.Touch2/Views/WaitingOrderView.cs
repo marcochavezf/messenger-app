@@ -92,7 +92,7 @@ namespace KangouMessenger.Touch
 			set.Apply();
 
 			//Set local notification
-			viewModel.ReceivingInfoOrder += (shortPickUpAddress, shortDropOffAddress) => {
+			viewModel.ReceivingInfoOrderToLocalNotification += (shortPickUpAddress, shortDropOffAddress) => {
 				Console.WriteLine("Scheduling Local Notification");
 				InvokeOnMainThread (delegate {  
 					ScheduleOrderNotification(shortPickUpAddress, shortDropOffAddress);

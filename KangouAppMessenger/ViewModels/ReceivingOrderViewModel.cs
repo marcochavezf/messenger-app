@@ -12,10 +12,12 @@ namespace KangouMessenger.Core
     public class ReceivingOrderViewModel 
 		: BusyMvxViewModel
     {
+		/* Constructor */
 		public ReceivingOrderViewModel() : base() {
 		
 			ConnectionManager.On  ( SocketEvents.AcceptInfoOrder, (data) => {
 				TurnOffConnectionEvents();
+				ItNeedsToBeRemoved = true;
 				ShowViewModel<PickUpRouteViewModel>(new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
 			});
 
@@ -39,9 +41,8 @@ namespace KangouMessenger.Core
 			ConnectionManager.Off( SocketEvents.AcceptInfoOrder );
 			ConnectionManager.Off(SocketEvents.OrderTakenFromSomeoneElse);
 		}
-
-		public Action OrderTakenFromSomeoneElse { get; set; }
-
+			
+		/* Properties */
 		private string _pickUpShortAddress = DataOrderManager.Instance.DataOrder.PickUpShortAdress;
         public string PickUpShortAddress
 		{ 
@@ -110,5 +111,7 @@ namespace KangouMessenger.Core
 			});
 		}
 
+		/* Actions to implement in platform specifi view */
+		public Action OrderTakenFromSomeoneElse { get; set; }
     }
 }

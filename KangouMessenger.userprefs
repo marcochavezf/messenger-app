@@ -1,20 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhone4s.8.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="KangouAppMessenger/Helpers/ConnectionManager.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Android.TA883036D6" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="KangouAppMessenger/ViewModels/ConnectViewModel.cs">
     <Files>
-      <File FileName="KangouAppMessenger/ViewModels/LoginViewModel.cs" Line="1" Column="1" />
-      <File FileName="KangouAppMessenger/Webclient/OrderStructureJson.cs" Line="1" Column="1" />
-      <File FileName="KangouAppMessenger/Webclient/KangouClient.cs" Line="1" Column="1" />
-      <File FileName="KangouAppMessenger/ViewModels/ConnectViewModel.cs" Line="1" Column="1" />
-      <File FileName="KangouMessenger.Touch2/Helpers/LocationManager.cs" Line="1" Column="1" />
-      <File FileName="KangouAppMessenger/Helpers/ConnectionManager.cs" Line="32" Column="32" />
-      <File FileName="KangouMessenger.Touch2/Views/LoginView.cs" Line="1" Column="1" />
-      <File FileName="../user-app/Kangou.Touch/Views/EditProfileView.cs" Line="1" Column="1" />
+      <File FileName="KangouAppMessenger/ViewModels/ConnectViewModel.cs" Line="2" Column="2" />
+      <File FileName="KangouAppMessenger/ViewModels/WaitingOrderViewModel.cs" Line="36" Column="36" />
+      <File FileName="KangouAppMessenger/Helpers/ConnectionManager.cs" Line="45" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.KangouMessenger.Droid MonoForAntroid.PreferredDevice="3.7&quot; WVGA (Nexus One)" />
+  <AuthorInfo Name="marcochavezf" Email="" Copyright="marcochavezf" Company="" Trademark="" />
+  <MonoDevelop.Ide.ItemProperties.KangouMessenger.Droid MonoForAntroid.PreferredDevice="Nexus 4" AndroidDeviceId-Debug="TA883036D6" />
 </Properties>

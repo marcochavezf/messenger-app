@@ -10,7 +10,5 @@ namespace KangouMessenger.Core
 		public const string	KangouGoingToDropOff = "KANGOU_GOING_TO_DROP_OFF";
 		public const string	KangouWaitingToDropOff = "KANGOU_WAITING_TO_DROP_OFF";
 		public const string	OrderSignedByClient = "ORDER_SIGNED_BY_CLIENT";
-		public const string	OrderReviewed = "ORDER_REVIEWED";
 	}
 }
-

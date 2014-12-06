@@ -6,7 +6,7 @@ using Android;
 namespace KangouMessenger.Droid
 {
     [Activity(
-		Label = "KangouMessenger.Droid"
+		Label = "Kangou Mensajero"
 		, MainLauncher = true
 		, Icon = "@drawable/icon"
 		, Theme = "@style/Theme.Splash"

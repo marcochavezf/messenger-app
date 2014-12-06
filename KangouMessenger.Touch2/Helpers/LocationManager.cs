@@ -31,8 +31,8 @@ namespace KangouMessenger.Touch
 				this.locMgr.RequestAlwaysAuthorization ();
 			LocationUpdated += PrintLocation;
 
-			Lat = 19.430473;
-			Lng = -99.200942;
+			Lat = 0;
+			Lng = 0;
 		}
 
 		// create a location manager to get system location updates to the application

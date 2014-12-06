@@ -12,6 +12,7 @@ namespace KangouMessenger.Core
 	public class ReviewViewModel
 		: BusyMvxViewModel
     {
+		/* Constructor */
 		public ReviewViewModel(){
 			ConnectionManager.On  ( SocketEvents.ReviewAccepted, (data) => {
 				ConnectionManager.Off  ( SocketEvents.ReviewAccepted );
@@ -20,6 +21,7 @@ namespace KangouMessenger.Core
 			});
 		}
 
+		/* Properties */
 		private string _commentsAboutClient;
 		public string CommentsAboutClient
 		{ 
@@ -45,7 +47,7 @@ namespace KangouMessenger.Core
 		{
 			DoAsyncLongTask (() => {
 				var orderId = DataOrderManager.Instance.DataOrder.Id;
-				var jsonString = String.Format( "{{ \"{0}\": {1}, \"commentsAboutClient\": \"{2}\", \"ratingAboutClient\": {3}, \"orderId\": \"{4}\" }}", SocketEvents.ReviewAccepted, "true", CommentsAboutClient, RatingAboutClient, orderId);
+				var jsonString = String.Format( "{{ \"{0}\": {1}, \"commentsAboutClient\": \"{2}\", \"ratingAboutClient\": {3}, \"orderId\": \"{4}\" }}", SocketEvents.ReviewAccepted, "true", CommentsAboutClient.Replace(System.Environment.NewLine," "), RatingAboutClient, orderId);
 				ConnectionManager.Emit( SocketEvents.ReviewAccepted, jsonString);
 			});
 		}

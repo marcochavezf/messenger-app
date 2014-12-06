@@ -16,16 +16,6 @@ namespace KangouMessenger.Core
 		{
 			ConnectionManager.Instance.KangouData = kangouData;
 
-			ConnectionManager.On(SocketEvents.Connected, (data) => {
-				System.Diagnostics.Debug.WriteLine ("connected On: {0}", data["isSuccesful"] );
-				if(IsBusy){
-					InvokeOnMainThread (delegate {
-						IsBusy = false;
-					});
-					ShowViewModel<WaitingOrderViewModel> ();
-				}
-			});
-
 			ConnectionManager.FailedToConnect (()=>{
 				InvokeOnMainThread (delegate {
 					IsBusy = false;
@@ -42,10 +32,28 @@ namespace KangouMessenger.Core
 		}
 		private void DoConnectCommand ()
 		{
-			IsBusy = true;
+			InvokeOnMainThread (delegate {
+				IsBusy = true;
+			});
 			Task.Run (()=>{
 				System.Diagnostics.Debug.WriteLine ("ConnectAsync");
 				ConnectionManager.Connect();
+			});
+
+			ConnectionManager.On(SocketEvents.Connected, (data) => {
+				ConnectionManager.Off(SocketEvents.Connected);
+
+				System.Diagnostics.Debug.WriteLine ("connected On: {0}", data["isSuccesful"] );
+				if(ConnectionManager.IsConectedByUser){
+					return;
+				}
+
+				ConnectionManager.IsConectedByUser = true;
+				if(IsBusy){
+					InvokeOnMainThread (delegate {
+						ShowViewModel<WaitingOrderViewModel> ();
+					});
+				}
 			});
 		}
 

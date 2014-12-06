@@ -15,15 +15,18 @@ namespace KangouMessenger.Core
 		: BusyMvxViewModel
     {
 
+		/* Constructor */
 		public PickUpRouteViewModel(bool removeNextToLastViewModel = true){
 			RemoveNextToLastViewModel = removeNextToLastViewModel;
 
 			ConnectionManager.On  ( SocketEvents.ArrivedToPickUp, (data) => {
 				ConnectionManager.Off( SocketEvents.ArrivedToPickUp );
+				ItNeedsToBeRemoved = true;
 				ShowViewModel<PickUpTimerViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
 			});
 		}
 
+		/* Properties */
 		private MvxCommand _helpCommand;
 		public ICommand HelpCommand {
 			get {
