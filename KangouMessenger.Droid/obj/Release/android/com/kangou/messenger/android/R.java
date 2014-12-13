@@ -232,48 +232,51 @@ containing a value of this type.
     }
     public static final class id {
         public static final int MvxBindingTagUnique=0x7f050005;
-        public static final int acceptButton=0x7f050021;
-        public static final int address=0x7f05000a;
-        public static final int callToCustomer=0x7f050010;
-        public static final int cancelButton=0x7f050020;
-        public static final int clientName=0x7f050014;
-        public static final int clientPhoneNumber=0x7f050015;
-        public static final int comments=0x7f050022;
+        public static final int acceptButton=0x7f050024;
+        public static final int address=0x7f05000b;
+        public static final int callToCustomer=0x7f050011;
+        public static final int cancelButton=0x7f050023;
+        public static final int clientName=0x7f050015;
+        public static final int clientPhoneNumber=0x7f050016;
+        public static final int comments=0x7f050025;
         public static final int connectButton=0x7f050008;
-        public static final int disconnectButton=0x7f05002a;
-        public static final int email=0x7f05001f;
-        public static final int emailEditText=0x7f050017;
-        public static final int from=0x7f05001b;
-        public static final int fromAddress=0x7f05001c;
-        public static final int helpButton=0x7f05000d;
+        public static final int disconnectButton=0x7f05002d;
+        public static final int email=0x7f050022;
+        public static final int emailEditText=0x7f050018;
+        public static final int from=0x7f05001e;
+        public static final int fromAddress=0x7f05001f;
+        public static final int helpButton=0x7f05000e;
         public static final int hybrid=0x7f050004;
-        public static final int imHereButton=0x7f05000e;
+        public static final int imHereButton=0x7f05000f;
+        public static final int infoPasswordA=0x7f05001b;
+        public static final int infoPasswordB=0x7f05001c;
         public static final int instructions=0x7f050006;
-        public static final int items=0x7f05001a;
-        public static final int labelHelp=0x7f050016;
-        public static final int linearLayout4=0x7f050009;
-        public static final int loginButton=0x7f050019;
-        public static final int map=0x7f05000f;
-        public static final int name=0x7f05000c;
+        public static final int items=0x7f05001d;
+        public static final int labelHelp=0x7f050017;
+        public static final int linearLayout4=0x7f05000a;
+        public static final int loginButton=0x7f05001a;
+        public static final int map=0x7f050010;
+        public static final int name=0x7f05000d;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
-        public static final int passwordEditText=0x7f050018;
-        public static final int pickedButton=0x7f050011;
-        public static final int references=0x7f05000b;
+        public static final int passwordEditText=0x7f050019;
+        public static final int pickedButton=0x7f050012;
+        public static final int references=0x7f05000c;
         public static final int satellite=0x7f050002;
         public static final int send=0x7f050007;
-        public static final int sendInfoButton=0x7f050029;
-        public static final int starButton1=0x7f050024;
-        public static final int starButton2=0x7f050025;
-        public static final int starButton3=0x7f050026;
-        public static final int starButton4=0x7f050027;
-        public static final int starButton5=0x7f050028;
-        public static final int tableRow2=0x7f050023;
+        public static final int sendInfoButton=0x7f05002c;
+        public static final int starButton1=0x7f050027;
+        public static final int starButton2=0x7f050028;
+        public static final int starButton3=0x7f050029;
+        public static final int starButton4=0x7f05002a;
+        public static final int starButton5=0x7f05002b;
+        public static final int tableRow2=0x7f050026;
         public static final int terrain=0x7f050003;
-        public static final int timer=0x7f050013;
-        public static final int timerTitle=0x7f050012;
-        public static final int to=0x7f05001d;
-        public static final int toAddress=0x7f05001e;
+        public static final int textView1=0x7f050009;
+        public static final int timer=0x7f050014;
+        public static final int timerTitle=0x7f050013;
+        public static final int to=0x7f050020;
+        public static final int toAddress=0x7f050021;
     }
     public static final class layout {
         public static final int clientsignatureview=0x7f030000;
@@ -382,6 +385,9 @@ containing a value of this type.
          */
         public static final int common_signin_button_text_long=0x7f060012;
         public static final int hello=0x7f060019;
+        public static final int infoConnect=0x7f06001d;
+        public static final int infoPasswordA=0x7f06001b;
+        public static final int infoPasswordB=0x7f06001c;
     }
     public static final class style {
         public static final int Theme_Splash=0x7f070000;

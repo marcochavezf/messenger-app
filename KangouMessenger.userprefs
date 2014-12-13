@@ -1,16 +1,20 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Android.TA883036D6" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="KangouAppMessenger/ViewModels/ConnectViewModel.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Android" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="KangouMessenger.Droid/Views/ReceivingOrderView.cs">
     <Files>
-      <File FileName="KangouAppMessenger/ViewModels/ConnectViewModel.cs" Line="2" Column="2" />
-      <File FileName="KangouAppMessenger/ViewModels/WaitingOrderViewModel.cs" Line="36" Column="36" />
-      <File FileName="KangouAppMessenger/Helpers/ConnectionManager.cs" Line="45" Column="45" />
+      <File FileName="KangouMessenger.Droid/Views/WaitingOrderView.cs" Line="65" Column="65" />
+      <File FileName="KangouAppMessenger/ViewModels/WaitingOrderViewModel.cs" Line="13" Column="13" />
+      <File FileName="KangouAppMessenger/ViewModels/LoginViewModel.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Droid/Views/ReceivingOrderView.cs" Line="10" Column="10" />
+      <File FileName="KangouAppMessenger/ViewModels/ReceivingOrderViewModel.cs" Line="31" Column="31" />
+      <File FileName="KangouAppMessenger/Helpers/Timer.cs" Line="6" Column="6" />
+      <File FileName="KangouMessenger.Droid/Helpers/BusyMvxActivity.cs" Line="51" Column="51" />
+      <File FileName="KangouAppMessenger/Helpers/BusyMvxViewModel.cs" Line="39" Column="39" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <AuthorInfo Name="marcochavezf" Email="" Copyright="marcochavezf" Company="" Trademark="" />
-  <MonoDevelop.Ide.ItemProperties.KangouMessenger.Droid MonoForAntroid.PreferredDevice="Nexus 4" AndroidDeviceId-Debug="TA883036D6" />
+  <MonoDevelop.Ide.ItemProperties.KangouMessenger.Droid MonoForAntroid.PreferredDevice="3.2&quot; HVGA slider (ADP1)" />
 </Properties>

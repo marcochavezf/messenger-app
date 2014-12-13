@@ -13,10 +13,11 @@ using Android.Widget;
 using Cirrious.MvvmCross.Droid.Views;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using KangouMessenger.Core;
+using Android.Content.PM;
 
 namespace KangouMessenger.Droid
 {
-	[Activity (Label = "Mensajero", Icon="@drawable/icon")]			
+	[Activity (Label = "Mensajero", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class BusyMvxActivity : MvxActivity
 	{
 

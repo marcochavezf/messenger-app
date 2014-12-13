@@ -6,10 +6,11 @@ using KangouMessenger.Core;
 using Android.Content;
 using Android.Widget;
 using Android.Views.InputMethods;
+using Android.Content.PM;
 
 namespace KangouMessenger.Droid
 {
-	[Activity(Label = "Ayuda", Icon="@drawable/icon")]
+	[Activity(Label = "Ayuda", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
 	public class HelpView : BusyMvxActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -17,5 +18,10 @@ namespace KangouMessenger.Droid
             base.OnCreate(bundle);
 			SetContentView(Resource.Layout.HelpView);
         }
+
+		public override void OnBackPressed ()
+		{
+			Finish ();
+		}
     }
 }

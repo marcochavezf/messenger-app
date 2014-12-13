@@ -71,7 +71,7 @@ namespace KangouMessenger.Core
 									var rootObj = _jsonConverter.DeserializeObject<User>(rawDataReceived);
 									var userId = rootObj.userId;
 									if(userId.Equals("error") || userId.Equals("not found"))
-										errorAction(userId);
+										errorAction(rootObj.err);
 									else
 										succesAction(userId);
 								}

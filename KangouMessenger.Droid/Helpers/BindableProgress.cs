@@ -23,6 +23,9 @@ namespace KangouMessenger.Droid
 		}
 
 		private ProgressDialog _dialog;
+		public ProgressDialog ProgressDialog { 
+			get { return _dialog; }
+		}
 
 		public bool Visible
 		{

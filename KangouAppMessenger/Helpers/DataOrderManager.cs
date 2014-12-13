@@ -8,7 +8,7 @@ namespace KangouMessenger.Core
 	{
 		private static DataOrderManager instance;
 
-		private bool _isOrderActive;
+		private volatile bool _isOrderActive;
 		public DataOrder DataOrder { private set; get; }
 
 		public bool IsOrderActive { 

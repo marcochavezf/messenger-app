@@ -5,10 +5,11 @@ using Android.Widget;
 using KangouMessenger.Core;
 using Android.Content;
 using System;
+using Android.Content.PM;
 
 namespace KangouMessenger.Droid
 {
-	[Activity(Label = "Calificación del servicio", Icon="@drawable/icon")]
+	[Activity(Label = "Calificación del servicio", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
 	public class ReviewView : BusyMvxActivity
 	{
 		protected override void OnCreate(Bundle bundle)

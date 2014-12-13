@@ -7,6 +7,11 @@ using System.Collections.Generic;
 
 namespace KangouMessenger.Core
 {
+	public enum ConnectionStates
+	{
+		USER_WANTS_TO_BE_CONNECTED, CONNECTED_BY_SERVER, DISCONNECTED_BY_USER 
+	}
+
 	public class ConnectionManager
 	{
 		private const string _endPoint 	= "kangou.herokuapp.com";
@@ -18,14 +23,44 @@ namespace KangouMessenger.Core
 		public KangouData KangouData { get; set; }
 			
 		private static ConnectionManager instance;
+		public static volatile ConnectionStates ConnectionState;
 		
 		private ConnectionManager() {
 			Socket =  new SocketIO (host : _endPoint, port : port);
+			ConnectionState = ConnectionStates.DISCONNECTED_BY_USER;
 		}
 
 		public static void FailedToConnect(Action action){
+
+			Instance.Socket.SocketFailedToConnect -= null;
+			Instance.Socket.SocketClosedByError -= null;
+			Instance.Socket.TimedOut -= null;
+
 			Instance.Socket.SocketFailedToConnect += (obj) => {
 				action();
+			};
+
+			Instance.Socket.SocketClosedByError += (arg1, arg2) => {
+				Instance.TryingToReconnect (true);
+				Debug.WriteLine("handleConnectError IsConectedByUser: {0}",ConnectionState);
+
+				if(ConnectionState == ConnectionStates.USER_WANTS_TO_BE_CONNECTED
+				|| ConnectionState == ConnectionStates.CONNECTED_BY_SERVER) {
+					Debug.WriteLine("ConnectAgain");
+
+					Connect();
+				}
+			};
+
+			Instance.Socket.TimedOut += () => {
+				Instance.TryingToReconnect (true);
+
+				if(ConnectionState == ConnectionStates.USER_WANTS_TO_BE_CONNECTED
+				|| ConnectionState == ConnectionStates.CONNECTED_BY_SERVER) {
+					Debug.WriteLine("ConnectAgain");
+
+					Connect();
+				}
 			};
 		}
 
@@ -44,6 +79,15 @@ namespace KangouMessenger.Core
 					{ "userId", Instance.KangouData.Id.ToString() },
 				});
 		}
+
+		public static void ConnectAgain(){
+			Instance.Socket.ConnectAsync (new Dictionary<string, string>()
+				{
+					{ "typeUser", "kangouMessenger" },
+					{ "userId", Instance.KangouData.Id.ToString() },
+					{ "isTryingToReconnect", "true" },
+				});
+		}
 				
 		public static void Disconnect(){
 			Instance.Socket.Disconnect ();
@@ -58,7 +102,7 @@ namespace KangouMessenger.Core
 				Instance.Socket.On (SocketEvents.Connected, (data) => {
 					Instance.Socket.Emit (name, args);
 				});
-				Connect ();
+				ConnectAgain ();
 			}
 		}
 

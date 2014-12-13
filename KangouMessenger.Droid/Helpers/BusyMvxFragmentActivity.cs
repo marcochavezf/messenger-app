@@ -14,12 +14,15 @@ using Android.Widget;
 using Cirrious.MvvmCross.Droid.Fragging;
 using Cirrious.MvvmCross.Binding.BindingContext;
 using KangouMessenger.Core;
+using Android.Content.PM;
 
 namespace KangouMessenger.Droid
 {
+	[Activity (Label = "Mensajero", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]		
 	public class BusyMvxFragmentActivity : MvxFragmentActivity
 	{
 		protected BindableProgress _bindableProgress;
+
 
 		protected override void OnCreate(Bundle bundle)
 		{

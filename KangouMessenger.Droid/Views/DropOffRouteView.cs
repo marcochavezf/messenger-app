@@ -18,10 +18,11 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Android.Graphics;
 using System.Threading;
+using Android.Content.PM;
 
 namespace KangouMessenger.Droid
 {
-	[Activity(Label = "Ir a entregar", Icon="@drawable/icon")]
+	[Activity(Label = "Ir a entregar", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
 	public class DropOffRouteView : BusyMvxFragmentActivity
 	{
 		SupportMapFragment _mapFragment;

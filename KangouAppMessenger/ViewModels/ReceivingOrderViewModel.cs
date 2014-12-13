@@ -5,6 +5,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System;
 using System.Diagnostics;
+using System.Diagnostics.Contracts;
 
 
 namespace KangouMessenger.Core
@@ -12,19 +13,14 @@ namespace KangouMessenger.Core
     public class ReceivingOrderViewModel 
 		: BusyMvxViewModel
     {
+
 		/* Constructor */
 		public ReceivingOrderViewModel() : base() {
-		
+
 			ConnectionManager.On  ( SocketEvents.AcceptInfoOrder, (data) => {
 				TurnOffConnectionEvents();
 				ItNeedsToBeRemoved = true;
 				ShowViewModel<PickUpRouteViewModel>(new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
-			});
-
-			ConnectionManager.On  ( SocketEvents.CancelInfoOrder, (data) => {
-				TurnOffConnectionEvents();
-				DataOrderManager.Instance.IsOrderActive = false;
-				Close(this);
 			});
 
 			ConnectionManager.On  ( SocketEvents.OrderTakenFromSomeoneElse, (data) => {
@@ -63,16 +59,25 @@ namespace KangouMessenger.Core
 		public string AproximateDistance { 
 			get { return _aproximateDistance; }
 			set {
-				_aproximateDistance = value;
+				_aproximateDistance = String.Format("{0} km",value);
 				RaisePropertyChanged (() => AproximateDistance);
 			}
 		}
 
-		private string _aproximateDistanceToFirstPoint = "Distancia al primer punto:\n" + DataOrderManager.Instance.DataOrder.AproximateDistanceToFirstPoint;
+		private string _timerToCancel;
+		public string TimerToCancel { 
+			get { return _timerToCancel; }
+			set {
+				_timerToCancel = value;
+				RaisePropertyChanged (() => TimerToCancel);
+			}
+		}
+
+		private string _aproximateDistanceToFirstPoint;
 		public string AproximateDistanceToFirstPoint { 
 			get { return _aproximateDistanceToFirstPoint; }
 			set {
-				_aproximateDistanceToFirstPoint = "Distancia al primer punto:\n" + value;
+				_aproximateDistanceToFirstPoint = String.Format("Distancia a {0}: {1} km",PickUpShortAddress,value);
 				RaisePropertyChanged (() => AproximateDistanceToFirstPoint);
 			}
 		}
@@ -86,6 +91,14 @@ namespace KangouMessenger.Core
 		}
 		private void DoAcceptCommand ()
 		{
+			CancelLocalNotification ();
+			TimerToCancel = "Esperando respuesta...";
+
+			if (ConnectionManager.ConnectionState == ConnectionStates.DISCONNECTED_BY_USER) {
+				Close (this);
+				return;
+			}
+
 			DoAsyncLongTask (() => {
 				var jsonString = String.Format( "{{ \"{0}\": {1} }}", SocketEvents.AcceptInfoOrder, true);
 				Debug.WriteLine("Accept Info Order: {0}",jsonString);
@@ -105,13 +118,24 @@ namespace KangouMessenger.Core
 
 		private void DoCancelCommand()
 		{
-			DoAsyncLongTask (() => {
+			CancelLocalNotification ();
+			TurnOffConnectionEvents();
+			DataOrderManager.Instance.IsOrderActive = false;
+
+
+			if (ConnectionManager.ConnectionState != ConnectionStates.DISCONNECTED_BY_USER) {
+				DoAsyncLongTask (() => {
+
+				});
 				var jsonString = String.Format( "{{ \"{0}\": {1} }}", SocketEvents.CancelInfoOrder, "true");
 				ConnectionManager.Emit( SocketEvents.CancelInfoOrder, jsonString);
-			});
+			}
+
+			Close(this);
 		}
 
 		/* Actions to implement in platform specifi view */
 		public Action OrderTakenFromSomeoneElse { get; set; }
+		public Action CancelLocalNotification { get; set; }
     }
 }

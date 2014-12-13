@@ -13,9 +13,13 @@ namespace KangouMessenger.Core
 		: BusyMvxViewModel
     {
 		private readonly KangouClient _kangouClient;
+
 		public LoginViewModel (IMvxJsonConverter jsonConverter) : base()
 		{
 			_kangouClient = new KangouClient (jsonConverter);
+
+			_email = "test@kangou.mx";
+			_password = "123";
 		}
 
 		private string _email;
@@ -62,7 +66,7 @@ namespace KangouMessenger.Core
 					InvokeOnMainThread (delegate {  
 						IsBusy = false;
 						if(LoginError != null)
-							LoginError();
+							LoginError(error);
 					});
 
 				});
@@ -72,7 +76,7 @@ namespace KangouMessenger.Core
 
 		/* Actions to implement in specific views */
 
-		public Action LoginError { get; set; }
+		public Action<string> LoginError { get; set; }
 
     }
 }

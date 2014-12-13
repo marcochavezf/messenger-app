@@ -13,13 +13,15 @@ namespace KangouMessenger.Core
     public class WaitingOrderViewModel 
 		: BusyMvxViewModel
     {
-
 		/* Constructor */
 		public WaitingOrderViewModel(){
 
 			IsTryingToReconnect = false;
 
 			ConnectionManager.On (SocketEvents.InfoOrder, (data) => {
+
+				if(ConnectionManager.ConnectionState == ConnectionStates.DISCONNECTED_BY_USER)
+					return;
 
 				Debug.WriteLine("listItems: {0}",data["listItems"]);
 
@@ -42,6 +44,7 @@ namespace KangouMessenger.Core
 				Debug.WriteLine("IsActive: {0}",DataOrderManager.Instance.IsOrderActive);
 
 				if(!DataOrderManager.Instance.IsOrderActive){
+					ConnectionManager.Emit(SocketEvents.InfoOrder, "{}");
 					DataOrderManager.Instance.SetData( data );
 					ReceivingInfoOrderToLocalNotification(DataOrderManager.Instance.DataOrder.PickUpAdress, DataOrderManager.Instance.DataOrder.DropOffAdress);
 					ShowViewModel<ReceivingOrderViewModel>();
@@ -49,6 +52,10 @@ namespace KangouMessenger.Core
 			});
 
 			ConnectionManager.On (SocketEvents.ResumeOrder, (data) => {
+
+				if(ConnectionManager.ConnectionState == ConnectionStates.DISCONNECTED_BY_USER)
+					return;
+
 				ConnectionManager.Emit(SocketEvents.ResumeOrder, "{}");
 				if(!DataOrderManager.Instance.IsOrderActive){
 					DataOrderManager.Instance.SetData( data );
@@ -111,7 +118,7 @@ namespace KangouMessenger.Core
 		{
 			IsBusy = true;
 			Task.Run (()=>{
-				ConnectionManager.IsConectedByUser = false;
+				ConnectionManager.ConnectionState = ConnectionStates.DISCONNECTED_BY_USER;
 				ConnectionManager.Disconnect();
 				InvokeOnMainThread (delegate {
 					IsBusy = false;

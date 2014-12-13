@@ -27,8 +27,12 @@ namespace KangouMessenger.Core
 		}
 
 		protected bool _thisViewhasBeenClosed;
+		protected volatile bool _itNeeedsToBeRemoved;
 		public bool RemoveNextToLastViewModel { get; protected set; } 	//For iOS version
-		public bool ItNeedsToBeRemoved { get; set; }					//For Android version
+		public bool  ItNeedsToBeRemoved { 
+			get { return _itNeeedsToBeRemoved; }
+			set { _itNeeedsToBeRemoved = value; }
+		}				//For Android version
 
 		public BusyMvxViewModel()  {
 			_thisViewhasBeenClosed = false;

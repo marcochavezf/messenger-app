@@ -6,10 +6,11 @@ using KangouMessenger.Core;
 using Android.Content;
 using Android.Widget;
 using Android.Views.InputMethods;
+using Android.Content.PM;
 
 namespace KangouMessenger.Droid
 {
-	[Activity(Label = "Esperando para recoger", Icon="@drawable/icon")]
+	[Activity(Label = "Esperando para recoger", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
     public class PickUpTimerView : BusyMvxActivity
     {
         protected override void OnCreate(Bundle bundle)

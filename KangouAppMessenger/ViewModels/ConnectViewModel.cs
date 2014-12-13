@@ -32,6 +32,7 @@ namespace KangouMessenger.Core
 		}
 		private void DoConnectCommand ()
 		{
+			ConnectionManager.ConnectionState = ConnectionStates.USER_WANTS_TO_BE_CONNECTED;
 			InvokeOnMainThread (delegate {
 				IsBusy = true;
 			});
@@ -43,19 +44,37 @@ namespace KangouMessenger.Core
 			ConnectionManager.On(SocketEvents.Connected, (data) => {
 				ConnectionManager.Off(SocketEvents.Connected);
 
-				System.Diagnostics.Debug.WriteLine ("connected On: {0}", data["isSuccesful"] );
-				if(ConnectionManager.IsConectedByUser){
-					return;
-				}
+				if(ConnectionManager.ConnectionState == ConnectionStates.USER_WANTS_TO_BE_CONNECTED){
 
-				ConnectionManager.IsConectedByUser = true;
-				if(IsBusy){
-					InvokeOnMainThread (delegate {
-						ShowViewModel<WaitingOrderViewModel> ();
-					});
+					System.Diagnostics.Debug.WriteLine ("connected On: {0}", data["isSuccesful"] );
+					ConnectionManager.ConnectionState = ConnectionStates.CONNECTED_BY_SERVER;
+
+					if(IsBusy){
+						InvokeOnMainThread (delegate {
+							ShowViewModel<WaitingOrderViewModel> ();
+						});
+					}
 				}
 			});
 		}
 
+
+		private MvxCommand _cancelConnectCommand;
+		public ICommand CancelConnectCommand {
+			get {
+				_cancelConnectCommand = _cancelConnectCommand ?? new MvxCommand (DoCancelConnectCommand);
+				return _cancelConnectCommand;
+			}
+		}
+		private void DoCancelConnectCommand ()
+		{
+			Task.Run (() => {
+				ConnectionManager.ConnectionState = ConnectionStates.DISCONNECTED_BY_USER;
+				ConnectionManager.Disconnect ();
+				InvokeOnMainThread (delegate {
+					IsBusy = false;
+				});
+			});
+		}
     }
 }

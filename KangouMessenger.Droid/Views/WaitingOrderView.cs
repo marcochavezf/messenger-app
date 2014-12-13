@@ -14,10 +14,13 @@ using Android.Support.V4.App;
 using Android.Content;
 using Android.Widget;
 using Android.Provider;
+using Android.Content.PM;
+using Android.Media;
+using Android.Graphics;
 
 namespace KangouMessenger.Droid
 {
-	[Activity(Label = "Conectado", Icon="@drawable/icon")]
+	[Activity(Label = "Conectado", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
 	public class WaitingOrderView : BusyMvxFragmentActivity, ILocationListener
 	{
 		private Location _currentLocation;
@@ -27,7 +30,7 @@ namespace KangouMessenger.Droid
 		private bool _isCameraUpdated;
 		private WaitingOrderViewModel _viewModel;
 		private BindableProgress _retryingToConnectProgress;
-		private volatile bool _isDisconnected;
+		public static readonly int NOTIFICATION_ID_ORDER_RECEIVED = 265431;
 
 		public static double CurrentLat { get; private set; }
 		public static double CurrentLng { get; private set; }
@@ -39,7 +42,6 @@ namespace KangouMessenger.Droid
 
 			_mapFragment = (SupportMapFragment)SupportFragmentManager.FindFragmentById(Resource.Id.map);
 			_mapFragment.Map.MyLocationEnabled = true;
-			_isDisconnected = false;
 
 			_retryingToConnectProgress = new BindableProgress(this, "Conectando", "Esperando servicio...");
 
@@ -52,28 +54,47 @@ namespace KangouMessenger.Droid
 			_viewModel = (WaitingOrderViewModel)ViewModel;
 			_viewModel.ReceivingInfoOrderToLocalNotification += (shortPickUpAddress, shortDropOffAddress) => {
 
-				// Instantiate the builder and set notification elements:
-				NotificationCompat.Builder builder = new NotificationCompat.Builder (this)
-					.SetContentTitle ("Orden Registrada")
-					.SetContentText (String.Format("De {0} a {1}",shortPickUpAddress,shortDropOffAddress))
-					.SetDefaults(NotificationCompat.DefaultAll)
-					.SetSmallIcon (Resource.Drawable.Icon);
+				RunOnUiThread(delegate {
 
-				// Build the notification:
-				Notification notification = builder.Build();
+					// Set up an intent so that tapping the notifications returns to this app:
+					Intent intent = new Intent (this, typeof(ReceivingOrderView));
+					intent.SetFlags(ActivityFlags.FromBackground | ActivityFlags.SingleTop);
 
-				// Get the notification manager:
-				NotificationManager notificationManager = GetSystemService (Context.NotificationService) as NotificationManager;
+					// Create a PendingIntent; we're only using one PendingIntent (ID = 0):
+					const int pendingIntentId = 0;
+					PendingIntent pendingIntent = PendingIntent.GetActivity (this, pendingIntentId, intent, PendingIntentFlags.OneShot);
 
-				// Publish the notification:
-				const int notificationId = 0;
-				notificationManager.Notify (notificationId, notification);
+					// Instantiate the builder and set notification elements:
+					NotificationCompat.Builder builder = new NotificationCompat.Builder (this)
+						.SetContentIntent (pendingIntent)
+						.SetContentTitle ("Orden Registrada")
+						.SetContentText (String.Format("De {0} a {1}",shortPickUpAddress,shortDropOffAddress))
+						.SetPriority(NotificationCompat.PriorityHigh)
+						.SetLights(Color.Orange, 1,1)
+						.SetSound(RingtoneManager.GetDefaultUri(RingtoneType.Ringtone))
+						.SetVibrate(new long[] {0,5000,1000,5000,1000,5000,1000,5000,5000,1000,5000,1000,5000,1000,5000,1000,5000,1000,5000,5000,1000,5000,1000,5000})
+						.SetSmallIcon (Resource.Drawable.Icon);
+
+					// Build the notification:
+					Notification notification = builder.Build();
+
+					// Get the notification manager:
+					NotificationManager notificationManager = GetSystemService (Context.NotificationService) as NotificationManager;
+
+					// Publish the notification:
+					try{
+						notificationManager.Notify (NOTIFICATION_ID_ORDER_RECEIVED, notification);
+					} catch (Exception e){
+						Console.WriteLine("Exception: {0}",e);
+					}
+
+				});
 			};
 
 			var disconnectButton = FindViewById<Button> (Resource.Id.disconnectButton);
 			disconnectButton.Click += (object sender, EventArgs e) => {
 				_locationManager.RemoveUpdates(this);
-				_isDisconnected = true;
+				ConnectionManager.ConnectionState = ConnectionStates.DISCONNECTED_BY_USER;
 			};
 		}
 
@@ -98,7 +119,7 @@ namespace KangouMessenger.Droid
 
 		public void OnLocationChanged(Location location) {
 
-			if (_isDisconnected || !ConnectionManager.IsConectedByUser)
+			if (ConnectionManager.ConnectionState == ConnectionStates.DISCONNECTED_BY_USER)
 				return;
 
 			_currentLocation = location;
@@ -124,7 +145,7 @@ namespace KangouMessenger.Droid
 					builder.Zoom (14);
 					CameraPosition cameraPosition = builder.Build ();
 					CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition (cameraPosition);
-					_mapFragment.Map.AnimateCamera (cameraUpdate);
+					_mapFragment.Map.MoveCamera (cameraUpdate);
 				}
 			}
 		}
