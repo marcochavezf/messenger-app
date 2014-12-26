@@ -18,8 +18,10 @@ namespace KangouMessenger.Core
 			ConnectionManager.On  ( SocketEvents.ArrivedToDropOff, (data) => {
 				ConnectionManager.Off( SocketEvents.ArrivedToDropOff );
 				ItNeedsToBeRemoved = true;
+				IsBusy = false;
 				ShowViewModel<DropOffTimerViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
 			});
+			ConnectionManager.Instance.KangouData.AppView = "DropOffRouteView";
 		}
 			
 		/* Properties */

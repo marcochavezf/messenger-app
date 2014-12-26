@@ -16,6 +16,9 @@ namespace KangouMessenger.Core
 	{
 		private const string _endPoint 	= "kangou.herokuapp.com";
 		private int port = 80;
+		private static int _ticksCounterToConnectAgain;
+		private volatile static Dictionary<string, Action> _actionsToPerform;
+
 		//private const string _endPoint 	= "localhost";
 		//private int port = 5000;
 
@@ -28,40 +31,42 @@ namespace KangouMessenger.Core
 		private ConnectionManager() {
 			Socket =  new SocketIO (host : _endPoint, port : port);
 			ConnectionState = ConnectionStates.DISCONNECTED_BY_USER;
-		}
+			_ticksCounterToConnectAgain = 0;
+			_actionsToPerform = new Dictionary<string, Action> ();
 
-		public static void FailedToConnect(Action action){
-
-			Instance.Socket.SocketFailedToConnect -= null;
-			Instance.Socket.SocketClosedByError -= null;
-			Instance.Socket.TimedOut -= null;
-
-			Instance.Socket.SocketFailedToConnect += (obj) => {
-				action();
-			};
-
-			Instance.Socket.SocketClosedByError += (arg1, arg2) => {
+			Socket.SocketClosedByError += (arg1, arg2) => {
 				Instance.TryingToReconnect (true);
 				Debug.WriteLine("handleConnectError IsConectedByUser: {0}",ConnectionState);
 
 				if(ConnectionState == ConnectionStates.USER_WANTS_TO_BE_CONNECTED
-				|| ConnectionState == ConnectionStates.CONNECTED_BY_SERVER) {
-					Debug.WriteLine("ConnectAgain");
+					|| ConnectionState == ConnectionStates.CONNECTED_BY_SERVER) {
+					Debug.WriteLine("ConnectAgain because of SocketClosedByError");
 
 					Connect();
 				}
 			};
 
-			Instance.Socket.TimedOut += () => {
+			Socket.TimedOut += () => {
 				Instance.TryingToReconnect (true);
 
 				if(ConnectionState == ConnectionStates.USER_WANTS_TO_BE_CONNECTED
-				|| ConnectionState == ConnectionStates.CONNECTED_BY_SERVER) {
+					|| ConnectionState == ConnectionStates.CONNECTED_BY_SERVER) {
 					Debug.WriteLine("ConnectAgain");
-
 					Connect();
 				}
 			};
+
+			Socket.On (SocketEvents.Connected, (data) => {
+				Debug.WriteLine ("**** Performing events ****");
+				foreach(KeyValuePair<string, Action> entry in _actionsToPerform){
+					Debug.WriteLine(" Action performed: {0}", entry.Key);
+					entry.Value();
+				}
+			});
+		}
+
+		public static void FailedToConnect(Action action){
+
 		}
 
 		public static void On(string name, Action <JToken> handler){
@@ -70,22 +75,16 @@ namespace KangouMessenger.Core
 
 		public static void Off(string name){
 			Instance.Socket.Off (name);
+			var isRemoved = _actionsToPerform.Remove (name);
+			Debug.WriteLine ("{0} is removed: {1}",name,isRemoved);
 		}
 
 		public static void Connect(){
 			Instance.Socket.ConnectAsync (new Dictionary<string, string>()
 				{
 					{ "typeUser", "kangouMessenger" },
-					{ "userId", Instance.KangouData.Id.ToString() },
-				});
-		}
-
-		public static void ConnectAgain(){
-			Instance.Socket.ConnectAsync (new Dictionary<string, string>()
-				{
-					{ "typeUser", "kangouMessenger" },
-					{ "userId", Instance.KangouData.Id.ToString() },
-					{ "isTryingToReconnect", "true" },
+					{ "userId", Instance.KangouData.Id },
+					{ "appView", Instance.KangouData.AppView }
 				});
 		}
 				
@@ -94,15 +93,36 @@ namespace KangouMessenger.Core
 		}
 			
 		public static void Emit (string name, IEnumerable args){
+
+			switch (name) {
+			case SocketEvents.AcceptInfoOrder:
+			case SocketEvents.CancelInfoOrder:
+
+			case SocketEvents.ArrivedToPickUp:
+			case SocketEvents.HasPickedUp:
+			case SocketEvents.ArrivedToDropOff:
+			case SocketEvents.HasDroppedOff:
+			case SocketEvents.ClientSignatureAccepted:
+			case SocketEvents.ReviewAccepted:
+				Debug.WriteLine ("***** Adding: {0}",name);
+				_actionsToPerform.Add (name, delegate {
+					Instance.Socket.Emit (name, args);
+				});
+				break;
+			}
+
 			if (Instance.Socket.Connected) {
 				Instance.TryingToReconnect (false);
 				Instance.Socket.Emit (name, args);
 			} else {
 				Instance.TryingToReconnect (true);
-				Instance.Socket.On (SocketEvents.Connected, (data) => {
-					Instance.Socket.Emit (name, args);
-				});
-				ConnectAgain ();
+
+				_ticksCounterToConnectAgain++;
+				if (_ticksCounterToConnectAgain < 5)
+					return;
+
+				_ticksCounterToConnectAgain = 0;
+				Connect ();
 			}
 		}
 

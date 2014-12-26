@@ -50,13 +50,20 @@ namespace KangouMessenger.Droid
 				e.Handled = false;
 			};
 
+			CameraPosition.Builder builder = CameraPosition.InvokeBuilder ();
+			builder.Target (origin);
+			builder.Zoom (14);
+			CameraPosition cameraPosition = builder.Build ();
+			CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition (cameraPosition);
+			_mapFragment.Map.MoveCamera (cameraUpdate);
+
 			var addressTextView = FindViewById<TextView> (Resource.Id.address);
 			var referencesTextView = FindViewById<TextView> (Resource.Id.references);
 			var nameTextView = FindViewById<TextView> (Resource.Id.name);
 
 			addressTextView.Text = "Dirección: " + dataOrder.DropOffAdress;
 			referencesTextView.Text = "Referencia: " + dataOrder.DropOffRefences;
-			nameTextView.Text = "Referencia: " + dataOrder.DropOffFullName;
+			nameTextView.Text = "Nombre: " + dataOrder.DropOffFullName;
 
 			var imNotNearDialog = new AlertDialog.Builder (this);
 			imNotNearDialog.SetTitle ("Se encuentra todavía lejos");

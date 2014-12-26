@@ -49,7 +49,7 @@ namespace KangouMessenger.Droid
 			};
 			paint.SetStyle (Paint.Style.Stroke);
 
-			for (var i = 1; i < _lines.Count; i++) {
+			for (var i = 0; i < _lines.Count; i++) {
 				var points = _lines [i];
 
 				if (points.Count == 0)
@@ -65,12 +65,25 @@ namespace KangouMessenger.Droid
 			}
 		}
 
+		public List<List<PointF>> Lines {
+			get { 
+				return _lines; 
+			}
+		}
+
+		public void CleanLines(){
+			_lines = new List<List<PointF>> ();
+			_line = new List<PointF> ();
+			_lines.Add (_line);
+			Invalidate ();
+		}
+
 		void Initialize ()
 		{
 			this.Touch += TouchMeImageViewOnTouch;
 			_lines = new List<List<PointF>> ();
-			_lines.Add (_line);
 			_line = new List<PointF> ();
+			_lines.Add (_line);
 		}
 
 		private void TouchMeImageViewOnTouch(object sender, View.TouchEventArgs touchEventArgs)

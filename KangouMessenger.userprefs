@@ -1,16 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Android" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="KangouMessenger.Droid/Views/ReceivingOrderView.cs">
-    <Files>
-      <File FileName="KangouMessenger.Droid/Views/WaitingOrderView.cs" Line="65" Column="65" />
-      <File FileName="KangouAppMessenger/ViewModels/WaitingOrderViewModel.cs" Line="13" Column="13" />
-      <File FileName="KangouAppMessenger/ViewModels/LoginViewModel.cs" Line="1" Column="1" />
-      <File FileName="KangouMessenger.Droid/Views/ReceivingOrderView.cs" Line="10" Column="10" />
-      <File FileName="KangouAppMessenger/ViewModels/ReceivingOrderViewModel.cs" Line="31" Column="31" />
-      <File FileName="KangouAppMessenger/Helpers/Timer.cs" Line="6" Column="6" />
-      <File FileName="KangouMessenger.Droid/Helpers/BusyMvxActivity.cs" Line="51" Column="51" />
-      <File FileName="KangouAppMessenger/Helpers/BusyMvxViewModel.cs" Line="39" Column="39" />
-    </Files>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Android.Android" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

@@ -65,3 +65,6 @@
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/SuperSocket.ClientEngine.Protocol.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/SuperSocket.ClientEngine.Common.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/System.Net.Http.Primitives.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/System.Text.RegularExpressions.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/System.Net.Requests.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/System.Net.Primitives.dll

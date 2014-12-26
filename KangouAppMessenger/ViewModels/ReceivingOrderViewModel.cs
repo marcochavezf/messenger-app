@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System;
 using System.Diagnostics;
 using System.Diagnostics.Contracts;
+using Cirrious.MvvmCross.Plugins.Messenger;
 
 
 namespace KangouMessenger.Core
@@ -13,13 +14,21 @@ namespace KangouMessenger.Core
     public class ReceivingOrderViewModel 
 		: BusyMvxViewModel
     {
+		private readonly MvxSubscriptionToken _token;
+		private readonly IMvxMessenger _messenger;
+		private int _tick;
 
 		/* Constructor */
-		public ReceivingOrderViewModel() : base() {
+		public ReceivingOrderViewModel(IMvxMessenger messenger) : base() {
+
+			_token = messenger.Subscribe<LocationMessage>(OnLocationMessage);
+			_messenger = messenger;
+			_tick = 30;
 
 			ConnectionManager.On  ( SocketEvents.AcceptInfoOrder, (data) => {
 				TurnOffConnectionEvents();
 				ItNeedsToBeRemoved = true;
+				IsBusy = false;
 				ShowViewModel<PickUpRouteViewModel>(new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
 			});
 
@@ -30,6 +39,19 @@ namespace KangouMessenger.Core
 				if(OrderTakenFromSomeoneElse != null)
 					OrderTakenFromSomeoneElse();
 			});
+
+			ConnectionManager.Instance.KangouData.AppView = "ReceivingOrderView";
+		}
+
+		private void OnLocationMessage(LocationMessage locationMessage)
+		{
+			if (_tick >= 0) {
+				_tick--;
+				TimerToCancel = System.String.Format ("Se autocancelará en {0} seg.", _tick);
+			} else {
+				_messenger.Unsubscribe<LocationMessage> (_token);
+				DoCancelCommand ();
+			}
 		}
 
 		private void TurnOffConnectionEvents(){
@@ -91,10 +113,14 @@ namespace KangouMessenger.Core
 		}
 		private void DoAcceptCommand ()
 		{
+			_tick = 30;
+			_messenger.Unsubscribe<LocationMessage> (_token);
 			CancelLocalNotification ();
 			TimerToCancel = "Esperando respuesta...";
 
 			if (ConnectionManager.ConnectionState == ConnectionStates.DISCONNECTED_BY_USER) {
+				ConnectionManager.Instance.KangouData.AppView = "ConnectView";
+				IsBusy = false;
 				Close (this);
 				return;
 			}
@@ -131,6 +157,8 @@ namespace KangouMessenger.Core
 				ConnectionManager.Emit( SocketEvents.CancelInfoOrder, jsonString);
 			}
 
+			ConnectionManager.Instance.KangouData.AppView = "WaitingOrderView";
+			IsBusy = false;
 			Close(this);
 		}
 

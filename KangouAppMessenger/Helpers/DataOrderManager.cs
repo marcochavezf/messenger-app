@@ -43,6 +43,7 @@ namespace KangouMessenger.Core
 	{
 		public string Id { get; set; }
 
+		public bool IsAPurchase { get; set; }
 		public string ListItems { get; set; }
 		public string AproximateDistance { get; set; }
 		public string AproximateDistanceToFirstPoint { get; set; }
@@ -68,6 +69,7 @@ namespace KangouMessenger.Core
 		public DataOrder(JToken data){
 			Id = data["_id"].ToString();
 
+			IsAPurchase = Convert.ToBoolean( data ["isAPurchase"].ToString () );
 			ListItems = data ["listItems"].ToString ();
 			AproximateDistance =  data["distancePickUpToDropOff"].ToString ();
 			AproximateDistanceToFirstPoint = data ["aproximateDistanceToFirstPoint"].ToString ();

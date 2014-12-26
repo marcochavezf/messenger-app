@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.Content;
+using Java.Util;
 
 namespace KangouMessenger.Droid
 {
@@ -37,7 +38,7 @@ namespace KangouMessenger.Droid
 
 				if (value)
 				{
-					_dialog = ProgressDialog.Show (_context, _title, _message, true);
+					_dialog = ProgressDialog.Show (_context, _title, _message);
 				}
 				else
 				{

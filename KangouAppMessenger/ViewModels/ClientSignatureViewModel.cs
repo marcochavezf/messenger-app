@@ -16,9 +16,13 @@ namespace KangouMessenger.Core
 			ConnectionManager.On  ( SocketEvents.ClientSignatureAccepted, (data) => {
 				ConnectionManager.Off  ( SocketEvents.ClientSignatureAccepted );
 				ItNeedsToBeRemoved = true;
+				IsBusy = false;
 				ShowViewModel<ReviewViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
 			});
+			ConnectionManager.Instance.KangouData.AppView = "ClientSignatureView";
 		}
+
+		public String SignatureJson { get; set; }
 
 		/* Properties */
 		private MvxCommand _acceptCommand;
@@ -32,14 +36,13 @@ namespace KangouMessenger.Core
 		private void DoAcceptCommand ()
 		{
 			IsBusy = true;
-			Task.Run (()=>{
-				var orderId = DataOrderManager.Instance.DataOrder.Id;
-				var jsonString = String.Format( "{{ \"{0}\": {1}, \"orderId\": \"{2}\" }}", SocketEvents.ClientSignatureAccepted, "true", orderId);
-				ConnectionManager.Emit( SocketEvents.ClientSignatureAccepted, jsonString);
-				SavingImage();
-				InvokeOnMainThread (delegate {
-					IsBusy = false;
-				});
+
+			var orderId = DataOrderManager.Instance.DataOrder.Id;
+			var jsonString = String.Format( "{{ \"{0}\": {1}, \"orderId\": \"{2}\", \"signature\": {3} }}", SocketEvents.ClientSignatureAccepted, "true", orderId, SignatureJson);
+			ConnectionManager.Emit( SocketEvents.ClientSignatureAccepted, jsonString);
+			SavingImage();
+			InvokeOnMainThread (delegate {
+				IsBusy = false;
 			});
 		}
 

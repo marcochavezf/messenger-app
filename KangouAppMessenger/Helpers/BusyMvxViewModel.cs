@@ -44,13 +44,7 @@ namespace KangouMessenger.Core
 			InvokeOnMainThread (delegate {  
 				IsBusy = true;
 			});
-			Task.Run (() => {
-				action();
-				InvokeOnMainThread (delegate {  
-					IsBusy = false;
-				});
-			});
-
+			action();
 		}
 	}
 }

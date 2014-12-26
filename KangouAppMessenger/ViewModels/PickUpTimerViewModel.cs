@@ -16,6 +16,7 @@ namespace KangouMessenger.Core
 
 		public PickUpTimerViewModel(bool removeNextToLastViewModel = true){
 			RemoveNextToLastViewModel = removeNextToLastViewModel;
+			IsBusy = false;
 
 			ConnectionManager.On  ( SocketEvents.HasPickedUp, (data) => {
 				ConnectionManager.Off( SocketEvents.HasPickedUp );
@@ -26,6 +27,7 @@ namespace KangouMessenger.Core
 				}
 
 				ItNeedsToBeRemoved = true;
+				IsBusy = false;
 				ShowViewModel<DropOffRouteViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
 			});
 
@@ -38,6 +40,7 @@ namespace KangouMessenger.Core
 					ConnectionManager.Emit( SocketEvents.TimerPickUpHasFinished, jsonString);
 				}
 			};
+			ConnectionManager.Instance.KangouData.AppView = "PickUpTimerView";
 		}
 
 		private string _timeRemaining = "13:00";

@@ -25,6 +25,7 @@ namespace KangouMessenger.Core
 				}
 
 				ItNeedsToBeRemoved = true;
+				IsBusy = false;
 				ShowViewModel<ClientSignatureViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });;
 			});
 
@@ -36,6 +37,8 @@ namespace KangouMessenger.Core
 					ConnectionManager.Emit( SocketEvents.TimerDropOffHasFinished, jsonString);
 				}
 			};
+
+			ConnectionManager.Instance.KangouData.AppView = "DropOffTimerView";
 		}
 
 		private string _timeRemaining = "13:00";

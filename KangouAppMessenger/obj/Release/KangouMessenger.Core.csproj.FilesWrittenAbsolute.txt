@@ -18,3 +18,15 @@
 /Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/SuperSocket.ClientEngine.Protocol.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/SuperSocket.ClientEngine.Common.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/System.Net.Http.Primitives.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/mscorlib.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/System.Core.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/System.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/System.Dynamic.Runtime.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/System.Linq.Queryable.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/System.Diagnostics.Tools.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/System.ComponentModel.EventBasedAsync.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/System.ComponentModel.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/System.Net.Primitives.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/System.Net.Requests.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/System.Net.NetworkInformation.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/System.Text.RegularExpressions.dll

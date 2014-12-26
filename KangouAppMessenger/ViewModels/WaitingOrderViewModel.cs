@@ -13,10 +13,14 @@ namespace KangouMessenger.Core
     public class WaitingOrderViewModel 
 		: BusyMvxViewModel
     {
-		/* Constructor */
-		public WaitingOrderViewModel(){
+		protected readonly IMvxMessenger _messenger;
 
+		/* Constructor */
+		public WaitingOrderViewModel(IMvxMessenger messenger){
+
+			_messenger = messenger;
 			IsTryingToReconnect = false;
+			ConnectionManager.Instance.KangouData.AppView = "WaitingOrderView";
 
 			ConnectionManager.On (SocketEvents.InfoOrder, (data) => {
 
@@ -123,9 +127,16 @@ namespace KangouMessenger.Core
 				InvokeOnMainThread (delegate {
 					IsBusy = false;
 				});
+
+				ConnectionManager.Instance.KangouData.AppView = "ConnectView";
 				Close(this);
 			});
 
+		}
+
+		public void PublishPosition(double lat, double lng){
+			var message = new LocationMessage(this,lat,lng);
+			_messenger.Publish(message);
 		}
 
 		/* Actions to implement in platform specific views */

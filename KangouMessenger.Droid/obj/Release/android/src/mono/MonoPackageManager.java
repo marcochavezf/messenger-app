@@ -68,7 +68,6 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"Kangou Mensajero.dll",
-		"Newtonsoft.Json.dll",
 		"Cirrious.CrossCore.Droid.dll",
 		"Cirrious.MvvmCross.Binding.Droid.dll",
 		"Cirrious.CrossCore.dll",
@@ -81,6 +80,7 @@ class MonoPackageManager_Resources {
 		"Cirrious.MvvmCross.Droid.Fragging.dll",
 		"Cirrious.MvvmCross.Plugins.Messenger.dll",
 		"Cirrious.MvvmCross.Plugins.Json.dll",
+		"Newtonsoft.Json.dll",
 		"KangouAppMessenger.dll",
 		"System.Reflection.Emit.ILGeneration.dll",
 		"System.Reflection.Emit.Lightweight.dll",

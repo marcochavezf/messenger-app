@@ -17,9 +17,8 @@ namespace KangouMessenger.Core
 		public LoginViewModel (IMvxJsonConverter jsonConverter) : base()
 		{
 			_kangouClient = new KangouClient (jsonConverter);
-
-			_email = "test@kangou.mx";
-			_password = "123";
+			//_email = "test@kangou.mx";
+			//_password = "123";
 		}
 
 		private string _email;

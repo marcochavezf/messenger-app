@@ -18,9 +18,15 @@
         android:layout_height="wrap_content"
         android:text="Enviar"
         android:layout_gravity="bottom"
-        android:layout_width="match_parent"
-        local:MvxBind="Click AcceptCommand" />
+        android:layout_width="match_parent" />
+    <Button
+        android:id="@+id/clean"
+        android:layout_height="wrap_content"
+        android:text="Borrar"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent" />
     <kangoumessenger.droid.ClientSignatureViewCanvas
+        android:id="@+id/canvasSignature"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </LinearLayout>

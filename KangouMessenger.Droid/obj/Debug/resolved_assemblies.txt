@@ -1,5 +1,4 @@
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Debug/Kangou Mensajero.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/Newtonsoft.Json.6.0.6/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll
 /Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.2/lib/MonoAndroid/Cirrious.CrossCore.Droid.dll
 /Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.2/lib/MonoAndroid/Cirrious.MvvmCross.Binding.Droid.dll
 /Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.2/lib/MonoAndroid/Cirrious.CrossCore.dll
@@ -12,6 +11,7 @@
 /Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.Droid.Fragging.3.2.2/lib/MonoAndroid/Cirrious.MvvmCross.Droid.Fragging.dll
 /Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.Plugin.Messenger.3.2.2/lib/MonoAndroid/Cirrious.MvvmCross.Plugins.Messenger.dll
 /Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.Plugin.Json.3.2.2/lib/MonoAndroid/Cirrious.MvvmCross.Plugins.Json.dll
+/Users/marcochavezf/Google Drive/messenger-app/packages/Newtonsoft.Json.6.0.7/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/KangouAppMessenger.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/Facades/System.Collections.Concurrent.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/Facades/System.Collections.dll

@@ -22,8 +22,10 @@ namespace KangouMessenger.Core
 			ConnectionManager.On  ( SocketEvents.ArrivedToPickUp, (data) => {
 				ConnectionManager.Off( SocketEvents.ArrivedToPickUp );
 				ItNeedsToBeRemoved = true;
+				IsBusy = false;
 				ShowViewModel<PickUpTimerViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
 			});
+			ConnectionManager.Instance.KangouData.AppView = "PickUpRouteView";
 		}
 
 		/* Properties */

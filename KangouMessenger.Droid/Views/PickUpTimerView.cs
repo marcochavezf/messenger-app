@@ -10,7 +10,7 @@ using Android.Content.PM;
 
 namespace KangouMessenger.Droid
 {
-	[Activity(Label = "Esperando para recoger", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
+	[Activity(Label = "Esperando para Recoger", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
     public class PickUpTimerView : BusyMvxActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -32,6 +32,10 @@ namespace KangouMessenger.Droid
 			confirmPickedUpAlert.SetPositiveButton("Sí",(object sender, DialogClickEventArgs args)=>{
 				viewModel.PickedUpCommand.Execute(null);
 			});
+			if (dataOrder.IsAPurchase) {
+				Title = "Esperando para Comprar";
+			}
+
 
 			pickedUpButton.Click += delegate
 			{

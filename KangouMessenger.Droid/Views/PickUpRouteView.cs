@@ -22,7 +22,7 @@ using Android.Content.PM;
 
 namespace KangouMessenger.Droid
 {
-	[Activity(Label = "Ir a recoger", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
+	[Activity(Label = "Ir a Recoger", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
 	public class PickUpRouteView : BusyMvxFragmentActivity
 	{
 		SupportMapFragment _mapFragment;
@@ -50,6 +50,13 @@ namespace KangouMessenger.Droid
 				e.Handled = false;
 			};
 
+			CameraPosition.Builder builder = CameraPosition.InvokeBuilder ();
+			builder.Target (origin);
+			builder.Zoom (14);
+			CameraPosition cameraPosition = builder.Build ();
+			CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition (cameraPosition);
+			_mapFragment.Map.MoveCamera (cameraUpdate);
+
 			var addressTextView = FindViewById<TextView> (Resource.Id.address);
 			var referencesTextView = FindViewById<TextView> (Resource.Id.references);
 			var nameTextView = FindViewById<TextView> (Resource.Id.name);
@@ -57,8 +64,12 @@ namespace KangouMessenger.Droid
 
 			addressTextView.Text = "Dirección: " + dataOrder.PickUpAdress;
 			referencesTextView.Text = "Referencia: " + dataOrder.PickUpRefences;
-			nameTextView.Text = "Referencia: " + dataOrder.PickUpFullName;
+			nameTextView.Text = "Nombre: " + dataOrder.PickUpFullName;
 			itemsTextView.Text = "Recoger: " + dataOrder.ListItems;
+			if (dataOrder.IsAPurchase) {
+				Title = "Ir a Comprar";
+				itemsTextView.Text = "Comprar: " + dataOrder.ListItems;
+			}
 
 			var imNotNearDialog = new AlertDialog.Builder (this);
 			imNotNearDialog.SetTitle ("Se encuentra todavía lejos");

@@ -14,9 +14,13 @@ namespace KangouMessenger.Core
     {
 		/* Constructor */
 		public ReviewViewModel(){
+			ConnectionManager.Instance.KangouData.AppView = "ReviewView";
 			ConnectionManager.On  ( SocketEvents.ReviewAccepted, (data) => {
 				ConnectionManager.Off  ( SocketEvents.ReviewAccepted );
 				DataOrderManager.Instance.IsOrderActive = false;
+
+				ConnectionManager.Instance.KangouData.AppView = "WaitingOrderView";
+				IsBusy = false;
 				Close(this);
 			});
 		}

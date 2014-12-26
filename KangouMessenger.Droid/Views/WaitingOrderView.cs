@@ -131,6 +131,7 @@ namespace KangouMessenger.Droid
 			{
 				CurrentLat = _currentLocation.Latitude;
 				CurrentLng = _currentLocation.Longitude;
+				_viewModel.PublishPosition (CurrentLat, CurrentLng);
 
 				var gpsPosString = gpsPosJsonString (CurrentLat, CurrentLng);
 				//Console.WriteLine (gpsPosString);
@@ -151,7 +152,7 @@ namespace KangouMessenger.Droid
 		}
 
 		private string gpsPosJsonString(double lat, double lng){
-			if (DataOrderManager.Instance.IsOrderActive)
+			if (DataOrderManager.Instance.IsOrderActive && ConnectionManager.Instance.KangouData.AppView != "ReceivingOrderView" && ConnectionManager.Instance.KangouData.AppView != "WaitingOrderView")
 				return String.Format( "{{ \"lat\": {0}, \"lng\": {1}, \"orderId\": \"{2}\" }}", lat, lng,  DataOrderManager.Instance.DataOrder.Id);
 			else
 				return String.Format( "{{ \"lat\": {0}, \"lng\": {1} }}", lat, lng);

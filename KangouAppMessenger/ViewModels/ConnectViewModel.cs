@@ -15,6 +15,7 @@ namespace KangouMessenger.Core
 		public void Init(KangouData kangouData)
 		{
 			ConnectionManager.Instance.KangouData = kangouData;
+			ConnectionManager.Instance.KangouData.AppView = "ConnectView";
 
 			ConnectionManager.FailedToConnect (()=>{
 				InvokeOnMainThread (delegate {
@@ -41,8 +42,13 @@ namespace KangouMessenger.Core
 				ConnectionManager.Connect();
 			});
 
+			var isConnected = false;
 			ConnectionManager.On(SocketEvents.Connected, (data) => {
-				ConnectionManager.Off(SocketEvents.Connected);
+				if(isConnected)
+					return;
+
+				isConnected = true;
+				//ConnectionManager.Off(SocketEvents.Connected);
 
 				if(ConnectionManager.ConnectionState == ConnectionStates.USER_WANTS_TO_BE_CONNECTED){
 
@@ -50,9 +56,7 @@ namespace KangouMessenger.Core
 					ConnectionManager.ConnectionState = ConnectionStates.CONNECTED_BY_SERVER;
 
 					if(IsBusy){
-						InvokeOnMainThread (delegate {
-							ShowViewModel<WaitingOrderViewModel> ();
-						});
+						ShowViewModel<WaitingOrderViewModel> ();
 					}
 				}
 			});

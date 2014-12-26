@@ -2,7 +2,6 @@
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.Xml.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v5.0/Mono.Android.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/Newtonsoft.Json.6.0.6/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll
 /Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.PortableSupport.3.2.2/lib/MonoAndroid/System.Net.dll
 /Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.PortableSupport.3.2.2/lib/MonoAndroid/System.Windows.dll
 /Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.PortableSupport.3.2.2/lib/MonoAndroid/System.Xml.Serialization.dll
@@ -18,6 +17,7 @@
 /Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.Droid.Fragging.3.2.2/lib/MonoAndroid/Cirrious.MvvmCross.Droid.Fragging.dll
 /Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.Plugin.Messenger.3.2.2/lib/MonoAndroid/Cirrious.MvvmCross.Plugins.Messenger.dll
 /Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.Plugin.Json.3.2.2/lib/MonoAndroid/Cirrious.MvvmCross.Plugins.Json.dll
+/Users/marcochavezf/Google Drive/messenger-app/packages/Newtonsoft.Json.6.0.7/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.Core.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/KangouAppMessenger.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/mscorlib.dll
@@ -67,8 +67,8 @@
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/Facades/System.Xml.ReaderWriter.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/Facades/System.Xml.XDocument.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/Facades/System.Xml.XmlSerializer.dll
-/Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.Runtime.Serialization.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.ServiceModel.dll
+/Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.Runtime.Serialization.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.Socket.IO.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/WebSocket4Net.MonoTouch.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/SuperSocket.ClientEngine.Core.dll
