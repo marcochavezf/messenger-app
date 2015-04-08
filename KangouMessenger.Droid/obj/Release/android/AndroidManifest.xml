@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionName="0.4.2" package="com.kangou.messenger.android" android:versionCode="8">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.kangou.messenger.android" android:versionName="1.1.1" android:versionCode="13">
   <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="21" />
   <application android:label="Kangou Mensajero" android:theme="@android:style/Theme.Holo.Light" android:icon="@drawable/icon" android:name="mono.android.app.Application">
     <!-- Debug 
@@ -25,6 +25,21 @@
     <activity android:icon="@drawable/icon" android:label="Ir a entregar" android:screenOrientation="portrait" android:name="kangoumessenger.droid.DropOffRouteView" />
     <activity android:icon="@drawable/icon" android:label="Esperando para entregar" android:screenOrientation="portrait" android:name="kangoumessenger.droid.DropOffTimerView" />
     <activity android:icon="@drawable/icon" android:label="Calificación del servicio" android:screenOrientation="portrait" android:name="kangoumessenger.droid.ReviewView" />
+    <receiver android:permission="com.google.android.c2dm.permission.SEND" android:name="kangoumessenger.droid.GCMBroadcastReceiver">
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <category android:name="com.kangou.messenger.android" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+        <category android:name="com.kangou.messenger.android" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.google.android.gcm.intent.RETRY" />
+        <category android:name="com.kangou.messenger.android" />
+      </intent-filter>
+    </receiver>
+    <service android:name="kangoumessenger.droid.MyIntentService" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.kangou.messenger.android.mono.MonoRuntimeProvider.__mono_init__" />
   </application>
   <permission android:name="com.kangou.messenger.permission.MAPS_RECEIVE" android:protectionLevel="signature" />
@@ -45,6 +60,18 @@
   <uses-permission android:name="android.permission.VIBRATE" />
   <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
   <uses-permission android:name="android.permission.PERSISTENT_ACTIVITY" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.BATTERY_STATS" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.READ_LOGS" />
+  <uses-permission android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" />
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
   <!-- Google Maps for Android v2 requires OpenGL ES v2 -->
   <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+  <permission android:name="com.kangou.messenger.android.permission.C2D_MESSAGE" />
+  <uses-permission android:name="com.kangou.messenger.android.permission.C2D_MESSAGE" />
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
 </manifest>

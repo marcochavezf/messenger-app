@@ -29,9 +29,13 @@ namespace KangouMessenger.Droid
 			base.OnCreate(bundle);
 			_bindableProgress = new BindableProgress(this);
 
-			var setA = this.CreateBindingSet<BusyMvxFragmentActivity, BusyMvxViewModel>();
-			setA.Bind(_bindableProgress).For(p => p.Visible).To(vm => vm.IsBusy);
-			setA.Apply();
+			var set = this.CreateBindingSet<BusyMvxFragmentActivity, BusyMvxViewModel>();
+			set.Bind(_bindableProgress).For(p => p.Visible).To(vm => vm.IsBusy);
+			set.Bind(_bindableProgress).For(p => p.EnableCancelButton).To(vm => vm.EnableCancelButton);
+			set.Bind(_bindableProgress).For(p => p.CancelAction).To(vm => vm.CancelAction);
+			set.Bind(_bindableProgress).For(p => p.EnableRetryButton).To(vm => vm.EnableRetryButton);
+			set.Bind(_bindableProgress).For(p => p.RetryAction).To(vm => vm.RetryAction);
+			set.Apply();
 		}
 
 		public override void OnBackPressed ()

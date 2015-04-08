@@ -17,7 +17,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 4,1
-	.asciz "Mono AOT Compiler 3.10.0 (mono-3.10.0-branch/491d1f5 Wed Oct 22 15:02:07 EDT 2014)"
+	.asciz "Mono AOT Compiler 3.12.0 (monotouch-8.6.0-branch/ba5d2d1 Thu Feb 26 10:59:01 EST 2015)"
 	.asciz "Cirrious.MvvmCross.Plugins.Json.dll"
 	.asciz ""
 
@@ -146,7 +146,7 @@ bl _p_2
 	.byte 128,128,189,232,14,16,160,225,0,0,159,229
 bl _p_3
 
-	.byte 14,3,0,2
+	.byte 24,3,0,2
 
 Lme_1:
 .text
@@ -437,7 +437,7 @@ bl _p_27
 	.byte 14,16,160,225,0,0,159,229
 bl _p_3
 
-	.byte 14,3,0,2
+	.byte 24,3,0,2
 
 Lme_12:
 .text
@@ -472,7 +472,7 @@ _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter_DeserializeObject___0_string:
 	.byte 12,32,139,229,4,0,155,229
 bl _p_28
 
-	.byte 0,80,160,225,0,0,149,229,7,64,128,226,7,64,196,227,4,208,77,224,0,64,141,226,0,0,159,229,0,0,0,234
+	.byte 0,80,160,225,0,0,149,229,7,64,128,226,7,64,196,227,4,208,77,224,13,64,160,225,0,0,159,229,0,0,0,234
 	.long _mono_aot_Cirrious_MvvmCross_Plugins_Json_got - . + 48
 	.byte 0,0,159,231,0,0,144,229,20,0,139,229,4,0,155,229
 bl _p_29
@@ -493,10 +493,11 @@ _System_Array_InternalArray__IEnumerable_GetEnumerator_T:
 	.byte 128,64,45,233,13,112,160,225,0,9,45,233,40,208,77,226,13,176,160,225,4,128,139,229,28,0,139,229,4,0,155,229
 bl _p_31
 
-	.byte 0,0,139,229,0,0,144,229,0,0,160,227,8,0,139,229,4,0,155,229
+	.byte 0,0,139,229,0,0,144,229,0,0,160,227,8,0,139,229,0,0,160,227,12,0,139,229,0,0,160,227,16,0,139,229
+	.byte 12,0,139,226,32,0,139,229,4,0,155,229
 bl _p_32
 
-	.byte 36,0,139,229,0,0,160,227,12,0,139,229,0,0,160,227,16,0,139,229,12,0,139,226,32,0,139,229,4,0,155,229
+	.byte 36,0,139,229,4,0,155,229
 bl _p_33
 
 	.byte 0,32,160,225,32,0,155,229,36,16,155,229,1,128,160,225,28,16,155,229,50,255,47,225,12,0,155,229,20,0,139,229
@@ -530,10 +531,10 @@ Lme_19:
 	.no_dead_strip _System_Array_InternalArray__ICollection_Clear
 _System_Array_InternalArray__ICollection_Clear:
 
-	.byte 128,64,45,233,13,112,160,225,0,1,45,233,12,208,77,226,0,0,141,229,29,6,14,227
+	.byte 128,64,45,233,13,112,160,225,0,1,45,233,12,208,77,226,0,0,141,229,213,14,14,227
 bl _p_35
 
-	.byte 0,16,160,225,38,3,0,227,0,2,64,227
+	.byte 0,16,160,225,48,3,0,227,0,2,64,227
 bl _mono_create_corlib_exception_1
 bl _p_27
 
@@ -549,10 +550,10 @@ _System_Array_InternalArray__ICollection_Add_T_T:
 	.byte 4,0,155,229
 bl _p_36
 
-	.byte 0,0,139,229,0,0,144,229,0,0,160,227,8,0,139,229,77,6,14,227
+	.byte 0,0,139,229,0,0,144,229,0,0,160,227,8,0,139,229,5,15,14,227
 bl _p_35
 
-	.byte 0,16,160,225,38,3,0,227,0,2,64,227
+	.byte 0,16,160,225,48,3,0,227,0,2,64,227
 bl _mono_create_corlib_exception_1
 bl _p_27
 
@@ -568,10 +569,10 @@ _System_Array_InternalArray__ICollection_Remove_T_T:
 	.byte 4,0,155,229
 bl _p_37
 
-	.byte 0,0,139,229,0,0,144,229,0,0,160,227,8,0,139,229,77,6,14,227
+	.byte 0,0,139,229,0,0,144,229,0,0,160,227,8,0,139,229,5,15,14,227
 bl _p_35
 
-	.byte 0,16,160,225,38,3,0,227,0,2,64,227
+	.byte 0,16,160,225,48,3,0,227,0,2,64,227
 bl _mono_create_corlib_exception_1
 bl _p_27
 
@@ -597,11 +598,11 @@ bl _p_40
 	.byte 0,48,160,225,16,0,155,229,0,128,160,225,6,0,160,225,4,16,160,225,11,32,160,225,51,255,47,225,0,0,90,227
 	.byte 4,0,0,26,0,0,155,229,0,0,80,227,11,0,0,26,1,0,160,227,13,0,0,234,0,16,155,229,10,0,160,225
 	.byte 0,32,154,229,15,224,160,225,44,240,146,229,255,0,0,226,0,0,80,227,1,0,0,10,1,0,160,227,3,0,0,234
-	.byte 1,64,132,226,5,0,84,225,223,255,255,186,0,0,160,227,24,208,139,226,112,13,189,232,128,128,189,232,137,6,14,227
+	.byte 1,64,132,226,5,0,84,225,223,255,255,186,0,0,160,227,24,208,139,226,112,13,189,232,128,128,189,232,65,15,14,227
 bl _p_35
 bl _p_41
 
-	.byte 0,16,160,225,56,3,0,227,0,2,64,227
+	.byte 0,16,160,225,66,3,0,227,0,2,64,227
 bl _mono_create_corlib_exception_1
 bl _p_27
 
@@ -629,44 +630,44 @@ bl _p_42
 	.byte 80,48,155,229,64,192,155,229,0,192,141,229
 bl _p_43
 
-	.byte 96,208,139,226,112,13,189,232,128,128,189,232,137,6,14,227
+	.byte 96,208,139,226,112,13,189,232,128,128,189,232,65,15,14,227
 bl _p_35
 bl _p_41
 
-	.byte 0,16,160,225,56,3,0,227,0,2,64,227
+	.byte 0,16,160,225,66,3,0,227,0,2,64,227
 bl _mono_create_corlib_exception_1
 bl _p_27
 
-	.byte 225,6,14,227
+	.byte 153,15,14,227
 bl _p_35
 
-	.byte 0,16,160,225,174,2,0,227,0,2,64,227
+	.byte 0,16,160,225,187,2,0,227,0,2,64,227
 bl _mono_create_corlib_exception_1
 bl _p_27
 
-	.byte 137,6,14,227
+	.byte 65,15,14,227
 bl _p_35
 bl _p_41
 
-	.byte 0,16,160,225,56,3,0,227,0,2,64,227
+	.byte 0,16,160,225,66,3,0,227,0,2,64,227
 bl _mono_create_corlib_exception_1
 bl _p_27
 
-	.byte 227,5,3,227
+	.byte 175,6,3,227
 bl _p_35
 
-	.byte 88,0,139,229,164,7,14,227
+	.byte 88,0,139,229,92,0,15,227
 bl _p_35
 bl _p_41
 
-	.byte 0,32,160,225,88,16,155,229,176,2,0,227,0,2,64,227
+	.byte 0,32,160,225,88,16,155,229,189,2,0,227,0,2,64,227
 bl _mono_create_corlib_exception_2
 bl _p_27
 
-	.byte 3,10,3,227
+	.byte 207,10,3,227
 bl _p_35
 
-	.byte 0,16,160,225,175,2,0,227,0,2,64,227
+	.byte 0,16,160,225,188,2,0,227,0,2,64,227
 bl _mono_create_corlib_exception_1
 bl _p_27
 
@@ -1108,28 +1109,28 @@ image_table:
 
 	.long 4
 	.asciz "Cirrious.MvvmCross.Plugins.Json"
-	.asciz "0AC0311D-F9FE-419C-A353-0208C8ABB267"
+	.asciz "17D37224-F7BA-4BF5-B7BE-2F53E18283BD"
 	.asciz ""
 	.asciz ""
 	.align 3
 
 	.long 0,1,0,0,0
 	.asciz "mscorlib"
-	.asciz "2F001905-97BA-4C5D-B051-7A38A8A8BC75"
+	.asciz "6E466931-A21F-4620-9A7C-947AFD4E1457"
 	.asciz ""
 	.asciz "7cec85d7bea7798e"
 	.align 3
 
 	.long 1,2,0,5,0
 	.asciz "Newtonsoft.Json"
-	.asciz "7623244B-067E-4F09-8C66-81E92C14BFA1"
+	.asciz "192A2AD5-BD80-432F-9CF2-AF391AA6785B"
 	.asciz ""
 	.asciz "30ad4fe6b2a6aeed"
 	.align 3
 
 	.long 1,6,0,0,0
 	.asciz "Cirrious.CrossCore"
-	.asciz "83AF60ED-32A6-4617-8337-ABC47AB6F13C"
+	.asciz "C1D649E6-8B89-4ADD-B37A-C66DFE6C5694"
 	.asciz ""
 	.asciz "e16445fd9b451819"
 	.align 3
@@ -1143,7 +1144,7 @@ got_end:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "0AC0311D-F9FE-419C-A353-0208C8ABB267"
+	.asciz "17D37224-F7BA-4BF5-B7BE-2F53E18283BD"
 .section __TEXT, __const
 	.align 2
 runtime_version:
@@ -1156,7 +1157,7 @@ assembly_name:
 	.align 3
 _mono_aot_file_info:
 
-	.long 102,0
+	.long 104,0
 	.align 2
 	.long _mono_aot_Cirrious_MvvmCross_Plugins_Json_got
 	.align 2
@@ -1235,60 +1236,60 @@ blob:
 	.byte 0,1,4,2,9,10,1,5,5,11,12,13,14,15,1,5,1,15,1,5,1,15,1,5,1,15,1,5,0,1,6,3
 	.byte 16,10,17,1,6,6,18,19,20,20,19,21,1,6,0,1,6,2,22,23,1,5,1,15,0,0,0,0,0,0,0,0
 	.byte 0,0,0,0,0,0,0,0,0,1,24,0,1,24,5,30,0,0,1,255,253,0,0,0,1,5,0,198,0,0,14,0
-	.byte 1,7,110,5,30,0,1,255,255,255,255,255,193,0,17,141,255,253,0,0,0,2,130,178,1,1,198,0,17,141,0,1
-	.byte 7,128,131,193,0,17,139,193,0,17,140,193,0,17,142,5,30,0,1,255,255,255,255,255,193,0,17,143,255,253,0,0
-	.byte 0,2,130,178,1,1,198,0,17,143,0,1,7,128,175,5,30,0,1,255,255,255,255,255,193,0,17,144,255,253,0,0
-	.byte 0,2,130,178,1,1,198,0,17,144,0,1,7,128,207,5,30,0,1,255,255,255,255,255,193,0,17,145,255,253,0,0
-	.byte 0,2,130,178,1,1,198,0,17,145,0,1,7,128,239,5,30,0,1,255,255,255,255,255,193,0,17,146,255,253,0,0
-	.byte 0,2,130,178,1,1,198,0,17,146,0,1,7,129,15,4,2,131,54,1,1,2,23,2,255,252,0,0,0,1,1,7
-	.byte 129,47,4,2,130,200,1,1,2,23,2,255,252,0,0,0,1,1,7,129,66,12,0,39,42,47,19,0,193,0,0,2
-	.byte 0,11,2,130,206,1,17,0,1,16,2,128,209,1,130,141,14,2,130,206,1,14,1,4,16,1,4,2,14,2,60,2
-	.byte 14,3,219,0,0,1,4,2,130,221,1,1,2,23,2,16,7,129,134,137,210,14,1,3,16,1,5,4,34,255,254,0
-	.byte 0,0,0,255,43,0,0,2,34,255,254,0,0,0,0,255,43,0,0,3,17,0,43,14,6,1,2,131,44,1,11,1
-	.byte 4,14,2,6,3,14,1,6,16,1,6,5,33,15,2,128,209,1,3,193,0,20,21,7,32,109,111,110,111,95,97,114
-	.byte 99,104,95,116,104,114,111,119,95,99,111,114,108,105,98,95,101,120,99,101,112,116,105,111,110,0,3,193,0,19,247,7
+	.byte 1,7,110,5,30,0,1,255,255,255,255,255,193,0,18,9,255,253,0,0,0,2,130,191,1,1,198,0,18,9,0,1
+	.byte 7,128,131,193,0,18,7,193,0,18,8,193,0,18,10,5,30,0,1,255,255,255,255,255,193,0,18,11,255,253,0,0
+	.byte 0,2,130,191,1,1,198,0,18,11,0,1,7,128,175,5,30,0,1,255,255,255,255,255,193,0,18,12,255,253,0,0
+	.byte 0,2,130,191,1,1,198,0,18,12,0,1,7,128,207,5,30,0,1,255,255,255,255,255,193,0,18,13,255,253,0,0
+	.byte 0,2,130,191,1,1,198,0,18,13,0,1,7,128,239,5,30,0,1,255,255,255,255,255,193,0,18,14,255,253,0,0
+	.byte 0,2,130,191,1,1,198,0,18,14,0,1,7,129,15,4,2,131,64,1,1,2,23,2,255,252,0,0,0,1,1,7
+	.byte 129,47,4,2,130,213,1,1,2,23,2,255,252,0,0,0,1,1,7,129,66,12,0,39,42,47,19,0,193,0,0,2
+	.byte 0,11,2,130,219,1,17,0,1,16,2,128,213,1,130,201,14,2,130,219,1,14,1,4,16,1,4,2,14,2,60,2
+	.byte 14,3,219,0,0,1,4,2,130,234,1,1,2,23,2,16,7,129,134,138,72,14,1,3,16,1,5,4,34,255,254,0
+	.byte 0,0,0,255,43,0,0,2,34,255,254,0,0,0,0,255,43,0,0,3,17,0,43,14,6,1,2,131,54,1,11,1
+	.byte 4,14,2,6,3,14,1,6,16,1,6,5,33,15,2,128,213,1,3,193,0,20,149,7,32,109,111,110,111,95,97,114
+	.byte 99,104,95,116,104,114,111,119,95,99,111,114,108,105,98,95,101,120,99,101,112,116,105,111,110,0,3,193,0,20,119,7
 	.byte 27,109,111,110,111,95,111,98,106,101,99,116,95,110,101,119,95,112,116,114,102,114,101,101,95,98,111,120,0,3,193,0
-	.byte 9,196,3,193,0,21,63,7,23,109,111,110,111,95,111,98,106,101,99,116,95,110,101,119,95,112,116,114,102,114,101,101
+	.byte 10,19,3,193,0,21,191,7,23,109,111,110,111,95,111,98,106,101,99,116,95,110,101,119,95,112,116,114,102,114,101,101
 	.byte 0,15,2,60,2,7,20,109,111,110,111,95,111,98,106,101,99,116,95,110,101,119,95,102,97,115,116,0,3,194,0,2
-	.byte 170,3,194,0,2,114,15,7,129,134,3,255,254,0,0,0,0,202,0,0,17,3,194,0,2,124,3,194,0,2,154,5
+	.byte 165,3,194,0,2,109,15,7,129,134,3,255,254,0,0,0,0,202,0,0,17,3,194,0,2,119,3,194,0,2,149,5
 	.byte 30,0,1,255,255,255,255,255,255,251,0,0,0,14,255,253,0,0,0,1,5,0,198,0,0,14,0,1,7,130,127,35
-	.byte 130,142,140,17,255,253,0,0,0,2,46,2,2,198,0,1,202,0,1,7,130,127,3,255,253,0,0,0,2,46,2,2
-	.byte 198,0,1,202,0,1,7,130,127,3,194,0,1,192,3,194,0,1,204,3,255,254,0,0,0,0,255,43,0,0,2,3
+	.byte 130,142,140,17,255,253,0,0,0,2,46,2,2,198,0,1,197,0,1,7,130,127,3,255,253,0,0,0,2,46,2,2
+	.byte 198,0,1,197,0,1,7,130,127,3,194,0,1,187,3,194,0,1,199,3,255,254,0,0,0,0,255,43,0,0,2,3
 	.byte 255,254,0,0,0,0,255,43,0,0,3,7,23,109,111,110,111,95,97,114,114,97,121,95,110,101,119,95,115,112,101,99
 	.byte 105,102,105,99,0,3,195,0,1,244,7,17,109,111,110,111,95,104,101,108,112,101,114,95,108,100,115,116,114,0,3,195
 	.byte 0,0,9,7,25,109,111,110,111,95,97,114,99,104,95,116,104,114,111,119,95,101,120,99,101,112,116,105,111,110,0,255
 	.byte 253,0,0,0,1,5,0,198,0,0,14,0,1,7,110,35,131,63,192,0,92,41,255,253,0,0,0,1,5,0,198,0
 	.byte 0,14,0,1,7,110,3,14,7,110,22,7,110,21,7,110,35,131,63,140,17,255,253,0,0,0,2,46,2,2,198,0
-	.byte 1,202,0,1,7,110,35,131,63,192,0,90,33,16,1,2,30,7,110,14,18,2,60,2,255,253,0,0,0,2,46,2
-	.byte 2,198,0,1,202,0,1,7,110,255,253,0,0,0,2,130,178,1,1,198,0,17,141,0,1,7,128,131,35,131,169,192
-	.byte 0,92,41,255,253,0,0,0,2,130,178,1,1,198,0,17,141,0,1,7,128,131,0,4,2,130,179,1,1,7,128,131
-	.byte 35,131,169,150,5,7,131,215,35,131,169,140,13,255,253,0,0,0,7,131,215,1,198,0,17,236,1,7,128,131,0,7
+	.byte 1,197,0,1,7,110,35,131,63,192,0,90,33,16,1,2,30,7,110,14,18,2,60,2,255,253,0,0,0,2,46,2
+	.byte 2,198,0,1,197,0,1,7,110,255,253,0,0,0,2,130,191,1,1,198,0,18,9,0,1,7,128,131,35,131,169,192
+	.byte 0,92,41,255,253,0,0,0,2,130,191,1,1,198,0,18,9,0,1,7,128,131,0,4,2,130,192,1,1,7,128,131
+	.byte 35,131,169,150,5,7,131,215,35,131,169,140,13,255,253,0,0,0,7,131,215,1,198,0,18,104,1,7,128,131,0,7
 	.byte 24,109,111,110,111,95,111,98,106,101,99,116,95,110,101,119,95,115,112,101,99,105,102,105,99,0,7,26,109,111,110,111
-	.byte 95,104,101,108,112,101,114,95,108,100,115,116,114,95,109,115,99,111,114,108,105,98,0,255,253,0,0,0,2,130,178,1
-	.byte 1,198,0,17,143,0,1,7,128,175,35,132,55,192,0,92,41,255,253,0,0,0,2,130,178,1,1,198,0,17,143,0
-	.byte 1,7,128,175,0,255,253,0,0,0,2,130,178,1,1,198,0,17,144,0,1,7,128,207,35,132,101,192,0,92,41,255
-	.byte 253,0,0,0,2,130,178,1,1,198,0,17,144,0,1,7,128,207,0,255,253,0,0,0,2,130,178,1,1,198,0,17
-	.byte 145,0,1,7,128,239,35,132,147,192,0,92,41,255,253,0,0,0,2,130,178,1,1,198,0,17,145,0,1,7,128,239
-	.byte 0,35,132,147,140,17,255,253,0,0,0,2,130,178,1,1,198,0,17,154,0,1,7,128,239,35,132,147,192,0,90,33
-	.byte 16,1,3,1,18,2,130,178,1,8,16,30,7,128,239,255,253,0,0,0,2,130,178,1,1,198,0,17,154,0,1,7
-	.byte 128,239,3,193,0,0,129,255,253,0,0,0,2,130,178,1,1,198,0,17,146,0,1,7,129,15,35,133,7,192,0,92
-	.byte 41,255,253,0,0,0,2,130,178,1,1,198,0,17,146,0,1,7,129,15,0,3,193,0,17,196,7,35,109,111,110,111
+	.byte 95,104,101,108,112,101,114,95,108,100,115,116,114,95,109,115,99,111,114,108,105,98,0,255,253,0,0,0,2,130,191,1
+	.byte 1,198,0,18,11,0,1,7,128,175,35,132,55,192,0,92,41,255,253,0,0,0,2,130,191,1,1,198,0,18,11,0
+	.byte 1,7,128,175,0,255,253,0,0,0,2,130,191,1,1,198,0,18,12,0,1,7,128,207,35,132,101,192,0,92,41,255
+	.byte 253,0,0,0,2,130,191,1,1,198,0,18,12,0,1,7,128,207,0,255,253,0,0,0,2,130,191,1,1,198,0,18
+	.byte 13,0,1,7,128,239,35,132,147,192,0,92,41,255,253,0,0,0,2,130,191,1,1,198,0,18,13,0,1,7,128,239
+	.byte 0,35,132,147,140,17,255,253,0,0,0,2,130,191,1,1,198,0,18,22,0,1,7,128,239,35,132,147,192,0,90,33
+	.byte 16,1,3,1,18,2,130,191,1,8,16,30,7,128,239,255,253,0,0,0,2,130,191,1,1,198,0,18,22,0,1,7
+	.byte 128,239,3,193,0,0,151,255,253,0,0,0,2,130,191,1,1,198,0,18,14,0,1,7,129,15,35,133,7,192,0,92
+	.byte 41,255,253,0,0,0,2,130,191,1,1,198,0,18,14,0,1,7,129,15,0,3,193,0,18,64,7,35,109,111,110,111
 	.byte 95,116,104,114,101,97,100,95,105,110,116,101,114,114,117,112,116,105,111,110,95,99,104,101,99,107,112,111,105,110,116,0
 	.byte 2,0,0,2,19,0,2,38,0,2,0,0,2,0,0,2,62,0,2,81,0,2,0,0,2,0,0,2,0,0,2,0
 	.byte 0,2,105,0,2,19,0,3,124,0,1,13,0,17,255,253,0,0,0,1,5,0,198,0,0,14,0,1,7,130,127,0
 	.byte 0,2,0,0,2,62,0,2,0,0,2,128,143,0,2,128,164,0,2,0,0,2,105,0,3,128,191,0,1,11,4,16
 	.byte 255,253,0,0,0,1,5,0,198,0,0,14,0,1,7,110,1,0,1,1,0,3,38,0,1,11,4,19,255,253,0,0
-	.byte 0,2,130,178,1,1,198,0,17,141,0,1,7,128,131,1,0,1,0,0,2,0,0,2,0,0,2,0,0,3,81,0
-	.byte 1,11,4,19,255,253,0,0,0,2,130,178,1,1,198,0,17,143,0,1,7,128,175,1,0,1,0,0,3,81,0,1
-	.byte 11,4,19,255,253,0,0,0,2,130,178,1,1,198,0,17,144,0,1,7,128,207,1,0,1,0,0,3,128,219,0,1
-	.byte 11,4,19,255,253,0,0,0,2,130,178,1,1,198,0,17,145,0,1,7,128,239,1,0,1,0,0,3,128,251,0,1
-	.byte 11,8,19,255,253,0,0,0,2,130,178,1,1,198,0,17,146,0,1,7,129,15,1,0,1,0,0,2,129,28,0,2
-	.byte 129,55,0,0,128,144,8,0,0,1,10,128,192,8,0,0,1,193,0,23,141,193,0,23,138,193,0,23,137,193,0,23
-	.byte 135,194,0,1,59,194,0,1,58,194,0,1,57,1,3,2,10,128,144,8,0,0,1,193,0,23,141,193,0,23,138,193
-	.byte 0,23,137,193,0,23,135,194,0,1,59,194,0,1,58,194,0,1,57,5,7,6,4,128,196,12,9,4,0,1,193,0
-	.byte 23,141,193,0,23,138,193,0,23,137,193,0,23,135,7,128,196,13,8,4,0,1,193,0,23,141,193,0,23,138,193,0
-	.byte 23,137,193,0,23,135,255,251,0,0,0,14,15,16,6,128,228,21,16,4,0,4,193,0,23,141,193,0,23,138,193,0
-	.byte 23,137,193,0,23,135,19,18,98,111,101,104,109,0
+	.byte 0,2,130,191,1,1,198,0,18,9,0,1,7,128,131,1,0,1,0,0,2,0,0,2,0,0,2,0,0,3,81,0
+	.byte 1,11,4,19,255,253,0,0,0,2,130,191,1,1,198,0,18,11,0,1,7,128,175,1,0,1,0,0,3,81,0,1
+	.byte 11,4,19,255,253,0,0,0,2,130,191,1,1,198,0,18,12,0,1,7,128,207,1,0,1,0,0,3,128,219,0,1
+	.byte 11,4,19,255,253,0,0,0,2,130,191,1,1,198,0,18,13,0,1,7,128,239,1,0,1,0,0,3,128,251,0,1
+	.byte 11,8,19,255,253,0,0,0,2,130,191,1,1,198,0,18,14,0,1,7,129,15,1,0,1,0,0,2,129,28,0,2
+	.byte 129,55,0,0,128,144,8,0,0,1,10,128,192,8,0,0,1,193,0,23,250,193,0,23,247,193,0,23,246,193,0,23
+	.byte 244,194,0,1,58,194,0,1,57,194,0,1,56,1,3,2,10,128,144,8,0,0,1,193,0,23,250,193,0,23,247,193
+	.byte 0,23,246,193,0,23,244,194,0,1,58,194,0,1,57,194,0,1,56,5,7,6,4,128,196,12,9,4,0,1,193,0
+	.byte 23,250,193,0,23,247,193,0,23,246,193,0,23,244,7,128,196,13,8,4,0,1,193,0,23,250,193,0,23,247,193,0
+	.byte 23,246,193,0,23,244,255,251,0,0,0,14,15,16,6,128,228,21,16,4,0,4,193,0,23,250,193,0,23,247,193,0
+	.byte 23,246,193,0,23,244,19,18,98,111,101,104,109,0
 .section __TEXT, __const
 	.align 3
 Lglobals_hash:
@@ -2319,452 +2320,467 @@ LTDIE_21:
 	.byte 5
 	.asciz "System_Globalization_TextInfo"
 
-	.byte 48,16
+	.byte 60,16
 LDIFF_SYM173=LTDIE_2 - Ldebug_info_start
 	.long LDIFF_SYM173
 	.byte 2,35,0,6
+	.asciz "m_listSeparator"
+
+LDIFF_SYM174=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM174
+	.byte 2,35,8,6
 	.asciz "m_isReadOnly"
 
-LDIFF_SYM174=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM174
-	.byte 2,35,16,6
+LDIFF_SYM175=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM175
+	.byte 2,35,20,6
 	.asciz "customCultureName"
 
-LDIFF_SYM175=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM175
-	.byte 2,35,8,6
-	.asciz "m_win32LangID"
-
-LDIFF_SYM176=LDIE_I4 - Ldebug_info_start
+LDIFF_SYM176=LDIE_STRING - Ldebug_info_start
 	.long LDIFF_SYM176
-	.byte 2,35,20,6
-	.asciz "ci"
-
-LDIFF_SYM177=LTDIE_15_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM177
 	.byte 2,35,12,6
-	.asciz "handleDotI"
+	.asciz "m_nDataItem"
+
+LDIFF_SYM177=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM177
+	.byte 2,35,24,6
+	.asciz "m_useUserOverride"
 
 LDIFF_SYM178=LDIE_BOOLEAN - Ldebug_info_start
 	.long LDIFF_SYM178
-	.byte 2,35,24,6
-	.asciz "data"
+	.byte 2,35,28,6
+	.asciz "m_win32LangID"
 
 LDIFF_SYM179=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM179
-	.byte 2,35,28,0,7
+	.byte 2,35,32,6
+	.asciz "ci"
+
+LDIFF_SYM180=LTDIE_15_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM180
+	.byte 2,35,16,6
+	.asciz "handleDotI"
+
+LDIFF_SYM181=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM181
+	.byte 2,35,36,6
+	.asciz "data"
+
+LDIFF_SYM182=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM182
+	.byte 2,35,40,0,7
 	.asciz "System_Globalization_TextInfo"
 
-LDIFF_SYM180=LTDIE_21 - Ldebug_info_start
-	.long LDIFF_SYM180
+LDIFF_SYM183=LTDIE_21 - Ldebug_info_start
+	.long LDIFF_SYM183
 LTDIE_21_POINTER:
 
 	.byte 13
-LDIFF_SYM181=LTDIE_21 - Ldebug_info_start
-	.long LDIFF_SYM181
+LDIFF_SYM184=LTDIE_21 - Ldebug_info_start
+	.long LDIFF_SYM184
 LTDIE_21_REFERENCE:
 
 	.byte 14
-LDIFF_SYM182=LTDIE_21 - Ldebug_info_start
-	.long LDIFF_SYM182
+LDIFF_SYM185=LTDIE_21 - Ldebug_info_start
+	.long LDIFF_SYM185
 LTDIE_24:
 
 	.byte 5
 	.asciz "Mono_Globalization_Unicode_CodePointIndexer"
 
 	.byte 24,16
-LDIFF_SYM183=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM183
+LDIFF_SYM186=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM186
 	.byte 2,35,0,6
 	.asciz "ranges"
 
-LDIFF_SYM184=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM184
+LDIFF_SYM187=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM187
 	.byte 2,35,8,6
 	.asciz "TotalCount"
 
-LDIFF_SYM185=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM185
+LDIFF_SYM188=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM188
 	.byte 2,35,12,6
 	.asciz "defaultIndex"
 
-LDIFF_SYM186=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM186
+LDIFF_SYM189=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM189
 	.byte 2,35,16,6
 	.asciz "defaultCP"
 
-LDIFF_SYM187=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM187
+LDIFF_SYM190=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM190
 	.byte 2,35,20,0,7
 	.asciz "Mono_Globalization_Unicode_CodePointIndexer"
 
-LDIFF_SYM188=LTDIE_24 - Ldebug_info_start
-	.long LDIFF_SYM188
+LDIFF_SYM191=LTDIE_24 - Ldebug_info_start
+	.long LDIFF_SYM191
 LTDIE_24_POINTER:
 
 	.byte 13
-LDIFF_SYM189=LTDIE_24 - Ldebug_info_start
-	.long LDIFF_SYM189
+LDIFF_SYM192=LTDIE_24 - Ldebug_info_start
+	.long LDIFF_SYM192
 LTDIE_24_REFERENCE:
 
 	.byte 14
-LDIFF_SYM190=LTDIE_24 - Ldebug_info_start
-	.long LDIFF_SYM190
+LDIFF_SYM193=LTDIE_24 - Ldebug_info_start
+	.long LDIFF_SYM193
 LTDIE_23:
 
 	.byte 5
 	.asciz "Mono_Globalization_Unicode_SimpleCollator"
 
 	.byte 52,16
-LDIFF_SYM191=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM191
+LDIFF_SYM194=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM194
 	.byte 2,35,0,6
 	.asciz "textInfo"
 
-LDIFF_SYM192=LTDIE_21_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM192
+LDIFF_SYM195=LTDIE_21_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM195
 	.byte 2,35,8,6
 	.asciz "cjkIndexer"
 
-LDIFF_SYM193=LTDIE_24_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM193
+LDIFF_SYM196=LTDIE_24_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM196
 	.byte 2,35,12,6
 	.asciz "contractions"
 
-LDIFF_SYM194=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM194
+LDIFF_SYM197=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM197
 	.byte 2,35,16,6
 	.asciz "level2Maps"
 
-LDIFF_SYM195=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM195
+LDIFF_SYM198=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM198
 	.byte 2,35,20,6
 	.asciz "unsafeFlags"
 
-LDIFF_SYM196=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM196
+LDIFF_SYM199=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM199
 	.byte 2,35,24,6
 	.asciz "cjkCatTable"
 
-LDIFF_SYM197=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM197
+LDIFF_SYM200=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM200
 	.byte 2,35,32,6
 	.asciz "cjkLv1Table"
 
-LDIFF_SYM198=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM198
+LDIFF_SYM201=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM201
 	.byte 2,35,36,6
 	.asciz "cjkLv2Table"
 
-LDIFF_SYM199=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM199
+LDIFF_SYM202=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM202
 	.byte 2,35,40,6
 	.asciz "cjkLv2Indexer"
 
-LDIFF_SYM200=LTDIE_24_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM200
+LDIFF_SYM203=LTDIE_24_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM203
 	.byte 2,35,28,6
 	.asciz "lcid"
 
-LDIFF_SYM201=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM201
+LDIFF_SYM204=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM204
 	.byte 2,35,44,6
 	.asciz "frenchSort"
 
-LDIFF_SYM202=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM202
+LDIFF_SYM205=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM205
 	.byte 2,35,48,0,7
 	.asciz "Mono_Globalization_Unicode_SimpleCollator"
 
-LDIFF_SYM203=LTDIE_23 - Ldebug_info_start
-	.long LDIFF_SYM203
+LDIFF_SYM206=LTDIE_23 - Ldebug_info_start
+	.long LDIFF_SYM206
 LTDIE_23_POINTER:
 
 	.byte 13
-LDIFF_SYM204=LTDIE_23 - Ldebug_info_start
-	.long LDIFF_SYM204
+LDIFF_SYM207=LTDIE_23 - Ldebug_info_start
+	.long LDIFF_SYM207
 LTDIE_23_REFERENCE:
 
 	.byte 14
-LDIFF_SYM205=LTDIE_23 - Ldebug_info_start
-	.long LDIFF_SYM205
+LDIFF_SYM208=LTDIE_23 - Ldebug_info_start
+	.long LDIFF_SYM208
 LTDIE_22:
 
 	.byte 5
 	.asciz "System_Globalization_CompareInfo"
 
 	.byte 24,16
-LDIFF_SYM206=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM206
+LDIFF_SYM209=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM209
 	.byte 2,35,0,6
 	.asciz "culture"
 
-LDIFF_SYM207=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM207
+LDIFF_SYM210=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM210
 	.byte 2,35,8,6
 	.asciz "win32LCID"
 
-LDIFF_SYM208=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM208
+LDIFF_SYM211=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM211
 	.byte 2,35,12,6
 	.asciz "m_name"
 
-LDIFF_SYM209=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM209
+LDIFF_SYM212=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM212
 	.byte 2,35,16,6
 	.asciz "collator"
 
-LDIFF_SYM210=LTDIE_23_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM210
+LDIFF_SYM213=LTDIE_23_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM213
 	.byte 2,35,20,0,7
 	.asciz "System_Globalization_CompareInfo"
 
-LDIFF_SYM211=LTDIE_22 - Ldebug_info_start
-	.long LDIFF_SYM211
+LDIFF_SYM214=LTDIE_22 - Ldebug_info_start
+	.long LDIFF_SYM214
 LTDIE_22_POINTER:
 
 	.byte 13
-LDIFF_SYM212=LTDIE_22 - Ldebug_info_start
-	.long LDIFF_SYM212
+LDIFF_SYM215=LTDIE_22 - Ldebug_info_start
+	.long LDIFF_SYM215
 LTDIE_22_REFERENCE:
 
 	.byte 14
-LDIFF_SYM213=LTDIE_22 - Ldebug_info_start
-	.long LDIFF_SYM213
+LDIFF_SYM216=LTDIE_22 - Ldebug_info_start
+	.long LDIFF_SYM216
 LTDIE_15:
 
 	.byte 5
 	.asciz "System_Globalization_CultureInfo"
 
 	.byte 108,16
-LDIFF_SYM214=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM214
+LDIFF_SYM217=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM217
 	.byte 2,35,0,6
 	.asciz "m_isReadOnly"
 
-LDIFF_SYM215=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM215
+LDIFF_SYM218=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM218
 	.byte 2,35,8,6
 	.asciz "cultureID"
 
-LDIFF_SYM216=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM216
+LDIFF_SYM219=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM219
 	.byte 2,35,12,6
 	.asciz "parent_lcid"
 
-LDIFF_SYM217=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM217
+LDIFF_SYM220=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM220
 	.byte 2,35,16,6
 	.asciz "datetime_index"
 
-LDIFF_SYM218=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM218
+LDIFF_SYM221=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM221
 	.byte 2,35,20,6
 	.asciz "number_index"
 
-LDIFF_SYM219=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM219
+LDIFF_SYM222=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM222
 	.byte 2,35,24,6
 	.asciz "default_calendar_type"
 
-LDIFF_SYM220=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM220
+LDIFF_SYM223=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM223
 	.byte 2,35,28,6
 	.asciz "m_useUserOverride"
 
-LDIFF_SYM221=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM221
+LDIFF_SYM224=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM224
 	.byte 2,35,32,6
 	.asciz "numInfo"
 
-LDIFF_SYM222=LTDIE_17_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM222
+LDIFF_SYM225=LTDIE_17_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM225
 	.byte 2,35,36,6
 	.asciz "dateTimeInfo"
 
-LDIFF_SYM223=LTDIE_18_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM223
+LDIFF_SYM226=LTDIE_18_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM226
 	.byte 2,35,40,6
 	.asciz "textInfo"
 
-LDIFF_SYM224=LTDIE_21_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM224
+LDIFF_SYM227=LTDIE_21_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM227
 	.byte 2,35,44,6
 	.asciz "m_name"
 
-LDIFF_SYM225=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM225
+LDIFF_SYM228=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM228
 	.byte 2,35,48,6
 	.asciz "englishname"
 
-LDIFF_SYM226=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM226
+LDIFF_SYM229=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM229
 	.byte 2,35,52,6
 	.asciz "nativename"
 
-LDIFF_SYM227=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM227
+LDIFF_SYM230=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM230
 	.byte 2,35,56,6
 	.asciz "iso3lang"
 
-LDIFF_SYM228=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM228
+LDIFF_SYM231=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM231
 	.byte 2,35,60,6
 	.asciz "iso2lang"
 
-LDIFF_SYM229=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM229
+LDIFF_SYM232=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM232
 	.byte 2,35,64,6
 	.asciz "win3lang"
 
-LDIFF_SYM230=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM230
+LDIFF_SYM233=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM233
 	.byte 2,35,68,6
 	.asciz "territory"
 
-LDIFF_SYM231=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM231
+LDIFF_SYM234=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM234
 	.byte 2,35,72,6
 	.asciz "native_calendar_names"
 
-LDIFF_SYM232=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM232
+LDIFF_SYM235=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM235
 	.byte 2,35,76,6
 	.asciz "compareInfo"
 
-LDIFF_SYM233=LTDIE_22_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM233
+LDIFF_SYM236=LTDIE_22_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM236
 	.byte 2,35,80,6
 	.asciz "textinfo_data"
 
-LDIFF_SYM234=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM234
+LDIFF_SYM237=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM237
 	.byte 2,35,84,6
 	.asciz "m_dataItem"
 
-LDIFF_SYM235=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM235
+LDIFF_SYM238=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM238
 	.byte 2,35,88,6
 	.asciz "calendar"
 
-LDIFF_SYM236=LTDIE_19_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM236
+LDIFF_SYM239=LTDIE_19_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM239
 	.byte 2,35,92,6
 	.asciz "parent_culture"
 
-LDIFF_SYM237=LTDIE_15_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM237
+LDIFF_SYM240=LTDIE_15_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM240
 	.byte 2,35,96,6
 	.asciz "constructed"
 
-LDIFF_SYM238=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM238
+LDIFF_SYM241=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM241
 	.byte 2,35,100,6
 	.asciz "cached_serialized_form"
 
-LDIFF_SYM239=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM239
+LDIFF_SYM242=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM242
 	.byte 2,35,104,0,7
 	.asciz "System_Globalization_CultureInfo"
 
-LDIFF_SYM240=LTDIE_15 - Ldebug_info_start
-	.long LDIFF_SYM240
+LDIFF_SYM243=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM243
 LTDIE_15_POINTER:
 
 	.byte 13
-LDIFF_SYM241=LTDIE_15 - Ldebug_info_start
-	.long LDIFF_SYM241
+LDIFF_SYM244=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM244
 LTDIE_15_REFERENCE:
 
 	.byte 14
-LDIFF_SYM242=LTDIE_15 - Ldebug_info_start
-	.long LDIFF_SYM242
+LDIFF_SYM245=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM245
 LTDIE_5:
 
 	.byte 5
 	.asciz "Newtonsoft_Json_JsonWriter"
 
 	.byte 64,16
-LDIFF_SYM243=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM243
+LDIFF_SYM246=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM246
 	.byte 2,35,0,6
 	.asciz "_stack"
 
-LDIFF_SYM244=LTDIE_6_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM244
+LDIFF_SYM247=LTDIE_6_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM247
 	.byte 2,35,8,6
 	.asciz "_currentPosition"
 
-LDIFF_SYM245=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM245
+LDIFF_SYM248=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM248
 	.byte 2,35,12,6
 	.asciz "_currentState"
 
-LDIFF_SYM246=LTDIE_9 - Ldebug_info_start
-	.long LDIFF_SYM246
+LDIFF_SYM249=LTDIE_9 - Ldebug_info_start
+	.long LDIFF_SYM249
 	.byte 2,35,36,6
 	.asciz "_formatting"
 
-LDIFF_SYM247=LTDIE_10 - Ldebug_info_start
-	.long LDIFF_SYM247
+LDIFF_SYM250=LTDIE_10 - Ldebug_info_start
+	.long LDIFF_SYM250
 	.byte 2,35,40,6
 	.asciz "_dateFormatHandling"
 
-LDIFF_SYM248=LTDIE_11 - Ldebug_info_start
-	.long LDIFF_SYM248
+LDIFF_SYM251=LTDIE_11 - Ldebug_info_start
+	.long LDIFF_SYM251
 	.byte 2,35,44,6
 	.asciz "_dateTimeZoneHandling"
 
-LDIFF_SYM249=LTDIE_12 - Ldebug_info_start
-	.long LDIFF_SYM249
+LDIFF_SYM252=LTDIE_12 - Ldebug_info_start
+	.long LDIFF_SYM252
 	.byte 2,35,48,6
 	.asciz "_stringEscapeHandling"
 
-LDIFF_SYM250=LTDIE_13 - Ldebug_info_start
-	.long LDIFF_SYM250
+LDIFF_SYM253=LTDIE_13 - Ldebug_info_start
+	.long LDIFF_SYM253
 	.byte 2,35,52,6
 	.asciz "_floatFormatHandling"
 
-LDIFF_SYM251=LTDIE_14 - Ldebug_info_start
-	.long LDIFF_SYM251
+LDIFF_SYM254=LTDIE_14 - Ldebug_info_start
+	.long LDIFF_SYM254
 	.byte 2,35,56,6
 	.asciz "_dateFormatString"
 
-LDIFF_SYM252=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM252
+LDIFF_SYM255=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM255
 	.byte 2,35,28,6
 	.asciz "_culture"
 
-LDIFF_SYM253=LTDIE_15_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM253
+LDIFF_SYM256=LTDIE_15_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM256
 	.byte 2,35,32,6
 	.asciz "<CloseOutput>k__BackingField"
 
-LDIFF_SYM254=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM254
+LDIFF_SYM257=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM257
 	.byte 2,35,60,0,7
 	.asciz "Newtonsoft_Json_JsonWriter"
 
-LDIFF_SYM255=LTDIE_5 - Ldebug_info_start
-	.long LDIFF_SYM255
+LDIFF_SYM258=LTDIE_5 - Ldebug_info_start
+	.long LDIFF_SYM258
 LTDIE_5_POINTER:
 
 	.byte 13
-LDIFF_SYM256=LTDIE_5 - Ldebug_info_start
-	.long LDIFF_SYM256
+LDIFF_SYM259=LTDIE_5 - Ldebug_info_start
+	.long LDIFF_SYM259
 LTDIE_5_REFERENCE:
 
 	.byte 14
-LDIFF_SYM257=LTDIE_5 - Ldebug_info_start
-	.long LDIFF_SYM257
+LDIFF_SYM260=LTDIE_5 - Ldebug_info_start
+	.long LDIFF_SYM260
 LTDIE_26:
 
 	.byte 8
 	.asciz "Newtonsoft_Json_TypeNameHandling"
 
 	.byte 4
-LDIFF_SYM258=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM258
+LDIFF_SYM261=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM261
 	.byte 9
 	.asciz "None"
 
@@ -2783,26 +2799,26 @@ LDIFF_SYM258=LDIE_I4 - Ldebug_info_start
 	.byte 4,0,7
 	.asciz "Newtonsoft_Json_TypeNameHandling"
 
-LDIFF_SYM259=LTDIE_26 - Ldebug_info_start
-	.long LDIFF_SYM259
+LDIFF_SYM262=LTDIE_26 - Ldebug_info_start
+	.long LDIFF_SYM262
 LTDIE_26_POINTER:
 
 	.byte 13
-LDIFF_SYM260=LTDIE_26 - Ldebug_info_start
-	.long LDIFF_SYM260
+LDIFF_SYM263=LTDIE_26 - Ldebug_info_start
+	.long LDIFF_SYM263
 LTDIE_26_REFERENCE:
 
 	.byte 14
-LDIFF_SYM261=LTDIE_26 - Ldebug_info_start
-	.long LDIFF_SYM261
+LDIFF_SYM264=LTDIE_26 - Ldebug_info_start
+	.long LDIFF_SYM264
 LTDIE_27:
 
 	.byte 8
 	.asciz "System_Runtime_Serialization_Formatters_FormatterAssemblyStyle"
 
 	.byte 4
-LDIFF_SYM262=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM262
+LDIFF_SYM265=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM265
 	.byte 9
 	.asciz "Simple"
 
@@ -2812,26 +2828,26 @@ LDIFF_SYM262=LDIE_I4 - Ldebug_info_start
 	.byte 1,0,7
 	.asciz "System_Runtime_Serialization_Formatters_FormatterAssemblyStyle"
 
-LDIFF_SYM263=LTDIE_27 - Ldebug_info_start
-	.long LDIFF_SYM263
+LDIFF_SYM266=LTDIE_27 - Ldebug_info_start
+	.long LDIFF_SYM266
 LTDIE_27_POINTER:
 
 	.byte 13
-LDIFF_SYM264=LTDIE_27 - Ldebug_info_start
-	.long LDIFF_SYM264
+LDIFF_SYM267=LTDIE_27 - Ldebug_info_start
+	.long LDIFF_SYM267
 LTDIE_27_REFERENCE:
 
 	.byte 14
-LDIFF_SYM265=LTDIE_27 - Ldebug_info_start
-	.long LDIFF_SYM265
+LDIFF_SYM268=LTDIE_27 - Ldebug_info_start
+	.long LDIFF_SYM268
 LTDIE_28:
 
 	.byte 8
 	.asciz "Newtonsoft_Json_PreserveReferencesHandling"
 
 	.byte 4
-LDIFF_SYM266=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM266
+LDIFF_SYM269=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM269
 	.byte 9
 	.asciz "None"
 
@@ -2847,26 +2863,26 @@ LDIFF_SYM266=LDIE_I4 - Ldebug_info_start
 	.byte 3,0,7
 	.asciz "Newtonsoft_Json_PreserveReferencesHandling"
 
-LDIFF_SYM267=LTDIE_28 - Ldebug_info_start
-	.long LDIFF_SYM267
+LDIFF_SYM270=LTDIE_28 - Ldebug_info_start
+	.long LDIFF_SYM270
 LTDIE_28_POINTER:
 
 	.byte 13
-LDIFF_SYM268=LTDIE_28 - Ldebug_info_start
-	.long LDIFF_SYM268
+LDIFF_SYM271=LTDIE_28 - Ldebug_info_start
+	.long LDIFF_SYM271
 LTDIE_28_REFERENCE:
 
 	.byte 14
-LDIFF_SYM269=LTDIE_28 - Ldebug_info_start
-	.long LDIFF_SYM269
+LDIFF_SYM272=LTDIE_28 - Ldebug_info_start
+	.long LDIFF_SYM272
 LTDIE_29:
 
 	.byte 8
 	.asciz "Newtonsoft_Json_ReferenceLoopHandling"
 
 	.byte 4
-LDIFF_SYM270=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM270
+LDIFF_SYM273=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM273
 	.byte 9
 	.asciz "Error"
 
@@ -2879,26 +2895,26 @@ LDIFF_SYM270=LDIE_I4 - Ldebug_info_start
 	.byte 2,0,7
 	.asciz "Newtonsoft_Json_ReferenceLoopHandling"
 
-LDIFF_SYM271=LTDIE_29 - Ldebug_info_start
-	.long LDIFF_SYM271
+LDIFF_SYM274=LTDIE_29 - Ldebug_info_start
+	.long LDIFF_SYM274
 LTDIE_29_POINTER:
 
 	.byte 13
-LDIFF_SYM272=LTDIE_29 - Ldebug_info_start
-	.long LDIFF_SYM272
+LDIFF_SYM275=LTDIE_29 - Ldebug_info_start
+	.long LDIFF_SYM275
 LTDIE_29_REFERENCE:
 
 	.byte 14
-LDIFF_SYM273=LTDIE_29 - Ldebug_info_start
-	.long LDIFF_SYM273
+LDIFF_SYM276=LTDIE_29 - Ldebug_info_start
+	.long LDIFF_SYM276
 LTDIE_30:
 
 	.byte 8
 	.asciz "Newtonsoft_Json_MissingMemberHandling"
 
 	.byte 4
-LDIFF_SYM274=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM274
+LDIFF_SYM277=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM277
 	.byte 9
 	.asciz "Ignore"
 
@@ -2908,26 +2924,26 @@ LDIFF_SYM274=LDIE_I4 - Ldebug_info_start
 	.byte 1,0,7
 	.asciz "Newtonsoft_Json_MissingMemberHandling"
 
-LDIFF_SYM275=LTDIE_30 - Ldebug_info_start
-	.long LDIFF_SYM275
+LDIFF_SYM278=LTDIE_30 - Ldebug_info_start
+	.long LDIFF_SYM278
 LTDIE_30_POINTER:
 
 	.byte 13
-LDIFF_SYM276=LTDIE_30 - Ldebug_info_start
-	.long LDIFF_SYM276
+LDIFF_SYM279=LTDIE_30 - Ldebug_info_start
+	.long LDIFF_SYM279
 LTDIE_30_REFERENCE:
 
 	.byte 14
-LDIFF_SYM277=LTDIE_30 - Ldebug_info_start
-	.long LDIFF_SYM277
+LDIFF_SYM280=LTDIE_30 - Ldebug_info_start
+	.long LDIFF_SYM280
 LTDIE_31:
 
 	.byte 8
 	.asciz "Newtonsoft_Json_ObjectCreationHandling"
 
 	.byte 4
-LDIFF_SYM278=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM278
+LDIFF_SYM281=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM281
 	.byte 9
 	.asciz "Auto"
 
@@ -2940,26 +2956,26 @@ LDIFF_SYM278=LDIE_I4 - Ldebug_info_start
 	.byte 2,0,7
 	.asciz "Newtonsoft_Json_ObjectCreationHandling"
 
-LDIFF_SYM279=LTDIE_31 - Ldebug_info_start
-	.long LDIFF_SYM279
+LDIFF_SYM282=LTDIE_31 - Ldebug_info_start
+	.long LDIFF_SYM282
 LTDIE_31_POINTER:
 
 	.byte 13
-LDIFF_SYM280=LTDIE_31 - Ldebug_info_start
-	.long LDIFF_SYM280
+LDIFF_SYM283=LTDIE_31 - Ldebug_info_start
+	.long LDIFF_SYM283
 LTDIE_31_REFERENCE:
 
 	.byte 14
-LDIFF_SYM281=LTDIE_31 - Ldebug_info_start
-	.long LDIFF_SYM281
+LDIFF_SYM284=LTDIE_31 - Ldebug_info_start
+	.long LDIFF_SYM284
 LTDIE_32:
 
 	.byte 8
 	.asciz "Newtonsoft_Json_NullValueHandling"
 
 	.byte 4
-LDIFF_SYM282=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM282
+LDIFF_SYM285=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM285
 	.byte 9
 	.asciz "Include"
 
@@ -2969,26 +2985,26 @@ LDIFF_SYM282=LDIE_I4 - Ldebug_info_start
 	.byte 1,0,7
 	.asciz "Newtonsoft_Json_NullValueHandling"
 
-LDIFF_SYM283=LTDIE_32 - Ldebug_info_start
-	.long LDIFF_SYM283
+LDIFF_SYM286=LTDIE_32 - Ldebug_info_start
+	.long LDIFF_SYM286
 LTDIE_32_POINTER:
 
 	.byte 13
-LDIFF_SYM284=LTDIE_32 - Ldebug_info_start
-	.long LDIFF_SYM284
+LDIFF_SYM287=LTDIE_32 - Ldebug_info_start
+	.long LDIFF_SYM287
 LTDIE_32_REFERENCE:
 
 	.byte 14
-LDIFF_SYM285=LTDIE_32 - Ldebug_info_start
-	.long LDIFF_SYM285
+LDIFF_SYM288=LTDIE_32 - Ldebug_info_start
+	.long LDIFF_SYM288
 LTDIE_33:
 
 	.byte 8
 	.asciz "Newtonsoft_Json_DefaultValueHandling"
 
 	.byte 4
-LDIFF_SYM286=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM286
+LDIFF_SYM289=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM289
 	.byte 9
 	.asciz "Include"
 
@@ -3004,26 +3020,26 @@ LDIFF_SYM286=LDIE_I4 - Ldebug_info_start
 	.byte 3,0,7
 	.asciz "Newtonsoft_Json_DefaultValueHandling"
 
-LDIFF_SYM287=LTDIE_33 - Ldebug_info_start
-	.long LDIFF_SYM287
+LDIFF_SYM290=LTDIE_33 - Ldebug_info_start
+	.long LDIFF_SYM290
 LTDIE_33_POINTER:
 
 	.byte 13
-LDIFF_SYM288=LTDIE_33 - Ldebug_info_start
-	.long LDIFF_SYM288
+LDIFF_SYM291=LTDIE_33 - Ldebug_info_start
+	.long LDIFF_SYM291
 LTDIE_33_REFERENCE:
 
 	.byte 14
-LDIFF_SYM289=LTDIE_33 - Ldebug_info_start
-	.long LDIFF_SYM289
+LDIFF_SYM292=LTDIE_33 - Ldebug_info_start
+	.long LDIFF_SYM292
 LTDIE_34:
 
 	.byte 8
 	.asciz "Newtonsoft_Json_ConstructorHandling"
 
 	.byte 4
-LDIFF_SYM290=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM290
+LDIFF_SYM293=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM293
 	.byte 9
 	.asciz "Default"
 
@@ -3033,26 +3049,26 @@ LDIFF_SYM290=LDIE_I4 - Ldebug_info_start
 	.byte 1,0,7
 	.asciz "Newtonsoft_Json_ConstructorHandling"
 
-LDIFF_SYM291=LTDIE_34 - Ldebug_info_start
-	.long LDIFF_SYM291
+LDIFF_SYM294=LTDIE_34 - Ldebug_info_start
+	.long LDIFF_SYM294
 LTDIE_34_POINTER:
 
 	.byte 13
-LDIFF_SYM292=LTDIE_34 - Ldebug_info_start
-	.long LDIFF_SYM292
+LDIFF_SYM295=LTDIE_34 - Ldebug_info_start
+	.long LDIFF_SYM295
 LTDIE_34_REFERENCE:
 
 	.byte 14
-LDIFF_SYM293=LTDIE_34 - Ldebug_info_start
-	.long LDIFF_SYM293
+LDIFF_SYM296=LTDIE_34 - Ldebug_info_start
+	.long LDIFF_SYM296
 LTDIE_35:
 
 	.byte 8
 	.asciz "Newtonsoft_Json_MetadataPropertyHandling"
 
 	.byte 4
-LDIFF_SYM294=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM294
+LDIFF_SYM297=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM297
 	.byte 9
 	.asciz "Default"
 
@@ -3065,18 +3081,18 @@ LDIFF_SYM294=LDIE_I4 - Ldebug_info_start
 	.byte 2,0,7
 	.asciz "Newtonsoft_Json_MetadataPropertyHandling"
 
-LDIFF_SYM295=LTDIE_35 - Ldebug_info_start
-	.long LDIFF_SYM295
+LDIFF_SYM298=LTDIE_35 - Ldebug_info_start
+	.long LDIFF_SYM298
 LTDIE_35_POINTER:
 
 	.byte 13
-LDIFF_SYM296=LTDIE_35 - Ldebug_info_start
-	.long LDIFF_SYM296
+LDIFF_SYM299=LTDIE_35 - Ldebug_info_start
+	.long LDIFF_SYM299
 LTDIE_35_REFERENCE:
 
 	.byte 14
-LDIFF_SYM297=LTDIE_35 - Ldebug_info_start
-	.long LDIFF_SYM297
+LDIFF_SYM300=LTDIE_35 - Ldebug_info_start
+	.long LDIFF_SYM300
 LTDIE_38:
 
 	.byte 17
@@ -3085,74 +3101,74 @@ LTDIE_38:
 	.byte 8,7
 	.asciz "System_Collections_Generic_IList`1"
 
-LDIFF_SYM298=LTDIE_38 - Ldebug_info_start
-	.long LDIFF_SYM298
+LDIFF_SYM301=LTDIE_38 - Ldebug_info_start
+	.long LDIFF_SYM301
 LTDIE_38_POINTER:
 
 	.byte 13
-LDIFF_SYM299=LTDIE_38 - Ldebug_info_start
-	.long LDIFF_SYM299
+LDIFF_SYM302=LTDIE_38 - Ldebug_info_start
+	.long LDIFF_SYM302
 LTDIE_38_REFERENCE:
 
 	.byte 14
-LDIFF_SYM300=LTDIE_38 - Ldebug_info_start
-	.long LDIFF_SYM300
+LDIFF_SYM303=LTDIE_38 - Ldebug_info_start
+	.long LDIFF_SYM303
 LTDIE_37:
 
 	.byte 5
 	.asciz "System_Collections_ObjectModel_Collection`1"
 
 	.byte 16,16
-LDIFF_SYM301=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM301
+LDIFF_SYM304=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM304
 	.byte 2,35,0,6
 	.asciz "items"
 
-LDIFF_SYM302=LTDIE_38_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM302
+LDIFF_SYM305=LTDIE_38_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM305
 	.byte 2,35,8,6
 	.asciz "syncRoot"
 
-LDIFF_SYM303=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM303
+LDIFF_SYM306=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM306
 	.byte 2,35,12,0,7
 	.asciz "System_Collections_ObjectModel_Collection`1"
 
-LDIFF_SYM304=LTDIE_37 - Ldebug_info_start
-	.long LDIFF_SYM304
+LDIFF_SYM307=LTDIE_37 - Ldebug_info_start
+	.long LDIFF_SYM307
 LTDIE_37_POINTER:
 
 	.byte 13
-LDIFF_SYM305=LTDIE_37 - Ldebug_info_start
-	.long LDIFF_SYM305
+LDIFF_SYM308=LTDIE_37 - Ldebug_info_start
+	.long LDIFF_SYM308
 LTDIE_37_REFERENCE:
 
 	.byte 14
-LDIFF_SYM306=LTDIE_37 - Ldebug_info_start
-	.long LDIFF_SYM306
+LDIFF_SYM309=LTDIE_37 - Ldebug_info_start
+	.long LDIFF_SYM309
 LTDIE_36:
 
 	.byte 5
 	.asciz "Newtonsoft_Json_JsonConverterCollection"
 
 	.byte 16,16
-LDIFF_SYM307=LTDIE_37 - Ldebug_info_start
-	.long LDIFF_SYM307
+LDIFF_SYM310=LTDIE_37 - Ldebug_info_start
+	.long LDIFF_SYM310
 	.byte 2,35,0,0,7
 	.asciz "Newtonsoft_Json_JsonConverterCollection"
 
-LDIFF_SYM308=LTDIE_36 - Ldebug_info_start
-	.long LDIFF_SYM308
+LDIFF_SYM311=LTDIE_36 - Ldebug_info_start
+	.long LDIFF_SYM311
 LTDIE_36_POINTER:
 
 	.byte 13
-LDIFF_SYM309=LTDIE_36 - Ldebug_info_start
-	.long LDIFF_SYM309
+LDIFF_SYM312=LTDIE_36 - Ldebug_info_start
+	.long LDIFF_SYM312
 LTDIE_36_REFERENCE:
 
 	.byte 14
-LDIFF_SYM310=LTDIE_36 - Ldebug_info_start
-	.long LDIFF_SYM310
+LDIFF_SYM313=LTDIE_36 - Ldebug_info_start
+	.long LDIFF_SYM313
 LTDIE_39:
 
 	.byte 17
@@ -3161,18 +3177,18 @@ LTDIE_39:
 	.byte 8,7
 	.asciz "Newtonsoft_Json_Serialization_IContractResolver"
 
-LDIFF_SYM311=LTDIE_39 - Ldebug_info_start
-	.long LDIFF_SYM311
+LDIFF_SYM314=LTDIE_39 - Ldebug_info_start
+	.long LDIFF_SYM314
 LTDIE_39_POINTER:
 
 	.byte 13
-LDIFF_SYM312=LTDIE_39 - Ldebug_info_start
-	.long LDIFF_SYM312
+LDIFF_SYM315=LTDIE_39 - Ldebug_info_start
+	.long LDIFF_SYM315
 LTDIE_39_REFERENCE:
 
 	.byte 14
-LDIFF_SYM313=LTDIE_39 - Ldebug_info_start
-	.long LDIFF_SYM313
+LDIFF_SYM316=LTDIE_39 - Ldebug_info_start
+	.long LDIFF_SYM316
 LTDIE_40:
 
 	.byte 17
@@ -3181,41 +3197,41 @@ LTDIE_40:
 	.byte 8,7
 	.asciz "Newtonsoft_Json_Serialization_ITraceWriter"
 
-LDIFF_SYM314=LTDIE_40 - Ldebug_info_start
-	.long LDIFF_SYM314
+LDIFF_SYM317=LTDIE_40 - Ldebug_info_start
+	.long LDIFF_SYM317
 LTDIE_40_POINTER:
 
 	.byte 13
-LDIFF_SYM315=LTDIE_40 - Ldebug_info_start
-	.long LDIFF_SYM315
+LDIFF_SYM318=LTDIE_40 - Ldebug_info_start
+	.long LDIFF_SYM318
 LTDIE_40_REFERENCE:
 
 	.byte 14
-LDIFF_SYM316=LTDIE_40 - Ldebug_info_start
-	.long LDIFF_SYM316
+LDIFF_SYM319=LTDIE_40 - Ldebug_info_start
+	.long LDIFF_SYM319
 LTDIE_41:
 
 	.byte 5
 	.asciz "Newtonsoft_Json_SerializationBinder"
 
 	.byte 8,16
-LDIFF_SYM317=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM317
+LDIFF_SYM320=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM320
 	.byte 2,35,0,0,7
 	.asciz "Newtonsoft_Json_SerializationBinder"
 
-LDIFF_SYM318=LTDIE_41 - Ldebug_info_start
-	.long LDIFF_SYM318
+LDIFF_SYM321=LTDIE_41 - Ldebug_info_start
+	.long LDIFF_SYM321
 LTDIE_41_POINTER:
 
 	.byte 13
-LDIFF_SYM319=LTDIE_41 - Ldebug_info_start
-	.long LDIFF_SYM319
+LDIFF_SYM322=LTDIE_41 - Ldebug_info_start
+	.long LDIFF_SYM322
 LTDIE_41_REFERENCE:
 
 	.byte 14
-LDIFF_SYM320=LTDIE_41 - Ldebug_info_start
-	.long LDIFF_SYM320
+LDIFF_SYM323=LTDIE_41 - Ldebug_info_start
+	.long LDIFF_SYM323
 LTDIE_42:
 
 	.byte 17
@@ -3224,399 +3240,399 @@ LTDIE_42:
 	.byte 8,7
 	.asciz "Newtonsoft_Json_Serialization_IReferenceResolver"
 
-LDIFF_SYM321=LTDIE_42 - Ldebug_info_start
-	.long LDIFF_SYM321
+LDIFF_SYM324=LTDIE_42 - Ldebug_info_start
+	.long LDIFF_SYM324
 LTDIE_42_POINTER:
 
 	.byte 13
-LDIFF_SYM322=LTDIE_42 - Ldebug_info_start
-	.long LDIFF_SYM322
+LDIFF_SYM325=LTDIE_42 - Ldebug_info_start
+	.long LDIFF_SYM325
 LTDIE_42_REFERENCE:
 
 	.byte 14
-LDIFF_SYM323=LTDIE_42 - Ldebug_info_start
-	.long LDIFF_SYM323
+LDIFF_SYM326=LTDIE_42 - Ldebug_info_start
+	.long LDIFF_SYM326
 LTDIE_47:
 
 	.byte 5
 	.asciz "System_Reflection_MethodBase"
 
 	.byte 8,16
-LDIFF_SYM324=LTDIE_4 - Ldebug_info_start
-	.long LDIFF_SYM324
+LDIFF_SYM327=LTDIE_4 - Ldebug_info_start
+	.long LDIFF_SYM327
 	.byte 2,35,0,0,7
 	.asciz "System_Reflection_MethodBase"
 
-LDIFF_SYM325=LTDIE_47 - Ldebug_info_start
-	.long LDIFF_SYM325
+LDIFF_SYM328=LTDIE_47 - Ldebug_info_start
+	.long LDIFF_SYM328
 LTDIE_47_POINTER:
 
 	.byte 13
-LDIFF_SYM326=LTDIE_47 - Ldebug_info_start
-	.long LDIFF_SYM326
+LDIFF_SYM329=LTDIE_47 - Ldebug_info_start
+	.long LDIFF_SYM329
 LTDIE_47_REFERENCE:
 
 	.byte 14
-LDIFF_SYM327=LTDIE_47 - Ldebug_info_start
-	.long LDIFF_SYM327
+LDIFF_SYM330=LTDIE_47 - Ldebug_info_start
+	.long LDIFF_SYM330
 LTDIE_46:
 
 	.byte 5
 	.asciz "System_Reflection_MethodInfo"
 
 	.byte 8,16
-LDIFF_SYM328=LTDIE_47 - Ldebug_info_start
-	.long LDIFF_SYM328
+LDIFF_SYM331=LTDIE_47 - Ldebug_info_start
+	.long LDIFF_SYM331
 	.byte 2,35,0,0,7
 	.asciz "System_Reflection_MethodInfo"
 
-LDIFF_SYM329=LTDIE_46 - Ldebug_info_start
-	.long LDIFF_SYM329
+LDIFF_SYM332=LTDIE_46 - Ldebug_info_start
+	.long LDIFF_SYM332
 LTDIE_46_POINTER:
 
 	.byte 13
-LDIFF_SYM330=LTDIE_46 - Ldebug_info_start
-	.long LDIFF_SYM330
+LDIFF_SYM333=LTDIE_46 - Ldebug_info_start
+	.long LDIFF_SYM333
 LTDIE_46_REFERENCE:
 
 	.byte 14
-LDIFF_SYM331=LTDIE_46 - Ldebug_info_start
-	.long LDIFF_SYM331
+LDIFF_SYM334=LTDIE_46 - Ldebug_info_start
+	.long LDIFF_SYM334
 LTDIE_48:
 
 	.byte 5
 	.asciz "System_DelegateData"
 
 	.byte 20,16
-LDIFF_SYM332=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM332
+LDIFF_SYM335=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM335
 	.byte 2,35,0,6
 	.asciz "target_type"
 
-LDIFF_SYM333=LTDIE_3_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM333
+LDIFF_SYM336=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM336
 	.byte 2,35,8,6
 	.asciz "method_name"
 
-LDIFF_SYM334=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM334
+LDIFF_SYM337=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM337
 	.byte 2,35,12,6
 	.asciz "curried_first_arg"
 
-LDIFF_SYM335=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM335
+LDIFF_SYM338=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM338
 	.byte 2,35,16,0,7
 	.asciz "System_DelegateData"
 
-LDIFF_SYM336=LTDIE_48 - Ldebug_info_start
-	.long LDIFF_SYM336
+LDIFF_SYM339=LTDIE_48 - Ldebug_info_start
+	.long LDIFF_SYM339
 LTDIE_48_POINTER:
 
 	.byte 13
-LDIFF_SYM337=LTDIE_48 - Ldebug_info_start
-	.long LDIFF_SYM337
+LDIFF_SYM340=LTDIE_48 - Ldebug_info_start
+	.long LDIFF_SYM340
 LTDIE_48_REFERENCE:
 
 	.byte 14
-LDIFF_SYM338=LTDIE_48 - Ldebug_info_start
-	.long LDIFF_SYM338
+LDIFF_SYM341=LTDIE_48 - Ldebug_info_start
+	.long LDIFF_SYM341
 LTDIE_45:
 
 	.byte 5
 	.asciz "System_Delegate"
 
 	.byte 44,16
-LDIFF_SYM339=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM339
+LDIFF_SYM342=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM342
 	.byte 2,35,0,6
 	.asciz "method_ptr"
 
-LDIFF_SYM340=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM340
+LDIFF_SYM343=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM343
 	.byte 2,35,8,6
 	.asciz "invoke_impl"
 
-LDIFF_SYM341=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM341
+LDIFF_SYM344=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM344
 	.byte 2,35,12,6
 	.asciz "m_target"
 
-LDIFF_SYM342=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM342
+LDIFF_SYM345=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM345
 	.byte 2,35,16,6
 	.asciz "method"
 
-LDIFF_SYM343=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM343
+LDIFF_SYM346=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM346
 	.byte 2,35,20,6
 	.asciz "delegate_trampoline"
 
-LDIFF_SYM344=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM344
+LDIFF_SYM347=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM347
 	.byte 2,35,24,6
 	.asciz "method_code"
 
-LDIFF_SYM345=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM345
+LDIFF_SYM348=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM348
 	.byte 2,35,28,6
 	.asciz "method_info"
 
-LDIFF_SYM346=LTDIE_46_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM346
+LDIFF_SYM349=LTDIE_46_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM349
 	.byte 2,35,32,6
 	.asciz "original_method_info"
 
-LDIFF_SYM347=LTDIE_46_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM347
+LDIFF_SYM350=LTDIE_46_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM350
 	.byte 2,35,36,6
 	.asciz "data"
 
-LDIFF_SYM348=LTDIE_48_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM348
+LDIFF_SYM351=LTDIE_48_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM351
 	.byte 2,35,40,0,7
 	.asciz "System_Delegate"
 
-LDIFF_SYM349=LTDIE_45 - Ldebug_info_start
-	.long LDIFF_SYM349
+LDIFF_SYM352=LTDIE_45 - Ldebug_info_start
+	.long LDIFF_SYM352
 LTDIE_45_POINTER:
 
 	.byte 13
-LDIFF_SYM350=LTDIE_45 - Ldebug_info_start
-	.long LDIFF_SYM350
+LDIFF_SYM353=LTDIE_45 - Ldebug_info_start
+	.long LDIFF_SYM353
 LTDIE_45_REFERENCE:
 
 	.byte 14
-LDIFF_SYM351=LTDIE_45 - Ldebug_info_start
-	.long LDIFF_SYM351
+LDIFF_SYM354=LTDIE_45 - Ldebug_info_start
+	.long LDIFF_SYM354
 LTDIE_44:
 
 	.byte 5
 	.asciz "System_MulticastDelegate"
 
 	.byte 52,16
-LDIFF_SYM352=LTDIE_45 - Ldebug_info_start
-	.long LDIFF_SYM352
+LDIFF_SYM355=LTDIE_45 - Ldebug_info_start
+	.long LDIFF_SYM355
 	.byte 2,35,0,6
 	.asciz "prev"
 
-LDIFF_SYM353=LTDIE_44_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM353
+LDIFF_SYM356=LTDIE_44_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM356
 	.byte 2,35,44,6
 	.asciz "kpm_next"
 
-LDIFF_SYM354=LTDIE_44_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM354
+LDIFF_SYM357=LTDIE_44_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM357
 	.byte 2,35,48,0,7
 	.asciz "System_MulticastDelegate"
 
-LDIFF_SYM355=LTDIE_44 - Ldebug_info_start
-	.long LDIFF_SYM355
+LDIFF_SYM358=LTDIE_44 - Ldebug_info_start
+	.long LDIFF_SYM358
 LTDIE_44_POINTER:
 
 	.byte 13
-LDIFF_SYM356=LTDIE_44 - Ldebug_info_start
-	.long LDIFF_SYM356
+LDIFF_SYM359=LTDIE_44 - Ldebug_info_start
+	.long LDIFF_SYM359
 LTDIE_44_REFERENCE:
 
 	.byte 14
-LDIFF_SYM357=LTDIE_44 - Ldebug_info_start
-	.long LDIFF_SYM357
+LDIFF_SYM360=LTDIE_44 - Ldebug_info_start
+	.long LDIFF_SYM360
 LTDIE_43:
 
 	.byte 5
 	.asciz "System_EventHandler`1"
 
 	.byte 52,16
-LDIFF_SYM358=LTDIE_44 - Ldebug_info_start
-	.long LDIFF_SYM358
+LDIFF_SYM361=LTDIE_44 - Ldebug_info_start
+	.long LDIFF_SYM361
 	.byte 2,35,0,0,7
 	.asciz "System_EventHandler`1"
 
-LDIFF_SYM359=LTDIE_43 - Ldebug_info_start
-	.long LDIFF_SYM359
+LDIFF_SYM362=LTDIE_43 - Ldebug_info_start
+	.long LDIFF_SYM362
 LTDIE_43_POINTER:
 
 	.byte 13
-LDIFF_SYM360=LTDIE_43 - Ldebug_info_start
-	.long LDIFF_SYM360
+LDIFF_SYM363=LTDIE_43 - Ldebug_info_start
+	.long LDIFF_SYM363
 LTDIE_43_REFERENCE:
 
 	.byte 14
-LDIFF_SYM361=LTDIE_43 - Ldebug_info_start
-	.long LDIFF_SYM361
+LDIFF_SYM364=LTDIE_43 - Ldebug_info_start
+	.long LDIFF_SYM364
 LTDIE_25:
 
 	.byte 5
 	.asciz "Newtonsoft_Json_JsonSerializer"
 
 	.byte 160,1,16
-LDIFF_SYM362=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM362
+LDIFF_SYM365=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM365
 	.byte 2,35,0,6
 	.asciz "_typeNameHandling"
 
-LDIFF_SYM363=LTDIE_26 - Ldebug_info_start
-	.long LDIFF_SYM363
+LDIFF_SYM366=LTDIE_26 - Ldebug_info_start
+	.long LDIFF_SYM366
 	.byte 2,35,48,6
 	.asciz "_typeNameAssemblyFormat"
 
-LDIFF_SYM364=LTDIE_27 - Ldebug_info_start
-	.long LDIFF_SYM364
+LDIFF_SYM367=LTDIE_27 - Ldebug_info_start
+	.long LDIFF_SYM367
 	.byte 2,35,52,6
 	.asciz "_preserveReferencesHandling"
 
-LDIFF_SYM365=LTDIE_28 - Ldebug_info_start
-	.long LDIFF_SYM365
+LDIFF_SYM368=LTDIE_28 - Ldebug_info_start
+	.long LDIFF_SYM368
 	.byte 2,35,56,6
 	.asciz "_referenceLoopHandling"
 
-LDIFF_SYM366=LTDIE_29 - Ldebug_info_start
-	.long LDIFF_SYM366
+LDIFF_SYM369=LTDIE_29 - Ldebug_info_start
+	.long LDIFF_SYM369
 	.byte 2,35,60,6
 	.asciz "_missingMemberHandling"
 
-LDIFF_SYM367=LTDIE_30 - Ldebug_info_start
-	.long LDIFF_SYM367
+LDIFF_SYM370=LTDIE_30 - Ldebug_info_start
+	.long LDIFF_SYM370
 	.byte 2,35,64,6
 	.asciz "_objectCreationHandling"
 
-LDIFF_SYM368=LTDIE_31 - Ldebug_info_start
-	.long LDIFF_SYM368
+LDIFF_SYM371=LTDIE_31 - Ldebug_info_start
+	.long LDIFF_SYM371
 	.byte 2,35,68,6
 	.asciz "_nullValueHandling"
 
-LDIFF_SYM369=LTDIE_32 - Ldebug_info_start
-	.long LDIFF_SYM369
+LDIFF_SYM372=LTDIE_32 - Ldebug_info_start
+	.long LDIFF_SYM372
 	.byte 2,35,72,6
 	.asciz "_defaultValueHandling"
 
-LDIFF_SYM370=LTDIE_33 - Ldebug_info_start
-	.long LDIFF_SYM370
+LDIFF_SYM373=LTDIE_33 - Ldebug_info_start
+	.long LDIFF_SYM373
 	.byte 2,35,76,6
 	.asciz "_constructorHandling"
 
-LDIFF_SYM371=LTDIE_34 - Ldebug_info_start
-	.long LDIFF_SYM371
+LDIFF_SYM374=LTDIE_34 - Ldebug_info_start
+	.long LDIFF_SYM374
 	.byte 2,35,80,6
 	.asciz "_metadataPropertyHandling"
 
-LDIFF_SYM372=LTDIE_35 - Ldebug_info_start
-	.long LDIFF_SYM372
+LDIFF_SYM375=LTDIE_35 - Ldebug_info_start
+	.long LDIFF_SYM375
 	.byte 2,35,84,6
 	.asciz "_converters"
 
-LDIFF_SYM373=LTDIE_36_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM373
+LDIFF_SYM376=LTDIE_36_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM376
 	.byte 2,35,8,6
 	.asciz "_contractResolver"
 
-LDIFF_SYM374=LTDIE_39_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM374
+LDIFF_SYM377=LTDIE_39_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM377
 	.byte 2,35,12,6
 	.asciz "_traceWriter"
 
-LDIFF_SYM375=LTDIE_40_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM375
+LDIFF_SYM378=LTDIE_40_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM378
 	.byte 2,35,16,6
 	.asciz "_binder"
 
-LDIFF_SYM376=LTDIE_41_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM376
+LDIFF_SYM379=LTDIE_41_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM379
 	.byte 2,35,20,6
 	.asciz "_context"
 
-LDIFF_SYM377=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM377
+LDIFF_SYM380=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM380
 	.byte 2,35,24,6
 	.asciz "_referenceResolver"
 
-LDIFF_SYM378=LTDIE_42_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM378
+LDIFF_SYM381=LTDIE_42_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM381
 	.byte 2,35,32,6
 	.asciz "_formatting"
 
-LDIFF_SYM379=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM379
+LDIFF_SYM382=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM382
 	.byte 2,35,88,6
 	.asciz "_dateFormatHandling"
 
-LDIFF_SYM380=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM380
+LDIFF_SYM383=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM383
 	.byte 2,35,96,6
 	.asciz "_dateTimeZoneHandling"
 
-LDIFF_SYM381=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM381
+LDIFF_SYM384=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM384
 	.byte 2,35,104,6
 	.asciz "_dateParseHandling"
 
-LDIFF_SYM382=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM382
+LDIFF_SYM385=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM385
 	.byte 2,35,112,6
 	.asciz "_floatFormatHandling"
 
-LDIFF_SYM383=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM383
+LDIFF_SYM386=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM386
 	.byte 2,35,120,6
 	.asciz "_floatParseHandling"
 
-LDIFF_SYM384=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM384
+LDIFF_SYM387=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM387
 	.byte 3,35,128,1,6
 	.asciz "_stringEscapeHandling"
 
-LDIFF_SYM385=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM385
+LDIFF_SYM388=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM388
 	.byte 3,35,136,1,6
 	.asciz "_culture"
 
-LDIFF_SYM386=LTDIE_15_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM386
+LDIFF_SYM389=LTDIE_15_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM389
 	.byte 2,35,36,6
 	.asciz "_maxDepth"
 
-LDIFF_SYM387=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM387
+LDIFF_SYM390=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM390
 	.byte 3,35,144,1,6
 	.asciz "_maxDepthSet"
 
-LDIFF_SYM388=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM388
+LDIFF_SYM391=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM391
 	.byte 3,35,152,1,6
 	.asciz "_checkAdditionalContent"
 
-LDIFF_SYM389=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM389
+LDIFF_SYM392=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM392
 	.byte 3,35,154,1,6
 	.asciz "_dateFormatString"
 
-LDIFF_SYM390=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM390
+LDIFF_SYM393=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM393
 	.byte 2,35,40,6
 	.asciz "_dateFormatStringSet"
 
-LDIFF_SYM391=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM391
+LDIFF_SYM394=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM394
 	.byte 3,35,156,1,6
 	.asciz "Error"
 
-LDIFF_SYM392=LTDIE_43_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM392
+LDIFF_SYM395=LTDIE_43_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM395
 	.byte 2,35,44,0,7
 	.asciz "Newtonsoft_Json_JsonSerializer"
 
-LDIFF_SYM393=LTDIE_25 - Ldebug_info_start
-	.long LDIFF_SYM393
+LDIFF_SYM396=LTDIE_25 - Ldebug_info_start
+	.long LDIFF_SYM396
 LTDIE_25_POINTER:
 
 	.byte 13
-LDIFF_SYM394=LTDIE_25 - Ldebug_info_start
-	.long LDIFF_SYM394
+LDIFF_SYM397=LTDIE_25 - Ldebug_info_start
+	.long LDIFF_SYM397
 LTDIE_25_REFERENCE:
 
 	.byte 14
-LDIFF_SYM395=LTDIE_25 - Ldebug_info_start
-	.long LDIFF_SYM395
+LDIFF_SYM398=LTDIE_25 - Ldebug_info_start
+	.long LDIFF_SYM398
 	.byte 2
 	.asciz "Cirrious.MvvmCross.Plugins.Json.MvxDateTimeJsonConverter:WriteJson"
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxDateTimeJsonConverter_WriteJson_Newtonsoft_Json_JsonWriter_object_Newtonsoft_Json_JsonSerializer
@@ -3625,47 +3641,47 @@ LDIFF_SYM395=LTDIE_25 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM396=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM396
+LDIFF_SYM399=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM399
 	.byte 0,3
 	.asciz "writer"
 
-LDIFF_SYM397=LTDIE_5_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM397
+LDIFF_SYM400=LTDIE_5_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM400
 	.byte 2,125,12,3
 	.asciz "value"
 
-LDIFF_SYM398=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM398
+LDIFF_SYM401=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM401
 	.byte 2,125,16,3
 	.asciz "serializer"
 
-LDIFF_SYM399=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM399
+LDIFF_SYM402=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM402
 	.byte 0,11
 	.asciz "V_0"
 
-LDIFF_SYM400=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM400
+LDIFF_SYM403=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM403
 	.byte 0,11
 	.asciz "V_1"
 
-LDIFF_SYM401=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM401
+LDIFF_SYM404=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM404
 	.byte 2,125,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM402=Lfde1_end - Lfde1_start
-	.long LDIFF_SYM402
+LDIFF_SYM405=Lfde1_end - Lfde1_start
+	.long LDIFF_SYM405
 Lfde1_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxDateTimeJsonConverter_WriteJson_Newtonsoft_Json_JsonWriter_object_Newtonsoft_Json_JsonSerializer
 
-LDIFF_SYM403=Lme_1 - _Cirrious_MvvmCross_Plugins_Json_MvxDateTimeJsonConverter_WriteJson_Newtonsoft_Json_JsonWriter_object_Newtonsoft_Json_JsonSerializer
-	.long LDIFF_SYM403
+LDIFF_SYM406=Lme_1 - _Cirrious_MvvmCross_Plugins_Json_MvxDateTimeJsonConverter_WriteJson_Newtonsoft_Json_JsonWriter_object_Newtonsoft_Json_JsonSerializer
+	.long LDIFF_SYM406
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,48
 	.align 2
 Lfde1_end:
@@ -3677,8 +3693,8 @@ LTDIE_50:
 	.asciz "Newtonsoft_Json_JsonToken"
 
 	.byte 4
-LDIFF_SYM404=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM404
+LDIFF_SYM407=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM407
 	.byte 9
 	.asciz "None"
 
@@ -3736,54 +3752,54 @@ LDIFF_SYM404=LDIE_I4 - Ldebug_info_start
 	.byte 17,0,7
 	.asciz "Newtonsoft_Json_JsonToken"
 
-LDIFF_SYM405=LTDIE_50 - Ldebug_info_start
-	.long LDIFF_SYM405
+LDIFF_SYM408=LTDIE_50 - Ldebug_info_start
+	.long LDIFF_SYM408
 LTDIE_50_POINTER:
 
 	.byte 13
-LDIFF_SYM406=LTDIE_50 - Ldebug_info_start
-	.long LDIFF_SYM406
+LDIFF_SYM409=LTDIE_50 - Ldebug_info_start
+	.long LDIFF_SYM409
 LTDIE_50_REFERENCE:
 
 	.byte 14
-LDIFF_SYM407=LTDIE_50 - Ldebug_info_start
-	.long LDIFF_SYM407
+LDIFF_SYM410=LTDIE_50 - Ldebug_info_start
+	.long LDIFF_SYM410
 LTDIE_51:
 
 	.byte 5
 	.asciz "System_Char"
 
 	.byte 10,16
-LDIFF_SYM408=LTDIE_8 - Ldebug_info_start
-	.long LDIFF_SYM408
+LDIFF_SYM411=LTDIE_8 - Ldebug_info_start
+	.long LDIFF_SYM411
 	.byte 2,35,0,6
 	.asciz "m_value"
 
-LDIFF_SYM409=LDIE_CHAR - Ldebug_info_start
-	.long LDIFF_SYM409
+LDIFF_SYM412=LDIE_CHAR - Ldebug_info_start
+	.long LDIFF_SYM412
 	.byte 2,35,8,0,7
 	.asciz "System_Char"
 
-LDIFF_SYM410=LTDIE_51 - Ldebug_info_start
-	.long LDIFF_SYM410
+LDIFF_SYM413=LTDIE_51 - Ldebug_info_start
+	.long LDIFF_SYM413
 LTDIE_51_POINTER:
 
 	.byte 13
-LDIFF_SYM411=LTDIE_51 - Ldebug_info_start
-	.long LDIFF_SYM411
+LDIFF_SYM414=LTDIE_51 - Ldebug_info_start
+	.long LDIFF_SYM414
 LTDIE_51_REFERENCE:
 
 	.byte 14
-LDIFF_SYM412=LTDIE_51 - Ldebug_info_start
-	.long LDIFF_SYM412
+LDIFF_SYM415=LTDIE_51 - Ldebug_info_start
+	.long LDIFF_SYM415
 LTDIE_52:
 
 	.byte 8
 	.asciz "_State"
 
 	.byte 4
-LDIFF_SYM413=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM413
+LDIFF_SYM416=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM416
 	.byte 9
 	.asciz "Start"
 
@@ -3826,26 +3842,26 @@ LDIFF_SYM413=LDIE_I4 - Ldebug_info_start
 	.byte 12,0,7
 	.asciz "_State"
 
-LDIFF_SYM414=LTDIE_52 - Ldebug_info_start
-	.long LDIFF_SYM414
+LDIFF_SYM417=LTDIE_52 - Ldebug_info_start
+	.long LDIFF_SYM417
 LTDIE_52_POINTER:
 
 	.byte 13
-LDIFF_SYM415=LTDIE_52 - Ldebug_info_start
-	.long LDIFF_SYM415
+LDIFF_SYM418=LTDIE_52 - Ldebug_info_start
+	.long LDIFF_SYM418
 LTDIE_52_REFERENCE:
 
 	.byte 14
-LDIFF_SYM416=LTDIE_52 - Ldebug_info_start
-	.long LDIFF_SYM416
+LDIFF_SYM419=LTDIE_52 - Ldebug_info_start
+	.long LDIFF_SYM419
 LTDIE_53:
 
 	.byte 8
 	.asciz "Newtonsoft_Json_ReadType"
 
 	.byte 4
-LDIFF_SYM417=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM417
+LDIFF_SYM420=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM420
 	.byte 9
 	.asciz "Read"
 
@@ -3870,26 +3886,26 @@ LDIFF_SYM417=LDIE_I4 - Ldebug_info_start
 	.byte 6,0,7
 	.asciz "Newtonsoft_Json_ReadType"
 
-LDIFF_SYM418=LTDIE_53 - Ldebug_info_start
-	.long LDIFF_SYM418
+LDIFF_SYM421=LTDIE_53 - Ldebug_info_start
+	.long LDIFF_SYM421
 LTDIE_53_POINTER:
 
 	.byte 13
-LDIFF_SYM419=LTDIE_53 - Ldebug_info_start
-	.long LDIFF_SYM419
+LDIFF_SYM422=LTDIE_53 - Ldebug_info_start
+	.long LDIFF_SYM422
 LTDIE_53_REFERENCE:
 
 	.byte 14
-LDIFF_SYM420=LTDIE_53 - Ldebug_info_start
-	.long LDIFF_SYM420
+LDIFF_SYM423=LTDIE_53 - Ldebug_info_start
+	.long LDIFF_SYM423
 LTDIE_54:
 
 	.byte 8
 	.asciz "Newtonsoft_Json_DateParseHandling"
 
 	.byte 4
-LDIFF_SYM421=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM421
+LDIFF_SYM424=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM424
 	.byte 9
 	.asciz "None"
 
@@ -3902,26 +3918,26 @@ LDIFF_SYM421=LDIE_I4 - Ldebug_info_start
 	.byte 2,0,7
 	.asciz "Newtonsoft_Json_DateParseHandling"
 
-LDIFF_SYM422=LTDIE_54 - Ldebug_info_start
-	.long LDIFF_SYM422
+LDIFF_SYM425=LTDIE_54 - Ldebug_info_start
+	.long LDIFF_SYM425
 LTDIE_54_POINTER:
 
 	.byte 13
-LDIFF_SYM423=LTDIE_54 - Ldebug_info_start
-	.long LDIFF_SYM423
+LDIFF_SYM426=LTDIE_54 - Ldebug_info_start
+	.long LDIFF_SYM426
 LTDIE_54_REFERENCE:
 
 	.byte 14
-LDIFF_SYM424=LTDIE_54 - Ldebug_info_start
-	.long LDIFF_SYM424
+LDIFF_SYM427=LTDIE_54 - Ldebug_info_start
+	.long LDIFF_SYM427
 LTDIE_55:
 
 	.byte 8
 	.asciz "Newtonsoft_Json_FloatParseHandling"
 
 	.byte 4
-LDIFF_SYM425=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM425
+LDIFF_SYM428=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM428
 	.byte 9
 	.asciz "Double"
 
@@ -3931,121 +3947,121 @@ LDIFF_SYM425=LDIE_I4 - Ldebug_info_start
 	.byte 1,0,7
 	.asciz "Newtonsoft_Json_FloatParseHandling"
 
-LDIFF_SYM426=LTDIE_55 - Ldebug_info_start
-	.long LDIFF_SYM426
+LDIFF_SYM429=LTDIE_55 - Ldebug_info_start
+	.long LDIFF_SYM429
 LTDIE_55_POINTER:
 
 	.byte 13
-LDIFF_SYM427=LTDIE_55 - Ldebug_info_start
-	.long LDIFF_SYM427
+LDIFF_SYM430=LTDIE_55 - Ldebug_info_start
+	.long LDIFF_SYM430
 LTDIE_55_REFERENCE:
 
 	.byte 14
-LDIFF_SYM428=LTDIE_55 - Ldebug_info_start
-	.long LDIFF_SYM428
+LDIFF_SYM431=LTDIE_55 - Ldebug_info_start
+	.long LDIFF_SYM431
 LTDIE_49:
 
 	.byte 5
 	.asciz "Newtonsoft_Json_JsonReader"
 
 	.byte 84,16
-LDIFF_SYM429=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM429
+LDIFF_SYM432=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM432
 	.byte 2,35,0,6
 	.asciz "_tokenType"
 
-LDIFF_SYM430=LTDIE_50 - Ldebug_info_start
-	.long LDIFF_SYM430
+LDIFF_SYM433=LTDIE_50 - Ldebug_info_start
+	.long LDIFF_SYM433
 	.byte 2,35,40,6
 	.asciz "_value"
 
-LDIFF_SYM431=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM431
+LDIFF_SYM434=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM434
 	.byte 2,35,8,6
 	.asciz "_quoteChar"
 
-LDIFF_SYM432=LDIE_CHAR - Ldebug_info_start
-	.long LDIFF_SYM432
+LDIFF_SYM435=LDIE_CHAR - Ldebug_info_start
+	.long LDIFF_SYM435
 	.byte 2,35,44,6
 	.asciz "_currentState"
 
-LDIFF_SYM433=LTDIE_52 - Ldebug_info_start
-	.long LDIFF_SYM433
+LDIFF_SYM436=LTDIE_52 - Ldebug_info_start
+	.long LDIFF_SYM436
 	.byte 2,35,48,6
 	.asciz "_readType"
 
-LDIFF_SYM434=LTDIE_53 - Ldebug_info_start
-	.long LDIFF_SYM434
+LDIFF_SYM437=LTDIE_53 - Ldebug_info_start
+	.long LDIFF_SYM437
 	.byte 2,35,52,6
 	.asciz "_currentPosition"
 
-LDIFF_SYM435=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM435
+LDIFF_SYM438=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM438
 	.byte 2,35,12,6
 	.asciz "_culture"
 
-LDIFF_SYM436=LTDIE_15_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM436
+LDIFF_SYM439=LTDIE_15_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM439
 	.byte 2,35,28,6
 	.asciz "_dateTimeZoneHandling"
 
-LDIFF_SYM437=LTDIE_12 - Ldebug_info_start
-	.long LDIFF_SYM437
+LDIFF_SYM440=LTDIE_12 - Ldebug_info_start
+	.long LDIFF_SYM440
 	.byte 2,35,56,6
 	.asciz "_maxDepth"
 
-LDIFF_SYM438=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM438
+LDIFF_SYM441=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM441
 	.byte 2,35,60,6
 	.asciz "_hasExceededMaxDepth"
 
-LDIFF_SYM439=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM439
+LDIFF_SYM442=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM442
 	.byte 2,35,68,6
 	.asciz "_dateParseHandling"
 
-LDIFF_SYM440=LTDIE_54 - Ldebug_info_start
-	.long LDIFF_SYM440
+LDIFF_SYM443=LTDIE_54 - Ldebug_info_start
+	.long LDIFF_SYM443
 	.byte 2,35,72,6
 	.asciz "_floatParseHandling"
 
-LDIFF_SYM441=LTDIE_55 - Ldebug_info_start
-	.long LDIFF_SYM441
+LDIFF_SYM444=LTDIE_55 - Ldebug_info_start
+	.long LDIFF_SYM444
 	.byte 2,35,76,6
 	.asciz "_dateFormatString"
 
-LDIFF_SYM442=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM442
+LDIFF_SYM445=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM445
 	.byte 2,35,32,6
 	.asciz "_stack"
 
-LDIFF_SYM443=LTDIE_6_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM443
+LDIFF_SYM446=LTDIE_6_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM446
 	.byte 2,35,36,6
 	.asciz "<CloseInput>k__BackingField"
 
-LDIFF_SYM444=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM444
+LDIFF_SYM447=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM447
 	.byte 2,35,80,6
 	.asciz "<SupportMultipleContent>k__BackingField"
 
-LDIFF_SYM445=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM445
+LDIFF_SYM448=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM448
 	.byte 2,35,81,0,7
 	.asciz "Newtonsoft_Json_JsonReader"
 
-LDIFF_SYM446=LTDIE_49 - Ldebug_info_start
-	.long LDIFF_SYM446
+LDIFF_SYM449=LTDIE_49 - Ldebug_info_start
+	.long LDIFF_SYM449
 LTDIE_49_POINTER:
 
 	.byte 13
-LDIFF_SYM447=LTDIE_49 - Ldebug_info_start
-	.long LDIFF_SYM447
+LDIFF_SYM450=LTDIE_49 - Ldebug_info_start
+	.long LDIFF_SYM450
 LTDIE_49_REFERENCE:
 
 	.byte 14
-LDIFF_SYM448=LTDIE_49 - Ldebug_info_start
-	.long LDIFF_SYM448
+LDIFF_SYM451=LTDIE_49 - Ldebug_info_start
+	.long LDIFF_SYM451
 	.byte 2
 	.asciz "Cirrious.MvvmCross.Plugins.Json.MvxDateTimeJsonConverter:ReadJson"
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxDateTimeJsonConverter_ReadJson_Newtonsoft_Json_JsonReader_System_Type_object_Newtonsoft_Json_JsonSerializer
@@ -4054,47 +4070,47 @@ LDIFF_SYM448=LTDIE_49 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM449=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM449
-	.byte 0,3
-	.asciz "reader"
-
-LDIFF_SYM450=LTDIE_49_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM450
-	.byte 2,123,12,3
-	.asciz "objectType"
-
-LDIFF_SYM451=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM451
-	.byte 0,3
-	.asciz "existingValue"
-
 LDIFF_SYM452=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM452
 	.byte 0,3
-	.asciz "serializer"
+	.asciz "reader"
 
-LDIFF_SYM453=LDIE_I4 - Ldebug_info_start
+LDIFF_SYM453=LTDIE_49_REFERENCE - Ldebug_info_start
 	.long LDIFF_SYM453
-	.byte 0,11
-	.asciz "V_0"
+	.byte 2,123,12,3
+	.asciz "objectType"
 
 LDIFF_SYM454=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM454
+	.byte 0,3
+	.asciz "existingValue"
+
+LDIFF_SYM455=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM455
+	.byte 0,3
+	.asciz "serializer"
+
+LDIFF_SYM456=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM456
+	.byte 0,11
+	.asciz "V_0"
+
+LDIFF_SYM457=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM457
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM455=Lfde2_end - Lfde2_start
-	.long LDIFF_SYM455
+LDIFF_SYM458=Lfde2_end - Lfde2_start
+	.long LDIFF_SYM458
 Lfde2_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxDateTimeJsonConverter_ReadJson_Newtonsoft_Json_JsonReader_System_Type_object_Newtonsoft_Json_JsonSerializer
 
-LDIFF_SYM456=Lme_2 - _Cirrious_MvvmCross_Plugins_Json_MvxDateTimeJsonConverter_ReadJson_Newtonsoft_Json_JsonReader_System_Type_object_Newtonsoft_Json_JsonSerializer
-	.long LDIFF_SYM456
+LDIFF_SYM459=Lme_2 - _Cirrious_MvvmCross_Plugins_Json_MvxDateTimeJsonConverter_ReadJson_Newtonsoft_Json_JsonReader_System_Type_object_Newtonsoft_Json_JsonSerializer
+	.long LDIFF_SYM459
 	.byte 12,13,0,72,14,8,135,2,68,14,16,136,4,139,3,142,1,68,14,56,68,13,11
 	.align 2
 Lfde2_end:
@@ -4109,22 +4125,22 @@ Lfde2_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM457=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM457
+LDIFF_SYM460=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM460
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM458=Lfde3_end - Lfde3_start
-	.long LDIFF_SYM458
+LDIFF_SYM461=Lfde3_end - Lfde3_start
+	.long LDIFF_SYM461
 Lfde3_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxDateTimeJsonConverter__ctor
 
-LDIFF_SYM459=Lme_3 - _Cirrious_MvvmCross_Plugins_Json_MvxDateTimeJsonConverter__ctor
-	.long LDIFF_SYM459
+LDIFF_SYM462=Lme_3 - _Cirrious_MvvmCross_Plugins_Json_MvxDateTimeJsonConverter__ctor
+	.long LDIFF_SYM462
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,24
 	.align 2
 Lfde3_end:
@@ -4136,23 +4152,23 @@ LTDIE_56:
 	.asciz "Cirrious_MvvmCross_Plugins_Json_MvxEnumJsonConverter"
 
 	.byte 8,16
-LDIFF_SYM460=LTDIE_1 - Ldebug_info_start
-	.long LDIFF_SYM460
+LDIFF_SYM463=LTDIE_1 - Ldebug_info_start
+	.long LDIFF_SYM463
 	.byte 2,35,0,0,7
 	.asciz "Cirrious_MvvmCross_Plugins_Json_MvxEnumJsonConverter"
 
-LDIFF_SYM461=LTDIE_56 - Ldebug_info_start
-	.long LDIFF_SYM461
+LDIFF_SYM464=LTDIE_56 - Ldebug_info_start
+	.long LDIFF_SYM464
 LTDIE_56_POINTER:
 
 	.byte 13
-LDIFF_SYM462=LTDIE_56 - Ldebug_info_start
-	.long LDIFF_SYM462
+LDIFF_SYM465=LTDIE_56 - Ldebug_info_start
+	.long LDIFF_SYM465
 LTDIE_56_REFERENCE:
 
 	.byte 14
-LDIFF_SYM463=LTDIE_56 - Ldebug_info_start
-	.long LDIFF_SYM463
+LDIFF_SYM466=LTDIE_56 - Ldebug_info_start
+	.long LDIFF_SYM466
 	.byte 2
 	.asciz "Cirrious.MvvmCross.Plugins.Json.MvxEnumJsonConverter:CanConvert"
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxEnumJsonConverter_CanConvert_System_Type
@@ -4161,27 +4177,27 @@ LDIFF_SYM463=LTDIE_56 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM464=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM464
+LDIFF_SYM467=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM467
 	.byte 0,3
 	.asciz "objectType"
 
-LDIFF_SYM465=LTDIE_3_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM465
+LDIFF_SYM468=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM468
 	.byte 2,125,4,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM466=Lfde4_end - Lfde4_start
-	.long LDIFF_SYM466
+LDIFF_SYM469=Lfde4_end - Lfde4_start
+	.long LDIFF_SYM469
 Lfde4_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxEnumJsonConverter_CanConvert_System_Type
 
-LDIFF_SYM467=Lme_4 - _Cirrious_MvvmCross_Plugins_Json_MvxEnumJsonConverter_CanConvert_System_Type
-	.long LDIFF_SYM467
+LDIFF_SYM470=Lme_4 - _Cirrious_MvvmCross_Plugins_Json_MvxEnumJsonConverter_CanConvert_System_Type
+	.long LDIFF_SYM470
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,24
 	.align 2
 Lfde4_end:
@@ -4196,37 +4212,37 @@ Lfde4_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM468=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM468
+LDIFF_SYM471=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM471
 	.byte 0,3
 	.asciz "writer"
 
-LDIFF_SYM469=LTDIE_5_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM469
+LDIFF_SYM472=LTDIE_5_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM472
 	.byte 2,125,4,3
 	.asciz "value"
 
-LDIFF_SYM470=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM470
+LDIFF_SYM473=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM473
 	.byte 2,125,8,3
 	.asciz "serializer"
 
-LDIFF_SYM471=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM471
+LDIFF_SYM474=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM474
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM472=Lfde5_end - Lfde5_start
-	.long LDIFF_SYM472
+LDIFF_SYM475=Lfde5_end - Lfde5_start
+	.long LDIFF_SYM475
 Lfde5_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxEnumJsonConverter_WriteJson_Newtonsoft_Json_JsonWriter_object_Newtonsoft_Json_JsonSerializer
 
-LDIFF_SYM473=Lme_5 - _Cirrious_MvvmCross_Plugins_Json_MvxEnumJsonConverter_WriteJson_Newtonsoft_Json_JsonWriter_object_Newtonsoft_Json_JsonSerializer
-	.long LDIFF_SYM473
+LDIFF_SYM476=Lme_5 - _Cirrious_MvvmCross_Plugins_Json_MvxEnumJsonConverter_WriteJson_Newtonsoft_Json_JsonWriter_object_Newtonsoft_Json_JsonSerializer
+	.long LDIFF_SYM476
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,32
 	.align 2
 Lfde5_end:
@@ -4241,47 +4257,47 @@ Lfde5_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM474=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM474
-	.byte 0,3
-	.asciz "reader"
-
-LDIFF_SYM475=LTDIE_49_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM475
-	.byte 2,123,4,3
-	.asciz "objectType"
-
-LDIFF_SYM476=LTDIE_3_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM476
-	.byte 2,123,8,3
-	.asciz "existingValue"
-
 LDIFF_SYM477=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM477
 	.byte 0,3
+	.asciz "reader"
+
+LDIFF_SYM478=LTDIE_49_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM478
+	.byte 2,123,4,3
+	.asciz "objectType"
+
+LDIFF_SYM479=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM479
+	.byte 2,123,8,3
+	.asciz "existingValue"
+
+LDIFF_SYM480=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM480
+	.byte 0,3
 	.asciz "serializer"
 
-LDIFF_SYM478=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM478
+LDIFF_SYM481=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM481
 	.byte 0,11
 	.asciz "V_0"
 
-LDIFF_SYM479=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM479
+LDIFF_SYM482=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM482
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM480=Lfde6_end - Lfde6_start
-	.long LDIFF_SYM480
+LDIFF_SYM483=Lfde6_end - Lfde6_start
+	.long LDIFF_SYM483
 Lfde6_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxEnumJsonConverter_ReadJson_Newtonsoft_Json_JsonReader_System_Type_object_Newtonsoft_Json_JsonSerializer
 
-LDIFF_SYM481=Lme_6 - _Cirrious_MvvmCross_Plugins_Json_MvxEnumJsonConverter_ReadJson_Newtonsoft_Json_JsonReader_System_Type_object_Newtonsoft_Json_JsonSerializer
-	.long LDIFF_SYM481
+LDIFF_SYM484=Lme_6 - _Cirrious_MvvmCross_Plugins_Json_MvxEnumJsonConverter_ReadJson_Newtonsoft_Json_JsonReader_System_Type_object_Newtonsoft_Json_JsonSerializer
+	.long LDIFF_SYM484
 	.byte 12,13,0,72,14,8,135,2,68,14,16,136,4,139,3,142,1,68,14,40,68,13,11
 	.align 2
 Lfde6_end:
@@ -4296,22 +4312,22 @@ Lfde6_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM482=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM482
+LDIFF_SYM485=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM485
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM483=Lfde7_end - Lfde7_start
-	.long LDIFF_SYM483
+LDIFF_SYM486=Lfde7_end - Lfde7_start
+	.long LDIFF_SYM486
 Lfde7_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxEnumJsonConverter__ctor
 
-LDIFF_SYM484=Lme_7 - _Cirrious_MvvmCross_Plugins_Json_MvxEnumJsonConverter__ctor
-	.long LDIFF_SYM484
+LDIFF_SYM487=Lme_7 - _Cirrious_MvvmCross_Plugins_Json_MvxEnumJsonConverter__ctor
+	.long LDIFF_SYM487
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,24
 	.align 2
 Lfde7_end:
@@ -4323,28 +4339,28 @@ LTDIE_57:
 	.asciz "Cirrious_MvvmCross_Plugins_Json_MvxJsonConfiguration"
 
 	.byte 9,16
-LDIFF_SYM485=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM485
+LDIFF_SYM488=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM488
 	.byte 2,35,0,6
 	.asciz "<RegisterAsTextSerializer>k__BackingField"
 
-LDIFF_SYM486=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM486
+LDIFF_SYM489=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM489
 	.byte 2,35,8,0,7
 	.asciz "Cirrious_MvvmCross_Plugins_Json_MvxJsonConfiguration"
 
-LDIFF_SYM487=LTDIE_57 - Ldebug_info_start
-	.long LDIFF_SYM487
+LDIFF_SYM490=LTDIE_57 - Ldebug_info_start
+	.long LDIFF_SYM490
 LTDIE_57_POINTER:
 
 	.byte 13
-LDIFF_SYM488=LTDIE_57 - Ldebug_info_start
-	.long LDIFF_SYM488
+LDIFF_SYM491=LTDIE_57 - Ldebug_info_start
+	.long LDIFF_SYM491
 LTDIE_57_REFERENCE:
 
 	.byte 14
-LDIFF_SYM489=LTDIE_57 - Ldebug_info_start
-	.long LDIFF_SYM489
+LDIFF_SYM492=LTDIE_57 - Ldebug_info_start
+	.long LDIFF_SYM492
 	.byte 2
 	.asciz "Cirrious.MvvmCross.Plugins.Json.MvxJsonConfiguration:.ctor"
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxJsonConfiguration__ctor
@@ -4353,22 +4369,22 @@ LDIFF_SYM489=LTDIE_57 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM490=LTDIE_57_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM490
+LDIFF_SYM493=LTDIE_57_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM493
 	.byte 2,125,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM491=Lfde8_end - Lfde8_start
-	.long LDIFF_SYM491
+LDIFF_SYM494=Lfde8_end - Lfde8_start
+	.long LDIFF_SYM494
 Lfde8_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxJsonConfiguration__ctor
 
-LDIFF_SYM492=Lme_8 - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConfiguration__ctor
-	.long LDIFF_SYM492
+LDIFF_SYM495=Lme_8 - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConfiguration__ctor
+	.long LDIFF_SYM495
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,24
 	.align 2
 Lfde8_end:
@@ -4383,22 +4399,22 @@ Lfde8_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM493=LTDIE_57_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM493
+LDIFF_SYM496=LTDIE_57_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM496
 	.byte 2,125,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM494=Lfde9_end - Lfde9_start
-	.long LDIFF_SYM494
+LDIFF_SYM497=Lfde9_end - Lfde9_start
+	.long LDIFF_SYM497
 Lfde9_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxJsonConfiguration_get_RegisterAsTextSerializer
 
-LDIFF_SYM495=Lme_9 - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConfiguration_get_RegisterAsTextSerializer
-	.long LDIFF_SYM495
+LDIFF_SYM498=Lme_9 - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConfiguration_get_RegisterAsTextSerializer
+	.long LDIFF_SYM498
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,24
 	.align 2
 Lfde9_end:
@@ -4413,27 +4429,27 @@ Lfde9_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM496=LTDIE_57_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM496
+LDIFF_SYM499=LTDIE_57_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM499
 	.byte 2,125,0,3
 	.asciz "value"
 
-LDIFF_SYM497=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM497
+LDIFF_SYM500=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM500
 	.byte 2,125,4,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM498=Lfde10_end - Lfde10_start
-	.long LDIFF_SYM498
+LDIFF_SYM501=Lfde10_end - Lfde10_start
+	.long LDIFF_SYM501
 Lfde10_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxJsonConfiguration_set_RegisterAsTextSerializer_bool
 
-LDIFF_SYM499=Lme_a - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConfiguration_set_RegisterAsTextSerializer_bool
-	.long LDIFF_SYM499
+LDIFF_SYM502=Lme_a - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConfiguration_set_RegisterAsTextSerializer_bool
+	.long LDIFF_SYM502
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,24
 	.align 2
 Lfde10_end:
@@ -4449,16 +4465,16 @@ Lfde10_end:
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM500=Lfde11_end - Lfde11_start
-	.long LDIFF_SYM500
+LDIFF_SYM503=Lfde11_end - Lfde11_start
+	.long LDIFF_SYM503
 Lfde11_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxJsonConfiguration__cctor
 
-LDIFF_SYM501=Lme_b - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConfiguration__cctor
-	.long LDIFF_SYM501
+LDIFF_SYM504=Lme_b - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConfiguration__cctor
+	.long LDIFF_SYM504
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,16
 	.align 2
 Lfde11_end:
@@ -4470,211 +4486,211 @@ LTDIE_58:
 	.asciz "Newtonsoft_Json_JsonSerializerSettings"
 
 	.byte 204,1,16
-LDIFF_SYM502=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM502
+LDIFF_SYM505=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM505
 	.byte 2,35,0,6
 	.asciz "_formatting"
 
-LDIFF_SYM503=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM503
+LDIFF_SYM506=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM506
 	.byte 2,35,52,6
 	.asciz "_dateFormatHandling"
 
-LDIFF_SYM504=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM504
+LDIFF_SYM507=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM507
 	.byte 2,35,60,6
 	.asciz "_dateTimeZoneHandling"
 
-LDIFF_SYM505=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM505
+LDIFF_SYM508=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM508
 	.byte 2,35,68,6
 	.asciz "_dateParseHandling"
 
-LDIFF_SYM506=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM506
+LDIFF_SYM509=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM509
 	.byte 2,35,76,6
 	.asciz "_floatFormatHandling"
 
-LDIFF_SYM507=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM507
+LDIFF_SYM510=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM510
 	.byte 2,35,84,6
 	.asciz "_floatParseHandling"
 
-LDIFF_SYM508=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM508
+LDIFF_SYM511=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM511
 	.byte 2,35,92,6
 	.asciz "_stringEscapeHandling"
 
-LDIFF_SYM509=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM509
+LDIFF_SYM512=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM512
 	.byte 2,35,100,6
 	.asciz "_culture"
 
-LDIFF_SYM510=LTDIE_15_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM510
+LDIFF_SYM513=LTDIE_15_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM513
 	.byte 2,35,8,6
 	.asciz "_checkAdditionalContent"
 
-LDIFF_SYM511=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM511
+LDIFF_SYM514=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM514
 	.byte 2,35,108,6
 	.asciz "_maxDepth"
 
-LDIFF_SYM512=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM512
+LDIFF_SYM515=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM515
 	.byte 2,35,112,6
 	.asciz "_maxDepthSet"
 
-LDIFF_SYM513=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM513
+LDIFF_SYM516=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM516
 	.byte 2,35,120,6
 	.asciz "_dateFormatString"
 
-LDIFF_SYM514=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM514
+LDIFF_SYM517=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM517
 	.byte 2,35,12,6
 	.asciz "_dateFormatStringSet"
 
-LDIFF_SYM515=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM515
+LDIFF_SYM518=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM518
 	.byte 2,35,121,6
 	.asciz "_typeNameAssemblyFormat"
 
-LDIFF_SYM516=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM516
+LDIFF_SYM519=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM519
 	.byte 2,35,124,6
 	.asciz "_defaultValueHandling"
 
-LDIFF_SYM517=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM517
+LDIFF_SYM520=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM520
 	.byte 3,35,132,1,6
 	.asciz "_preserveReferencesHandling"
 
-LDIFF_SYM518=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM518
+LDIFF_SYM521=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM521
 	.byte 3,35,140,1,6
 	.asciz "_nullValueHandling"
 
-LDIFF_SYM519=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM519
+LDIFF_SYM522=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM522
 	.byte 3,35,148,1,6
 	.asciz "_objectCreationHandling"
 
-LDIFF_SYM520=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM520
+LDIFF_SYM523=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM523
 	.byte 3,35,156,1,6
 	.asciz "_missingMemberHandling"
 
-LDIFF_SYM521=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM521
+LDIFF_SYM524=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM524
 	.byte 3,35,164,1,6
 	.asciz "_referenceLoopHandling"
 
-LDIFF_SYM522=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM522
+LDIFF_SYM525=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM525
 	.byte 3,35,172,1,6
 	.asciz "_context"
 
-LDIFF_SYM523=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM523
+LDIFF_SYM526=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM526
 	.byte 2,35,16,6
 	.asciz "_constructorHandling"
 
-LDIFF_SYM524=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM524
+LDIFF_SYM527=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM527
 	.byte 3,35,180,1,6
 	.asciz "_typeNameHandling"
 
-LDIFF_SYM525=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM525
+LDIFF_SYM528=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM528
 	.byte 3,35,188,1,6
 	.asciz "_metadataPropertyHandling"
 
-LDIFF_SYM526=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM526
+LDIFF_SYM529=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM529
 	.byte 3,35,196,1,6
 	.asciz "<Converters>k__BackingField"
 
-LDIFF_SYM527=LTDIE_38_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM527
+LDIFF_SYM530=LTDIE_38_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM530
 	.byte 2,35,28,6
 	.asciz "<ContractResolver>k__BackingField"
 
-LDIFF_SYM528=LTDIE_39_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM528
+LDIFF_SYM531=LTDIE_39_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM531
 	.byte 2,35,32,6
 	.asciz "<ReferenceResolver>k__BackingField"
 
-LDIFF_SYM529=LTDIE_42_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM529
+LDIFF_SYM532=LTDIE_42_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM532
 	.byte 2,35,36,6
 	.asciz "<TraceWriter>k__BackingField"
 
-LDIFF_SYM530=LTDIE_40_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM530
+LDIFF_SYM533=LTDIE_40_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM533
 	.byte 2,35,40,6
 	.asciz "<Binder>k__BackingField"
 
-LDIFF_SYM531=LTDIE_41_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM531
+LDIFF_SYM534=LTDIE_41_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM534
 	.byte 2,35,44,6
 	.asciz "<Error>k__BackingField"
 
-LDIFF_SYM532=LTDIE_43_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM532
+LDIFF_SYM535=LTDIE_43_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM535
 	.byte 2,35,48,0,7
 	.asciz "Newtonsoft_Json_JsonSerializerSettings"
 
-LDIFF_SYM533=LTDIE_58 - Ldebug_info_start
-	.long LDIFF_SYM533
+LDIFF_SYM536=LTDIE_58 - Ldebug_info_start
+	.long LDIFF_SYM536
 LTDIE_58_POINTER:
 
 	.byte 13
-LDIFF_SYM534=LTDIE_58 - Ldebug_info_start
-	.long LDIFF_SYM534
+LDIFF_SYM537=LTDIE_58 - Ldebug_info_start
+	.long LDIFF_SYM537
 LTDIE_58_REFERENCE:
 
 	.byte 14
-LDIFF_SYM535=LTDIE_58 - Ldebug_info_start
-	.long LDIFF_SYM535
+LDIFF_SYM538=LTDIE_58 - Ldebug_info_start
+	.long LDIFF_SYM538
 LTDIE_59:
 
 	.byte 5
 	.asciz "System_Collections_Generic_List`1"
 
 	.byte 20,16
-LDIFF_SYM536=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM536
+LDIFF_SYM539=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM539
 	.byte 2,35,0,6
 	.asciz "_items"
 
-LDIFF_SYM537=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM537
+LDIFF_SYM540=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM540
 	.byte 2,35,8,6
 	.asciz "_size"
 
-LDIFF_SYM538=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM538
+LDIFF_SYM541=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM541
 	.byte 2,35,12,6
 	.asciz "_version"
 
-LDIFF_SYM539=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM539
+LDIFF_SYM542=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM542
 	.byte 2,35,16,0,7
 	.asciz "System_Collections_Generic_List`1"
 
-LDIFF_SYM540=LTDIE_59 - Ldebug_info_start
-	.long LDIFF_SYM540
+LDIFF_SYM543=LTDIE_59 - Ldebug_info_start
+	.long LDIFF_SYM543
 LTDIE_59_POINTER:
 
 	.byte 13
-LDIFF_SYM541=LTDIE_59 - Ldebug_info_start
-	.long LDIFF_SYM541
+LDIFF_SYM544=LTDIE_59 - Ldebug_info_start
+	.long LDIFF_SYM544
 LTDIE_59_REFERENCE:
 
 	.byte 14
-LDIFF_SYM542=LTDIE_59 - Ldebug_info_start
-	.long LDIFF_SYM542
+LDIFF_SYM545=LTDIE_59 - Ldebug_info_start
+	.long LDIFF_SYM545
 	.byte 2
 	.asciz "Cirrious.MvvmCross.Plugins.Json.MvxJsonConverter:.cctor"
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter__cctor
@@ -4683,27 +4699,27 @@ LDIFF_SYM542=LTDIE_59 - Ldebug_info_start
 	.byte 2,118,16,11
 	.asciz "V_0"
 
-LDIFF_SYM543=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM543
+LDIFF_SYM546=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM546
 	.byte 0,11
 	.asciz "V_1"
 
-LDIFF_SYM544=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM544
+LDIFF_SYM547=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM547
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM545=Lfde12_end - Lfde12_start
-	.long LDIFF_SYM545
+LDIFF_SYM548=Lfde12_end - Lfde12_start
+	.long LDIFF_SYM548
 Lfde12_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter__cctor
 
-LDIFF_SYM546=Lme_c - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter__cctor
-	.long LDIFF_SYM546
+LDIFF_SYM549=Lme_c - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter__cctor
+	.long LDIFF_SYM549
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,48
 	.align 2
 Lfde12_end:
@@ -4715,23 +4731,23 @@ LTDIE_60:
 	.asciz "Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter"
 
 	.byte 8,16
-LDIFF_SYM547=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM547
+LDIFF_SYM550=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM550
 	.byte 2,35,0,0,7
 	.asciz "Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter"
 
-LDIFF_SYM548=LTDIE_60 - Ldebug_info_start
-	.long LDIFF_SYM548
+LDIFF_SYM551=LTDIE_60 - Ldebug_info_start
+	.long LDIFF_SYM551
 LTDIE_60_POINTER:
 
 	.byte 13
-LDIFF_SYM549=LTDIE_60 - Ldebug_info_start
-	.long LDIFF_SYM549
+LDIFF_SYM552=LTDIE_60 - Ldebug_info_start
+	.long LDIFF_SYM552
 LTDIE_60_REFERENCE:
 
 	.byte 14
-LDIFF_SYM550=LTDIE_60 - Ldebug_info_start
-	.long LDIFF_SYM550
+LDIFF_SYM553=LTDIE_60 - Ldebug_info_start
+	.long LDIFF_SYM553
 	.byte 2
 	.asciz "Cirrious.MvvmCross.Plugins.Json.MvxJsonConverter:DeserializeObject<T>"
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter_DeserializeObject_T_string
@@ -4740,27 +4756,27 @@ LDIFF_SYM550=LTDIE_60 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM551=LTDIE_60_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM551
+LDIFF_SYM554=LTDIE_60_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM554
 	.byte 2,125,4,3
 	.asciz "inputText"
 
-LDIFF_SYM552=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM552
+LDIFF_SYM555=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM555
 	.byte 2,125,8,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM553=Lfde13_end - Lfde13_start
-	.long LDIFF_SYM553
+LDIFF_SYM556=Lfde13_end - Lfde13_start
+	.long LDIFF_SYM556
 Lfde13_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter_DeserializeObject_T_string
 
-LDIFF_SYM554=Lme_d - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter_DeserializeObject_T_string
-	.long LDIFF_SYM554
+LDIFF_SYM557=Lme_d - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter_DeserializeObject_T_string
+	.long LDIFF_SYM557
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,40
 	.align 2
 Lfde13_end:
@@ -4775,27 +4791,27 @@ Lfde13_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM555=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM555
+LDIFF_SYM558=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM558
 	.byte 0,3
 	.asciz "toSerialise"
 
-LDIFF_SYM556=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM556
+LDIFF_SYM559=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM559
 	.byte 2,125,4,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM557=Lfde14_end - Lfde14_start
-	.long LDIFF_SYM557
+LDIFF_SYM560=Lfde14_end - Lfde14_start
+	.long LDIFF_SYM560
 Lfde14_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter_SerializeObject_object
 
-LDIFF_SYM558=Lme_e - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter_SerializeObject_object
-	.long LDIFF_SYM558
+LDIFF_SYM561=Lme_e - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter_SerializeObject_object
+	.long LDIFF_SYM561
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,24
 	.align 2
 Lfde14_end:
@@ -4810,32 +4826,32 @@ Lfde14_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM559=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM559
+LDIFF_SYM562=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM562
 	.byte 0,3
 	.asciz "type"
 
-LDIFF_SYM560=LTDIE_3_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM560
+LDIFF_SYM563=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM563
 	.byte 2,125,4,3
 	.asciz "inputText"
 
-LDIFF_SYM561=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM561
+LDIFF_SYM564=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM564
 	.byte 2,125,8,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM562=Lfde15_end - Lfde15_start
-	.long LDIFF_SYM562
+LDIFF_SYM565=Lfde15_end - Lfde15_start
+	.long LDIFF_SYM565
 Lfde15_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter_DeserializeObject_System_Type_string
 
-LDIFF_SYM563=Lme_f - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter_DeserializeObject_System_Type_string
-	.long LDIFF_SYM563
+LDIFF_SYM566=Lme_f - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter_DeserializeObject_System_Type_string
+	.long LDIFF_SYM566
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,32
 	.align 2
 Lfde15_end:
@@ -4850,22 +4866,22 @@ Lfde15_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM564=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM564
+LDIFF_SYM567=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM567
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM565=Lfde16_end - Lfde16_start
-	.long LDIFF_SYM565
+LDIFF_SYM568=Lfde16_end - Lfde16_start
+	.long LDIFF_SYM568
 Lfde16_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter__ctor
 
-LDIFF_SYM566=Lme_10 - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter__ctor
-	.long LDIFF_SYM566
+LDIFF_SYM569=Lme_10 - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter__ctor
+	.long LDIFF_SYM569
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,24
 	.align 2
 Lfde16_end:
@@ -4877,33 +4893,33 @@ LTDIE_61:
 	.asciz "Cirrious_MvvmCross_Plugins_Json_PluginLoader"
 
 	.byte 16,16
-LDIFF_SYM567=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM567
+LDIFF_SYM570=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM570
 	.byte 2,35,0,6
 	.asciz "_loaded"
 
-LDIFF_SYM568=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM568
+LDIFF_SYM571=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM571
 	.byte 2,35,12,6
 	.asciz "_configuration"
 
-LDIFF_SYM569=LTDIE_57_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM569
+LDIFF_SYM572=LTDIE_57_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM572
 	.byte 2,35,8,0,7
 	.asciz "Cirrious_MvvmCross_Plugins_Json_PluginLoader"
 
-LDIFF_SYM570=LTDIE_61 - Ldebug_info_start
-	.long LDIFF_SYM570
+LDIFF_SYM573=LTDIE_61 - Ldebug_info_start
+	.long LDIFF_SYM573
 LTDIE_61_POINTER:
 
 	.byte 13
-LDIFF_SYM571=LTDIE_61 - Ldebug_info_start
-	.long LDIFF_SYM571
+LDIFF_SYM574=LTDIE_61 - Ldebug_info_start
+	.long LDIFF_SYM574
 LTDIE_61_REFERENCE:
 
 	.byte 14
-LDIFF_SYM572=LTDIE_61 - Ldebug_info_start
-	.long LDIFF_SYM572
+LDIFF_SYM575=LTDIE_61 - Ldebug_info_start
+	.long LDIFF_SYM575
 	.byte 2
 	.asciz "Cirrious.MvvmCross.Plugins.Json.PluginLoader:EnsureLoaded"
 	.long _Cirrious_MvvmCross_Plugins_Json_PluginLoader_EnsureLoaded
@@ -4912,27 +4928,27 @@ LDIFF_SYM572=LTDIE_61 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM573=LTDIE_61_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM573
+LDIFF_SYM576=LTDIE_61_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM576
 	.byte 1,90,11
 	.asciz "V_0"
 
-LDIFF_SYM574=LTDIE_57_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM574
+LDIFF_SYM577=LTDIE_57_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM577
 	.byte 2,125,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM575=Lfde17_end - Lfde17_start
-	.long LDIFF_SYM575
+LDIFF_SYM578=Lfde17_end - Lfde17_start
+	.long LDIFF_SYM578
 Lfde17_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_PluginLoader_EnsureLoaded
 
-LDIFF_SYM576=Lme_11 - _Cirrious_MvvmCross_Plugins_Json_PluginLoader_EnsureLoaded
-	.long LDIFF_SYM576
+LDIFF_SYM579=Lme_11 - _Cirrious_MvvmCross_Plugins_Json_PluginLoader_EnsureLoaded
+	.long LDIFF_SYM579
 	.byte 12,13,0,72,14,8,135,2,68,14,16,136,4,138,3,142,1,68,14,24
 	.align 2
 Lfde17_end:
@@ -4946,18 +4962,18 @@ LTDIE_62:
 	.byte 8,7
 	.asciz "Cirrious_CrossCore_Plugins_IMvxPluginConfiguration"
 
-LDIFF_SYM577=LTDIE_62 - Ldebug_info_start
-	.long LDIFF_SYM577
+LDIFF_SYM580=LTDIE_62 - Ldebug_info_start
+	.long LDIFF_SYM580
 LTDIE_62_POINTER:
 
 	.byte 13
-LDIFF_SYM578=LTDIE_62 - Ldebug_info_start
-	.long LDIFF_SYM578
+LDIFF_SYM581=LTDIE_62 - Ldebug_info_start
+	.long LDIFF_SYM581
 LTDIE_62_REFERENCE:
 
 	.byte 14
-LDIFF_SYM579=LTDIE_62 - Ldebug_info_start
-	.long LDIFF_SYM579
+LDIFF_SYM582=LTDIE_62 - Ldebug_info_start
+	.long LDIFF_SYM582
 	.byte 2
 	.asciz "Cirrious.MvvmCross.Plugins.Json.PluginLoader:Configure"
 	.long _Cirrious_MvvmCross_Plugins_Json_PluginLoader_Configure_Cirrious_CrossCore_Plugins_IMvxPluginConfiguration
@@ -4966,32 +4982,32 @@ LDIFF_SYM579=LTDIE_62 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM580=LTDIE_61_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM580
+LDIFF_SYM583=LTDIE_61_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM583
 	.byte 2,125,0,3
 	.asciz "configuration"
 
-LDIFF_SYM581=LTDIE_62_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM581
+LDIFF_SYM584=LTDIE_62_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM584
 	.byte 1,90,11
 	.asciz "V_0"
 
-LDIFF_SYM582=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM582
+LDIFF_SYM585=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM585
 	.byte 1,85,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM583=Lfde18_end - Lfde18_start
-	.long LDIFF_SYM583
+LDIFF_SYM586=Lfde18_end - Lfde18_start
+	.long LDIFF_SYM586
 Lfde18_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_PluginLoader_Configure_Cirrious_CrossCore_Plugins_IMvxPluginConfiguration
 
-LDIFF_SYM584=Lme_12 - _Cirrious_MvvmCross_Plugins_Json_PluginLoader_Configure_Cirrious_CrossCore_Plugins_IMvxPluginConfiguration
-	.long LDIFF_SYM584
+LDIFF_SYM587=Lme_12 - _Cirrious_MvvmCross_Plugins_Json_PluginLoader_Configure_Cirrious_CrossCore_Plugins_IMvxPluginConfiguration
+	.long LDIFF_SYM587
 	.byte 12,13,0,72,14,8,135,2,68,14,28,132,7,133,6,136,5,138,4,139,3,142,1,68,14,56
 	.align 2
 Lfde18_end:
@@ -5006,22 +5022,22 @@ Lfde18_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM585=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM585
+LDIFF_SYM588=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM588
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM586=Lfde19_end - Lfde19_start
-	.long LDIFF_SYM586
+LDIFF_SYM589=Lfde19_end - Lfde19_start
+	.long LDIFF_SYM589
 Lfde19_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_PluginLoader__ctor
 
-LDIFF_SYM587=Lme_13 - _Cirrious_MvvmCross_Plugins_Json_PluginLoader__ctor
-	.long LDIFF_SYM587
+LDIFF_SYM590=Lme_13 - _Cirrious_MvvmCross_Plugins_Json_PluginLoader__ctor
+	.long LDIFF_SYM590
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,24
 	.align 2
 Lfde19_end:
@@ -5037,16 +5053,16 @@ Lfde19_end:
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM588=Lfde20_end - Lfde20_start
-	.long LDIFF_SYM588
+LDIFF_SYM591=Lfde20_end - Lfde20_start
+	.long LDIFF_SYM591
 Lfde20_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_PluginLoader__cctor
 
-LDIFF_SYM589=Lme_14 - _Cirrious_MvvmCross_Plugins_Json_PluginLoader__cctor
-	.long LDIFF_SYM589
+LDIFF_SYM592=Lme_14 - _Cirrious_MvvmCross_Plugins_Json_PluginLoader__cctor
+	.long LDIFF_SYM592
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,16
 	.align 2
 Lfde20_end:
@@ -5061,27 +5077,27 @@ Lfde20_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM590=LTDIE_60_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM590
+LDIFF_SYM593=LTDIE_60_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM593
 	.byte 2,123,8,3
 	.asciz "inputText"
 
-LDIFF_SYM591=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM591
+LDIFF_SYM594=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM594
 	.byte 2,123,12,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM592=Lfde21_end - Lfde21_start
-	.long LDIFF_SYM592
+LDIFF_SYM595=Lfde21_end - Lfde21_start
+	.long LDIFF_SYM595
 Lfde21_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter_DeserializeObject___0_string
 
-LDIFF_SYM593=Lme_16 - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter_DeserializeObject___0_string
-	.long LDIFF_SYM593
+LDIFF_SYM596=Lme_16 - _Cirrious_MvvmCross_Plugins_Json_MvxJsonConverter_DeserializeObject___0_string
+	.long LDIFF_SYM596
 	.byte 12,13,0,72,14,8,135,2,68,14,24,132,6,133,5,136,4,139,3,142,1,68,14,48,68,13,11
 	.align 2
 Lfde21_end:
@@ -5093,23 +5109,23 @@ LTDIE_63:
 	.asciz "System_Array"
 
 	.byte 8,16
-LDIFF_SYM594=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM594
+LDIFF_SYM597=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM597
 	.byte 2,35,0,0,7
 	.asciz "System_Array"
 
-LDIFF_SYM595=LTDIE_63 - Ldebug_info_start
-	.long LDIFF_SYM595
+LDIFF_SYM598=LTDIE_63 - Ldebug_info_start
+	.long LDIFF_SYM598
 LTDIE_63_POINTER:
 
 	.byte 13
-LDIFF_SYM596=LTDIE_63 - Ldebug_info_start
-	.long LDIFF_SYM596
+LDIFF_SYM599=LTDIE_63 - Ldebug_info_start
+	.long LDIFF_SYM599
 LTDIE_63_REFERENCE:
 
 	.byte 14
-LDIFF_SYM597=LTDIE_63 - Ldebug_info_start
-	.long LDIFF_SYM597
+LDIFF_SYM600=LTDIE_63 - Ldebug_info_start
+	.long LDIFF_SYM600
 	.byte 2
 	.asciz "System.Array:InternalArray__IEnumerable_GetEnumerator<T>"
 	.long _System_Array_InternalArray__IEnumerable_GetEnumerator_T
@@ -5118,22 +5134,22 @@ LDIFF_SYM597=LTDIE_63 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM598=LTDIE_63_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM598
+LDIFF_SYM601=LTDIE_63_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM601
 	.byte 2,123,28,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM599=Lfde22_end - Lfde22_start
-	.long LDIFF_SYM599
+LDIFF_SYM602=Lfde22_end - Lfde22_start
+	.long LDIFF_SYM602
 Lfde22_start:
 
 	.long 0
 	.align 2
 	.long _System_Array_InternalArray__IEnumerable_GetEnumerator_T
 
-LDIFF_SYM600=Lme_17 - _System_Array_InternalArray__IEnumerable_GetEnumerator_T
-	.long LDIFF_SYM600
+LDIFF_SYM603=Lme_17 - _System_Array_InternalArray__IEnumerable_GetEnumerator_T
+	.long LDIFF_SYM603
 	.byte 12,13,0,72,14,8,135,2,68,14,16,136,4,139,3,142,1,68,14,56,68,13,11
 	.align 2
 Lfde22_end:
@@ -5148,22 +5164,22 @@ Lfde22_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM601=LTDIE_63_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM601
+LDIFF_SYM604=LTDIE_63_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM604
 	.byte 2,125,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM602=Lfde23_end - Lfde23_start
-	.long LDIFF_SYM602
+LDIFF_SYM605=Lfde23_end - Lfde23_start
+	.long LDIFF_SYM605
 Lfde23_start:
 
 	.long 0
 	.align 2
 	.long _System_Array_InternalArray__ICollection_get_Count
 
-LDIFF_SYM603=Lme_18 - _System_Array_InternalArray__ICollection_get_Count
-	.long LDIFF_SYM603
+LDIFF_SYM606=Lme_18 - _System_Array_InternalArray__ICollection_get_Count
+	.long LDIFF_SYM606
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,24
 	.align 2
 Lfde23_end:
@@ -5178,22 +5194,22 @@ Lfde23_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM604=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM604
+LDIFF_SYM607=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM607
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM605=Lfde24_end - Lfde24_start
-	.long LDIFF_SYM605
+LDIFF_SYM608=Lfde24_end - Lfde24_start
+	.long LDIFF_SYM608
 Lfde24_start:
 
 	.long 0
 	.align 2
 	.long _System_Array_InternalArray__ICollection_get_IsReadOnly
 
-LDIFF_SYM606=Lme_19 - _System_Array_InternalArray__ICollection_get_IsReadOnly
-	.long LDIFF_SYM606
+LDIFF_SYM609=Lme_19 - _System_Array_InternalArray__ICollection_get_IsReadOnly
+	.long LDIFF_SYM609
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,24
 	.align 2
 Lfde24_end:
@@ -5208,22 +5224,22 @@ Lfde24_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM607=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM607
+LDIFF_SYM610=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM610
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM608=Lfde25_end - Lfde25_start
-	.long LDIFF_SYM608
+LDIFF_SYM611=Lfde25_end - Lfde25_start
+	.long LDIFF_SYM611
 Lfde25_start:
 
 	.long 0
 	.align 2
 	.long _System_Array_InternalArray__ICollection_Clear
 
-LDIFF_SYM609=Lme_1a - _System_Array_InternalArray__ICollection_Clear
-	.long LDIFF_SYM609
+LDIFF_SYM612=Lme_1a - _System_Array_InternalArray__ICollection_Clear
+	.long LDIFF_SYM612
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,24
 	.align 2
 Lfde25_end:
@@ -5238,27 +5254,27 @@ Lfde25_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM610=LTDIE_63_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM610
+LDIFF_SYM613=LTDIE_63_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM613
 	.byte 2,123,12,3
 	.asciz "item"
 
-LDIFF_SYM611=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM611
+LDIFF_SYM614=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM614
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM612=Lfde26_end - Lfde26_start
-	.long LDIFF_SYM612
+LDIFF_SYM615=Lfde26_end - Lfde26_start
+	.long LDIFF_SYM615
 Lfde26_start:
 
 	.long 0
 	.align 2
 	.long _System_Array_InternalArray__ICollection_Add_T_T
 
-LDIFF_SYM613=Lme_1b - _System_Array_InternalArray__ICollection_Add_T_T
-	.long LDIFF_SYM613
+LDIFF_SYM616=Lme_1b - _System_Array_InternalArray__ICollection_Add_T_T
+	.long LDIFF_SYM616
 	.byte 12,13,0,72,14,8,135,2,68,14,16,136,4,139,3,142,1,68,14,40,68,13,11
 	.align 2
 Lfde26_end:
@@ -5273,27 +5289,27 @@ Lfde26_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM614=LTDIE_63_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM614
+LDIFF_SYM617=LTDIE_63_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM617
 	.byte 2,123,12,3
 	.asciz "item"
 
-LDIFF_SYM615=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM615
+LDIFF_SYM618=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM618
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM616=Lfde27_end - Lfde27_start
-	.long LDIFF_SYM616
+LDIFF_SYM619=Lfde27_end - Lfde27_start
+	.long LDIFF_SYM619
 Lfde27_start:
 
 	.long 0
 	.align 2
 	.long _System_Array_InternalArray__ICollection_Remove_T_T
 
-LDIFF_SYM617=Lme_1c - _System_Array_InternalArray__ICollection_Remove_T_T
-	.long LDIFF_SYM617
+LDIFF_SYM620=Lme_1c - _System_Array_InternalArray__ICollection_Remove_T_T
+	.long LDIFF_SYM620
 	.byte 12,13,0,72,14,8,135,2,68,14,16,136,4,139,3,142,1,68,14,40,68,13,11
 	.align 2
 Lfde27_end:
@@ -5308,42 +5324,42 @@ Lfde27_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM618=LTDIE_63_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM618
+LDIFF_SYM621=LTDIE_63_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM621
 	.byte 1,86,3
 	.asciz "item"
 
-LDIFF_SYM619=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM619
+LDIFF_SYM622=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM622
 	.byte 1,90,11
 	.asciz "length"
 
-LDIFF_SYM620=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM620
+LDIFF_SYM623=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM623
 	.byte 1,85,11
 	.asciz "i"
 
-LDIFF_SYM621=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM621
+LDIFF_SYM624=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM624
 	.byte 1,84,11
 	.asciz "value"
 
-LDIFF_SYM622=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM622
+LDIFF_SYM625=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM625
 	.byte 2,123,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM623=Lfde28_end - Lfde28_start
-	.long LDIFF_SYM623
+LDIFF_SYM626=Lfde28_end - Lfde28_start
+	.long LDIFF_SYM626
 Lfde28_start:
 
 	.long 0
 	.align 2
 	.long _System_Array_InternalArray__ICollection_Contains_T_T
 
-LDIFF_SYM624=Lme_1d - _System_Array_InternalArray__ICollection_Contains_T_T
-	.long LDIFF_SYM624
+LDIFF_SYM627=Lme_1d - _System_Array_InternalArray__ICollection_Contains_T_T
+	.long LDIFF_SYM627
 	.byte 12,13,0,72,14,8,135,2,68,14,32,132,8,133,7,134,6,136,5,138,4,139,3,142,1,68,14,56,68,13,11
 	.align 2
 Lfde28_end:
@@ -5358,32 +5374,32 @@ Lfde28_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM625=LTDIE_63_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM625
+LDIFF_SYM628=LTDIE_63_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM628
 	.byte 1,85,3
 	.asciz "array"
 
-LDIFF_SYM626=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM626
+LDIFF_SYM629=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM629
 	.byte 1,86,3
 	.asciz "index"
 
-LDIFF_SYM627=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM627
+LDIFF_SYM630=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM630
 	.byte 1,90,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM628=Lfde29_end - Lfde29_start
-	.long LDIFF_SYM628
+LDIFF_SYM631=Lfde29_end - Lfde29_start
+	.long LDIFF_SYM631
 Lfde29_start:
 
 	.long 0
 	.align 2
 	.long _System_Array_InternalArray__ICollection_CopyTo_T_T___int
 
-LDIFF_SYM629=Lme_1e - _System_Array_InternalArray__ICollection_CopyTo_T_T___int
-	.long LDIFF_SYM629
+LDIFF_SYM632=Lme_1e - _System_Array_InternalArray__ICollection_CopyTo_T_T___int
+	.long LDIFF_SYM632
 	.byte 12,13,0,72,14,8,135,2,68,14,32,132,8,133,7,134,6,136,5,138,4,139,3,142,1,68,14,128,1,68,13,11
 	.align 2
 Lfde29_end:
@@ -5395,23 +5411,23 @@ LTDIE_64:
 	.asciz "System_Predicate`1"
 
 	.byte 52,16
-LDIFF_SYM630=LTDIE_44 - Ldebug_info_start
-	.long LDIFF_SYM630
+LDIFF_SYM633=LTDIE_44 - Ldebug_info_start
+	.long LDIFF_SYM633
 	.byte 2,35,0,0,7
 	.asciz "System_Predicate`1"
 
-LDIFF_SYM631=LTDIE_64 - Ldebug_info_start
-	.long LDIFF_SYM631
+LDIFF_SYM634=LTDIE_64 - Ldebug_info_start
+	.long LDIFF_SYM634
 LTDIE_64_POINTER:
 
 	.byte 13
-LDIFF_SYM632=LTDIE_64 - Ldebug_info_start
-	.long LDIFF_SYM632
+LDIFF_SYM635=LTDIE_64 - Ldebug_info_start
+	.long LDIFF_SYM635
 LTDIE_64_REFERENCE:
 
 	.byte 14
-LDIFF_SYM633=LTDIE_64 - Ldebug_info_start
-	.long LDIFF_SYM633
+LDIFF_SYM636=LTDIE_64 - Ldebug_info_start
+	.long LDIFF_SYM636
 	.byte 2
 	.asciz "(wrapper delegate-invoke) System.Predicate`1<Newtonsoft.Json.JsonConverter>:invoke_bool_T"
 	.long _wrapper_delegate_invoke_System_Predicate_1_Newtonsoft_Json_JsonConverter_invoke_bool_T_Newtonsoft_Json_JsonConverter
@@ -5420,37 +5436,37 @@ LDIFF_SYM633=LTDIE_64 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM634=LTDIE_64_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM634
+LDIFF_SYM637=LTDIE_64_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM637
 	.byte 1,86,3
 	.asciz "param0"
 
-LDIFF_SYM635=LTDIE_1_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM635
+LDIFF_SYM638=LTDIE_1_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM638
 	.byte 1,90,11
 	.asciz "V_0"
 
-LDIFF_SYM636=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM636
+LDIFF_SYM639=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM639
 	.byte 1,85,11
 	.asciz "V_1"
 
-LDIFF_SYM637=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM637
+LDIFF_SYM640=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM640
 	.byte 1,84,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM638=Lfde30_end - Lfde30_start
-	.long LDIFF_SYM638
+LDIFF_SYM641=Lfde30_end - Lfde30_start
+	.long LDIFF_SYM641
 Lfde30_start:
 
 	.long 0
 	.align 2
 	.long _wrapper_delegate_invoke_System_Predicate_1_Newtonsoft_Json_JsonConverter_invoke_bool_T_Newtonsoft_Json_JsonConverter
 
-LDIFF_SYM639=Lme_1f - _wrapper_delegate_invoke_System_Predicate_1_Newtonsoft_Json_JsonConverter_invoke_bool_T_Newtonsoft_Json_JsonConverter
-	.long LDIFF_SYM639
+LDIFF_SYM642=Lme_1f - _wrapper_delegate_invoke_System_Predicate_1_Newtonsoft_Json_JsonConverter_invoke_bool_T_Newtonsoft_Json_JsonConverter
+	.long LDIFF_SYM642
 	.byte 12,13,0,72,14,8,135,2,68,14,28,132,7,133,6,134,5,136,4,138,3,142,1,68,14,32
 	.align 2
 Lfde30_end:
@@ -5462,23 +5478,23 @@ LTDIE_65:
 	.asciz "System_Comparison`1"
 
 	.byte 52,16
-LDIFF_SYM640=LTDIE_44 - Ldebug_info_start
-	.long LDIFF_SYM640
+LDIFF_SYM643=LTDIE_44 - Ldebug_info_start
+	.long LDIFF_SYM643
 	.byte 2,35,0,0,7
 	.asciz "System_Comparison`1"
 
-LDIFF_SYM641=LTDIE_65 - Ldebug_info_start
-	.long LDIFF_SYM641
+LDIFF_SYM644=LTDIE_65 - Ldebug_info_start
+	.long LDIFF_SYM644
 LTDIE_65_POINTER:
 
 	.byte 13
-LDIFF_SYM642=LTDIE_65 - Ldebug_info_start
-	.long LDIFF_SYM642
+LDIFF_SYM645=LTDIE_65 - Ldebug_info_start
+	.long LDIFF_SYM645
 LTDIE_65_REFERENCE:
 
 	.byte 14
-LDIFF_SYM643=LTDIE_65 - Ldebug_info_start
-	.long LDIFF_SYM643
+LDIFF_SYM646=LTDIE_65 - Ldebug_info_start
+	.long LDIFF_SYM646
 	.byte 2
 	.asciz "(wrapper delegate-invoke) System.Comparison`1<Newtonsoft.Json.JsonConverter>:invoke_int_T_T"
 	.long _wrapper_delegate_invoke_System_Comparison_1_Newtonsoft_Json_JsonConverter_invoke_int_T_T_Newtonsoft_Json_JsonConverter_Newtonsoft_Json_JsonConverter
@@ -5487,42 +5503,42 @@ LDIFF_SYM643=LTDIE_65 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM644=LTDIE_65_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM644
+LDIFF_SYM647=LTDIE_65_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM647
 	.byte 1,85,3
 	.asciz "param0"
 
-LDIFF_SYM645=LTDIE_1_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM645
+LDIFF_SYM648=LTDIE_1_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM648
 	.byte 1,86,3
 	.asciz "param1"
 
-LDIFF_SYM646=LTDIE_1_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM646
+LDIFF_SYM649=LTDIE_1_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM649
 	.byte 1,90,11
 	.asciz "V_0"
 
-LDIFF_SYM647=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM647
+LDIFF_SYM650=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM650
 	.byte 1,84,11
 	.asciz "V_1"
 
-LDIFF_SYM648=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM648
+LDIFF_SYM651=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM651
 	.byte 1,91,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM649=Lfde31_end - Lfde31_start
-	.long LDIFF_SYM649
+LDIFF_SYM652=Lfde31_end - Lfde31_start
+	.long LDIFF_SYM652
 Lfde31_start:
 
 	.long 0
 	.align 2
 	.long _wrapper_delegate_invoke_System_Comparison_1_Newtonsoft_Json_JsonConverter_invoke_int_T_T_Newtonsoft_Json_JsonConverter_Newtonsoft_Json_JsonConverter
 
-LDIFF_SYM650=Lme_20 - _wrapper_delegate_invoke_System_Comparison_1_Newtonsoft_Json_JsonConverter_invoke_int_T_T_Newtonsoft_Json_JsonConverter_Newtonsoft_Json_JsonConverter
-	.long LDIFF_SYM650
+LDIFF_SYM653=Lme_20 - _wrapper_delegate_invoke_System_Comparison_1_Newtonsoft_Json_JsonConverter_invoke_int_T_T_Newtonsoft_Json_JsonConverter_Newtonsoft_Json_JsonConverter
+	.long LDIFF_SYM653
 	.byte 12,13,0,72,14,8,135,2,68,14,32,132,8,133,7,134,6,136,5,138,4,139,3,142,1
 	.align 2
 Lfde31_end:

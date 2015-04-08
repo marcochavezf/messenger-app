@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
 using Newtonsoft.Json.Linq;
+using System.Net;
+using System.Text;
+using System.Collections.Generic;
+using Xamarin;
 
 namespace KangouMessenger.Core
 {
@@ -67,30 +71,62 @@ namespace KangouMessenger.Core
 		public string ClientPhoneNumber { get; set; }
 
 		public DataOrder(JToken data){
-			Id = data["_id"].ToString();
+			try{
+				Id = data["_id"].ToString();
+				string isAPurchaseValue = getValue(data, "isAPurchase");
+				IsAPurchase = Convert.ToBoolean( isAPurchaseValue == "" ? "false" : isAPurchaseValue );
+				ListItems = WebUtility.HtmlDecode( getValue(data,"listItems"));
+				AproximateDistance =  getValue(data,"distancePickUpToDropOff");
+				AproximateDistanceToFirstPoint = getValue(data,"aproximateDistanceToFirstPoint");
 
-			IsAPurchase = Convert.ToBoolean( data ["isAPurchase"].ToString () );
-			ListItems = data ["listItems"].ToString ();
-			AproximateDistance =  data["distancePickUpToDropOff"].ToString ();
-			AproximateDistanceToFirstPoint = data ["aproximateDistanceToFirstPoint"].ToString ();
+				PickUpShortAdress = htmlToUTF8String (  getValue(data,"pickUpShortAdress") );
+				PickUpAdress = htmlToUTF8String ( getValue(data,"pickUpAdress") );
+				PickUpRefences = htmlToUTF8String ( getValue(data,"pickUpRefences") );
+				PickUpFullName = htmlToUTF8String ( getValue(data,"pickUpFullName") );
+				PickUpLat = (double)data["pickUpLat"];
+				PickUpLng = (double)data["pickUpLng"];
 
-			PickUpShortAdress = data["pickUpShortAdress"].ToString ();
-			PickUpAdress = data["pickUpAdress"].ToString ();
-			PickUpRefences = data["pickUpRefences"].ToString ();
-			PickUpFullName = data["pickUpFullName"].ToString ();
-			PickUpLat = (double)data["pickUpLat"];
-			PickUpLng = (double)data["pickUpLng"];
+				DropOffShortAdress = htmlToUTF8String ( getValue(data,"dropOffShortAdress") );
+				DropOffAdress = htmlToUTF8String( getValue(data,"dropOffAdress") );
+				DropOffRefences = htmlToUTF8String( getValue(data,"dropOffRefences") );
+				DropOffFullName = htmlToUTF8String( getValue(data,"dropOffFullName") );
+				DropOffLat = (double)data["dropOffLat"];
+				DropOffLng = (double)data["dropOffLng"];
 
-			DropOffShortAdress = data["dropOffShortAdress"].ToString ();
-			DropOffAdress = data["dropOffAdress"].ToString ();
-			DropOffRefences = data["dropOffRefences"].ToString ();
-			DropOffFullName = data["dropOffFullName"].ToString ();
-			DropOffLat = (double)data["dropOffLat"];
-			DropOffLng = (double)data["dropOffLng"];
+				ClientName = WebUtility.HtmlDecode( getValue(data,"clientName") );
+				ClientEmail = getValue(data,"clientEmail");
+				ClientPhoneNumber = getValue(data,"clientPhoneNumber");
+			} catch (Exception e){
+				Insights.Report (e);
+				Debug.WriteLine ("Exception: {0}",e);
+			}
+		}
 
-			ClientName = data["clientName"].ToString ();
-			ClientEmail = data["clientEmail"].ToString ();
-			ClientPhoneNumber = data["clientPhoneNumber"].ToString ();
+		private String htmlToUTF8String(string input){
+
+			var dictionary = new Dictionary<string, string> () {
+				{ "Ã‰", "É" },
+				{ "Ã©", "é" },
+				{ "Ãº" , "ú" },
+				{ "â€¢" , "-" },
+				{ "Ã¡", "á" },
+				{ "Ã³", "ó" },
+				{ "â€" , "–" },
+				{ "Ã" , "í" }
+			};
+
+			foreach (KeyValuePair<string, string> entry in dictionary) {
+				input = input.Replace (entry.Key, entry.Value);
+			}
+			return input;
+		}
+
+		private string getValue(JToken data, string key){
+			var jTokenValue = data [key];
+			string stringValue = "";
+			if (jTokenValue is Object)
+				stringValue = jTokenValue.ToString ();
+			return stringValue;
 		}
 	}
 				

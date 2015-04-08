@@ -19,6 +19,7 @@ using Newtonsoft.Json;
 using Android.Graphics;
 using System.Threading;
 using Android.Content.PM;
+using Xamarin;
 
 namespace KangouMessenger.Droid
 {
@@ -112,6 +113,7 @@ namespace KangouMessenger.Droid
 							line.Geodesic = true;
 						} catch (Exception e){
 							Console.WriteLine ("Exception: {0}", e);
+							Insights.Report(e);
 						}
 					});
 				});
@@ -128,6 +130,7 @@ namespace KangouMessenger.Droid
 			} catch (Exception e){
 				Console.WriteLine ("URL: {0}", url);
 				Console.WriteLine ("Exception: {0}", e);
+				Insights.Report(e);
 			}
 		}
 

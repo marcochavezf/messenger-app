@@ -1,6 +1,5 @@
 using Cirrious.MvvmCross.ViewModels;
 using System.Windows.Input;
-using Xamarin.Socket.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System;
@@ -20,13 +19,20 @@ namespace KangouMessenger.Core
 				DataOrderManager.Instance.IsOrderActive = false;
 
 				ConnectionManager.Instance.KangouData.AppView = "WaitingOrderView";
-				IsBusy = false;
-				Close(this);
+				InvokeOnMainThread (delegate {  
+					IsBusy = false;
+				});
+				Task.Run(delegate {
+					Close(this);
+				});
 			});
+
+			EnableRetryButton = true;
+			RetryAction = DoAcceptCommand;
 		}
 
 		/* Properties */
-		private string _commentsAboutClient;
+		private string _commentsAboutClient = "";
 		public string CommentsAboutClient
 		{ 
 			get { return _commentsAboutClient; }

@@ -1,6 +1,5 @@
 using Cirrious.MvvmCross.ViewModels;
 using System.Windows.Input;
-using Xamarin.Socket.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System;
@@ -15,13 +14,20 @@ namespace KangouMessenger.Core
 		public DropOffRouteViewModel(bool removeNextToLastViewModel = true){
 			RemoveNextToLastViewModel = removeNextToLastViewModel;
 
-			ConnectionManager.On  ( SocketEvents.ArrivedToDropOff, (data) => {
-				ConnectionManager.Off( SocketEvents.ArrivedToDropOff );
+			ConnectionManager.On (SocketEvents.ArrivedToDropOff, (data) => {
+				ConnectionManager.Off (SocketEvents.ArrivedToDropOff);
 				ItNeedsToBeRemoved = true;
-				IsBusy = false;
-				ShowViewModel<DropOffTimerViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
+				InvokeOnMainThread (delegate {  
+					IsBusy = false;
+				});
+				Task.Run (delegate {
+					ShowViewModel<DropOffTimerViewModel> (new BusyMvxViewModelParameters (){ RemoveNextToLastViewModel = true });
+				});
 			});
 			ConnectionManager.Instance.KangouData.AppView = "DropOffRouteView";
+
+			EnableRetryButton = true;
+			RetryAction = DoImHereCommand;
 		}
 			
 		/* Properties */

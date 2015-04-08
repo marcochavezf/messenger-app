@@ -286,17 +286,20 @@ containing a value of this type.
         public static final int connectview=0x7f030001;
         public static final int dropoffrouteview=0x7f030002;
         public static final int dropofftimerview=0x7f030003;
-        public static final int helpview=0x7f030004;
-        public static final int loginview=0x7f030005;
-        public static final int pickuprouteview=0x7f030006;
-        public static final int pickuptimerview=0x7f030007;
-        public static final int receivingorderview=0x7f030008;
-        public static final int reviewview=0x7f030009;
-        public static final int splashscreen=0x7f03000a;
-        public static final int waitingorderview=0x7f03000b;
+        public static final int firstview=0x7f030004;
+        public static final int helpview=0x7f030005;
+        public static final int loginview=0x7f030006;
+        public static final int pickuprouteview=0x7f030007;
+        public static final int pickuptimerview=0x7f030008;
+        public static final int receivingorderview=0x7f030009;
+        public static final int reviewview=0x7f03000a;
+        public static final int splashscreen=0x7f03000b;
+        public static final int waitingorderview=0x7f03000c;
     }
     public static final class string {
-        public static final int app_name=0x7f06001a;
+        public static final int ApplicationName=0x7f06001a;
+        public static final int Hello=0x7f060019;
+        public static final int app_name=0x7f06001c;
         /**   Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70] 
          */
@@ -387,10 +390,10 @@ containing a value of this type.
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
         public static final int common_signin_button_text_long=0x7f060012;
-        public static final int hello=0x7f060019;
-        public static final int infoConnect=0x7f06001d;
-        public static final int infoPasswordA=0x7f06001b;
-        public static final int infoPasswordB=0x7f06001c;
+        public static final int hello=0x7f06001b;
+        public static final int infoConnect=0x7f06001f;
+        public static final int infoPasswordA=0x7f06001d;
+        public static final int infoPasswordB=0x7f06001e;
     }
     public static final class style {
         public static final int Theme_Splash=0x7f070000;

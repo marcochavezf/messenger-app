@@ -1,14 +1,16 @@
-# Version: 8.4.0.16 (80e9ff7)
+# Version: 8.6.2.26 (9905782)
 # [first argument, ignore] # /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Touch2/bin/iPhone/Ad-Hoc/mtouch.exe
-/Library/Frameworks/Xamarin.iOS.framework/Versions/8.4.0.16/bin/mtouch \
+/Library/Frameworks/Xamarin.iOS.framework/Versions/8.6.2.26/bin/mtouch-64 \
 	-sdkroot \
 	/Applications/Xcode.app/Contents/Developer \
 	--cache \
 	"/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Touch2/obj/iPhone/Ad-Hoc/mtouch-cache" \
+	--executable \
+	KangouMessengerTouch2 \
 	--nomanifest \
 	--nosign \
 	-dev \
-	"/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Touch2/bin/iPhone/Ad-Hoc/KangouMessengerTouch.app" \
+	"/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Touch2/bin/iPhone/Ad-Hoc/KangouMessengerTouch2.app" \
 	-r \
 	"/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/KangouAppMessenger.dll" \
 	-r \
@@ -24,28 +26,28 @@
 	-r \
 	"/Users/marcochavezf/Google Drive/messenger-app/Components/mbprogresshud-0.8/lib/ios/MBProgressHUD.dll" \
 	-r \
-	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.1/lib/MonoTouch/Cirrious.CrossCore.Touch.dll" \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.2/lib/MonoTouch/Cirrious.CrossCore.Touch.dll" \
 	-r \
-	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.1/lib/MonoTouch/Cirrious.MvvmCross.Binding.Touch.dll" \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.2/lib/MonoTouch/Cirrious.MvvmCross.Binding.Touch.dll" \
 	-r \
-	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.1/lib/MonoTouch/Cirrious.CrossCore.dll" \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.2/lib/MonoTouch/Cirrious.CrossCore.dll" \
 	-r \
-	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.1/lib/MonoTouch/Cirrious.MvvmCross.Binding.dll" \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.2/lib/MonoTouch/Cirrious.MvvmCross.Binding.dll" \
 	-r \
-	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.1/lib/MonoTouch/Cirrious.MvvmCross.Localization.dll" \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.2.2/lib/MonoTouch/Cirrious.MvvmCross.Localization.dll" \
 	-r \
-	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.Plugin.Messenger.3.2.1/lib/MonoTouch/Cirrious.MvvmCross.Plugins.Messenger.dll" \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.Plugin.Messenger.3.2.2/lib/MonoTouch/Cirrious.MvvmCross.Plugins.Messenger.dll" \
 	-r \
-	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1/lib/MonoTouch/Cirrious.MvvmCross.Touch.dll" \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.Plugin.Json.3.2.2/lib/MonoTouch/Cirrious.MvvmCross.Plugins.Json.dll" \
 	-r \
-	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.MvvmCrossLibraries.3.2.1/lib/MonoTouch/Cirrious.MvvmCross.dll" \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.MvvmCrossLibraries.3.2.2/lib/MonoTouch/Cirrious.MvvmCross.Touch.dll" \
 	-r \
-	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.Plugin.Json.3.2.1/lib/MonoTouch/Cirrious.MvvmCross.Plugins.Json.dll" \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.MvvmCrossLibraries.3.2.2/lib/MonoTouch/Cirrious.MvvmCross.dll" \
 	-r \
-	"/Users/marcochavezf/Google Drive/messenger-app/packages/Newtonsoft.Json.6.0.6/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll" \
+	"/Users/marcochavezf/Google Drive/messenger-app/packages/Newtonsoft.Json.6.0.7/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll" \
 	-linksdkonly \
 	-sdk \
-	8.1 \
+	8.2 \
 	-targetver \
 	8.0 \
 	--abi=armv7,armv7s \

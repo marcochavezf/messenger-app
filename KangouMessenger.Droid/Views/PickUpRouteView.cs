@@ -19,6 +19,7 @@ using Newtonsoft.Json;
 using Android.Graphics;
 using System.Threading;
 using Android.Content.PM;
+using Xamarin;
 
 namespace KangouMessenger.Droid
 {
@@ -57,15 +58,16 @@ namespace KangouMessenger.Droid
 			CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition (cameraPosition);
 			_mapFragment.Map.MoveCamera (cameraUpdate);
 
-			var addressTextView = FindViewById<TextView> (Resource.Id.address);
-			var referencesTextView = FindViewById<TextView> (Resource.Id.references);
 			var nameTextView = FindViewById<TextView> (Resource.Id.name);
 			var itemsTextView = FindViewById<TextView> (Resource.Id.items);
+			var addressTextView = FindViewById<TextView> (Resource.Id.address);
+			var referencesTextView = FindViewById<TextView> (Resource.Id.references);
 
-			addressTextView.Text = "Dirección: " + dataOrder.PickUpAdress;
-			referencesTextView.Text = "Referencia: " + dataOrder.PickUpRefences;
 			nameTextView.Text = "Nombre: " + dataOrder.PickUpFullName;
 			itemsTextView.Text = "Recoger: " + dataOrder.ListItems;
+			addressTextView.Text = "Dirección: " + dataOrder.PickUpAdress;
+			referencesTextView.Text = "Referencia: " + dataOrder.PickUpRefences;
+
 			if (dataOrder.IsAPurchase) {
 				Title = "Ir a Comprar";
 				itemsTextView.Text = "Comprar: " + dataOrder.ListItems;
@@ -119,6 +121,7 @@ namespace KangouMessenger.Droid
 								line.Geodesic = true;
 							} catch (Exception e){
 								Console.WriteLine ("Exception: {0}", e);
+								Insights.Report(e);
 							}
 						});
 					});
@@ -136,6 +139,7 @@ namespace KangouMessenger.Droid
 			} catch (Exception e){
 				Console.WriteLine ("URL: {0}", url);
 				Console.WriteLine ("Exception: {0}", e);
+				Insights.Report(e);
 			}
 		}
 

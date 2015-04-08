@@ -1,6 +1,5 @@
 using Cirrious.MvvmCross.ViewModels;
 using System.Windows.Input;
-using Xamarin.Socket.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using Cirrious.MvvmCross.Views;
@@ -22,10 +21,17 @@ namespace KangouMessenger.Core
 			ConnectionManager.On  ( SocketEvents.ArrivedToPickUp, (data) => {
 				ConnectionManager.Off( SocketEvents.ArrivedToPickUp );
 				ItNeedsToBeRemoved = true;
-				IsBusy = false;
-				ShowViewModel<PickUpTimerViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
+				InvokeOnMainThread (delegate {  
+					IsBusy = false;
+				});
+				Task.Run(delegate {
+					ShowViewModel<PickUpTimerViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
+				});
 			});
 			ConnectionManager.Instance.KangouData.AppView = "PickUpRouteView";
+
+			EnableRetryButton = true;
+			RetryAction = DoImHereCommand;
 		}
 
 		/* Properties */

@@ -17,7 +17,7 @@ Ldebug_info_begin:
 	.short 2
 	.long 0
 	.byte 4,1
-	.asciz "Mono AOT Compiler 3.10.0 (mono-3.10.0-branch/491d1f5 Wed Oct 22 15:02:07 EDT 2014)"
+	.asciz "Mono AOT Compiler 3.12.0 (monotouch-8.6.0-branch/ba5d2d1 Thu Feb 26 10:59:01 EST 2015)"
 	.asciz "Cirrious.MvvmCross.Localization.dll"
 	.asciz ""
 
@@ -201,7 +201,7 @@ bl _p_7
 	.byte 20,192,155,229,12,240,160,225,4,0,155,229,36,208,139,226,0,13,189,232,128,128,189,232,14,16,160,225,0,0,159,229
 bl _p_8
 
-	.byte 39,3,0,2
+	.byte 49,3,0,2
 
 Lme_8:
 .text
@@ -396,21 +396,21 @@ image_table:
 
 	.long 3
 	.asciz "Cirrious.MvvmCross.Localization"
-	.asciz "C16194C1-1D71-470D-9E78-641F3E1CF459"
+	.asciz "7A40ECA5-5161-43C8-ACB0-5AE68DE9B271"
 	.asciz ""
 	.asciz ""
 	.align 3
 
 	.long 0,1,0,0,0
 	.asciz "Cirrious.CrossCore"
-	.asciz "83AF60ED-32A6-4617-8337-ABC47AB6F13C"
+	.asciz "C1D649E6-8B89-4ADD-B37A-C66DFE6C5694"
 	.asciz ""
 	.asciz "e16445fd9b451819"
 	.align 3
 
 	.long 1,1,0,0,0
 	.asciz "mscorlib"
-	.asciz "2F001905-97BA-4C5D-B051-7A38A8A8BC75"
+	.asciz "6E466931-A21F-4620-9A7C-947AFD4E1457"
 	.asciz ""
 	.asciz "7cec85d7bea7798e"
 	.align 3
@@ -424,7 +424,7 @@ got_end:
 .section __TEXT, __const
 	.align 2
 assembly_guid:
-	.asciz "C16194C1-1D71-470D-9E78-641F3E1CF459"
+	.asciz "7A40ECA5-5161-43C8-ACB0-5AE68DE9B271"
 .section __TEXT, __const
 	.align 2
 runtime_version:
@@ -437,7 +437,7 @@ assembly_name:
 	.align 3
 _mono_aot_file_info:
 
-	.long 102,0
+	.long 104,0
 	.align 2
 	.long _mono_aot_Cirrious_MvvmCross_Localization_got
 	.align 2
@@ -513,15 +513,15 @@ _mono_aot_module_Cirrious_MvvmCross_Localization_info:
 blob:
 
 	.byte 0,0,3,4,4,5,0,0,0,0,0,0,0,2,6,7,0,0,0,0,0,1,8,12,0,39,42,47,23,1,3,6
-	.byte 3,34,255,254,0,0,0,0,255,43,0,0,1,14,2,6,1,6,5,3,194,0,16,163,3,255,254,0,0,0,0,255
+	.byte 3,34,255,254,0,0,0,0,255,43,0,0,1,14,2,6,1,6,5,3,194,0,17,32,3,255,254,0,0,0,0,255
 	.byte 43,0,0,1,7,17,109,111,110,111,95,104,101,108,112,101,114,95,108,100,115,116,114,0,7,20,109,111,110,111,95,111
 	.byte 98,106,101,99,116,95,110,101,119,95,102,97,115,116,0,3,193,0,0,8,7,25,109,111,110,111,95,97,114,99,104,95
-	.byte 116,104,114,111,119,95,101,120,99,101,112,116,105,111,110,0,3,194,0,16,159,7,32,109,111,110,111,95,97,114,99,104
-	.byte 95,116,104,114,111,119,95,99,111,114,108,105,98,95,101,120,99,101,112,116,105,111,110,0,3,194,0,24,109,2,0,0
+	.byte 116,104,114,111,119,95,101,120,99,101,112,116,105,111,110,0,3,194,0,17,28,7,32,109,111,110,111,95,97,114,99,104
+	.byte 95,116,104,114,111,119,95,99,111,114,108,105,98,95,101,120,99,101,112,116,105,111,110,0,3,194,0,24,221,2,0,0
 	.byte 2,32,0,2,51,0,2,72,0,6,91,1,2,20,128,244,68,128,208,128,212,0,2,117,0,2,72,0,2,72,0,0
-	.byte 128,144,8,0,0,1,8,128,144,8,0,0,1,194,0,23,141,194,0,23,138,194,0,23,137,194,0,23,135,1,193,0
-	.byte 0,55,193,0,0,55,1,0,128,144,8,0,0,1,0,128,144,8,0,0,1,10,128,160,20,0,0,4,194,0,23,141
-	.byte 194,0,23,138,194,0,23,137,194,0,23,135,10,11,12,11,10,9,98,111,101,104,109,0
+	.byte 128,144,8,0,0,1,8,128,144,8,0,0,1,194,0,23,250,194,0,23,247,194,0,23,246,194,0,23,244,1,193,0
+	.byte 0,55,193,0,0,55,1,0,128,144,8,0,0,1,0,128,144,8,0,0,1,10,128,160,20,0,0,4,194,0,23,250
+	.byte 194,0,23,247,194,0,23,246,194,0,23,244,10,11,12,11,10,9,98,111,101,104,109,0
 .section __TEXT, __const
 	.align 3
 Lglobals_hash:
@@ -1270,366 +1270,381 @@ LTDIE_13:
 	.byte 5
 	.asciz "System_Globalization_TextInfo"
 
-	.byte 48,16
+	.byte 60,16
 LDIFF_SYM138=LTDIE_2 - Ldebug_info_start
 	.long LDIFF_SYM138
 	.byte 2,35,0,6
+	.asciz "m_listSeparator"
+
+LDIFF_SYM139=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM139
+	.byte 2,35,8,6
 	.asciz "m_isReadOnly"
 
-LDIFF_SYM139=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM139
-	.byte 2,35,16,6
+LDIFF_SYM140=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM140
+	.byte 2,35,20,6
 	.asciz "customCultureName"
 
-LDIFF_SYM140=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM140
-	.byte 2,35,8,6
-	.asciz "m_win32LangID"
-
-LDIFF_SYM141=LDIE_I4 - Ldebug_info_start
+LDIFF_SYM141=LDIE_STRING - Ldebug_info_start
 	.long LDIFF_SYM141
-	.byte 2,35,20,6
-	.asciz "ci"
-
-LDIFF_SYM142=LTDIE_5_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM142
 	.byte 2,35,12,6
-	.asciz "handleDotI"
+	.asciz "m_nDataItem"
+
+LDIFF_SYM142=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM142
+	.byte 2,35,24,6
+	.asciz "m_useUserOverride"
 
 LDIFF_SYM143=LDIE_BOOLEAN - Ldebug_info_start
 	.long LDIFF_SYM143
-	.byte 2,35,24,6
-	.asciz "data"
+	.byte 2,35,28,6
+	.asciz "m_win32LangID"
 
 LDIFF_SYM144=LDIE_I4 - Ldebug_info_start
 	.long LDIFF_SYM144
-	.byte 2,35,28,0,7
+	.byte 2,35,32,6
+	.asciz "ci"
+
+LDIFF_SYM145=LTDIE_5_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM145
+	.byte 2,35,16,6
+	.asciz "handleDotI"
+
+LDIFF_SYM146=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM146
+	.byte 2,35,36,6
+	.asciz "data"
+
+LDIFF_SYM147=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM147
+	.byte 2,35,40,0,7
 	.asciz "System_Globalization_TextInfo"
 
-LDIFF_SYM145=LTDIE_13 - Ldebug_info_start
-	.long LDIFF_SYM145
+LDIFF_SYM148=LTDIE_13 - Ldebug_info_start
+	.long LDIFF_SYM148
 LTDIE_13_POINTER:
 
 	.byte 13
-LDIFF_SYM146=LTDIE_13 - Ldebug_info_start
-	.long LDIFF_SYM146
+LDIFF_SYM149=LTDIE_13 - Ldebug_info_start
+	.long LDIFF_SYM149
 LTDIE_13_REFERENCE:
 
 	.byte 14
-LDIFF_SYM147=LTDIE_13 - Ldebug_info_start
-	.long LDIFF_SYM147
+LDIFF_SYM150=LTDIE_13 - Ldebug_info_start
+	.long LDIFF_SYM150
 LTDIE_16:
 
 	.byte 5
 	.asciz "Mono_Globalization_Unicode_CodePointIndexer"
 
 	.byte 24,16
-LDIFF_SYM148=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM148
+LDIFF_SYM151=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM151
 	.byte 2,35,0,6
 	.asciz "ranges"
 
-LDIFF_SYM149=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM149
+LDIFF_SYM152=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM152
 	.byte 2,35,8,6
 	.asciz "TotalCount"
 
-LDIFF_SYM150=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM150
+LDIFF_SYM153=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM153
 	.byte 2,35,12,6
 	.asciz "defaultIndex"
 
-LDIFF_SYM151=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM151
+LDIFF_SYM154=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM154
 	.byte 2,35,16,6
 	.asciz "defaultCP"
 
-LDIFF_SYM152=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM152
+LDIFF_SYM155=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM155
 	.byte 2,35,20,0,7
 	.asciz "Mono_Globalization_Unicode_CodePointIndexer"
 
-LDIFF_SYM153=LTDIE_16 - Ldebug_info_start
-	.long LDIFF_SYM153
+LDIFF_SYM156=LTDIE_16 - Ldebug_info_start
+	.long LDIFF_SYM156
 LTDIE_16_POINTER:
 
 	.byte 13
-LDIFF_SYM154=LTDIE_16 - Ldebug_info_start
-	.long LDIFF_SYM154
+LDIFF_SYM157=LTDIE_16 - Ldebug_info_start
+	.long LDIFF_SYM157
 LTDIE_16_REFERENCE:
 
 	.byte 14
-LDIFF_SYM155=LTDIE_16 - Ldebug_info_start
-	.long LDIFF_SYM155
+LDIFF_SYM158=LTDIE_16 - Ldebug_info_start
+	.long LDIFF_SYM158
 LTDIE_15:
 
 	.byte 5
 	.asciz "Mono_Globalization_Unicode_SimpleCollator"
 
 	.byte 52,16
-LDIFF_SYM156=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM156
+LDIFF_SYM159=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM159
 	.byte 2,35,0,6
 	.asciz "textInfo"
 
-LDIFF_SYM157=LTDIE_13_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM157
+LDIFF_SYM160=LTDIE_13_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM160
 	.byte 2,35,8,6
 	.asciz "cjkIndexer"
 
-LDIFF_SYM158=LTDIE_16_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM158
+LDIFF_SYM161=LTDIE_16_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM161
 	.byte 2,35,12,6
 	.asciz "contractions"
 
-LDIFF_SYM159=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM159
+LDIFF_SYM162=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM162
 	.byte 2,35,16,6
 	.asciz "level2Maps"
 
-LDIFF_SYM160=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM160
+LDIFF_SYM163=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM163
 	.byte 2,35,20,6
 	.asciz "unsafeFlags"
 
-LDIFF_SYM161=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM161
+LDIFF_SYM164=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM164
 	.byte 2,35,24,6
 	.asciz "cjkCatTable"
 
-LDIFF_SYM162=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM162
+LDIFF_SYM165=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM165
 	.byte 2,35,32,6
 	.asciz "cjkLv1Table"
 
-LDIFF_SYM163=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM163
+LDIFF_SYM166=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM166
 	.byte 2,35,36,6
 	.asciz "cjkLv2Table"
 
-LDIFF_SYM164=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM164
+LDIFF_SYM167=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM167
 	.byte 2,35,40,6
 	.asciz "cjkLv2Indexer"
 
-LDIFF_SYM165=LTDIE_16_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM165
+LDIFF_SYM168=LTDIE_16_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM168
 	.byte 2,35,28,6
 	.asciz "lcid"
 
-LDIFF_SYM166=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM166
+LDIFF_SYM169=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM169
 	.byte 2,35,44,6
 	.asciz "frenchSort"
 
-LDIFF_SYM167=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM167
+LDIFF_SYM170=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM170
 	.byte 2,35,48,0,7
 	.asciz "Mono_Globalization_Unicode_SimpleCollator"
 
-LDIFF_SYM168=LTDIE_15 - Ldebug_info_start
-	.long LDIFF_SYM168
+LDIFF_SYM171=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM171
 LTDIE_15_POINTER:
 
 	.byte 13
-LDIFF_SYM169=LTDIE_15 - Ldebug_info_start
-	.long LDIFF_SYM169
+LDIFF_SYM172=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM172
 LTDIE_15_REFERENCE:
 
 	.byte 14
-LDIFF_SYM170=LTDIE_15 - Ldebug_info_start
-	.long LDIFF_SYM170
+LDIFF_SYM173=LTDIE_15 - Ldebug_info_start
+	.long LDIFF_SYM173
 LTDIE_14:
 
 	.byte 5
 	.asciz "System_Globalization_CompareInfo"
 
 	.byte 24,16
-LDIFF_SYM171=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM171
+LDIFF_SYM174=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM174
 	.byte 2,35,0,6
 	.asciz "culture"
 
-LDIFF_SYM172=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM172
+LDIFF_SYM175=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM175
 	.byte 2,35,8,6
 	.asciz "win32LCID"
 
-LDIFF_SYM173=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM173
+LDIFF_SYM176=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM176
 	.byte 2,35,12,6
 	.asciz "m_name"
 
-LDIFF_SYM174=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM174
+LDIFF_SYM177=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM177
 	.byte 2,35,16,6
 	.asciz "collator"
 
-LDIFF_SYM175=LTDIE_15_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM175
+LDIFF_SYM178=LTDIE_15_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM178
 	.byte 2,35,20,0,7
 	.asciz "System_Globalization_CompareInfo"
 
-LDIFF_SYM176=LTDIE_14 - Ldebug_info_start
-	.long LDIFF_SYM176
+LDIFF_SYM179=LTDIE_14 - Ldebug_info_start
+	.long LDIFF_SYM179
 LTDIE_14_POINTER:
 
 	.byte 13
-LDIFF_SYM177=LTDIE_14 - Ldebug_info_start
-	.long LDIFF_SYM177
+LDIFF_SYM180=LTDIE_14 - Ldebug_info_start
+	.long LDIFF_SYM180
 LTDIE_14_REFERENCE:
 
 	.byte 14
-LDIFF_SYM178=LTDIE_14 - Ldebug_info_start
-	.long LDIFF_SYM178
+LDIFF_SYM181=LTDIE_14 - Ldebug_info_start
+	.long LDIFF_SYM181
 LTDIE_5:
 
 	.byte 5
 	.asciz "System_Globalization_CultureInfo"
 
 	.byte 108,16
-LDIFF_SYM179=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM179
+LDIFF_SYM182=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM182
 	.byte 2,35,0,6
 	.asciz "m_isReadOnly"
 
-LDIFF_SYM180=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM180
+LDIFF_SYM183=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM183
 	.byte 2,35,8,6
 	.asciz "cultureID"
 
-LDIFF_SYM181=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM181
+LDIFF_SYM184=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM184
 	.byte 2,35,12,6
 	.asciz "parent_lcid"
 
-LDIFF_SYM182=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM182
+LDIFF_SYM185=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM185
 	.byte 2,35,16,6
 	.asciz "datetime_index"
 
-LDIFF_SYM183=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM183
+LDIFF_SYM186=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM186
 	.byte 2,35,20,6
 	.asciz "number_index"
 
-LDIFF_SYM184=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM184
+LDIFF_SYM187=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM187
 	.byte 2,35,24,6
 	.asciz "default_calendar_type"
 
-LDIFF_SYM185=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM185
+LDIFF_SYM188=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM188
 	.byte 2,35,28,6
 	.asciz "m_useUserOverride"
 
-LDIFF_SYM186=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM186
+LDIFF_SYM189=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM189
 	.byte 2,35,32,6
 	.asciz "numInfo"
 
-LDIFF_SYM187=LTDIE_9_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM187
+LDIFF_SYM190=LTDIE_9_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM190
 	.byte 2,35,36,6
 	.asciz "dateTimeInfo"
 
-LDIFF_SYM188=LTDIE_10_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM188
+LDIFF_SYM191=LTDIE_10_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM191
 	.byte 2,35,40,6
 	.asciz "textInfo"
 
-LDIFF_SYM189=LTDIE_13_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM189
+LDIFF_SYM192=LTDIE_13_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM192
 	.byte 2,35,44,6
 	.asciz "m_name"
 
-LDIFF_SYM190=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM190
+LDIFF_SYM193=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM193
 	.byte 2,35,48,6
 	.asciz "englishname"
 
-LDIFF_SYM191=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM191
+LDIFF_SYM194=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM194
 	.byte 2,35,52,6
 	.asciz "nativename"
 
-LDIFF_SYM192=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM192
+LDIFF_SYM195=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM195
 	.byte 2,35,56,6
 	.asciz "iso3lang"
 
-LDIFF_SYM193=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM193
+LDIFF_SYM196=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM196
 	.byte 2,35,60,6
 	.asciz "iso2lang"
 
-LDIFF_SYM194=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM194
+LDIFF_SYM197=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM197
 	.byte 2,35,64,6
 	.asciz "win3lang"
 
-LDIFF_SYM195=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM195
+LDIFF_SYM198=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM198
 	.byte 2,35,68,6
 	.asciz "territory"
 
-LDIFF_SYM196=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM196
+LDIFF_SYM199=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM199
 	.byte 2,35,72,6
 	.asciz "native_calendar_names"
 
-LDIFF_SYM197=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM197
+LDIFF_SYM200=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM200
 	.byte 2,35,76,6
 	.asciz "compareInfo"
 
-LDIFF_SYM198=LTDIE_14_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM198
+LDIFF_SYM201=LTDIE_14_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM201
 	.byte 2,35,80,6
 	.asciz "textinfo_data"
 
-LDIFF_SYM199=LDIE_I - Ldebug_info_start
-	.long LDIFF_SYM199
+LDIFF_SYM202=LDIE_I - Ldebug_info_start
+	.long LDIFF_SYM202
 	.byte 2,35,84,6
 	.asciz "m_dataItem"
 
-LDIFF_SYM200=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM200
+LDIFF_SYM203=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM203
 	.byte 2,35,88,6
 	.asciz "calendar"
 
-LDIFF_SYM201=LTDIE_11_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM201
+LDIFF_SYM204=LTDIE_11_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM204
 	.byte 2,35,92,6
 	.asciz "parent_culture"
 
-LDIFF_SYM202=LTDIE_5_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM202
+LDIFF_SYM205=LTDIE_5_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM205
 	.byte 2,35,96,6
 	.asciz "constructed"
 
-LDIFF_SYM203=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM203
+LDIFF_SYM206=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM206
 	.byte 2,35,100,6
 	.asciz "cached_serialized_form"
 
-LDIFF_SYM204=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM204
+LDIFF_SYM207=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM207
 	.byte 2,35,104,0,7
 	.asciz "System_Globalization_CultureInfo"
 
-LDIFF_SYM205=LTDIE_5 - Ldebug_info_start
-	.long LDIFF_SYM205
+LDIFF_SYM208=LTDIE_5 - Ldebug_info_start
+	.long LDIFF_SYM208
 LTDIE_5_POINTER:
 
 	.byte 13
-LDIFF_SYM206=LTDIE_5 - Ldebug_info_start
-	.long LDIFF_SYM206
+LDIFF_SYM209=LTDIE_5 - Ldebug_info_start
+	.long LDIFF_SYM209
 LTDIE_5_REFERENCE:
 
 	.byte 14
-LDIFF_SYM207=LTDIE_5 - Ldebug_info_start
-	.long LDIFF_SYM207
+LDIFF_SYM210=LTDIE_5 - Ldebug_info_start
+	.long LDIFF_SYM210
 LTDIE_17:
 
 	.byte 17
@@ -1638,18 +1653,18 @@ LTDIE_17:
 	.byte 8,7
 	.asciz "Cirrious_MvvmCross_Localization_IMvxLanguageBinder"
 
-LDIFF_SYM208=LTDIE_17 - Ldebug_info_start
-	.long LDIFF_SYM208
+LDIFF_SYM211=LTDIE_17 - Ldebug_info_start
+	.long LDIFF_SYM211
 LTDIE_17_POINTER:
 
 	.byte 13
-LDIFF_SYM209=LTDIE_17 - Ldebug_info_start
-	.long LDIFF_SYM209
+LDIFF_SYM212=LTDIE_17 - Ldebug_info_start
+	.long LDIFF_SYM212
 LTDIE_17_REFERENCE:
 
 	.byte 14
-LDIFF_SYM210=LTDIE_17 - Ldebug_info_start
-	.long LDIFF_SYM210
+LDIFF_SYM213=LTDIE_17 - Ldebug_info_start
+	.long LDIFF_SYM213
 	.byte 2
 	.asciz "Cirrious.MvvmCross.Localization.MvxLanguageConverter:Convert"
 	.long _Cirrious_MvvmCross_Localization_MvxLanguageConverter_Convert_object_System_Type_object_System_Globalization_CultureInfo
@@ -1658,47 +1673,47 @@ LDIFF_SYM210=LTDIE_17 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM211=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM211
+LDIFF_SYM214=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM214
 	.byte 0,3
 	.asciz "value"
 
-LDIFF_SYM212=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM212
+LDIFF_SYM215=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM215
 	.byte 1,86,3
 	.asciz "targetType"
 
-LDIFF_SYM213=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM213
+LDIFF_SYM216=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM216
 	.byte 0,3
 	.asciz "parameter"
 
-LDIFF_SYM214=LDIE_OBJECT - Ldebug_info_start
-	.long LDIFF_SYM214
+LDIFF_SYM217=LDIE_OBJECT - Ldebug_info_start
+	.long LDIFF_SYM217
 	.byte 2,123,12,3
 	.asciz "culture"
 
-LDIFF_SYM215=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM215
+LDIFF_SYM218=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM218
 	.byte 0,11
 	.asciz "V_0"
 
-LDIFF_SYM216=LTDIE_17_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM216
+LDIFF_SYM219=LTDIE_17_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM219
 	.byte 1,85,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM217=Lfde0_end - Lfde0_start
-	.long LDIFF_SYM217
+LDIFF_SYM220=Lfde0_end - Lfde0_start
+	.long LDIFF_SYM220
 Lfde0_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Localization_MvxLanguageConverter_Convert_object_System_Type_object_System_Globalization_CultureInfo
 
-LDIFF_SYM218=Lme_0 - _Cirrious_MvvmCross_Localization_MvxLanguageConverter_Convert_object_System_Type_object_System_Globalization_CultureInfo
-	.long LDIFF_SYM218
+LDIFF_SYM221=Lme_0 - _Cirrious_MvvmCross_Localization_MvxLanguageConverter_Convert_object_System_Type_object_System_Globalization_CultureInfo
+	.long LDIFF_SYM221
 	.byte 12,13,0,72,14,8,135,2,68,14,32,132,8,133,7,134,6,136,5,138,4,139,3,142,1,68,14,56,68,13,11
 	.align 2
 Lfde0_end:
@@ -1713,22 +1728,22 @@ Lfde0_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM219=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM219
+LDIFF_SYM222=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM222
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM220=Lfde1_end - Lfde1_start
-	.long LDIFF_SYM220
+LDIFF_SYM223=Lfde1_end - Lfde1_start
+	.long LDIFF_SYM223
 Lfde1_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Localization_MvxLanguageConverter__ctor
 
-LDIFF_SYM221=Lme_1 - _Cirrious_MvvmCross_Localization_MvxLanguageConverter__ctor
-	.long LDIFF_SYM221
+LDIFF_SYM224=Lme_1 - _Cirrious_MvvmCross_Localization_MvxLanguageConverter__ctor
+	.long LDIFF_SYM224
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,24
 	.align 2
 Lfde1_end:
@@ -1742,56 +1757,56 @@ LTDIE_19:
 	.byte 8,7
 	.asciz "Cirrious_MvvmCross_Localization_IMvxTextProvider"
 
-LDIFF_SYM222=LTDIE_19 - Ldebug_info_start
-	.long LDIFF_SYM222
+LDIFF_SYM225=LTDIE_19 - Ldebug_info_start
+	.long LDIFF_SYM225
 LTDIE_19_POINTER:
 
 	.byte 13
-LDIFF_SYM223=LTDIE_19 - Ldebug_info_start
-	.long LDIFF_SYM223
+LDIFF_SYM226=LTDIE_19 - Ldebug_info_start
+	.long LDIFF_SYM226
 LTDIE_19_REFERENCE:
 
 	.byte 14
-LDIFF_SYM224=LTDIE_19 - Ldebug_info_start
-	.long LDIFF_SYM224
+LDIFF_SYM227=LTDIE_19 - Ldebug_info_start
+	.long LDIFF_SYM227
 LTDIE_18:
 
 	.byte 5
 	.asciz "Cirrious_MvvmCross_Localization_MvxLanguageBinder"
 
 	.byte 20,16
-LDIFF_SYM225=LTDIE_2 - Ldebug_info_start
-	.long LDIFF_SYM225
+LDIFF_SYM228=LTDIE_2 - Ldebug_info_start
+	.long LDIFF_SYM228
 	.byte 2,35,0,6
 	.asciz "_namespaceName"
 
-LDIFF_SYM226=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM226
+LDIFF_SYM229=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM229
 	.byte 2,35,8,6
 	.asciz "_typeName"
 
-LDIFF_SYM227=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM227
+LDIFF_SYM230=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM230
 	.byte 2,35,12,6
 	.asciz "_cachedTextProvider"
 
-LDIFF_SYM228=LTDIE_19_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM228
+LDIFF_SYM231=LTDIE_19_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM231
 	.byte 2,35,16,0,7
 	.asciz "Cirrious_MvvmCross_Localization_MvxLanguageBinder"
 
-LDIFF_SYM229=LTDIE_18 - Ldebug_info_start
-	.long LDIFF_SYM229
+LDIFF_SYM232=LTDIE_18 - Ldebug_info_start
+	.long LDIFF_SYM232
 LTDIE_18_POINTER:
 
 	.byte 13
-LDIFF_SYM230=LTDIE_18 - Ldebug_info_start
-	.long LDIFF_SYM230
+LDIFF_SYM233=LTDIE_18 - Ldebug_info_start
+	.long LDIFF_SYM233
 LTDIE_18_REFERENCE:
 
 	.byte 14
-LDIFF_SYM231=LTDIE_18 - Ldebug_info_start
-	.long LDIFF_SYM231
+LDIFF_SYM234=LTDIE_18 - Ldebug_info_start
+	.long LDIFF_SYM234
 	.byte 2
 	.asciz "Cirrious.MvvmCross.Localization.MvxLanguageBinder:.ctor"
 	.long _Cirrious_MvvmCross_Localization_MvxLanguageBinder__ctor_System_Type
@@ -1800,27 +1815,27 @@ LDIFF_SYM231=LTDIE_18 - Ldebug_info_start
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM232=LTDIE_18_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM232
+LDIFF_SYM235=LTDIE_18_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM235
 	.byte 2,125,0,3
 	.asciz "owningObject"
 
-LDIFF_SYM233=LTDIE_3_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM233
+LDIFF_SYM236=LTDIE_3_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM236
 	.byte 1,90,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM234=Lfde2_end - Lfde2_start
-	.long LDIFF_SYM234
+LDIFF_SYM237=Lfde2_end - Lfde2_start
+	.long LDIFF_SYM237
 Lfde2_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Localization_MvxLanguageBinder__ctor_System_Type
 
-LDIFF_SYM235=Lme_6 - _Cirrious_MvvmCross_Localization_MvxLanguageBinder__ctor_System_Type
-	.long LDIFF_SYM235
+LDIFF_SYM238=Lme_6 - _Cirrious_MvvmCross_Localization_MvxLanguageBinder__ctor_System_Type
+	.long LDIFF_SYM238
 	.byte 12,13,0,72,14,8,135,2,68,14,16,136,4,138,3,142,1,68,14,32
 	.align 2
 Lfde2_end:
@@ -1835,32 +1850,32 @@ Lfde2_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM236=LTDIE_18_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM236
+LDIFF_SYM239=LTDIE_18_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM239
 	.byte 2,125,0,3
 	.asciz "namespaceName"
 
-LDIFF_SYM237=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM237
+LDIFF_SYM240=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM240
 	.byte 2,125,4,3
 	.asciz "typeName"
 
-LDIFF_SYM238=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM238
+LDIFF_SYM241=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM241
 	.byte 2,125,8,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM239=Lfde3_end - Lfde3_start
-	.long LDIFF_SYM239
+LDIFF_SYM242=Lfde3_end - Lfde3_start
+	.long LDIFF_SYM242
 Lfde3_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Localization_MvxLanguageBinder__ctor_string_string
 
-LDIFF_SYM240=Lme_7 - _Cirrious_MvvmCross_Localization_MvxLanguageBinder__ctor_string_string
-	.long LDIFF_SYM240
+LDIFF_SYM243=Lme_7 - _Cirrious_MvvmCross_Localization_MvxLanguageBinder__ctor_string_string
+	.long LDIFF_SYM243
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,32
 	.align 2
 Lfde3_end:
@@ -1875,37 +1890,37 @@ Lfde3_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM241=LTDIE_18_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM241
+LDIFF_SYM244=LTDIE_18_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM244
 	.byte 1,90,11
 	.asciz "V_0"
 
-LDIFF_SYM242=LDIE_BOOLEAN - Ldebug_info_start
-	.long LDIFF_SYM242
+LDIFF_SYM245=LDIE_BOOLEAN - Ldebug_info_start
+	.long LDIFF_SYM245
 	.byte 2,123,0,11
 	.asciz "V_1"
 
-LDIFF_SYM243=LTDIE_19_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM243
+LDIFF_SYM246=LTDIE_19_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM246
 	.byte 2,123,4,11
 	.asciz "V_2"
 
-LDIFF_SYM244=LTDIE_18_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM244
+LDIFF_SYM247=LTDIE_18_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM247
 	.byte 2,123,8,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM245=Lfde4_end - Lfde4_start
-	.long LDIFF_SYM245
+LDIFF_SYM248=Lfde4_end - Lfde4_start
+	.long LDIFF_SYM248
 Lfde4_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Localization_MvxLanguageBinder_get_TextProvider
 
-LDIFF_SYM246=Lme_8 - _Cirrious_MvvmCross_Localization_MvxLanguageBinder_get_TextProvider
-	.long LDIFF_SYM246
+LDIFF_SYM249=Lme_8 - _Cirrious_MvvmCross_Localization_MvxLanguageBinder_get_TextProvider
+	.long LDIFF_SYM249
 	.byte 12,13,0,72,14,8,135,2,68,14,20,136,5,138,4,139,3,142,1,68,14,56,68,13,11
 	.align 2
 Lfde4_end:
@@ -1920,27 +1935,27 @@ Lfde4_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM247=LTDIE_18_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM247
+LDIFF_SYM250=LTDIE_18_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM250
 	.byte 1,86,3
 	.asciz "entryKey"
 
-LDIFF_SYM248=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM248
+LDIFF_SYM251=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM251
 	.byte 2,125,0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM249=Lfde5_end - Lfde5_start
-	.long LDIFF_SYM249
+LDIFF_SYM252=Lfde5_end - Lfde5_start
+	.long LDIFF_SYM252
 Lfde5_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Localization_MvxLanguageBinder_GetText_string
 
-LDIFF_SYM250=Lme_9 - _Cirrious_MvvmCross_Localization_MvxLanguageBinder_GetText_string
-	.long LDIFF_SYM250
+LDIFF_SYM253=Lme_9 - _Cirrious_MvvmCross_Localization_MvxLanguageBinder_GetText_string
+	.long LDIFF_SYM253
 	.byte 12,13,0,72,14,8,135,2,68,14,16,134,4,136,3,142,1,68,14,24
 	.align 2
 Lfde5_end:
@@ -1955,37 +1970,37 @@ Lfde5_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM251=LTDIE_18_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM251
+LDIFF_SYM254=LTDIE_18_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM254
 	.byte 2,125,0,3
 	.asciz "entryKey"
 
-LDIFF_SYM252=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM252
+LDIFF_SYM255=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM255
 	.byte 2,125,4,3
 	.asciz "args"
 
-LDIFF_SYM253=LDIE_SZARRAY - Ldebug_info_start
-	.long LDIFF_SYM253
+LDIFF_SYM256=LDIE_SZARRAY - Ldebug_info_start
+	.long LDIFF_SYM256
 	.byte 2,125,8,11
 	.asciz "V_0"
 
-LDIFF_SYM254=LDIE_I4 - Ldebug_info_start
-	.long LDIFF_SYM254
+LDIFF_SYM257=LDIE_I4 - Ldebug_info_start
+	.long LDIFF_SYM257
 	.byte 0,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM255=Lfde6_end - Lfde6_start
-	.long LDIFF_SYM255
+LDIFF_SYM258=Lfde6_end - Lfde6_start
+	.long LDIFF_SYM258
 Lfde6_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Localization_MvxLanguageBinder_GetText_string_object__
 
-LDIFF_SYM256=Lme_a - _Cirrious_MvvmCross_Localization_MvxLanguageBinder_GetText_string_object__
-	.long LDIFF_SYM256
+LDIFF_SYM259=Lme_a - _Cirrious_MvvmCross_Localization_MvxLanguageBinder_GetText_string_object__
+	.long LDIFF_SYM259
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,32
 	.align 2
 Lfde6_end:
@@ -2000,37 +2015,37 @@ Lfde6_end:
 	.byte 2,118,16,3
 	.asciz "this"
 
-LDIFF_SYM257=LTDIE_18_REFERENCE - Ldebug_info_start
-	.long LDIFF_SYM257
+LDIFF_SYM260=LTDIE_18_REFERENCE - Ldebug_info_start
+	.long LDIFF_SYM260
 	.byte 2,125,0,3
 	.asciz "namespaceKey"
 
-LDIFF_SYM258=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM258
+LDIFF_SYM261=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM261
 	.byte 2,125,4,3
 	.asciz "typeKey"
 
-LDIFF_SYM259=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM259
+LDIFF_SYM262=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM262
 	.byte 2,125,8,3
 	.asciz "entryKey"
 
-LDIFF_SYM260=LDIE_STRING - Ldebug_info_start
-	.long LDIFF_SYM260
+LDIFF_SYM263=LDIE_STRING - Ldebug_info_start
+	.long LDIFF_SYM263
 	.byte 2,125,12,0
 
 .section __DWARF, __debug_frame,regular,debug
 
-LDIFF_SYM261=Lfde7_end - Lfde7_start
-	.long LDIFF_SYM261
+LDIFF_SYM264=Lfde7_end - Lfde7_start
+	.long LDIFF_SYM264
 Lfde7_start:
 
 	.long 0
 	.align 2
 	.long _Cirrious_MvvmCross_Localization_MvxLanguageBinder_GetText_string_string_string
 
-LDIFF_SYM262=Lme_b - _Cirrious_MvvmCross_Localization_MvxLanguageBinder_GetText_string_string_string
-	.long LDIFF_SYM262
+LDIFF_SYM265=Lme_b - _Cirrious_MvvmCross_Localization_MvxLanguageBinder_GetText_string_string_string
+	.long LDIFF_SYM265
 	.byte 12,13,0,72,14,8,135,2,68,14,12,136,3,142,1,68,14,32
 	.align 2
 Lfde7_end:

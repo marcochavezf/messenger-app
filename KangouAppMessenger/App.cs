@@ -12,6 +12,7 @@ namespace KangouMessenger.Core
                 .RegisterAsLazySingleton();
 
 			RegisterAppStart<KangouMessenger.Core.LoginViewModel>();
+			//RegisterAppStart<KangouMessenger.Core.WaitingOrderViewModel>();
         }
     }
 }
