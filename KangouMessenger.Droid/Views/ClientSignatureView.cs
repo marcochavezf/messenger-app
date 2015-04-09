@@ -55,7 +55,9 @@ namespace KangouMessenger.Droid
 						if(j > 0){
 							signatureJson += ", ";
 						}
-						signatureJson += String.Format("{{\"x\": \"{0}\", \"y\": \"{1}\"}}",points [j].X, points [j].Y).Replace(",",".");
+						var pointX = String.Format("\"{0}\"", points [j].X).Replace(",",".");
+						var pointY = String.Format("\"{0}\"", points [j].Y).Replace(",",".");
+						signatureJson += String.Format("{{\"x\": {0}, \"y\": {1}}}", pointX, pointY);
 					}
 
 					signatureJson += "]";

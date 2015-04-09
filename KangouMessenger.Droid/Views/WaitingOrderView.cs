@@ -173,10 +173,12 @@ namespace KangouMessenger.Droid
 		}
 
 		private string gpsPosJsonString(double lat, double lng){
+			var latString = String.Format("\"{0}\"", lat).Replace(",",".");
+			var lngString = String.Format("\"{0}\"", lng).Replace(",",".");
 			if (DataOrderManager.Instance.IsOrderActive && ConnectionManager.Instance.KangouData.AppView != "ReceivingOrderView" && ConnectionManager.Instance.KangouData.AppView != "WaitingOrderView")
-				return String.Format( "{{ \"lat\": \"{0}\", \"lng\": \"{1}\", \"orderId\": \"{2}\" }}", lat, lng,  DataOrderManager.Instance.DataOrder.Id);
+				return String.Format( "{{ \"lat\": {0}, \"lng\": {1}, \"orderId\": \"{2}\" }}", latString, lngString,  DataOrderManager.Instance.DataOrder.Id);
 			else
-				return String.Format( "{{ \"lat\": \"{0}\", \"lng\": \"{1}\" }}", lat, lng);
+				return String.Format( "{{ \"lat\": {0}, \"lng\": {1} }}", latString, lngString);
 		}
 
 		public void OnProviderDisabled(string provider) {

@@ -1,16 +1,19 @@
 ﻿<Properties StartupItem="KangouMessenger.Droid/KangouMessenger.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.TA883036D6" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Android.Nexus S (KitKat)" />
   <MonoDevelop.Ide.Workbench ActiveDocument="KangouMessenger.Droid/Views/WaitingOrderView.cs">
     <Files>
       <File FileName="KangouMessenger.Droid/Helpers/BindableProgress.cs" Line="1" Column="1" />
-      <File FileName="KangouAppMessenger/Helpers/BusyMvxViewModel.cs" Line="31" Column="31" />
-      <File FileName="KangouMessenger.Droid/Helpers/BusyMvxActivity.cs" Line="4" Column="4" />
-      <File FileName="KangouMessenger.Droid/Helpers/BusyMvxFragmentActivity.cs" Line="4" Column="4" />
-      <File FileName="KangouAppMessenger/Helpers/ConnectionManager.cs" Line="4" Column="4" />
-      <File FileName="KangouAppMessenger/ViewModels/ConnectViewModel.cs" Line="42" Column="42" />
-      <File FileName="KangouAppMessenger/ViewModels/ClientSignatureViewModel.cs" Line="3" Column="3" />
-      <File FileName="KangouAppMessenger/ViewModels/ReceivingOrderViewModel.cs" Line="8" Column="8" />
-      <File FileName="KangouMessenger.Droid/Views/WaitingOrderView.cs" Line="14" Column="14" />
+      <File FileName="KangouAppMessenger/Helpers/BusyMvxViewModel.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Droid/Helpers/BusyMvxActivity.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Droid/Helpers/BusyMvxFragmentActivity.cs" Line="1" Column="1" />
+      <File FileName="KangouAppMessenger/Helpers/ConnectionManager.cs" Line="1" Column="1" />
+      <File FileName="KangouAppMessenger/ViewModels/ConnectViewModel.cs" Line="1" Column="1" />
+      <File FileName="KangouAppMessenger/ViewModels/ClientSignatureViewModel.cs" Line="48" Column="78" />
+      <File FileName="KangouAppMessenger/ViewModels/ReceivingOrderViewModel.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Droid/Views/WaitingOrderView.cs" Line="185" Column="59" />
+      <File FileName="KangouMessenger.Droid/Views/LoginView.cs" Line="20" Column="46" />
+      <File FileName="KangouAppMessenger/ViewModels/LoginViewModel.cs" Line="29" Column="32" />
+      <File FileName="KangouMessenger.Droid/Views/ClientSignatureView.cs" Line="58" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

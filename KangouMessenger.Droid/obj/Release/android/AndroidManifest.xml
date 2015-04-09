@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.kangou.messenger.android" android:versionName="1.1.1" android:versionCode="13">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.kangou.messenger.android" android:versionName="1.1.2" android:versionCode="14">
   <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="21" />
   <application android:label="Kangou Mensajero" android:theme="@android:style/Theme.Holo.Light" android:icon="@drawable/icon" android:name="mono.android.app.Application">
     <!-- Debug 
