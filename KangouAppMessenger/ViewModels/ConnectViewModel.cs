@@ -1,10 +1,10 @@
 using Cirrious.MvvmCross.ViewModels;
 using System.Windows.Input;
-using Xamarin.Socket.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using Cirrious.MvvmCross.Plugins.Messenger;
 using System.Diagnostics;
+using Quobject.SocketIoClientDotNet.Client;
 
 
 namespace KangouMessenger.Core
@@ -15,13 +15,10 @@ namespace KangouMessenger.Core
 		public void Init(KangouData kangouData)
 		{
 			ConnectionManager.Instance.KangouData = kangouData;
-			ConnectionManager.Instance.KangouData.AppView = "ConnectView";
 
-			ConnectionManager.FailedToConnect (()=>{
-				InvokeOnMainThread (delegate {
-					IsBusy = false;
-				});
-			});
+			ConnectionManager.Instance.KangouData.AppView = "ConnectView";
+			EnableCancelButton = true;
+			CancelAction = DoCancelConnectCommand;
 		}
 
 		private MvxCommand _connectCommand;
@@ -34,30 +31,26 @@ namespace KangouMessenger.Core
 		private void DoConnectCommand ()
 		{
 			ConnectionManager.ConnectionState = ConnectionStates.USER_WANTS_TO_BE_CONNECTED;
-			InvokeOnMainThread (delegate {
-				IsBusy = true;
-			});
-			Task.Run (()=>{
-				System.Diagnostics.Debug.WriteLine ("ConnectAsync");
-				ConnectionManager.Connect();
-			});
+			IsBusy = true;
 
-			var isConnected = false;
-			ConnectionManager.On(SocketEvents.Connected, (data) => {
-				if(isConnected)
-					return;
+			System.Diagnostics.Debug.WriteLine ("ConnectAsync");
+			ConnectionManager.Connect();
 
-				isConnected = true;
-				//ConnectionManager.Off(SocketEvents.Connected);
+			ConnectionManager.Once(Socket.EVENT_CONNECT, (data) => {
+				Debug.WriteLine("Connected");
 
 				if(ConnectionManager.ConnectionState == ConnectionStates.USER_WANTS_TO_BE_CONNECTED){
 
-					System.Diagnostics.Debug.WriteLine ("connected On: {0}", data["isSuccesful"] );
+					System.Diagnostics.Debug.WriteLine ("connected On");
 					ConnectionManager.ConnectionState = ConnectionStates.CONNECTED_BY_SERVER;
 
-					if(IsBusy){
+					Task.Run (() => {
 						ShowViewModel<WaitingOrderViewModel> ();
-					}
+					});
+						
+					InvokeOnMainThread (delegate {
+						IsBusy = false;
+					});
 				}
 			});
 		}
@@ -72,13 +65,14 @@ namespace KangouMessenger.Core
 		}
 		private void DoCancelConnectCommand ()
 		{
-			Task.Run (() => {
-				ConnectionManager.ConnectionState = ConnectionStates.DISCONNECTED_BY_USER;
-				ConnectionManager.Disconnect ();
-				InvokeOnMainThread (delegate {
+			if (ConnectionManager.ConnectionState != ConnectionStates.CONNECTED_BY_SERVER) {
+				Debug.WriteLine ("DoCancelConnectCommand");
+				Task.Run (() => {
+					ConnectionManager.ConnectionState = ConnectionStates.DISCONNECTED_BY_USER;
+					ConnectionManager.Disconnect ();
 					IsBusy = false;
 				});
-			});
+			}
 		}
     }
 }

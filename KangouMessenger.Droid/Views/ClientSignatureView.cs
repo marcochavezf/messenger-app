@@ -52,9 +52,12 @@ namespace KangouMessenger.Droid
 					signatureJson += " [";
 
 					for (var j = 0; j < points.Count; j++) {
-						if(j > 0)
+						if(j > 0){
 							signatureJson += ", ";
-						signatureJson += String.Format("{{\"x\":{0}, \"y\":{1}}}",points [j].X, points [j].Y);
+						}
+						var pointX = String.Format("\"{0}\"", points [j].X).Replace(",",".");
+						var pointY = String.Format("\"{0}\"", points [j].Y).Replace(",",".");
+						signatureJson += String.Format("{{\"x\": {0}, \"y\": {1}}}", pointX, pointY);
 					}
 
 					signatureJson += "]";

@@ -1,6 +1,5 @@
 using Cirrious.MvvmCross.ViewModels;
 using System.Windows.Input;
-using Xamarin.Socket.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using Cirrious.MvvmCross.Plugins.Messenger;
@@ -20,6 +19,11 @@ namespace KangouMessenger.Core
 
 			_messenger = messenger;
 			IsTryingToReconnect = false;
+			#if DEBUG
+			if (ConnectionManager.Instance.KangouData == null) {
+				ConnectionManager.Instance.KangouData = new KangouData(){ Id = "1234" };
+			}
+			#endif
 			ConnectionManager.Instance.KangouData.AppView = "WaitingOrderView";
 
 			ConnectionManager.On (SocketEvents.InfoOrder, (data) => {
@@ -89,8 +93,10 @@ namespace KangouMessenger.Core
 				}
 			});
 
-			ConnectionManager.Instance.TryingToReconnect += (bool obj) => {
+			ConnectionManager.Instance.TryingToReconnect += (bool obj, string title, string message) => {
 				IsTryingToReconnect = obj;
+				TitleBindableProgress = title;
+				MessageBindableProgress = message;
 				StatusConnection = obj ? "Desconectado" : "Conectado";
 			};
 		}
@@ -108,6 +114,24 @@ namespace KangouMessenger.Core
 		{ 
 			get { return _isTryingToReconnect; }
 			set { _isTryingToReconnect = value; RaisePropertyChanged(() => IsTryingToReconnect); }
+		}
+
+		private string _messageBindableProgress;
+		public string MessageBindableProgress { 
+			get { return _messageBindableProgress; }
+			set {
+				_messageBindableProgress = value;
+				RaisePropertyChanged (() => MessageBindableProgress);
+			}
+		}
+
+		private string _titleBindableProgress;
+		public string TitleBindableProgress { 
+			get { return _titleBindableProgress; }
+			set {
+				_titleBindableProgress = value;
+				RaisePropertyChanged (() => TitleBindableProgress);
+			}
 		}
 
 		private MvxCommand _disconnectCommand;

@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>KangouAppMessenger</RootNamespace>
     <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
-    <ReleaseVersion>0.1.0</ReleaseVersion>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -69,6 +69,11 @@
     <Compile Include="Helpers\StringValidator.cs" />
     <Compile Include="Helpers\StatusOrder.cs" />
     <Compile Include="Services\LocationMessage.cs" />
+    <Compile Include="Config\Config.cs" />
+    <Compile Include="swp8\Bootstrap\CommunitySqlitePluginBootstrap.cs" />
+    <Compile Include="Services\DataStore\IDataService.cs" />
+    <Compile Include="Services\DataStore\DataService.cs" />
+    <Compile Include="Services\DataStore\CourierData.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -77,33 +82,49 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.2\lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid\Cirrious.CrossCore.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.CrossCore.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Localization">
-      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.2.2\lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid\Cirrious.MvvmCross.Localization.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.0\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.Localization.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Messenger.3.2.2\lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Messenger.3.5.0\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Json">
-      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.2.2\lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Cirrious.MvvmCross">
-      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.2.2\lib\portable-win+net45+wp8+win8+wpa81+MonoTouch+MonoAndroid\Cirrious.MvvmCross.dll</HintPath>
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.5.0\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.7\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net45+wp80+win8+wpa81+aspnetcore50\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.0\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.9.1.107\lib\portable-win+net40+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Community.Plugins.Sqlite">
+      <HintPath>..\packages\MvvmCross.Community.Plugin.Sqlite.3.1.1\lib\portable-win+net45+MonoAndroid+MonoTouch+sl5+wp8\Cirrious.MvvmCross.Community.Plugins.Sqlite.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />
     <Folder Include="Webclient\" />
     <Folder Include="Services\" />
+    <Folder Include="Config\" />
+    <Folder Include="Services\DataStore\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\GitHub\Xamarin.Socket.IO\Xamarin.Socket.IO\Xamarin.Socket.IO\Socket.IO.csproj">
-      <Project>{282EB56C-E471-4565-B130-AC9B99196301}</Project>
-      <Name>Socket.IO</Name>
+    <ProjectReference Include="..\..\..\GitHub\SocketIoClientDotNet.Pcl4.5.Profile78\SocketIoClientDotNet.Pcl4.5.Profile78\SocketIoClientDotNet.Pcl4.5.Profile78.csproj">
+      <Project>{B4C79CEE-4B09-428A-BFE9-B276DF4F57FA}</Project>
+      <Name>SocketIoClientDotNet.Pcl4.5.Profile78</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\GitHub\EngineIoClientDotNet.Pcl4.5.Profile78\EngineIoClientDotNet.Pcl4.5.Profile78\EngineIoClientDotNet.Pcl4.5.Profile78.csproj">
+      <Project>{842D8B13-DAF3-4919-80A0-03EFA3C17178}</Project>
+      <Name>EngineIoClientDotNet.Pcl4.5.Profile78</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\GitHub\ModernHttpClient\src\ModernHttpClient\ModernHttpClient.Portable.csproj">
+      <Project>{6DD98593-4498-463D-B16E-F6CC5A928B79}</Project>
+      <Name>ModernHttpClient.Portable</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

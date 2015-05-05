@@ -1,6 +1,5 @@
 using Cirrious.MvvmCross.ViewModels;
 using System.Windows.Input;
-using Xamarin.Socket.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System;
@@ -16,29 +15,38 @@ namespace KangouMessenger.Core
 		public DropOffTimerViewModel(bool removeNextToLastViewModel = true){
 			RemoveNextToLastViewModel = removeNextToLastViewModel;
 			
-			ConnectionManager.On  ( SocketEvents.HasDroppedOff, (data) => {
-				ConnectionManager.Off  ( SocketEvents.HasDroppedOff );
+			ConnectionManager.On (SocketEvents.HasDroppedOff, (data) => {
+				ConnectionManager.Off (SocketEvents.HasDroppedOff);
 
-				if(CountDownTimer != null){
-					CountDownTimer.Dispose();
+				if (CountDownTimer != null) {
+					CountDownTimer.Dispose ();
 					CountDownTimer = null;
 				}
-
 				ItNeedsToBeRemoved = true;
-				IsBusy = false;
-				ShowViewModel<ClientSignatureViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });;
+				InvokeOnMainThread (delegate {  
+					IsBusy = false;
+				});
+				Task.Run (delegate {
+					ShowViewModel<ClientSignatureViewModel> (new BusyMvxViewModelParameters (){ RemoveNextToLastViewModel = true });
+				});
 			});
-
 			CountDownTimer = new CountDownTimer (13, 0);
 			CountDownTimer.TickTime += (readableTime, hasFinished) => {
 				TimeRemaining = readableTime;
 				if(hasFinished){
 					var jsonString = String.Format( "{{ \"{0}\": {1} }}", SocketEvents.TimerDropOffHasFinished, true);
 					ConnectionManager.Emit( SocketEvents.TimerDropOffHasFinished, jsonString);
+
+					CountDownTimer.TickTime -= null;
+					CountDownTimer.Dispose();
+					CountDownTimer = null;
 				}
 			};
 
 			ConnectionManager.Instance.KangouData.AppView = "DropOffTimerView";
+
+			EnableRetryButton = true;
+			RetryAction = DoDroppedOffCommand;
 		}
 
 		private string _timeRemaining = "13:00";

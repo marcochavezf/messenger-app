@@ -1,6 +1,5 @@
 using Cirrious.MvvmCross.ViewModels;
 using System.Windows.Input;
-using Xamarin.Socket.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System;
@@ -25,13 +24,16 @@ namespace KangouMessenger.Core
 			_messenger = messenger;
 			_tick = 30;
 
-			ConnectionManager.On  ( SocketEvents.AcceptInfoOrder, (data) => {
-				TurnOffConnectionEvents();
+			ConnectionManager.On (SocketEvents.AcceptInfoOrder, (data) => {
+				TurnOffConnectionEvents ();
 				ItNeedsToBeRemoved = true;
-				IsBusy = false;
-				ShowViewModel<PickUpRouteViewModel>(new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
+				InvokeOnMainThread (delegate {  
+					IsBusy = false;
+				});
+				Task.Run (delegate {
+					ShowViewModel<PickUpRouteViewModel> (new BusyMvxViewModelParameters (){ RemoveNextToLastViewModel = true });
+				});
 			});
-
 			ConnectionManager.On  ( SocketEvents.OrderTakenFromSomeoneElse, (data) => {
 				Debug.WriteLine("Taken From someone else");
 				TurnOffConnectionEvents();
@@ -127,6 +129,8 @@ namespace KangouMessenger.Core
 
 			DoAsyncLongTask (() => {
 				var jsonString = String.Format( "{{ \"{0}\": {1} }}", SocketEvents.AcceptInfoOrder, true);
+				if(DataOrderManager.Instance.DataOrder != null)
+					jsonString = String.Format( "{{ \"{0}\": {1}, \"orderId\": \"{2}\" }}", SocketEvents.AcceptInfoOrder, "true", DataOrderManager.Instance.DataOrder.Id);
 				Debug.WriteLine("Accept Info Order: {0}",jsonString);
 				ConnectionManager.Emit( SocketEvents.AcceptInfoOrder, jsonString);
 			});
@@ -150,9 +154,6 @@ namespace KangouMessenger.Core
 
 
 			if (ConnectionManager.ConnectionState != ConnectionStates.DISCONNECTED_BY_USER) {
-				DoAsyncLongTask (() => {
-
-				});
 				var jsonString = String.Format( "{{ \"{0}\": {1} }}", SocketEvents.CancelInfoOrder, "true");
 				ConnectionManager.Emit( SocketEvents.CancelInfoOrder, jsonString);
 			}

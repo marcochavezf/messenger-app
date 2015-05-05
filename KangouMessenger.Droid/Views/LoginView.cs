@@ -7,6 +7,7 @@ using Android.Content;
 using Android.Widget;
 using Android.Views.InputMethods;
 using Android.Content.PM;
+using System;
 
 namespace KangouMessenger.Droid
 {
@@ -20,9 +21,9 @@ namespace KangouMessenger.Droid
 
 			/* Retrieving necesary data */
 			var viewModel = (LoginViewModel)ViewModel;
+			var loginButton = FindViewById<Button>(Resource.Id.loginButton);
 			var emailEditText = FindViewById<EditText> (Resource.Id.emailEditText);
 			var passwordEditText = FindViewById<EditText> (Resource.Id.passwordEditText);
-			var loginButton = FindViewById<Button>(Resource.Id.loginButton);
 
 			var errorLoginDialog = new AlertDialog.Builder (this);
 			errorLoginDialog.SetTitle ("Error al iniciar sesión");
@@ -34,12 +35,9 @@ namespace KangouMessenger.Droid
 
 					if(error != null && error.Contains("Someone")){
 						errorLoginDialog.SetMessage ("Esta cuenta está siendo utilizada por alguien más");
-						emailEditText.Text = "";
-						passwordEditText.Text = "";
-					}else
+					} else {
 						errorLoginDialog.SetMessage ("Favor de verificar que sus datos sean correctos o que tenga conexión a Internet");
-
-
+					}
 					errorLoginDialog.Show();
 				});
 			};
@@ -62,6 +60,11 @@ namespace KangouMessenger.Droid
 					Window.SetSoftInputMode (Android.Views.SoftInput.StateAlwaysVisible);
 					return;
 				}
+				var prefs = Application.Context.GetSharedPreferences("KangouCourier", FileCreationMode.Private);  
+				var registrationId = prefs.GetString("registrationId", null);
+
+				viewModel.PushDeviceId = registrationId;
+				viewModel.PushDeviceService = "GCM";
 
 				viewModel.LoginCommand.Execute(null);
 			};

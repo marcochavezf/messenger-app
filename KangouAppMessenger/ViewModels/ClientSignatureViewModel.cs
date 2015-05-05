@@ -1,6 +1,5 @@
 using Cirrious.MvvmCross.ViewModels;
 using System.Windows.Input;
-using Xamarin.Socket.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System;
@@ -13,13 +12,20 @@ namespace KangouMessenger.Core
     {
 		/* Constructor */
 		public ClientSignatureViewModel(){
-			ConnectionManager.On  ( SocketEvents.ClientSignatureAccepted, (data) => {
-				ConnectionManager.Off  ( SocketEvents.ClientSignatureAccepted );
+			ConnectionManager.On (SocketEvents.ClientSignatureAccepted, (data) => {
+				ConnectionManager.Off (SocketEvents.ClientSignatureAccepted);
 				ItNeedsToBeRemoved = true;
-				IsBusy = false;
-				ShowViewModel<ReviewViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
+				InvokeOnMainThread (delegate {  
+					IsBusy = false;
+				});
+				Task.Run (delegate {
+					ShowViewModel<ReviewViewModel> (new BusyMvxViewModelParameters (){ RemoveNextToLastViewModel = true });
+				});
 			});
 			ConnectionManager.Instance.KangouData.AppView = "ClientSignatureView";
+
+			EnableRetryButton = true;
+			RetryAction = DoAcceptCommand;
 		}
 
 		public String SignatureJson { get; set; }

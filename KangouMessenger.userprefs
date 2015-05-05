@@ -1,15 +1,24 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Android.Android" />
-  <MonoDevelop.Ide.Workbench>
-    <Pads>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
-    </Pads>
+﻿<Properties StartupItem="KangouMessenger.Droid/KangouMessenger.Droid.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Android.Nexus S (KitKat)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="KangouMessenger.Droid/Views/WaitingOrderView.cs">
+    <Files>
+      <File FileName="KangouMessenger.Droid/Helpers/BindableProgress.cs" Line="1" Column="1" />
+      <File FileName="KangouAppMessenger/Helpers/BusyMvxViewModel.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Droid/Helpers/BusyMvxActivity.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Droid/Helpers/BusyMvxFragmentActivity.cs" Line="1" Column="1" />
+      <File FileName="KangouAppMessenger/Helpers/ConnectionManager.cs" Line="1" Column="1" />
+      <File FileName="KangouAppMessenger/ViewModels/ConnectViewModel.cs" Line="1" Column="1" />
+      <File FileName="KangouAppMessenger/ViewModels/ClientSignatureViewModel.cs" Line="48" Column="78" />
+      <File FileName="KangouAppMessenger/ViewModels/ReceivingOrderViewModel.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Droid/Views/WaitingOrderView.cs" Line="185" Column="59" />
+      <File FileName="KangouMessenger.Droid/Views/LoginView.cs" Line="20" Column="46" />
+      <File FileName="KangouAppMessenger/ViewModels/LoginViewModel.cs" Line="29" Column="32" />
+      <File FileName="KangouMessenger.Droid/Views/ClientSignatureView.cs" Line="58" Column="7" />
+    </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.KangouMessenger.Droid MonoForAntroid.PreferredDevice="3.2&quot; HVGA slider (ADP1)" />
+  <MonoDevelop.Ide.ItemProperties.KangouMessenger.Droid AndroidDeviceId-Debug="emulator-5554" AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>

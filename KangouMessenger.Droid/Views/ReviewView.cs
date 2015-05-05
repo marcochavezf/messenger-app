@@ -49,8 +49,10 @@ namespace KangouMessenger.Droid
 			pleaseRateAlert.SetMessage("Por favor indique de 1 a 5 estrellas cómo lo trató el cliente o cómo fue el servicio");
 			pleaseRateAlert.SetNegativeButton("Ok",(object sender, DialogClickEventArgs args)=>{});
 
+
 			var sendInfoButton = FindViewById<Button> (Resource.Id.sendInfoButton);
 			sendInfoButton.Click += delegate {
+
 				if(viewModel.RatingAboutClient > 0)
 					viewModel.AcceptCommand.Execute(null);
 				else

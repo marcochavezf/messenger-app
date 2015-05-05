@@ -26,6 +26,42 @@ namespace KangouMessenger.Core
 			set { _isBusy = value; RaisePropertyChanged(() => IsBusy); }
 		}
 
+		private bool _enableCancelButton;
+		public bool EnableCancelButton { 
+			get { return _enableCancelButton; }
+			set {
+				_enableCancelButton = value;
+				RaisePropertyChanged (() => EnableCancelButton);
+			}
+		}
+
+		private Action _cancelAction;
+		public Action CancelAction { 
+			get { return _cancelAction; }
+			set {
+				_cancelAction = value;
+				RaisePropertyChanged (() => CancelAction);
+			}
+		}
+
+		private bool _enableRetryButton;
+		public bool EnableRetryButton { 
+			get { return _enableRetryButton; }
+			set {
+				_enableRetryButton = value;
+				RaisePropertyChanged (() => EnableRetryButton);
+			}
+		}
+
+		private Action _retryAction;
+		public Action RetryAction { 
+			get { return _retryAction; }
+			set {
+				_retryAction = value;
+				RaisePropertyChanged (() => RetryAction);
+			}
+		}
+
 		protected bool _thisViewhasBeenClosed;
 		protected volatile bool _itNeeedsToBeRemoved;
 		public bool RemoveNextToLastViewModel { get; protected set; } 	//For iOS version
@@ -40,9 +76,10 @@ namespace KangouMessenger.Core
 		}
 
 		protected void DoAsyncLongTask(Action action){
-
-			InvokeOnMainThread (delegate {  
-				IsBusy = true;
+			Task.Run (() => {
+				//InvokeOnMainThread (delegate {  
+					IsBusy = true;
+				//});
 			});
 			action();
 		}

@@ -20,7 +20,7 @@
             android:id="@+id/pickedButton"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Ya entregué"
+            android:text="Ya recogí"
             android:gravity="center"
             android:layout_gravity="center" />
         <TextView

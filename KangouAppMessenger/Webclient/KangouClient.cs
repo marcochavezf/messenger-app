@@ -5,7 +5,6 @@ using System.IO;
 using Cirrious.CrossCore;
 using Cirrious.CrossCore.Platform;
 using System.Diagnostics;
-using System.Collections.Generic;
 
 namespace KangouMessenger.Core
 {
@@ -17,10 +16,16 @@ namespace KangouMessenger.Core
 			_jsonConverter = jsonConverter;
 		}
 
-		public void LoginAsMessenger(string email, string password, Action<string> succesAction, Action<string> errorAction)
+		public void LoginAsMessenger(string email, string password, string pushDeviceId, string pushDeviceService, Action<string> succesAction, Action<string> errorAction)
 		{
-			var _endPointOrderData = "https://kangou.herokuapp.com/users/loginAsKangou";
-			//var _endPointOrderData = "http://localhost:5000/users/loginAsKangou";
+			#if DEBUG
+			var _endPointOrderData = Config.STAGE_ENDPOINT + "/users/loginAsKangou";
+			if(Config.IS_LOCAL){
+				_endPointOrderData = Config.LOCAL_ENDPOINT + ":" + Config.LOCAL_PORT + "/users/loginAsKangou";
+			}
+			#else
+			var _endPointOrderData = Config.PRODUCTION_ENDPOINT + "/users/loginAsKangou";
+			#endif
 
 			/* Preparing Data. */
 			var request = (HttpWebRequest)WebRequest.Create(_endPointOrderData);
@@ -28,8 +33,10 @@ namespace KangouMessenger.Core
 			request.Method = "POST";
 
 			string postData = 
-				"email=" 		+ email +
-				"&password=" 	+ password;
+				"email=" 				+ email +
+				"&password=" 			+ password +
+				"&pushDeviceId=" 		+ pushDeviceId +
+				"&pushDeviceService=" 	+ pushDeviceService;
 				
 			// Convert the string into a byte array.
 			byte[] byteArray = Encoding.UTF8.GetBytes(postData);

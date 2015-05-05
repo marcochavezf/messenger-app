@@ -17,6 +17,8 @@ using Android.Provider;
 using Android.Content.PM;
 using Android.Media;
 using Android.Graphics;
+using Xamarin;
+using System.Threading.Tasks;
 
 namespace KangouMessenger.Droid
 {
@@ -30,6 +32,7 @@ namespace KangouMessenger.Droid
 		private bool _isCameraUpdated;
 		private WaitingOrderViewModel _viewModel;
 		private BindableProgress _retryingToConnectProgress;
+		private int _ticksToEmitGpsPosition;
 		public static readonly int NOTIFICATION_ID_ORDER_RECEIVED = 265431;
 
 		public static double CurrentLat { get; private set; }
@@ -40,18 +43,29 @@ namespace KangouMessenger.Droid
 			base.OnCreate(bundle);
 			SetContentView(Resource.Layout.WaitingOrderView);
 
-			_mapFragment = (SupportMapFragment)SupportFragmentManager.FindFragmentById(Resource.Id.map);
-			_mapFragment.Map.MyLocationEnabled = true;
+			_ticksToEmitGpsPosition = 0;
+			_viewModel = (WaitingOrderViewModel)ViewModel;
 
-			_retryingToConnectProgress = new BindableProgress(this, "Conectando", "Esperando servicio...");
+			_mapFragment = (SupportMapFragment)SupportFragmentManager.FindFragmentById(Resource.Id.map);
+			if(_mapFragment.Map != null)
+				_mapFragment.Map.MyLocationEnabled = true;
+
+			_retryingToConnectProgress = new BindableProgress(this, "Desconectado", "Intentando conectar...", true, ()=>{
+				_viewModel.DisconnectCommand.Execute(null);
+			}, "Cancelar");
 
 			var set = this.CreateBindingSet<WaitingOrderView, WaitingOrderViewModel>();
 			set.Bind(_retryingToConnectProgress).For(p => p.Visible).To(vm => vm.IsTryingToReconnect);
+			set.Bind(_retryingToConnectProgress).For(p => p.Title).To(vm => vm.TitleBindableProgress);
+			set.Bind(_retryingToConnectProgress).For(p => p.Message).To(vm => vm.MessageBindableProgress);
 			set.Apply();
 
-			InitializeLocationManager ();
-
-			_viewModel = (WaitingOrderViewModel)ViewModel;
+			try{
+				InitializeLocationManager ();
+			} catch (Exception e){
+				Console.WriteLine ("Exception InitializeLocationManager: {0}", e);
+			}
+				
 			_viewModel.ReceivingInfoOrderToLocalNotification += (shortPickUpAddress, shortDropOffAddress) => {
 
 				RunOnUiThread(delegate {
@@ -86,6 +100,7 @@ namespace KangouMessenger.Droid
 						notificationManager.Notify (NOTIFICATION_ID_ORDER_RECEIVED, notification);
 					} catch (Exception e){
 						Console.WriteLine("Exception: {0}",e);
+						Insights.Report(e);
 					}
 
 				});
@@ -114,6 +129,7 @@ namespace KangouMessenger.Droid
 					_viewModel.DisconnectCommand.Execute(null);
 				});
 				openSettingsDialog.Show();
+				Insights.Report(e);
 			}
 		}
 
@@ -134,8 +150,6 @@ namespace KangouMessenger.Droid
 				_viewModel.PublishPosition (CurrentLat, CurrentLng);
 
 				var gpsPosString = gpsPosJsonString (CurrentLat, CurrentLng);
-				//Console.WriteLine (gpsPosString);
-				ConnectionManager.Emit (SocketEvents.GpsPosition, gpsPosString);
 
 				if (!_isCameraUpdated && _mapFragment.Map != null) {
 					_isCameraUpdated = true;
@@ -148,14 +162,23 @@ namespace KangouMessenger.Droid
 					CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition (cameraPosition);
 					_mapFragment.Map.MoveCamera (cameraUpdate);
 				}
+
+				if (_ticksToEmitGpsPosition > 5) {
+					ConnectionManager.Emit (SocketEvents.GpsPosition, gpsPosString);
+					_ticksToEmitGpsPosition = 0;
+				}
+
+				_ticksToEmitGpsPosition++;
 			}
 		}
 
 		private string gpsPosJsonString(double lat, double lng){
+			var latString = String.Format("\"{0}\"", lat).Replace(",",".");
+			var lngString = String.Format("\"{0}\"", lng).Replace(",",".");
 			if (DataOrderManager.Instance.IsOrderActive && ConnectionManager.Instance.KangouData.AppView != "ReceivingOrderView" && ConnectionManager.Instance.KangouData.AppView != "WaitingOrderView")
-				return String.Format( "{{ \"lat\": {0}, \"lng\": {1}, \"orderId\": \"{2}\" }}", lat, lng,  DataOrderManager.Instance.DataOrder.Id);
+				return String.Format( "{{ \"lat\": {0}, \"lng\": {1}, \"orderId\": \"{2}\" }}", latString, lngString,  DataOrderManager.Instance.DataOrder.Id);
 			else
-				return String.Format( "{{ \"lat\": {0}, \"lng\": {1} }}", lat, lng);
+				return String.Format( "{{ \"lat\": {0}, \"lng\": {1} }}", latString, lngString);
 		}
 
 		public void OnProviderDisabled(string provider) {
@@ -173,6 +196,7 @@ namespace KangouMessenger.Droid
 			_isCameraUpdated = false;
 
 			_locationManager = (LocationManager)GetSystemService(LocationService);
+
 			Criteria criteriaForLocationService = new Criteria
 			{
 				Accuracy = Accuracy.Low

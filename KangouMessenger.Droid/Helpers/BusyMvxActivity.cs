@@ -30,6 +30,10 @@ namespace KangouMessenger.Droid
 
 			var set = this.CreateBindingSet<BusyMvxActivity, BusyMvxViewModel>();
 			set.Bind(_bindableProgress).For(p => p.Visible).To(vm => vm.IsBusy);
+			set.Bind(_bindableProgress).For(p => p.EnableCancelButton).To(vm => vm.EnableCancelButton);
+			set.Bind(_bindableProgress).For(p => p.CancelAction).To(vm => vm.CancelAction);
+			set.Bind(_bindableProgress).For(p => p.EnableRetryButton).To(vm => vm.EnableRetryButton);
+			set.Bind(_bindableProgress).For(p => p.RetryAction).To(vm => vm.RetryAction);
 			set.Apply();
 		}
 

@@ -231,157 +231,169 @@ containing a value of this type.
         public static int starreviewon=0x7f020023;
     }
     public static final class id {
-        public static int MvxBindingTagUnique=0x7f050005;
-        public static int acceptButton=0x7f050021;
-        public static int address=0x7f05000a;
-        public static int callToCustomer=0x7f050010;
-        public static int cancelButton=0x7f050020;
-        public static int clientName=0x7f050014;
-        public static int clientPhoneNumber=0x7f050015;
-        public static int comments=0x7f050022;
-        public static int connectButton=0x7f050008;
-        public static int disconnectButton=0x7f05002a;
-        public static int email=0x7f05001f;
-        public static int emailEditText=0x7f050017;
-        public static int from=0x7f05001b;
-        public static int fromAddress=0x7f05001c;
-        public static int helpButton=0x7f05000d;
-        public static int hybrid=0x7f050004;
-        public static int imHereButton=0x7f05000e;
-        public static int instructions=0x7f050006;
-        public static int items=0x7f05001a;
-        public static int labelHelp=0x7f050016;
-        public static int linearLayout4=0x7f050009;
-        public static int loginButton=0x7f050019;
-        public static int map=0x7f05000f;
-        public static int name=0x7f05000c;
-        public static int none=0x7f050000;
-        public static int normal=0x7f050001;
-        public static int passwordEditText=0x7f050018;
-        public static int pickedButton=0x7f050011;
-        public static int references=0x7f05000b;
-        public static int satellite=0x7f050002;
-        public static int send=0x7f050007;
-        public static int sendInfoButton=0x7f050029;
-        public static int starButton1=0x7f050024;
-        public static int starButton2=0x7f050025;
-        public static int starButton3=0x7f050026;
-        public static int starButton4=0x7f050027;
-        public static int starButton5=0x7f050028;
-        public static int tableRow2=0x7f050023;
-        public static int terrain=0x7f050003;
-        public static int timer=0x7f050013;
-        public static int timerTitle=0x7f050012;
-        public static int to=0x7f05001d;
-        public static int toAddress=0x7f05001e;
+        public static int MvxBindingTagUnique=0x7f060000;
+        public static int acceptButton=0x7f060027;
+        public static int address=0x7f06000d;
+        public static int callToCustomer=0x7f060013;
+        public static int cancelButton=0x7f060026;
+        public static int canvasSignature=0x7f060009;
+        public static int clean=0x7f060008;
+        public static int clientName=0x7f060017;
+        public static int clientPhoneNumber=0x7f060018;
+        public static int comments=0x7f060028;
+        public static int connectButton=0x7f06000a;
+        public static int disconnectButton=0x7f060030;
+        public static int email=0x7f060024;
+        public static int emailEditText=0x7f06001a;
+        public static int from=0x7f060020;
+        public static int fromAddress=0x7f060021;
+        public static int helpButton=0x7f060010;
+        public static int hybrid=0x7f060001;
+        public static int imHereButton=0x7f060011;
+        public static int infoPasswordA=0x7f06001d;
+        public static int infoPasswordB=0x7f06001e;
+        public static int instructions=0x7f060006;
+        public static int items=0x7f06001f;
+        public static int labelHelp=0x7f060019;
+        public static int linearLayout4=0x7f06000c;
+        public static int loginButton=0x7f06001c;
+        public static int map=0x7f060012;
+        public static int name=0x7f06000f;
+        public static int none=0x7f060002;
+        public static int normal=0x7f060003;
+        public static int passwordEditText=0x7f06001b;
+        public static int pickedButton=0x7f060014;
+        public static int references=0x7f06000e;
+        public static int satellite=0x7f060004;
+        public static int send=0x7f060007;
+        public static int sendInfoButton=0x7f06002f;
+        public static int starButton1=0x7f06002a;
+        public static int starButton2=0x7f06002b;
+        public static int starButton3=0x7f06002c;
+        public static int starButton4=0x7f06002d;
+        public static int starButton5=0x7f06002e;
+        public static int tableRow2=0x7f060029;
+        public static int terrain=0x7f060005;
+        public static int textView1=0x7f06000b;
+        public static int timer=0x7f060016;
+        public static int timerTitle=0x7f060015;
+        public static int timerToCancel=0x7f060025;
+        public static int to=0x7f060022;
+        public static int toAddress=0x7f060023;
     }
     public static final class layout {
         public static int clientsignatureview=0x7f030000;
         public static int connectview=0x7f030001;
         public static int dropoffrouteview=0x7f030002;
         public static int dropofftimerview=0x7f030003;
-        public static int helpview=0x7f030004;
-        public static int loginview=0x7f030005;
-        public static int pickuprouteview=0x7f030006;
-        public static int pickuptimerview=0x7f030007;
-        public static int receivingorderview=0x7f030008;
-        public static int reviewview=0x7f030009;
-        public static int splashscreen=0x7f03000a;
-        public static int waitingorderview=0x7f03000b;
+        public static int firstview=0x7f030004;
+        public static int helpview=0x7f030005;
+        public static int loginview=0x7f030006;
+        public static int pickuprouteview=0x7f030007;
+        public static int pickuptimerview=0x7f030008;
+        public static int receivingorderview=0x7f030009;
+        public static int reviewview=0x7f03000a;
+        public static int splashscreen=0x7f03000b;
+        public static int waitingorderview=0x7f03000c;
     }
     public static final class string {
-        public static int app_name=0x7f06001a;
+        public static int ApplicationName=0x7f05001a;
+        public static int Hello=0x7f050019;
+        public static int app_name=0x7f05001c;
         /**   Title for notification shown when GooglePlayServices needs to be
         enabled for a application to work. [CHAR LIMIT=70] 
          */
-        public static int auth_client_needs_enabling_title=0x7f060014;
+        public static int auth_client_needs_enabling_title=0x7f050014;
         /**   Title for notification shown when GooglePlayServices needs to be
         installed for a application to work. [CHAR LIMIT=70] 
          */
-        public static int auth_client_needs_installation_title=0x7f060015;
+        public static int auth_client_needs_installation_title=0x7f050015;
         /**   Title for notification shown when GooglePlayServices needs to be
         udpated for a application to work. [CHAR LIMIT=70] 
          */
-        public static int auth_client_needs_update_title=0x7f060016;
+        public static int auth_client_needs_update_title=0x7f050016;
         /**   Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=42] 
          */
-        public static int auth_client_play_services_err_notification_msg=0x7f060017;
+        public static int auth_client_play_services_err_notification_msg=0x7f050017;
         /**   Requested by string saying which app requested the notification. [CHAR LIMIT=42] 
          */
-        public static int auth_client_requested_by_msg=0x7f060018;
+        public static int auth_client_requested_by_msg=0x7f050018;
         /**   Title for notification shown when a bad version of GooglePlayServices
         has been installed and needs correction for an application to work.
         [CHAR LIMIT=70] 
          */
-        public static int auth_client_using_bad_version_title=0x7f060013;
+        public static int auth_client_using_bad_version_title=0x7f050013;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_enable_button=0x7f060006;
+        public static int common_google_play_services_enable_button=0x7f050006;
         /**  Message in confirmation dialog informing user they need to enable
         Google Play services in application settings [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_enable_text=0x7f060005;
+        public static int common_google_play_services_enable_text=0x7f050005;
         /**  Title of confirmation dialog informing user they need to enable
         Google Play services in application settings [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_enable_title=0x7f060004;
+        public static int common_google_play_services_enable_title=0x7f050004;
         /**  Button in confirmation dialog for installing Google Play services [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_install_button=0x7f060003;
+        public static int common_google_play_services_install_button=0x7f050003;
         /**  (For phones) Message in confirmation dialog informing user that
         they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_install_text_phone=0x7f060001;
+        public static int common_google_play_services_install_text_phone=0x7f050001;
         /**  (For tablets) Message in confirmation dialog informing user that
         they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_install_text_tablet=0x7f060002;
+        public static int common_google_play_services_install_text_tablet=0x7f050002;
         /**  Title of confirmation dialog informing user that they need to install
         Google Play services (from Play Store) [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_install_title=0x7f060000;
+        public static int common_google_play_services_install_title=0x7f050000;
         /**  Message in confirmation dialog informing the user that they provided an invalid account. [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_invalid_account_text=0x7f06000c;
+        public static int common_google_play_services_invalid_account_text=0x7f05000c;
         /**  Title of confirmation dialog informing the user that they provided an invalid account. [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_invalid_account_title=0x7f06000b;
+        public static int common_google_play_services_invalid_account_title=0x7f05000b;
         /**  Message in confirmation dialog informing the user that a network error occurred. [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_network_error_text=0x7f06000a;
+        public static int common_google_play_services_network_error_text=0x7f05000a;
         /**  Title of confirmation dialog informing the user that a network error occurred. [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_network_error_title=0x7f060009;
+        public static int common_google_play_services_network_error_title=0x7f050009;
         /**  Message in confirmation dialog informing user there is an unknown issue in Google Play
         services [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_unknown_issue=0x7f06000d;
+        public static int common_google_play_services_unknown_issue=0x7f05000d;
         /**  Message in confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_unsupported_text=0x7f06000f;
+        public static int common_google_play_services_unsupported_text=0x7f05000f;
         /**  Title of confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_unsupported_title=0x7f06000e;
+        public static int common_google_play_services_unsupported_title=0x7f05000e;
         /**  Button in confirmation dialog for updating Google Play services [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_update_button=0x7f060010;
+        public static int common_google_play_services_update_button=0x7f050010;
         /**  Message in confirmation dialog informing user that they need to update
         Google Play services (from Play Store) [CHAR LIMIT=NONE] 
          */
-        public static int common_google_play_services_update_text=0x7f060008;
+        public static int common_google_play_services_update_text=0x7f050008;
         /**  Title of confirmation dialog informing user that they need to update
         Google Play services (from Play Store) [CHAR LIMIT=40] 
          */
-        public static int common_google_play_services_update_title=0x7f060007;
+        public static int common_google_play_services_update_title=0x7f050007;
         /**  Sign-in button text [CHAR LIMIT=15] 
          */
-        public static int common_signin_button_text=0x7f060011;
+        public static int common_signin_button_text=0x7f050011;
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
-        public static int common_signin_button_text_long=0x7f060012;
-        public static int hello=0x7f060019;
+        public static int common_signin_button_text_long=0x7f050012;
+        public static int hello=0x7f05001b;
+        public static int infoConnect=0x7f05001f;
+        public static int infoPasswordA=0x7f05001d;
+        public static int infoPasswordB=0x7f05001e;
     }
     public static final class style {
         public static int Theme_Splash=0x7f070000;
@@ -442,7 +454,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:cameraBearing
         */
-        public static final int MapAttrs_cameraBearing = 1;
+        public static int MapAttrs_cameraBearing = 1;
         /**
           <p>This symbol is the offset where the {@link com.google.android.gms.R.attr#cameraTargetLat}
           attribute's value can be found in the {@link #MapAttrs} array.
@@ -456,7 +468,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:cameraTargetLat
         */
-        public static final int MapAttrs_cameraTargetLat = 2;
+        public static int MapAttrs_cameraTargetLat = 2;
         /**
           <p>This symbol is the offset where the {@link com.google.android.gms.R.attr#cameraTargetLng}
           attribute's value can be found in the {@link #MapAttrs} array.
@@ -470,7 +482,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:cameraTargetLng
         */
-        public static final int MapAttrs_cameraTargetLng = 3;
+        public static int MapAttrs_cameraTargetLng = 3;
         /**
           <p>This symbol is the offset where the {@link com.google.android.gms.R.attr#cameraTilt}
           attribute's value can be found in the {@link #MapAttrs} array.
@@ -484,7 +496,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:cameraTilt
         */
-        public static final int MapAttrs_cameraTilt = 4;
+        public static int MapAttrs_cameraTilt = 4;
         /**
           <p>This symbol is the offset where the {@link com.google.android.gms.R.attr#cameraZoom}
           attribute's value can be found in the {@link #MapAttrs} array.
@@ -498,7 +510,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:cameraZoom
         */
-        public static final int MapAttrs_cameraZoom = 5;
+        public static int MapAttrs_cameraZoom = 5;
         /**
           <p>This symbol is the offset where the {@link com.google.android.gms.R.attr#mapType}
           attribute's value can be found in the {@link #MapAttrs} array.
@@ -518,7 +530,7 @@ containing a value of this type.
 </table>
           @attr name com.google.android.gms:mapType
         */
-        public static final int MapAttrs_mapType = 0;
+        public static int MapAttrs_mapType = 0;
         /**
           <p>This symbol is the offset where the {@link com.google.android.gms.R.attr#uiCompass}
           attribute's value can be found in the {@link #MapAttrs} array.
@@ -532,7 +544,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:uiCompass
         */
-        public static final int MapAttrs_uiCompass = 6;
+        public static int MapAttrs_uiCompass = 6;
         /**
           <p>This symbol is the offset where the {@link com.google.android.gms.R.attr#uiRotateGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
@@ -546,7 +558,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:uiRotateGestures
         */
-        public static final int MapAttrs_uiRotateGestures = 7;
+        public static int MapAttrs_uiRotateGestures = 7;
         /**
           <p>This symbol is the offset where the {@link com.google.android.gms.R.attr#uiScrollGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
@@ -560,7 +572,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:uiScrollGestures
         */
-        public static final int MapAttrs_uiScrollGestures = 8;
+        public static int MapAttrs_uiScrollGestures = 8;
         /**
           <p>This symbol is the offset where the {@link com.google.android.gms.R.attr#uiTiltGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
@@ -574,7 +586,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:uiTiltGestures
         */
-        public static final int MapAttrs_uiTiltGestures = 9;
+        public static int MapAttrs_uiTiltGestures = 9;
         /**
           <p>This symbol is the offset where the {@link com.google.android.gms.R.attr#uiZoomControls}
           attribute's value can be found in the {@link #MapAttrs} array.
@@ -588,7 +600,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:uiZoomControls
         */
-        public static final int MapAttrs_uiZoomControls = 10;
+        public static int MapAttrs_uiZoomControls = 10;
         /**
           <p>This symbol is the offset where the {@link com.google.android.gms.R.attr#uiZoomGestures}
           attribute's value can be found in the {@link #MapAttrs} array.
@@ -602,7 +614,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:uiZoomGestures
         */
-        public static final int MapAttrs_uiZoomGestures = 11;
+        public static int MapAttrs_uiZoomGestures = 11;
         /**
           <p>This symbol is the offset where the {@link com.google.android.gms.R.attr#useViewLifecycle}
           attribute's value can be found in the {@link #MapAttrs} array.
@@ -616,7 +628,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:useViewLifecycle
         */
-        public static final int MapAttrs_useViewLifecycle = 12;
+        public static int MapAttrs_useViewLifecycle = 12;
         /**
           <p>This symbol is the offset where the {@link com.google.android.gms.R.attr#zOrderOnTop}
           attribute's value can be found in the {@link #MapAttrs} array.
@@ -630,7 +642,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:zOrderOnTop
         */
-        public static final int MapAttrs_zOrderOnTop = 13;
+        public static int MapAttrs_zOrderOnTop = 13;
         /** Attributes that can be used with a MvxBinding.
            <p>Includes the following attributes:</p>
            <table>
@@ -659,7 +671,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:MvxBind
         */
-        public static final int MvxBinding_MvxBind = 0;
+        public static int MvxBinding_MvxBind = 0;
         /**
           <p>This symbol is the offset where the {@link com.google.android.gms.R.attr#MvxLang}
           attribute's value can be found in the {@link #MvxBinding} array.
@@ -673,7 +685,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:MvxLang
         */
-        public static final int MvxBinding_MvxLang = 1;
+        public static int MvxBinding_MvxLang = 1;
         /** Attributes that can be used with a MvxControl.
            <p>Includes the following attributes:</p>
            <table>
@@ -700,7 +712,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:MvxTemplate
         */
-        public static final int MvxControl_MvxTemplate = 0;
+        public static int MvxControl_MvxTemplate = 0;
         /** Attributes that can be used with a MvxImageView.
            <p>Includes the following attributes:</p>
            <table>
@@ -727,7 +739,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:MvxSource
         */
-        public static final int MvxImageView_MvxSource = 0;
+        public static int MvxImageView_MvxSource = 0;
         /** Attributes that can be used with a MvxListView.
            <p>Includes the following attributes:</p>
            <table>
@@ -756,7 +768,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:MvxDropDownItemTemplate
         */
-        public static final int MvxListView_MvxDropDownItemTemplate = 1;
+        public static int MvxListView_MvxDropDownItemTemplate = 1;
         /**
           <p>This symbol is the offset where the {@link com.google.android.gms.R.attr#MvxItemTemplate}
           attribute's value can be found in the {@link #MvxListView} array.
@@ -770,6 +782,6 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.google.android.gms:MvxItemTemplate
         */
-        public static final int MvxListView_MvxItemTemplate = 0;
+        public static int MvxListView_MvxItemTemplate = 0;
     };
 }
