@@ -14,6 +14,13 @@ namespace KangouMessenger.Core
 		public CountDownTimer CountDownTimer { get; set; }
 
 		public PickUpTimerViewModel(bool removeNextToLastViewModel = true){
+
+			/* This is when the view is trying to open after a running out of memory */ 
+			if (String.IsNullOrEmpty (KangouData.Id)) {
+				Close(this);
+				return;
+			}
+
 			RemoveNextToLastViewModel = removeNextToLastViewModel;
 			IsBusy = false;
 
@@ -48,7 +55,7 @@ namespace KangouMessenger.Core
 					CountDownTimer = null;
 				}
 			};
-			ConnectionManager.Instance.KangouData.AppView = "PickUpTimerView";
+			KangouData.AppView = "PickUpTimerView";
 
 			EnableRetryButton = true;
 			RetryAction = DoPickedUpCommand;

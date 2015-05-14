@@ -9,11 +9,19 @@ using Android.Content;
 
 namespace KangouMessenger.Droid
 {
-	[Activity(Label = "Firma del cliente", ScreenOrientation = ScreenOrientation.Portrait)]
+	[Activity(Label = "Cargando...", ScreenOrientation = ScreenOrientation.Portrait)]
     public class ClientSignatureView : BusyMvxActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
+			/* Finish this view when it's trying to open after a running out of memory */ 
+			if (String.IsNullOrEmpty (KangouData.Id)) {
+				SetTitle (Resource.String.loading);
+				Finish ();
+				base.OnCreate (bundle);
+				return;
+			}
+
             base.OnCreate(bundle);
 			SetContentView(Resource.Layout.ClientSignatureView);
 			var canvasSignature = FindViewById<ClientSignatureViewCanvas>(Resource.Id.canvasSignature);
@@ -67,6 +75,8 @@ namespace KangouMessenger.Droid
 				viewModel.SignatureJson = signatureJson;
 				viewModel.AcceptCommand.Execute(null);
 			};
+
+			Title = "Firma del cliente";
         }
 
     }

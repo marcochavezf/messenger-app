@@ -42,7 +42,7 @@ namespace KangouMessenger.Core
 					OrderTakenFromSomeoneElse();
 			});
 
-			ConnectionManager.Instance.KangouData.AppView = "ReceivingOrderView";
+			KangouData.AppView = "ReceivingOrderView";
 		}
 
 		private void OnLocationMessage(LocationMessage locationMessage)
@@ -121,7 +121,7 @@ namespace KangouMessenger.Core
 			TimerToCancel = "Esperando respuesta...";
 
 			if (ConnectionManager.ConnectionState == ConnectionStates.DISCONNECTED_BY_USER) {
-				ConnectionManager.Instance.KangouData.AppView = "ConnectView";
+				KangouData.AppView = "ConnectView";
 				IsBusy = false;
 				Close (this);
 				return;
@@ -158,7 +158,7 @@ namespace KangouMessenger.Core
 				ConnectionManager.Emit( SocketEvents.CancelInfoOrder, jsonString);
 			}
 
-			ConnectionManager.Instance.KangouData.AppView = "WaitingOrderView";
+			KangouData.AppView = "WaitingOrderView";
 			IsBusy = false;
 			Close(this);
 		}

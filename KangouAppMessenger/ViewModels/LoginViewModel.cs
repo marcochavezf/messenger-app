@@ -20,6 +20,7 @@ namespace KangouMessenger.Core
 		{
 			_kangouClient = new KangouClient (jsonConverter);
 			_dataService = dataService;
+
 			#if DEBUG
 			_email = "test@kangou.mx";
 			_password = "123";
@@ -83,7 +84,8 @@ namespace KangouMessenger.Core
 
 					_dataService.AddOrUpdate(new CourierData(){
 						Email = Email,
-						Password = Password
+						Password = Password,
+						UserId = userId
 					});
 
 					InvokeOnMainThread (delegate {  
@@ -96,7 +98,9 @@ namespace KangouMessenger.Core
 					Insights.Identify(userId, traits);
 
 					Debug.WriteLine("userId retrieved: {0}", userId);
-					ShowViewModel<ConnectViewModel>(new KangouData(){ Id = userId });
+					KangouData.Id = userId;
+					KangouData.AppView = "LoginView";
+					ShowViewModel<WaitingOrderViewModel>();
 
 				}, (error) => {
 

@@ -17,7 +17,7 @@ public class MonoPackageManager {
 	static Object lock = new Object ();
 	static boolean initialized;
 
-	public static void LoadApplication (Context context, String runtimeDataDir, String[] apks)
+	public static void LoadApplication (Context context, ApplicationInfo runtimePackage, String[] apks)
 	{
 		synchronized (lock) {
 			if (!initialized) {
@@ -26,13 +26,13 @@ public class MonoPackageManager {
 				String language     = locale.getLanguage () + "-" + locale.getCountry ();
 				String filesDir     = context.getFilesDir ().getAbsolutePath ();
 				String cacheDir     = context.getCacheDir ().getAbsolutePath ();
-				String dataDir      = context.getApplicationInfo ().dataDir + "/lib";
+				String dataDir      = getNativeLibraryPath (context);
 				ClassLoader loader  = context.getClassLoader ();
 
 				Runtime.init (
 						language,
 						apks,
-						runtimeDataDir,
+						getNativeLibraryPath (runtimePackage),
 						new String[]{
 							filesDir,
 							cacheDir,
@@ -47,6 +47,18 @@ public class MonoPackageManager {
 				initialized = true;
 			}
 		}
+	}
+
+	static String getNativeLibraryPath (Context context)
+	{
+	    return getNativeLibraryPath (context.getApplicationInfo ());
+	}
+
+	static String getNativeLibraryPath (ApplicationInfo ainfo)
+	{
+		if (android.os.Build.VERSION.SDK_INT >= 9)
+			return ainfo.nativeLibraryDir;
+		return ainfo.dataDir + "/lib";
 	}
 
 	public static String[] getAssemblies ()
@@ -68,8 +80,10 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"Kangou Mensajero.dll",
-		"GooglePlayServicesFroyoLib.dll",
-		"Xamarin.Android.Support.v4.dll",
+		"Newtonsoft.Json.dll",
+		"OkHttp.dll",
+		"Cirrious.MvvmCross.Community.Plugins.Sqlite.dll",
+		"Cirrious.MvvmCross.Community.Plugins.Sqlite.Droid.dll",
 		"Cirrious.CrossCore.Droid.dll",
 		"Cirrious.MvvmCross.Binding.Droid.dll",
 		"Cirrious.CrossCore.dll",
@@ -77,14 +91,14 @@ class MonoPackageManager_Resources {
 		"Cirrious.MvvmCross.Localization.dll",
 		"Cirrious.MvvmCross.Plugins.Messenger.dll",
 		"Cirrious.MvvmCross.Plugins.Json.dll",
-		"Newtonsoft.Json.dll",
 		"Cirrious.MvvmCross.Droid.dll",
 		"Cirrious.MvvmCross.dll",
 		"Cirrious.MvvmCross.Droid.Fragging.dll",
-		"OkHttp.dll",
 		"Xamarin.Insights.dll",
-		"Cirrious.MvvmCross.Community.Plugins.Sqlite.dll",
-		"Cirrious.MvvmCross.Community.Plugins.Sqlite.Droid.dll",
+		"GooglePlayServicesLib.dll",
+		"Xamarin.Android.Support.v4.dll",
+		"Xamarin.Android.Support.v7.AppCompat.dll",
+		"Xamarin.Android.Support.v7.MediaRouter.dll",
 		"KangouAppMessenger.dll",
 		"System.Reflection.Emit.ILGeneration.dll",
 		"System.Reflection.Emit.Lightweight.dll",

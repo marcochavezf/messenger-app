@@ -15,5 +15,6 @@ namespace KangouMessenger.Core
 		public string Password { get; set; }
 		public string PushDeviceId { get; set; }
 		public string PushDeviceService { get; set; }
+		public string UserId { get; set; }
     }
 }

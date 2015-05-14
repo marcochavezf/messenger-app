@@ -7,14 +7,23 @@ using Android.Content;
 using Android.Widget;
 using Android.Views.InputMethods;
 using Android.Content.PM;
+using System;
 
 namespace KangouMessenger.Droid
 {
-	[Activity(Label = "Esperando para Recoger", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
+	[Activity(Label = "Cargando...", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
     public class PickUpTimerView : BusyMvxActivity
     {
         protected override void OnCreate(Bundle bundle)
         {
+			/* Finish this view when it's trying to open after a running out of memory */ 
+			if (String.IsNullOrEmpty (KangouData.Id)) {
+				SetTitle (Resource.String.loading);
+				Finish ();
+				base.OnCreate (bundle);
+				return;
+			}
+
             base.OnCreate(bundle);
 			SetContentView(Resource.Layout.PickUpTimerView);
 
@@ -51,6 +60,7 @@ namespace KangouMessenger.Droid
 
 			clientNameTextView.Text = "Nombre del cliente: " + dataOrder.ClientName;
 			phoneNumberTextView.Text = "Número del cliente: " + dataOrder.ClientPhoneNumber;
+			Title = "Esperando para Recoger";
         }
     }
 }

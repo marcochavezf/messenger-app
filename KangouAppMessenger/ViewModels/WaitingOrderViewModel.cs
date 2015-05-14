@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Cirrious.MvvmCross.Plugins.Messenger;
 using System.Diagnostics;
 using System;
+using Quobject.SocketIoClientDotNet.Client;
 
 namespace KangouMessenger.Core
 {
@@ -15,16 +16,40 @@ namespace KangouMessenger.Core
 		protected readonly IMvxMessenger _messenger;
 
 		/* Constructor */
-		public WaitingOrderViewModel(IMvxMessenger messenger){
+		public WaitingOrderViewModel(IMvxMessenger messenger, IDataService dataService){
+
+			IsTryingToReconnect = true;
+			TitleBindableProgress = "Conectando...";
+			MessageBindableProgress = "Por favor espere";
+			StatusConnection = "Conectando...";
 
 			_messenger = messenger;
-			IsTryingToReconnect = false;
+
 			#if DEBUG
-			if (ConnectionManager.Instance.KangouData == null) {
-				ConnectionManager.Instance.KangouData = new KangouData(){ Id = "1234" };
+			if (KangouData.Id == null) {
+				KangouData.Id = "54e0b95d5f0b2755c284ef89";
 			}
 			#endif
-			ConnectionManager.Instance.KangouData.AppView = "WaitingOrderView";
+			KangouData.Id = dataService.GetCourierData ().UserId;
+			KangouData.AppView = "WaitingOrderView";
+
+			ConnectionManager.Connect();
+			ConnectionManager.ConnectionState = ConnectionStates.USER_WANTS_TO_BE_CONNECTED;
+
+			ConnectionManager.Once(Socket.EVENT_CONNECT, (data) => {
+				Debug.WriteLine("Connected");
+
+				if(ConnectionManager.ConnectionState == ConnectionStates.USER_WANTS_TO_BE_CONNECTED){
+
+					System.Diagnostics.Debug.WriteLine ("connected On");
+					ConnectionManager.ConnectionState = ConnectionStates.CONNECTED_BY_SERVER;
+					StatusConnection = "Conectado";
+
+					InvokeOnMainThread (delegate {
+						IsBusy = false;
+					});
+				}
+			});
 
 			ConnectionManager.On (SocketEvents.InfoOrder, (data) => {
 
@@ -94,10 +119,12 @@ namespace KangouMessenger.Core
 			});
 
 			ConnectionManager.Instance.TryingToReconnect += (bool obj, string title, string message) => {
-				IsTryingToReconnect = obj;
-				TitleBindableProgress = title;
-				MessageBindableProgress = message;
-				StatusConnection = obj ? "Desconectado" : "Conectado";
+  				if(ConnectionManager.ConnectionState == ConnectionStates.CONNECTED_BY_SERVER){
+					IsTryingToReconnect = obj;
+					TitleBindableProgress = title;
+					MessageBindableProgress = message;
+					StatusConnection = obj ? "Desconectado" : "Conectado";
+				}
 			};
 		}
 			
@@ -152,7 +179,7 @@ namespace KangouMessenger.Core
 					IsBusy = false;
 				});
 
-				ConnectionManager.Instance.KangouData.AppView = "ConnectView";
+				KangouData.AppView = "ConnectView";
 				Close(this);
 			});
 
@@ -160,7 +187,7 @@ namespace KangouMessenger.Core
 
 		public void PublishPosition(double lat, double lng){
 			var message = new LocationMessage(this,lat,lng);
-			_messenger.Publish(message);
+			_messenger.Publish (message);
 		}
 
 		/* Actions to implement in platform specific views */

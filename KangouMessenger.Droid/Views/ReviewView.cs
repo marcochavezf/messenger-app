@@ -9,11 +9,19 @@ using Android.Content.PM;
 
 namespace KangouMessenger.Droid
 {
-	[Activity(Label = "Calificación del servicio", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
+	[Activity(Label = "Cargando...", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
 	public class ReviewView : BusyMvxActivity
 	{
 		protected override void OnCreate(Bundle bundle)
 		{
+			/* Finish this view when it's trying to open after a running out of memory */ 
+			if (String.IsNullOrEmpty (KangouData.Id)) {
+				SetTitle (Resource.String.loading);
+				Finish ();
+				base.OnCreate (bundle);
+				return;
+			}
+
 			base.OnCreate(bundle);
 			SetContentView(Resource.Layout.ReviewView);
 
@@ -59,6 +67,7 @@ namespace KangouMessenger.Droid
 					pleaseRateAlert.Show();
 			};
 
+			Title = "Calificación del servicio";
 		}
 	}
 }

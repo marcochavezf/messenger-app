@@ -24,9 +24,6 @@ namespace KangouMessenger.Droid
 			base.OnCreate(bundle);
 			SetContentView(Resource.Layout.ConnectView);
 
-			if (String.IsNullOrWhiteSpace (ConnectionManager.Instance.KangouData.Id))
-				Finish ();
-
 			_locationManager = (LocationManager)GetSystemService(LocationService);
 
 			_openSettingsDialog = new AlertDialog.Builder (this);

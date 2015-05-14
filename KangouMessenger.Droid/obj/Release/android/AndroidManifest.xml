@@ -1,31 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.kangou.messenger.android" android:versionName="1.1.2" android:versionCode="14">
-  <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="21" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.kangou.messenger.android" android:versionName="1.2.0" android:versionCode="15">
+  <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21" />
   <application android:label="Kangou Mensajero" android:theme="@android:style/Theme.Holo.Light" android:icon="@drawable/icon" android:name="mono.android.app.Application">
-    <!-- Debug 
-		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyABL2Bgekp18DBhCEPu1>P_XPfibL4o13Q" / -->
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <!-- Debug
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyABL2Bgekp18DBhCEPu1nP_XPfibL4o13Q" /-->
     <!-- Release -->
     <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyB2LQqZnCuHBRVOKK-Vjl7gpABIJ1ld9oo" />
-    <activity android:icon="@drawable/icon" android:label="Kangou Mensajero" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/Theme.Splash" android:name="kangoumessenger.droid.SplashScreen">
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+    <activity android:icon="@drawable/icon" android:label="Kangou Mensajero" android:noHistory="true" android:screenOrientation="portrait" android:theme="@style/Theme.Splash" android:name="md5812a52d1f6bfb9d29600df1a9463568c.SplashScreen">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:icon="@drawable/icon" android:label="Conectarse" android:screenOrientation="portrait" android:name="kangoumessenger.droid.ConnectView" />
-    <activity android:label="Firma del cliente" android:screenOrientation="portrait" android:name="kangoumessenger.droid.ClientSignatureView" />
-    <activity android:icon="@drawable/icon" android:label="Iniciar Sesión" android:screenOrientation="portrait" android:name="kangoumessenger.droid.LoginView" />
-    <activity android:icon="@drawable/icon" android:label="Mensajero" android:screenOrientation="portrait" android:name="kangoumessenger.droid.BusyMvxActivity" />
-    <activity android:icon="@drawable/icon" android:label="Conectado" android:screenOrientation="portrait" android:name="kangoumessenger.droid.WaitingOrderView" />
-    <activity android:label="Recibiendo orden" android:screenOrientation="portrait" android:name="kangoumessenger.droid.ReceivingOrderView" />
-    <activity android:icon="@drawable/icon" android:label="Ir a Recoger" android:screenOrientation="portrait" android:name="kangoumessenger.droid.PickUpRouteView" />
-    <activity android:icon="@drawable/icon" android:label="Mensajero" android:screenOrientation="portrait" android:name="kangoumessenger.droid.BusyMvxFragmentActivity" />
-    <activity android:icon="@drawable/icon" android:label="Ayuda" android:screenOrientation="portrait" android:name="kangoumessenger.droid.HelpView" />
-    <activity android:icon="@drawable/icon" android:label="Esperando para Recoger" android:screenOrientation="portrait" android:name="kangoumessenger.droid.PickUpTimerView" />
-    <activity android:icon="@drawable/icon" android:label="Ir a entregar" android:screenOrientation="portrait" android:name="kangoumessenger.droid.DropOffRouteView" />
-    <activity android:icon="@drawable/icon" android:label="Esperando para entregar" android:screenOrientation="portrait" android:name="kangoumessenger.droid.DropOffTimerView" />
-    <activity android:icon="@drawable/icon" android:label="Calificación del servicio" android:screenOrientation="portrait" android:name="kangoumessenger.droid.ReviewView" />
-    <receiver android:permission="com.google.android.c2dm.permission.SEND" android:name="kangoumessenger.droid.GCMBroadcastReceiver">
+    <activity android:icon="@drawable/icon" android:label="Conectarse" android:screenOrientation="portrait" android:name="md5812a52d1f6bfb9d29600df1a9463568c.ConnectView" />
+    <activity android:label="Cargando..." android:screenOrientation="portrait" android:name="md5812a52d1f6bfb9d29600df1a9463568c.ClientSignatureView" />
+    <activity android:icon="@drawable/icon" android:label="Iniciar Sesión" android:screenOrientation="portrait" android:name="md5812a52d1f6bfb9d29600df1a9463568c.LoginView" />
+    <activity android:icon="@drawable/icon" android:label="Mensajero" android:screenOrientation="portrait" android:name="md5812a52d1f6bfb9d29600df1a9463568c.BusyMvxActivity" />
+    <activity android:icon="@drawable/icon" android:label="Conectando... Espere por favor" android:screenOrientation="portrait" android:name="md5812a52d1f6bfb9d29600df1a9463568c.WaitingOrderView" />
+    <activity android:label="Recibiendo orden" android:screenOrientation="portrait" android:name="md5812a52d1f6bfb9d29600df1a9463568c.ReceivingOrderView" />
+    <activity android:icon="@drawable/icon" android:label="Cargando..." android:screenOrientation="portrait" android:name="md5812a52d1f6bfb9d29600df1a9463568c.PickUpRouteView" />
+    <activity android:icon="@drawable/icon" android:label="Mensajero" android:screenOrientation="portrait" android:name="md5812a52d1f6bfb9d29600df1a9463568c.BusyMvxFragmentActivity" />
+    <activity android:icon="@drawable/icon" android:label="Cargando..." android:screenOrientation="portrait" android:name="md5812a52d1f6bfb9d29600df1a9463568c.HelpView" />
+    <activity android:icon="@drawable/icon" android:label="Cargando..." android:screenOrientation="portrait" android:name="md5812a52d1f6bfb9d29600df1a9463568c.PickUpTimerView" />
+    <activity android:icon="@drawable/icon" android:label="Cargando..." android:screenOrientation="portrait" android:name="md5812a52d1f6bfb9d29600df1a9463568c.DropOffRouteView" />
+    <activity android:icon="@drawable/icon" android:label="Cargando..." android:screenOrientation="portrait" android:name="md5812a52d1f6bfb9d29600df1a9463568c.DropOffTimerView" />
+    <activity android:icon="@drawable/icon" android:label="Cargando..." android:screenOrientation="portrait" android:name="md5812a52d1f6bfb9d29600df1a9463568c.ReviewView" />
+    <receiver android:permission="com.google.android.c2dm.permission.SEND" android:name="md5812a52d1f6bfb9d29600df1a9463568c.GCMBroadcastReceiver">
       <intent-filter>
         <action android:name="com.google.android.c2dm.intent.RECEIVE" />
         <category android:name="com.kangou.messenger.android" />
@@ -39,7 +41,7 @@
         <category android:name="com.kangou.messenger.android" />
       </intent-filter>
     </receiver>
-    <service android:name="kangoumessenger.droid.MyIntentService" />
+    <service android:name="md5812a52d1f6bfb9d29600df1a9463568c.MyIntentService" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.kangou.messenger.android.mono.MonoRuntimeProvider.__mono_init__" />
   </application>
   <permission android:name="com.kangou.messenger.permission.MAPS_RECEIVE" android:protectionLevel="signature" />

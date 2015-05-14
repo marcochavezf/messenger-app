@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Collections.Generic;
 using Quobject.SocketIoClientDotNet.Client;
 using Xamarin;
+using System.Threading.Tasks;
 
 namespace KangouMessenger.Core
 {
@@ -16,18 +17,27 @@ namespace KangouMessenger.Core
 	public class ConnectionManager
 	{
 		private static int _ticksCounterToConnectAgain;
-		private volatile static Dictionary<string, Action> _actionsToPerform;
+		private static volatile Dictionary<string, Action> _actionsToPerform;
 
-		public Socket Socket { get; set; }
-		public KangouData KangouData { get; set; }
-			
+	
+		private Socket _socket;
+		public Socket Socket { 
+			get { 
+				if (_socket == null) {
+					Connect (); 
+					ConnectionState = ConnectionStates.USER_WANTS_TO_BE_CONNECTED;
+				}
+				return _socket;
+			}
+			set { _socket = value; }
+		}
+
 		private static ConnectionManager instance;
-		public static volatile ConnectionStates ConnectionState;
+		public static ConnectionStates ConnectionState { get; set; }
 		
 		private ConnectionManager() {
 			ConnectionState = ConnectionStates.DISCONNECTED_BY_USER;
 			_ticksCounterToConnectAgain = 0;
-			_actionsToPerform = new Dictionary<string, Action> ();
 		}
 
 		private static string CreateUriWithParameters(string host, int port, Dictionary<string, string> parameters)
@@ -44,32 +54,51 @@ namespace KangouMessenger.Core
 
 		public static void On(string name, Action <JToken> handler){
 			Action<object> handlerWithObject = (dataObject) => {
-				var dataJToken = dataObject as JToken;
-				handler(dataJToken);
+				try{
+					var dataJToken = dataObject as JToken;
+					handler(dataJToken);
+					
+					Task.Run (() => {
+						Insights.Track("On: " + name, new Dictionary<string, string> {
+							{ "typeUser", "kangouMessenger" },
+							{ "userId", KangouData.Id },
+							{ "appView", KangouData.AppView },
+							{ "On Event", name},
+							{ "Data", dataJToken is Object ? dataJToken.ToString() : "" }
+						});
+					});
 
-				Insights.Track("On: " + name, new Dictionary<string, string> {
-					{ "typeUser", "kangouMessenger" },
-					{ "userId", Instance.KangouData.Id },
-					{ "appView", Instance.KangouData.AppView },
-					{ "On Event", name},
-					{ "Data", dataJToken is Object ? dataJToken.ToString() : "" }
-				});
+				} catch(Exception e){
+					Debug.WriteLine(e);
+					Task.Run (() => {
+						Insights.Report(e);
+					});
+				}
 			};
 			Instance.Socket.On (name, handlerWithObject);
 		}
 
 		public static void Once(string name, Action <JToken> handler){
 			Action<object> handlerWithObject = (dataObject) => {
-				var dataJToken = dataObject as JToken;
-				handler(dataJToken);
+				try{
+					var dataJToken = dataObject as JToken;
+					handler(dataJToken);
 
-				Insights.Track("Once: " + name, new Dictionary<string, string> {
-					{ "typeUser", "kangouMessenger" },
-					{ "userId", Instance.KangouData.Id },
-					{ "appView", Instance.KangouData.AppView },
-					{ "Once Event", name},
-					{ "Data", dataJToken is Object ? dataJToken.ToString() : "" }
-				});
+					Task.Run (() => {
+						Insights.Track("Once: " + name, new Dictionary<string, string> {
+							{ "typeUser", "kangouMessenger" },
+							{ "userId", KangouData.Id },
+							{ "appView", KangouData.AppView },
+							{ "Once Event", name},
+							{ "Data", dataJToken is Object ? dataJToken.ToString() : "" }
+						});
+					});
+				} catch(Exception e){
+					Debug.WriteLine(e);
+					Task.Run (() => {
+						Insights.Report(e);
+					});
+				}
 			};
 			Instance.Socket.Once (name, handlerWithObject);
 		}
@@ -98,10 +127,12 @@ namespace KangouMessenger.Core
 				new Dictionary<string, string>() 
 				{
 					{ "typeUser", "kangouMessenger" },
-					{ "userId", Instance.KangouData.Id },
-					{ "appView", Instance.KangouData.AppView }
+					{ "userId", KangouData.Id },
+					{ "appView", KangouData.AppView }
 				});
 			Debug.WriteLine ("uri: {0}",uri);
+			_actionsToPerform = new Dictionary<string, Action> ();
+
 			Instance.Socket = IO.Socket (uri);
 			Instance.Socket.Once (Socket.EVENT_CONNECT, (data) => {
 				Debug.WriteLine ("**** Performing events ****");
@@ -113,8 +144,8 @@ namespace KangouMessenger.Core
 
 			Insights.Track("Connect", new Dictionary<string, string> {
 				{ "typeUser", "kangouMessenger" },
-				{ "userId", Instance.KangouData.Id },
-				{ "appView", Instance.KangouData.AppView }
+				{ "userId", KangouData.Id },
+				{ "appView", KangouData.AppView }
 			});
 		}
 				
@@ -133,8 +164,8 @@ namespace KangouMessenger.Core
 
 			Insights.Track("Disconnect", new Dictionary<string, string> {
 				{ "typeUser", "kangouMessenger" },
-				{ "userId", Instance.KangouData.Id },
-				{ "appView", Instance.KangouData.AppView }
+				{ "userId", KangouData.Id },
+				{ "appView", KangouData.AppView }
 			});
 		}
 			
@@ -180,8 +211,8 @@ namespace KangouMessenger.Core
 
 							Insights.Track ("Emit: " + name, new Dictionary<string, string> {
 								{ "typeUser", "kangouMessenger" },
-								{ "userId", Instance.KangouData.Id },
-								{ "appView", Instance.KangouData.AppView },
+								{ "userId", KangouData.Id },
+								{ "appView", KangouData.AppView },
 								{ "Emit", name },
 								{ "Data", args is Object ? args.ToString () : "" }
 							});
@@ -201,8 +232,8 @@ namespace KangouMessenger.Core
 				if(!name.Equals(SocketEvents.GpsPosition))
 					Insights.Track("Emit " + name, new Dictionary<string, string> {
 						{ "typeUser", "kangouMessenger" },
-						{ "userId", Instance.KangouData.Id },
-						{ "appView", Instance.KangouData.AppView },
+						{ "userId", KangouData.Id },
+						{ "appView", KangouData.AppView },
 						{ "Emit", name },
 						{ "Data", args is Object ? args.ToString() : ""}
 					});

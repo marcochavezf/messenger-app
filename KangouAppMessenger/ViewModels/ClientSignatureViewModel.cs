@@ -12,6 +12,13 @@ namespace KangouMessenger.Core
     {
 		/* Constructor */
 		public ClientSignatureViewModel(){
+
+			/* This is when the view is trying to open after a running out of memory */ 
+			if (String.IsNullOrEmpty (KangouData.Id)) {
+				Close(this);
+				return;
+			}
+
 			ConnectionManager.On (SocketEvents.ClientSignatureAccepted, (data) => {
 				ConnectionManager.Off (SocketEvents.ClientSignatureAccepted);
 				ItNeedsToBeRemoved = true;
@@ -22,7 +29,7 @@ namespace KangouMessenger.Core
 					ShowViewModel<ReviewViewModel> (new BusyMvxViewModelParameters (){ RemoveNextToLastViewModel = true });
 				});
 			});
-			ConnectionManager.Instance.KangouData.AppView = "ClientSignatureView";
+			KangouData.AppView = "ClientSignatureView";
 
 			EnableRetryButton = true;
 			RetryAction = DoAcceptCommand;

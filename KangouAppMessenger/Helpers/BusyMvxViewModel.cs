@@ -13,7 +13,7 @@ namespace KangouMessenger.Core
 
 	public abstract class BusyMvxViewModel : MvxViewModel
 	{
-		public void Init(BusyMvxViewModelParameters parameters){
+		public void Init(BusyMvxViewModelParameters parameters){			
 			Debug.WriteLine ("Init RemoveNextToLastViewModel: {0}", parameters.RemoveNextToLastViewModel);
 			RemoveNextToLastViewModel = parameters.RemoveNextToLastViewModel;
 			ItNeedsToBeRemoved = false;

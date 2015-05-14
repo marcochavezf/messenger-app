@@ -2,7 +2,7 @@ package cirrious.mvvmcross.binding.droid.views;
 
 
 public class MvxListItemView
-	extends cirrious.mvvmcross.binding.droid.views.MvxBaseListItemView
+	extends md53471cbf751f08dad2f5f63288aefa6f2.MvxBaseListItemView
 	implements
 		mono.android.IGCUserPeer
 {

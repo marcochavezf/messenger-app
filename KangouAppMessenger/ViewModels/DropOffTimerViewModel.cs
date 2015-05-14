@@ -13,6 +13,13 @@ namespace KangouMessenger.Core
 		public CountDownTimer CountDownTimer { get; set; }
 		
 		public DropOffTimerViewModel(bool removeNextToLastViewModel = true){
+
+			/* This is when the view is trying to open after a running out of memory */ 
+			if (String.IsNullOrEmpty (KangouData.Id)) {
+				Close(this);
+				return;
+			}
+
 			RemoveNextToLastViewModel = removeNextToLastViewModel;
 			
 			ConnectionManager.On (SocketEvents.HasDroppedOff, (data) => {
@@ -43,7 +50,7 @@ namespace KangouMessenger.Core
 				}
 			};
 
-			ConnectionManager.Instance.KangouData.AppView = "DropOffTimerView";
+			KangouData.AppView = "DropOffTimerView";
 
 			EnableRetryButton = true;
 			RetryAction = DoDroppedOffCommand;

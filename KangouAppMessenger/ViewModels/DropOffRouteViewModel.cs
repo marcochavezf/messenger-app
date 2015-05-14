@@ -12,6 +12,13 @@ namespace KangouMessenger.Core
     {
 		/* Constructor */
 		public DropOffRouteViewModel(bool removeNextToLastViewModel = true){
+
+			/* This is when the view is trying to open after a running out of memory */ 
+			if (String.IsNullOrEmpty (KangouData.Id)) {
+				Close(this);
+				return;
+			}
+
 			RemoveNextToLastViewModel = removeNextToLastViewModel;
 
 			ConnectionManager.On (SocketEvents.ArrivedToDropOff, (data) => {
@@ -24,7 +31,7 @@ namespace KangouMessenger.Core
 					ShowViewModel<DropOffTimerViewModel> (new BusyMvxViewModelParameters (){ RemoveNextToLastViewModel = true });
 				});
 			});
-			ConnectionManager.Instance.KangouData.AppView = "DropOffRouteView";
+			KangouData.AppView = "DropOffRouteView";
 
 			EnableRetryButton = true;
 			RetryAction = DoImHereCommand;

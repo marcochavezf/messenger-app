@@ -23,41 +23,26 @@ using Xamarin;
 
 namespace KangouMessenger.Droid
 {
-	[Activity(Label = "Ir a entregar", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
+	[Activity(Label = "Cargando...", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
 	public class DropOffRouteView : BusyMvxFragmentActivity
 	{
-		SupportMapFragment _mapFragment;
 		DropOffRouteViewModel _viewModel;
 
 		protected override void OnCreate(Bundle bundle)
 		{
+			/* Finish this view when it's trying to open after a running out of memory */ 
+			if (String.IsNullOrEmpty (KangouData.Id)) {
+				Finish ();
+				base.OnCreate (bundle);
+				return;
+			}
+
 			base.OnCreate(bundle);
 			SetContentView(Resource.Layout.DropOffRouteView);
-
-			_mapFragment = (SupportMapFragment)SupportFragmentManager.FindFragmentById(Resource.Id.map);
-			_mapFragment.Map.MyLocationEnabled = true;
 			_viewModel = (DropOffRouteViewModel)ViewModel;
 
-			//Setting origin and destiny directions
 			var dataOrder = DataOrderManager.Instance.DataOrder;
-			var origin = new LatLng (WaitingOrderView.CurrentLat, WaitingOrderView.CurrentLng);
 			var destiny = new LatLng (dataOrder.DropOffLat, dataOrder.DropOffLng);
-			
-			_mapFragment.Map.AddMarker (new MarkerOptions ().SetPosition (destiny));
-			DrawRoute(origin, destiny);
-
-			_mapFragment.Map.MyLocationButtonClick += (object sender, GoogleMap.MyLocationButtonClickEventArgs e) => {
-				DrawRoute(new LatLng (WaitingOrderView.CurrentLat, WaitingOrderView.CurrentLng), destiny);
-				e.Handled = false;
-			};
-
-			CameraPosition.Builder builder = CameraPosition.InvokeBuilder ();
-			builder.Target (origin);
-			builder.Zoom (14);
-			CameraPosition cameraPosition = builder.Build ();
-			CameraUpdate cameraUpdate = CameraUpdateFactory.NewCameraPosition (cameraPosition);
-			_mapFragment.Map.MoveCamera (cameraUpdate);
-
 			var addressTextView = FindViewById<TextView> (Resource.Id.address);
 			var referencesTextView = FindViewById<TextView> (Resource.Id.references);
 			var nameTextView = FindViewById<TextView> (Resource.Id.name);
@@ -84,9 +69,39 @@ namespace KangouMessenger.Droid
 				else
 					_viewModel.ImHereCommand.Execute(null);
 			};
+			SetTitle (Resource.String.titleDropOffRoute);
 		}
 
-		private void DrawRoute(LatLng origin, LatLng destiny){
+		protected override void OnResume ()
+		{
+			base.OnResume ();
+			SetUpMapIfNeeded (Resource.Id.map, (map)=>{
+
+				//Setting origin and destiny directions
+				var dataOrder = DataOrderManager.Instance.DataOrder;
+				var origin = new LatLng (WaitingOrderView.CurrentLat, WaitingOrderView.CurrentLng);
+				var destiny = new LatLng (dataOrder.DropOffLat, dataOrder.DropOffLng);
+				var builder = CameraPosition.InvokeBuilder ();
+				builder.Target (origin);
+				builder.Zoom (14);
+				var cameraPosition = builder.Build ();
+				var cameraUpdate = CameraUpdateFactory.NewCameraPosition (cameraPosition);
+
+				map.MyLocationEnabled = true;
+
+				map.AddMarker (new MarkerOptions ().SetPosition (destiny));
+				DrawRoute(map, origin, destiny);
+
+				map.MyLocationButtonClick += (object sender, GoogleMap.MyLocationButtonClickEventArgs e) => {
+					DrawRoute(map, new LatLng (WaitingOrderView.CurrentLat, WaitingOrderView.CurrentLng), destiny);
+					e.Handled = false;
+				};
+
+				map.MoveCamera (cameraUpdate);
+			});
+		}
+
+		private void DrawRoute(GoogleMap map, LatLng origin, LatLng destiny){
 			var url = String.Format("https://maps.googleapis.com/maps/api/directions/json?origin={0},{1}&destination={2},{3}&sensor=true",origin.Latitude,origin.Longitude,destiny.Latitude,destiny.Longitude);
 
 			ThreadPool.QueueUserWorkItem (o => {
@@ -105,7 +120,7 @@ namespace KangouMessenger.Droid
 
 					RunOnUiThread(() => {
 						try{
-							Android.Gms.Maps.Model.Polyline line = _mapFragment.Map.AddPolyline (new PolylineOptions ()
+							var line = map.AddPolyline (new PolylineOptions ()
 							.Geodesic (true)
 							.Add (Lines.ToArray ()));
 							line.Width = 5;

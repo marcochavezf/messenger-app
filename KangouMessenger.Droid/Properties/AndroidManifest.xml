@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.kangou.messenger.android" android:versionName="1.1.2" android:versionCode="14">
-	<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="21" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.kangou.messenger.android" android:versionName="1.2.0" android:versionCode="15">
+	<uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21" />
 	<application android:label="Kangou Mensajero" android:theme="@android:style/Theme.Holo.Light" android:icon="@drawable/icon">
-		<!-- Debug 
-		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyABL2Bgekp18DBhCEPu1>P_XPfibL4o13Q" / -->
+		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+		<!-- Debug
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyABL2Bgekp18DBhCEPu1nP_XPfibL4o13Q" /-->
 		<!-- Release -->
 		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyB2LQqZnCuHBRVOKK-Vjl7gpABIJ1ld9oo" />
 	</application>

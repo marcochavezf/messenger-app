@@ -8,20 +8,41 @@ using Android.Widget;
 using Android.Views.InputMethods;
 using Android.Content.PM;
 using System;
+using System.Threading;
+using System.Threading.Tasks;
+using Android.Gms.Maps;
+using Android.Locations;
+using Android.Provider;
 
 namespace KangouMessenger.Droid
 {
 	[Activity(Label = "Iniciar Sesión", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
     public class LoginView : BusyMvxActivity
     {
+		private LocationManager _locationManager;
+		private AlertDialog.Builder _openSettingsDialog;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
 			SetContentView(Resource.Layout.LoginView);
+			/*
+			Task.Run (() => {
+				try {
+					MapView mv = new MapView(this);
+					mv.OnCreate(null);
+					mv.OnPause();
+					mv.OnDestroy();
+				}catch (Exception ignored){
+
+				}
+			});
+			*/
 
 			/* Retrieving necesary data */
 			var viewModel = (LoginViewModel)ViewModel;
 			var loginButton = FindViewById<Button>(Resource.Id.loginButton);
+			var registerButton = FindViewById<Button>(Resource.Id.register);
 			var emailEditText = FindViewById<EditText> (Resource.Id.emailEditText);
 			var passwordEditText = FindViewById<EditText> (Resource.Id.passwordEditText);
 
@@ -42,9 +63,24 @@ namespace KangouMessenger.Droid
 				});
 			};
 
+			_locationManager = (LocationManager)GetSystemService(LocationService);
+
+			_openSettingsDialog = new AlertDialog.Builder (this);
+			_openSettingsDialog.SetTitle ("GPS no habilitado");
+			_openSettingsDialog.SetMessage ("Favor de encender el localizador GPS");
+			_openSettingsDialog.SetPositiveButton ("Aceptar", (object sender, DialogClickEventArgs args)=>{
+				Intent intent = new Intent(Settings.ActionLocationSourceSettings);
+				StartActivity(intent);
+			});
+
 			/* Verify data before to continue */
 			loginButton.Click += delegate
 			{
+				if(!_locationManager.IsProviderEnabled(LocationManager.GpsProvider)){
+					_openSettingsDialog.Show();
+					return;
+				}
+
 				var emailString = emailEditText.Text.ToString ().Trim ();
 				if (string.IsNullOrWhiteSpace(emailString) || !StringValidator.IsValidEmail (emailString)) {    
 					emailEditText.SetError ("Se requiere un email válido", Resources.GetDrawable (Resource.Drawable.ic_action_accept));
@@ -67,6 +103,11 @@ namespace KangouMessenger.Droid
 				viewModel.PushDeviceService = "GCM";
 
 				viewModel.LoginCommand.Execute(null);
+			};
+
+			registerButton.Click += delegate {
+				Intent browserIntent = new Intent(Intent.ActionView, Android.Net.Uri.Parse("https://registro.kangou.mx"));
+				StartActivity(browserIntent);
 			};
 
         }

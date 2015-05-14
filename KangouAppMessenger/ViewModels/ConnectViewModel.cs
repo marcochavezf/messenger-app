@@ -12,11 +12,9 @@ namespace KangouMessenger.Core
     public class ConnectViewModel 
 		: BusyMvxViewModel
     {
-		public void Init(KangouData kangouData)
+		public ConnectViewModel()
 		{
-			ConnectionManager.Instance.KangouData = kangouData;
-
-			ConnectionManager.Instance.KangouData.AppView = "ConnectView";
+			KangouData.AppView = "ConnectView";
 			EnableCancelButton = true;
 			CancelAction = DoCancelConnectCommand;
 		}
@@ -30,11 +28,11 @@ namespace KangouMessenger.Core
 		}
 		private void DoConnectCommand ()
 		{
-			ConnectionManager.ConnectionState = ConnectionStates.USER_WANTS_TO_BE_CONNECTED;
-			IsBusy = true;
-
-			System.Diagnostics.Debug.WriteLine ("ConnectAsync");
+			Debug.WriteLine ("ConnectAsync");
 			ConnectionManager.Connect();
+			ConnectionManager.ConnectionState = ConnectionStates.USER_WANTS_TO_BE_CONNECTED;
+
+			IsBusy = true;
 
 			ConnectionManager.Once(Socket.EVENT_CONNECT, (data) => {
 				Debug.WriteLine("Connected");
