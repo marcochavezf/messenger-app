@@ -18,6 +18,7 @@
 /Users/marcochavezf/Google Drive/messenger-app/packages/Xamarin.Android.Support.v4.22.1.1.1/lib/MonoAndroid403/Xamarin.Android.Support.v4.dll
 /Users/marcochavezf/Google Drive/messenger-app/packages/Xamarin.Android.Support.v7.AppCompat.22.1.1.1/lib/MonoAndroid403/Xamarin.Android.Support.v7.AppCompat.dll
 /Users/marcochavezf/Google Drive/messenger-app/packages/Xamarin.Android.Support.v7.MediaRouter.22.1.1.1/lib/MonoAndroid403/Xamarin.Android.Support.v7.MediaRouter.dll
+/Users/marcochavezf/Google Drive/messenger-app/packages/Xamarin.Facebook.4.0.1.1/lib/MonoAndroid40/Xamarin.Facebook.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Debug/KangouAppMessenger.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/Facades/System.Collections.Concurrent.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/Facades/System.Collections.dll

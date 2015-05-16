@@ -224,6 +224,9 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0100bb
 			public const int autoCompleteTextViewStyle = 2130772155;
 			
+			// aapt resource value: 0x7f0100ff
+			public const int auxiliary_view_position = 2130772223;
+			
 			// aapt resource value: 0x7f01001b
 			public const int background = 2130771995;
 			
@@ -344,6 +347,9 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f01004e
 			public const int commitIcon = 2130772046;
 			
+			// aapt resource value: 0x7f010101
+			public const int confirm_logout = 2130772225;
+			
 			// aapt resource value: 0x7f010026
 			public const int contentInsetEnd = 2130772006;
 			
@@ -416,6 +422,9 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f01000e
 			public const int externalRouteEnabledDrawable = 2130771982;
 			
+			// aapt resource value: 0x7f0100fb
+			public const int foreground_color = 2130772219;
+			
 			// aapt resource value: 0x7f0100ef
 			public const int fragmentMode = 2130772207;
 			
@@ -440,6 +449,9 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f01001f
 			public const int homeLayout = 2130771999;
 			
+			// aapt resource value: 0x7f010100
+			public const int horizontal_alignment = 2130772224;
+			
 			// aapt resource value: 0x7f010018
 			public const int icon = 2130771992;
 			
@@ -460,6 +472,9 @@ namespace KangouMessenger.Droid
 			
 			// aapt resource value: 0x7f010011
 			public const int isLightTheme = 2130771985;
+			
+			// aapt resource value: 0x7f010106
+			public const int is_cropped = 2130772230;
 			
 			// aapt resource value: 0x7f010023
 			public const int itemPadding = 2130772003;
@@ -500,8 +515,14 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0100e2
 			public const int liteMode = 2130772194;
 			
+			// aapt resource value: 0x7f010102
+			public const int login_text = 2130772226;
+			
 			// aapt resource value: 0x7f010019
 			public const int logo = 2130771993;
+			
+			// aapt resource value: 0x7f010103
+			public const int logout_text = 2130772227;
 			
 			// aapt resource value: 0x7f0100dc
 			public const int mapType = 2130772188;
@@ -569,6 +590,12 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f010013
 			public const int navigationMode = 2130771987;
 			
+			// aapt resource value: 0x7f0100fc
+			public const int object_id = 2130772220;
+			
+			// aapt resource value: 0x7f0100fd
+			public const int object_type = 2130772221;
+			
 			// aapt resource value: 0x7f010044
 			public const int overlapAnchor = 2130772036;
 			
@@ -601,6 +628,9 @@ namespace KangouMessenger.Droid
 			
 			// aapt resource value: 0x7f010043
 			public const int preserveIconSpacing = 2130772035;
+			
+			// aapt resource value: 0x7f010105
+			public const int preset_size = 2130772229;
 			
 			// aapt resource value: 0x7f010022
 			public const int progressBarPadding = 2130772002;
@@ -667,6 +697,9 @@ namespace KangouMessenger.Droid
 			
 			// aapt resource value: 0x7f010045
 			public const int state_above_anchor = 2130772037;
+			
+			// aapt resource value: 0x7f0100fe
+			public const int style = 2130772222;
 			
 			// aapt resource value: 0x7f010051
 			public const int submitBackground = 2130772049;
@@ -760,6 +793,9 @@ namespace KangouMessenger.Droid
 			
 			// aapt resource value: 0x7f010094
 			public const int toolbarStyle = 2130772116;
+			
+			// aapt resource value: 0x7f010104
+			public const int tooltip_mode = 2130772228;
 			
 			// aapt resource value: 0x7f010038
 			public const int topBottomBarArrowSize = 2130772024;
@@ -874,29 +910,29 @@ namespace KangouMessenger.Droid
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f0b004a
-			public const int abc_background_cache_hint_selector_material_dark = 2131427402;
+			// aapt resource value: 0x7f0b0057
+			public const int abc_background_cache_hint_selector_material_dark = 2131427415;
 			
-			// aapt resource value: 0x7f0b004b
-			public const int abc_background_cache_hint_selector_material_light = 2131427403;
+			// aapt resource value: 0x7f0b0058
+			public const int abc_background_cache_hint_selector_material_light = 2131427416;
 			
 			// aapt resource value: 0x7f0b0000
 			public const int abc_input_method_navigation_guard = 2131427328;
 			
-			// aapt resource value: 0x7f0b004c
-			public const int abc_primary_text_disable_only_material_dark = 2131427404;
+			// aapt resource value: 0x7f0b0059
+			public const int abc_primary_text_disable_only_material_dark = 2131427417;
 			
-			// aapt resource value: 0x7f0b004d
-			public const int abc_primary_text_disable_only_material_light = 2131427405;
+			// aapt resource value: 0x7f0b005a
+			public const int abc_primary_text_disable_only_material_light = 2131427418;
 			
-			// aapt resource value: 0x7f0b004e
-			public const int abc_primary_text_material_dark = 2131427406;
+			// aapt resource value: 0x7f0b005b
+			public const int abc_primary_text_material_dark = 2131427419;
 			
-			// aapt resource value: 0x7f0b004f
-			public const int abc_primary_text_material_light = 2131427407;
+			// aapt resource value: 0x7f0b005c
+			public const int abc_primary_text_material_light = 2131427420;
 			
-			// aapt resource value: 0x7f0b0050
-			public const int abc_search_url_text = 2131427408;
+			// aapt resource value: 0x7f0b005d
+			public const int abc_search_url_text = 2131427421;
 			
 			// aapt resource value: 0x7f0b0001
 			public const int abc_search_url_text_normal = 2131427329;
@@ -907,11 +943,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0b0003
 			public const int abc_search_url_text_selected = 2131427331;
 			
-			// aapt resource value: 0x7f0b0051
-			public const int abc_secondary_text_material_dark = 2131427409;
+			// aapt resource value: 0x7f0b005e
+			public const int abc_secondary_text_material_dark = 2131427422;
 			
-			// aapt resource value: 0x7f0b0052
-			public const int abc_secondary_text_material_light = 2131427410;
+			// aapt resource value: 0x7f0b005f
+			public const int abc_secondary_text_material_light = 2131427423;
 			
 			// aapt resource value: 0x7f0b0004
 			public const int accent_material_dark = 2131427332;
@@ -955,6 +991,45 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0b0011
 			public const int button_material_light = 2131427345;
 			
+			// aapt resource value: 0x7f0b004a
+			public const int com_facebook_blue = 2131427402;
+			
+			// aapt resource value: 0x7f0b004b
+			public const int com_facebook_button_background_color = 2131427403;
+			
+			// aapt resource value: 0x7f0b004c
+			public const int com_facebook_button_background_color_disabled = 2131427404;
+			
+			// aapt resource value: 0x7f0b004d
+			public const int com_facebook_button_background_color_pressed = 2131427405;
+			
+			// aapt resource value: 0x7f0b004e
+			public const int com_facebook_button_like_background_color_selected = 2131427406;
+			
+			// aapt resource value: 0x7f0b004f
+			public const int com_facebook_button_login_silver_background_color = 2131427407;
+			
+			// aapt resource value: 0x7f0b0050
+			public const int com_facebook_button_login_silver_background_color_pressed = 2131427408;
+			
+			// aapt resource value: 0x7f0b0051
+			public const int com_facebook_button_send_background_color = 2131427409;
+			
+			// aapt resource value: 0x7f0b0052
+			public const int com_facebook_button_send_background_color_pressed = 2131427410;
+			
+			// aapt resource value: 0x7f0b0053
+			public const int com_facebook_likeboxcountview_border_color = 2131427411;
+			
+			// aapt resource value: 0x7f0b0054
+			public const int com_facebook_likeboxcountview_text_color = 2131427412;
+			
+			// aapt resource value: 0x7f0b0055
+			public const int com_facebook_likeview_text_color = 2131427413;
+			
+			// aapt resource value: 0x7f0b0056
+			public const int com_facebook_share_button_text_color = 2131427414;
+			
 			// aapt resource value: 0x7f0b003c
 			public const int common_action_bar_splitter = 2131427388;
 			
@@ -985,11 +1060,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0b0038
 			public const int common_signin_btn_light_text_pressed = 2131427384;
 			
-			// aapt resource value: 0x7f0b0053
-			public const int common_signin_btn_text_dark = 2131427411;
+			// aapt resource value: 0x7f0b0060
+			public const int common_signin_btn_text_dark = 2131427424;
 			
-			// aapt resource value: 0x7f0b0054
-			public const int common_signin_btn_text_light = 2131427412;
+			// aapt resource value: 0x7f0b0061
+			public const int common_signin_btn_text_light = 2131427425;
 			
 			// aapt resource value: 0x7f0b0012
 			public const int dim_foreground_disabled_material_dark = 2131427346;
@@ -1084,11 +1159,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0b0030
 			public const int switch_thumb_disabled_material_light = 2131427376;
 			
-			// aapt resource value: 0x7f0b0055
-			public const int switch_thumb_material_dark = 2131427413;
+			// aapt resource value: 0x7f0b0062
+			public const int switch_thumb_material_dark = 2131427426;
 			
-			// aapt resource value: 0x7f0b0056
-			public const int switch_thumb_material_light = 2131427414;
+			// aapt resource value: 0x7f0b0063
+			public const int switch_thumb_material_light = 2131427427;
 			
 			// aapt resource value: 0x7f0b0031
 			public const int switch_thumb_normal_material_dark = 2131427377;
@@ -1135,11 +1210,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0b0049
 			public const int wallet_link_text_light = 2131427401;
 			
-			// aapt resource value: 0x7f0b0057
-			public const int wallet_primary_text_holo_light = 2131427415;
+			// aapt resource value: 0x7f0b0064
+			public const int wallet_primary_text_holo_light = 2131427428;
 			
-			// aapt resource value: 0x7f0b0058
-			public const int wallet_secondary_text_holo_dark = 2131427416;
+			// aapt resource value: 0x7f0b0065
+			public const int wallet_secondary_text_holo_dark = 2131427429;
 			
 			static Color()
 			{
@@ -1333,6 +1408,63 @@ namespace KangouMessenger.Droid
 			
 			// aapt resource value: 0x7f09003c
 			public const int abc_text_size_title_material_toolbar = 2131296316;
+			
+			// aapt resource value: 0x7f090043
+			public const int com_facebook_likeboxcountview_border_radius = 2131296323;
+			
+			// aapt resource value: 0x7f090044
+			public const int com_facebook_likeboxcountview_border_width = 2131296324;
+			
+			// aapt resource value: 0x7f090045
+			public const int com_facebook_likeboxcountview_caret_height = 2131296325;
+			
+			// aapt resource value: 0x7f090046
+			public const int com_facebook_likeboxcountview_caret_width = 2131296326;
+			
+			// aapt resource value: 0x7f090047
+			public const int com_facebook_likeboxcountview_text_padding = 2131296327;
+			
+			// aapt resource value: 0x7f090048
+			public const int com_facebook_likeboxcountview_text_size = 2131296328;
+			
+			// aapt resource value: 0x7f090049
+			public const int com_facebook_likeview_edge_padding = 2131296329;
+			
+			// aapt resource value: 0x7f09004a
+			public const int com_facebook_likeview_internal_padding = 2131296330;
+			
+			// aapt resource value: 0x7f09004b
+			public const int com_facebook_likeview_text_size = 2131296331;
+			
+			// aapt resource value: 0x7f09004c
+			public const int com_facebook_profilepictureview_preset_size_large = 2131296332;
+			
+			// aapt resource value: 0x7f09004d
+			public const int com_facebook_profilepictureview_preset_size_normal = 2131296333;
+			
+			// aapt resource value: 0x7f09004e
+			public const int com_facebook_profilepictureview_preset_size_small = 2131296334;
+			
+			// aapt resource value: 0x7f09004f
+			public const int com_facebook_share_button_compound_drawable_padding = 2131296335;
+			
+			// aapt resource value: 0x7f090050
+			public const int com_facebook_share_button_padding_bottom = 2131296336;
+			
+			// aapt resource value: 0x7f090051
+			public const int com_facebook_share_button_padding_left = 2131296337;
+			
+			// aapt resource value: 0x7f090052
+			public const int com_facebook_share_button_padding_right = 2131296338;
+			
+			// aapt resource value: 0x7f090053
+			public const int com_facebook_share_button_padding_top = 2131296339;
+			
+			// aapt resource value: 0x7f090054
+			public const int com_facebook_share_button_text_size = 2131296340;
+			
+			// aapt resource value: 0x7f090055
+			public const int com_facebook_tooltip_horizontal_padding = 2131296341;
 			
 			// aapt resource value: 0x7f09003d
 			public const int dialog_fixed_height_major = 2131296317;
@@ -1549,220 +1681,301 @@ namespace KangouMessenger.Droid
 			public const int big_icon = 2130837563;
 			
 			// aapt resource value: 0x7f02003c
-			public const int common_full_open_on_phone = 2130837564;
+			public const int com_facebook_button_background = 2130837564;
 			
 			// aapt resource value: 0x7f02003d
-			public const int common_ic_googleplayservices = 2130837565;
+			public const int com_facebook_button_icon = 2130837565;
 			
 			// aapt resource value: 0x7f02003e
-			public const int common_signin_btn_icon_dark = 2130837566;
+			public const int com_facebook_button_like_background = 2130837566;
 			
 			// aapt resource value: 0x7f02003f
-			public const int common_signin_btn_icon_disabled_dark = 2130837567;
+			public const int com_facebook_button_like_icon_selected = 2130837567;
 			
 			// aapt resource value: 0x7f020040
-			public const int common_signin_btn_icon_disabled_focus_dark = 2130837568;
+			public const int com_facebook_button_login_silver_background = 2130837568;
 			
 			// aapt resource value: 0x7f020041
-			public const int common_signin_btn_icon_disabled_focus_light = 2130837569;
+			public const int com_facebook_button_send_background = 2130837569;
 			
 			// aapt resource value: 0x7f020042
-			public const int common_signin_btn_icon_disabled_light = 2130837570;
+			public const int com_facebook_button_send_icon = 2130837570;
 			
 			// aapt resource value: 0x7f020043
-			public const int common_signin_btn_icon_focus_dark = 2130837571;
+			public const int com_facebook_close = 2130837571;
 			
 			// aapt resource value: 0x7f020044
-			public const int common_signin_btn_icon_focus_light = 2130837572;
+			public const int com_facebook_profile_picture_blank_portrait = 2130837572;
 			
 			// aapt resource value: 0x7f020045
-			public const int common_signin_btn_icon_light = 2130837573;
+			public const int com_facebook_profile_picture_blank_square = 2130837573;
 			
 			// aapt resource value: 0x7f020046
-			public const int common_signin_btn_icon_normal_dark = 2130837574;
+			public const int com_facebook_tooltip_black_background = 2130837574;
 			
 			// aapt resource value: 0x7f020047
-			public const int common_signin_btn_icon_normal_light = 2130837575;
+			public const int com_facebook_tooltip_black_bottomnub = 2130837575;
 			
 			// aapt resource value: 0x7f020048
-			public const int common_signin_btn_icon_pressed_dark = 2130837576;
+			public const int com_facebook_tooltip_black_topnub = 2130837576;
 			
 			// aapt resource value: 0x7f020049
-			public const int common_signin_btn_icon_pressed_light = 2130837577;
+			public const int com_facebook_tooltip_black_xout = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int common_signin_btn_text_dark = 2130837578;
+			public const int com_facebook_tooltip_blue_background = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int common_signin_btn_text_disabled_dark = 2130837579;
+			public const int com_facebook_tooltip_blue_bottomnub = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
-			public const int common_signin_btn_text_disabled_focus_dark = 2130837580;
+			public const int com_facebook_tooltip_blue_topnub = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int common_signin_btn_text_disabled_focus_light = 2130837581;
+			public const int com_facebook_tooltip_blue_xout = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int common_signin_btn_text_disabled_light = 2130837582;
+			public const int common_full_open_on_phone = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int common_signin_btn_text_focus_dark = 2130837583;
+			public const int common_ic_googleplayservices = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int common_signin_btn_text_focus_light = 2130837584;
+			public const int common_signin_btn_icon_dark = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int common_signin_btn_text_light = 2130837585;
+			public const int common_signin_btn_icon_disabled_dark = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int common_signin_btn_text_normal_dark = 2130837586;
+			public const int common_signin_btn_icon_disabled_focus_dark = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int common_signin_btn_text_normal_light = 2130837587;
+			public const int common_signin_btn_icon_disabled_focus_light = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int common_signin_btn_text_pressed_dark = 2130837588;
+			public const int common_signin_btn_icon_disabled_light = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int common_signin_btn_text_pressed_light = 2130837589;
+			public const int common_signin_btn_icon_focus_dark = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int ic_action_accept = 2130837590;
+			public const int common_signin_btn_icon_focus_light = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int ic_cast_dark = 2130837591;
+			public const int common_signin_btn_icon_light = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int ic_cast_disabled_light = 2130837592;
+			public const int common_signin_btn_icon_normal_dark = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int ic_cast_light = 2130837593;
+			public const int common_signin_btn_icon_normal_light = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int ic_cast_off_light = 2130837594;
+			public const int common_signin_btn_icon_pressed_dark = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int ic_cast_on_0_light = 2130837595;
+			public const int common_signin_btn_icon_pressed_light = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int ic_cast_on_1_light = 2130837596;
+			public const int common_signin_btn_text_dark = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int ic_cast_on_2_light = 2130837597;
+			public const int common_signin_btn_text_disabled_dark = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int ic_cast_on_light = 2130837598;
+			public const int common_signin_btn_text_disabled_focus_dark = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int ic_marker = 2130837599;
+			public const int common_signin_btn_text_disabled_focus_light = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int ic_media_pause = 2130837600;
+			public const int common_signin_btn_text_disabled_light = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int ic_media_play = 2130837601;
+			public const int common_signin_btn_text_focus_dark = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int ic_media_route_disabled_mono_dark = 2130837602;
+			public const int common_signin_btn_text_focus_light = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int ic_media_route_off_mono_dark = 2130837603;
+			public const int common_signin_btn_text_light = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int ic_media_route_on_0_mono_dark = 2130837604;
+			public const int common_signin_btn_text_normal_dark = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int ic_media_route_on_1_mono_dark = 2130837605;
+			public const int common_signin_btn_text_normal_light = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int ic_media_route_on_2_mono_dark = 2130837606;
+			public const int common_signin_btn_text_pressed_dark = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int ic_media_route_on_mono_dark = 2130837607;
+			public const int common_signin_btn_text_pressed_light = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int ic_menu_refresh = 2130837608;
+			public const int ic_action_accept = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int ic_pause_dark = 2130837609;
+			public const int ic_cast_dark = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int ic_pause_light = 2130837610;
+			public const int ic_cast_disabled_light = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int ic_play_dark = 2130837611;
+			public const int ic_cast_light = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int ic_play_light = 2130837612;
+			public const int ic_cast_off_light = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int ic_plusone_medium_off_client = 2130837613;
+			public const int ic_cast_on_0_light = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int ic_plusone_small_off_client = 2130837614;
+			public const int ic_cast_on_1_light = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int ic_plusone_standard_off_client = 2130837615;
+			public const int ic_cast_on_2_light = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int ic_plusone_tall_off_client = 2130837616;
+			public const int ic_cast_on_light = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int ic_setting_dark = 2130837617;
+			public const int ic_marker = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int ic_setting_light = 2130837618;
+			public const int ic_media_pause = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int Icon = 2130837619;
+			public const int ic_media_play = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int mr_ic_audio_vol = 2130837620;
+			public const int ic_media_route_disabled_mono_dark = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int mr_ic_media_route_connecting_mono_dark = 2130837621;
+			public const int ic_media_route_off_mono_dark = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int mr_ic_media_route_connecting_mono_light = 2130837622;
+			public const int ic_media_route_on_0_mono_dark = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int mr_ic_media_route_mono_dark = 2130837623;
+			public const int ic_media_route_on_1_mono_dark = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int mr_ic_media_route_mono_light = 2130837624;
+			public const int ic_media_route_on_2_mono_dark = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int mr_ic_pause_dark = 2130837625;
+			public const int ic_media_route_on_mono_dark = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int mr_ic_pause_light = 2130837626;
+			public const int ic_menu_refresh = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int mr_ic_play_dark = 2130837627;
+			public const int ic_pause_dark = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int mr_ic_play_light = 2130837628;
+			public const int ic_pause_light = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int mr_ic_settings_dark = 2130837629;
+			public const int ic_play_dark = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int mr_ic_settings_light = 2130837630;
+			public const int ic_play_light = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int powered_by_google_dark = 2130837631;
+			public const int ic_plusone_medium_off_client = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int powered_by_google_light = 2130837632;
+			public const int ic_plusone_small_off_client = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int splash = 2130837633;
+			public const int ic_plusone_standard_off_client = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int starReviewOff = 2130837634;
+			public const int ic_plusone_tall_off_client = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int starReviewOn = 2130837635;
+			public const int ic_setting_dark = 2130837635;
+			
+			// aapt resource value: 0x7f020084
+			public const int ic_setting_light = 2130837636;
+			
+			// aapt resource value: 0x7f020085
+			public const int Icon = 2130837637;
+			
+			// aapt resource value: 0x7f020086
+			public const int messenger_bubble_large_blue = 2130837638;
+			
+			// aapt resource value: 0x7f020087
+			public const int messenger_bubble_large_white = 2130837639;
+			
+			// aapt resource value: 0x7f020088
+			public const int messenger_bubble_small_blue = 2130837640;
+			
+			// aapt resource value: 0x7f020089
+			public const int messenger_bubble_small_white = 2130837641;
+			
+			// aapt resource value: 0x7f02008a
+			public const int messenger_button_blue_bg_round = 2130837642;
+			
+			// aapt resource value: 0x7f02008b
+			public const int messenger_button_blue_bg_selector = 2130837643;
+			
+			// aapt resource value: 0x7f02008c
+			public const int messenger_button_send_round_shadow = 2130837644;
+			
+			// aapt resource value: 0x7f02008d
+			public const int messenger_button_white_bg_round = 2130837645;
+			
+			// aapt resource value: 0x7f02008e
+			public const int messenger_button_white_bg_selector = 2130837646;
+			
+			// aapt resource value: 0x7f02008f
+			public const int mr_ic_audio_vol = 2130837647;
+			
+			// aapt resource value: 0x7f020090
+			public const int mr_ic_media_route_connecting_mono_dark = 2130837648;
+			
+			// aapt resource value: 0x7f020091
+			public const int mr_ic_media_route_connecting_mono_light = 2130837649;
+			
+			// aapt resource value: 0x7f020092
+			public const int mr_ic_media_route_mono_dark = 2130837650;
+			
+			// aapt resource value: 0x7f020093
+			public const int mr_ic_media_route_mono_light = 2130837651;
+			
+			// aapt resource value: 0x7f020094
+			public const int mr_ic_pause_dark = 2130837652;
+			
+			// aapt resource value: 0x7f020095
+			public const int mr_ic_pause_light = 2130837653;
+			
+			// aapt resource value: 0x7f020096
+			public const int mr_ic_play_dark = 2130837654;
+			
+			// aapt resource value: 0x7f020097
+			public const int mr_ic_play_light = 2130837655;
+			
+			// aapt resource value: 0x7f020098
+			public const int mr_ic_settings_dark = 2130837656;
+			
+			// aapt resource value: 0x7f020099
+			public const int mr_ic_settings_light = 2130837657;
+			
+			// aapt resource value: 0x7f02009a
+			public const int powered_by_google_dark = 2130837658;
+			
+			// aapt resource value: 0x7f02009b
+			public const int powered_by_google_light = 2130837659;
+			
+			// aapt resource value: 0x7f02009c
+			public const int splash = 2130837660;
+			
+			// aapt resource value: 0x7f02009d
+			public const int starReviewOff = 2130837661;
+			
+			// aapt resource value: 0x7f02009e
+			public const int starReviewOn = 2130837662;
 			
 			static Drawable()
 			{
@@ -1780,32 +1993,32 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f060000
 			public const int MvxBindingTagUnique = 2131099648;
 			
-			// aapt resource value: 0x7f060093
-			public const int acceptButton = 2131099795;
+			// aapt resource value: 0x7f0600ad
+			public const int acceptButton = 2131099821;
 			
-			// aapt resource value: 0x7f060055
-			public const int action_bar = 2131099733;
+			// aapt resource value: 0x7f060066
+			public const int action_bar = 2131099750;
 			
 			// aapt resource value: 0x7f060001
 			public const int action_bar_activity_content = 2131099649;
 			
-			// aapt resource value: 0x7f060054
-			public const int action_bar_container = 2131099732;
+			// aapt resource value: 0x7f060065
+			public const int action_bar_container = 2131099749;
 			
-			// aapt resource value: 0x7f060050
-			public const int action_bar_root = 2131099728;
+			// aapt resource value: 0x7f060061
+			public const int action_bar_root = 2131099745;
 			
 			// aapt resource value: 0x7f060002
 			public const int action_bar_spinner = 2131099650;
 			
-			// aapt resource value: 0x7f060039
-			public const int action_bar_subtitle = 2131099705;
+			// aapt resource value: 0x7f06004a
+			public const int action_bar_subtitle = 2131099722;
 			
-			// aapt resource value: 0x7f060038
-			public const int action_bar_title = 2131099704;
+			// aapt resource value: 0x7f060049
+			public const int action_bar_title = 2131099721;
 			
-			// aapt resource value: 0x7f060056
-			public const int action_context_bar = 2131099734;
+			// aapt resource value: 0x7f060067
+			public const int action_context_bar = 2131099751;
 			
 			// aapt resource value: 0x7f060003
 			public const int action_menu_divider = 2131099651;
@@ -1813,20 +2026,20 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f060004
 			public const int action_menu_presenter = 2131099652;
 			
-			// aapt resource value: 0x7f060052
-			public const int action_mode_bar = 2131099730;
+			// aapt resource value: 0x7f060063
+			public const int action_mode_bar = 2131099747;
 			
-			// aapt resource value: 0x7f060051
-			public const int action_mode_bar_stub = 2131099729;
+			// aapt resource value: 0x7f060062
+			public const int action_mode_bar_stub = 2131099746;
 			
-			// aapt resource value: 0x7f06003a
-			public const int action_mode_close_button = 2131099706;
+			// aapt resource value: 0x7f06004b
+			public const int action_mode_close_button = 2131099723;
 			
-			// aapt resource value: 0x7f06003b
-			public const int activity_chooser_view_content = 2131099707;
+			// aapt resource value: 0x7f06004c
+			public const int activity_chooser_view_content = 2131099724;
 			
-			// aapt resource value: 0x7f06006b
-			public const int address = 2131099755;
+			// aapt resource value: 0x7f060083
+			public const int address = 2131099779;
 			
 			// aapt resource value: 0x7f060024
 			public const int adjust_height = 2131099684;
@@ -1834,14 +2047,17 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f060025
 			public const int adjust_width = 2131099685;
 			
-			// aapt resource value: 0x7f060045
-			public const int alertTitle = 2131099717;
+			// aapt resource value: 0x7f060056
+			public const int alertTitle = 2131099734;
 			
 			// aapt resource value: 0x7f060017
 			public const int always = 2131099671;
 			
-			// aapt resource value: 0x7f060084
-			public const int art = 2131099780;
+			// aapt resource value: 0x7f06009e
+			public const int art = 2131099806;
+			
+			// aapt resource value: 0x7f060044
+			public const int automatic = 2131099716;
 			
 			// aapt resource value: 0x7f060014
 			public const int beginning = 2131099668;
@@ -1849,11 +2065,20 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f060031
 			public const int book_now = 2131099697;
 			
-			// aapt resource value: 0x7f06004b
-			public const int buttonPanel = 2131099723;
+			// aapt resource value: 0x7f06003e
+			public const int bottom = 2131099710;
 			
-			// aapt resource value: 0x7f060088
-			public const int buttons = 2131099784;
+			// aapt resource value: 0x7f06003b
+			public const int box_count = 2131099707;
+			
+			// aapt resource value: 0x7f06003c
+			public const int button = 2131099708;
+			
+			// aapt resource value: 0x7f06005c
+			public const int buttonPanel = 2131099740;
+			
+			// aapt resource value: 0x7f0600a2
+			public const int buttons = 2131099810;
 			
 			// aapt resource value: 0x7f06002e
 			public const int buyButton = 2131099694;
@@ -1864,56 +2089,80 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f060033
 			public const int buy_with_google = 2131099699;
 			
-			// aapt resource value: 0x7f060071
-			public const int callToCustomer = 2131099761;
+			// aapt resource value: 0x7f060089
+			public const int callToCustomer = 2131099785;
 			
-			// aapt resource value: 0x7f060092
-			public const int cancelButton = 2131099794;
+			// aapt resource value: 0x7f0600ac
+			public const int cancelButton = 2131099820;
 			
-			// aapt resource value: 0x7f060067
-			public const int canvasSignature = 2131099751;
+			// aapt resource value: 0x7f060078
+			public const int canvasSignature = 2131099768;
 			
-			// aapt resource value: 0x7f06004d
-			public const int checkbox = 2131099725;
+			// aapt resource value: 0x7f060041
+			public const int center = 2131099713;
+			
+			// aapt resource value: 0x7f06005e
+			public const int checkbox = 2131099742;
 			
 			// aapt resource value: 0x7f060035
 			public const int classic = 2131099701;
 			
-			// aapt resource value: 0x7f060066
-			public const int clean = 2131099750;
+			// aapt resource value: 0x7f060077
+			public const int clean = 2131099767;
 			
-			// aapt resource value: 0x7f060075
-			public const int clientName = 2131099765;
+			// aapt resource value: 0x7f06008d
+			public const int clientName = 2131099789;
 			
-			// aapt resource value: 0x7f060076
-			public const int clientPhoneNumber = 2131099766;
+			// aapt resource value: 0x7f06008e
+			public const int clientPhoneNumber = 2131099790;
 			
 			// aapt resource value: 0x7f060018
 			public const int collapseActionView = 2131099672;
 			
-			// aapt resource value: 0x7f060094
-			public const int comments = 2131099796;
+			// aapt resource value: 0x7f06007b
+			public const int com_facebook_body_frame = 2131099771;
 			
-			// aapt resource value: 0x7f060068
-			public const int connectButton = 2131099752;
+			// aapt resource value: 0x7f06007d
+			public const int com_facebook_button_xout = 2131099773;
 			
-			// aapt resource value: 0x7f060046
-			public const int contentPanel = 2131099718;
+			// aapt resource value: 0x7f060079
+			public const int com_facebook_fragment_container = 2131099769;
 			
-			// aapt resource value: 0x7f06004a
-			public const int custom = 2131099722;
+			// aapt resource value: 0x7f06007a
+			public const int com_facebook_login_activity_progress_bar = 2131099770;
 			
-			// aapt resource value: 0x7f060049
-			public const int customPanel = 2131099721;
+			// aapt resource value: 0x7f06007f
+			public const int com_facebook_tooltip_bubble_view_bottom_pointer = 2131099775;
 			
-			// aapt resource value: 0x7f060053
-			public const int decor_content_parent = 2131099731;
+			// aapt resource value: 0x7f06007e
+			public const int com_facebook_tooltip_bubble_view_text_body = 2131099774;
 			
-			// aapt resource value: 0x7f06003e
-			public const int default_activity_button = 2131099710;
+			// aapt resource value: 0x7f06007c
+			public const int com_facebook_tooltip_bubble_view_top_pointer = 2131099772;
 			
-			// aapt resource value: 0x7f060083
-			public const int default_control_frame = 2131099779;
+			// aapt resource value: 0x7f0600ae
+			public const int comments = 2131099822;
+			
+			// aapt resource value: 0x7f060080
+			public const int connectButton = 2131099776;
+			
+			// aapt resource value: 0x7f060057
+			public const int contentPanel = 2131099735;
+			
+			// aapt resource value: 0x7f06005b
+			public const int custom = 2131099739;
+			
+			// aapt resource value: 0x7f06005a
+			public const int customPanel = 2131099738;
+			
+			// aapt resource value: 0x7f060064
+			public const int decor_content_parent = 2131099748;
+			
+			// aapt resource value: 0x7f06004f
+			public const int default_activity_button = 2131099727;
+			
+			// aapt resource value: 0x7f06009d
+			public const int default_control_frame = 2131099805;
 			
 			// aapt resource value: 0x7f06001c
 			public const int dialog = 2131099676;
@@ -1921,11 +2170,14 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f06000d
 			public const int disableHome = 2131099661;
 			
-			// aapt resource value: 0x7f060089
-			public const int disconnect = 2131099785;
+			// aapt resource value: 0x7f0600a3
+			public const int disconnect = 2131099811;
 			
-			// aapt resource value: 0x7f06009c
-			public const int disconnectButton = 2131099804;
+			// aapt resource value: 0x7f0600b6
+			public const int disconnectButton = 2131099830;
+			
+			// aapt resource value: 0x7f060045
+			public const int display_always = 2131099717;
 			
 			// aapt resource value: 0x7f060034
 			public const int donate_with_google = 2131099700;
@@ -1933,35 +2185,32 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f06001d
 			public const int dropdown = 2131099677;
 			
-			// aapt resource value: 0x7f060057
-			public const int edit_query = 2131099735;
+			// aapt resource value: 0x7f060068
+			public const int edit_query = 2131099752;
 			
-			// aapt resource value: 0x7f060090
-			public const int email = 2131099792;
-			
-			// aapt resource value: 0x7f060078
-			public const int emailEditText = 2131099768;
+			// aapt resource value: 0x7f0600aa
+			public const int email = 2131099818;
 			
 			// aapt resource value: 0x7f060015
 			public const int end = 2131099669;
 			
-			// aapt resource value: 0x7f06003c
-			public const int expand_activities_button = 2131099708;
+			// aapt resource value: 0x7f06004d
+			public const int expand_activities_button = 2131099725;
 			
-			// aapt resource value: 0x7f06004c
-			public const int expanded_menu = 2131099724;
+			// aapt resource value: 0x7f06005d
+			public const int expanded_menu = 2131099741;
 			
-			// aapt resource value: 0x7f06008c
-			public const int from = 2131099788;
+			// aapt resource value: 0x7f0600a6
+			public const int from = 2131099814;
 			
-			// aapt resource value: 0x7f06008d
-			public const int fromAddress = 2131099789;
+			// aapt resource value: 0x7f0600a7
+			public const int fromAddress = 2131099815;
 			
 			// aapt resource value: 0x7f060036
 			public const int grayscale = 2131099702;
 			
-			// aapt resource value: 0x7f06006e
-			public const int helpButton = 2131099758;
+			// aapt resource value: 0x7f060086
+			public const int helpButton = 2131099782;
 			
 			// aapt resource value: 0x7f060029
 			public const int holo_dark = 2131099689;
@@ -1978,59 +2227,74 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f060026
 			public const int hybrid = 2131099686;
 			
-			// aapt resource value: 0x7f060040
-			public const int icon = 2131099712;
+			// aapt resource value: 0x7f060051
+			public const int icon = 2131099729;
 			
 			// aapt resource value: 0x7f060019
 			public const int ifRoom = 2131099673;
 			
-			// aapt resource value: 0x7f06006f
-			public const int imHereButton = 2131099759;
+			// aapt resource value: 0x7f060087
+			public const int imHereButton = 2131099783;
 			
-			// aapt resource value: 0x7f06003d
-			public const int image = 2131099709;
+			// aapt resource value: 0x7f06004e
+			public const int image = 2131099726;
 			
-			// aapt resource value: 0x7f06007b
-			public const int infoPasswordA = 2131099771;
+			// aapt resource value: 0x7f060093
+			public const int infoPasswordA = 2131099795;
 			
-			// aapt resource value: 0x7f06007d
-			public const int infoPasswordB = 2131099773;
+			// aapt resource value: 0x7f060095
+			public const int infoPasswordB = 2131099797;
 			
-			// aapt resource value: 0x7f060064
-			public const int instructions = 2131099748;
+			// aapt resource value: 0x7f06003f
+			public const int inline = 2131099711;
 			
-			// aapt resource value: 0x7f06008b
-			public const int items = 2131099787;
+			// aapt resource value: 0x7f060075
+			public const int instructions = 2131099765;
 			
-			// aapt resource value: 0x7f060077
-			public const int labelHelp = 2131099767;
+			// aapt resource value: 0x7f0600a5
+			public const int items = 2131099813;
 			
-			// aapt resource value: 0x7f06006a
-			public const int linearLayout4 = 2131099754;
+			// aapt resource value: 0x7f06008f
+			public const int labelHelp = 2131099791;
+			
+			// aapt resource value: 0x7f060047
+			public const int large = 2131099719;
+			
+			// aapt resource value: 0x7f060042
+			public const int left = 2131099714;
+			
+			// aapt resource value: 0x7f060082
+			public const int linearLayout4 = 2131099778;
 			
 			// aapt resource value: 0x7f06000a
 			public const int listMode = 2131099658;
 			
-			// aapt resource value: 0x7f06003f
-			public const int list_item = 2131099711;
+			// aapt resource value: 0x7f060050
+			public const int list_item = 2131099728;
 			
-			// aapt resource value: 0x7f06007a
-			public const int loginButton = 2131099770;
+			// aapt resource value: 0x7f060096
+			public const int loginButton = 2131099798;
 			
-			// aapt resource value: 0x7f060070
-			public const int map = 2131099760;
+			// aapt resource value: 0x7f060090
+			public const int logoutButton = 2131099792;
 			
-			// aapt resource value: 0x7f06009d
-			public const int map_layout = 2131099805;
+			// aapt resource value: 0x7f060088
+			public const int map = 2131099784;
+			
+			// aapt resource value: 0x7f0600b7
+			public const int map_layout = 2131099831;
 			
 			// aapt resource value: 0x7f060030
 			public const int match_parent = 2131099696;
 			
-			// aapt resource value: 0x7f060082
-			public const int media_route_control_frame = 2131099778;
+			// aapt resource value: 0x7f06009c
+			public const int media_route_control_frame = 2131099804;
 			
-			// aapt resource value: 0x7f06007e
-			public const int media_route_list = 2131099774;
+			// aapt resource value: 0x7f060098
+			public const int media_route_list = 2131099800;
+			
+			// aapt resource value: 0x7f060097
+			public const int messenger_send_button = 2131099799;
 			
 			// aapt resource value: 0x7f060016
 			public const int middle = 2131099670;
@@ -2041,11 +2305,14 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f06001f
 			public const int multiply = 2131099679;
 			
-			// aapt resource value: 0x7f06006d
-			public const int name = 2131099757;
+			// aapt resource value: 0x7f060085
+			public const int name = 2131099781;
 			
 			// aapt resource value: 0x7f06001a
 			public const int never = 2131099674;
+			
+			// aapt resource value: 0x7f060046
+			public const int never_display = 2131099718;
 			
 			// aapt resource value: 0x7f06000f
 			public const int none = 2131099663;
@@ -2053,17 +2320,20 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f06000b
 			public const int normal = 2131099659;
 			
-			// aapt resource value: 0x7f060042
-			public const int parentPanel = 2131099714;
+			// aapt resource value: 0x7f060038
+			public const int open_graph = 2131099704;
 			
-			// aapt resource value: 0x7f060079
-			public const int passwordEditText = 2131099769;
+			// aapt resource value: 0x7f060039
+			public const int page = 2131099705;
 			
-			// aapt resource value: 0x7f060072
-			public const int pickedButton = 2131099762;
+			// aapt resource value: 0x7f060053
+			public const int parentPanel = 2131099731;
 			
-			// aapt resource value: 0x7f060085
-			public const int play_pause = 2131099781;
+			// aapt resource value: 0x7f06008a
+			public const int pickedButton = 2131099786;
+			
+			// aapt resource value: 0x7f06009f
+			public const int play_pause = 2131099807;
 			
 			// aapt resource value: 0x7f06002b
 			public const int production = 2131099691;
@@ -2074,17 +2344,20 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f060007
 			public const int progress_horizontal = 2131099655;
 			
-			// aapt resource value: 0x7f06004f
-			public const int radio = 2131099727;
+			// aapt resource value: 0x7f060060
+			public const int radio = 2131099744;
 			
-			// aapt resource value: 0x7f06006c
-			public const int references = 2131099756;
+			// aapt resource value: 0x7f060084
+			public const int references = 2131099780;
 			
-			// aapt resource value: 0x7f06007c
-			public const int register = 2131099772;
+			// aapt resource value: 0x7f060094
+			public const int register = 2131099796;
 			
-			// aapt resource value: 0x7f060080
-			public const int route_name = 2131099776;
+			// aapt resource value: 0x7f060043
+			public const int right = 2131099715;
+			
+			// aapt resource value: 0x7f06009a
+			public const int route_name = 2131099802;
 			
 			// aapt resource value: 0x7f06002c
 			public const int sandbox = 2131099692;
@@ -2095,56 +2368,56 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f060020
 			public const int screen = 2131099680;
 			
-			// aapt resource value: 0x7f060047
-			public const int scrollView = 2131099719;
-			
-			// aapt resource value: 0x7f060059
-			public const int search_badge = 2131099737;
-			
 			// aapt resource value: 0x7f060058
-			public const int search_bar = 2131099736;
+			public const int scrollView = 2131099736;
 			
-			// aapt resource value: 0x7f06005a
-			public const int search_button = 2131099738;
+			// aapt resource value: 0x7f06006a
+			public const int search_badge = 2131099754;
 			
-			// aapt resource value: 0x7f06005f
-			public const int search_close_btn = 2131099743;
+			// aapt resource value: 0x7f060069
+			public const int search_bar = 2131099753;
 			
-			// aapt resource value: 0x7f06005b
-			public const int search_edit_frame = 2131099739;
+			// aapt resource value: 0x7f06006b
+			public const int search_button = 2131099755;
 			
-			// aapt resource value: 0x7f060061
-			public const int search_go_btn = 2131099745;
+			// aapt resource value: 0x7f060070
+			public const int search_close_btn = 2131099760;
 			
-			// aapt resource value: 0x7f06005c
-			public const int search_mag_icon = 2131099740;
+			// aapt resource value: 0x7f06006c
+			public const int search_edit_frame = 2131099756;
 			
-			// aapt resource value: 0x7f06005d
-			public const int search_plate = 2131099741;
+			// aapt resource value: 0x7f060072
+			public const int search_go_btn = 2131099762;
 			
-			// aapt resource value: 0x7f06005e
-			public const int search_src_text = 2131099742;
+			// aapt resource value: 0x7f06006d
+			public const int search_mag_icon = 2131099757;
 			
-			// aapt resource value: 0x7f060062
-			public const int search_voice_btn = 2131099746;
+			// aapt resource value: 0x7f06006e
+			public const int search_plate = 2131099758;
 			
-			// aapt resource value: 0x7f060063
-			public const int select_dialog_listview = 2131099747;
+			// aapt resource value: 0x7f06006f
+			public const int search_src_text = 2131099759;
+			
+			// aapt resource value: 0x7f060073
+			public const int search_voice_btn = 2131099763;
+			
+			// aapt resource value: 0x7f060074
+			public const int select_dialog_listview = 2131099764;
 			
 			// aapt resource value: 0x7f06002f
 			public const int selectionDetails = 2131099695;
 			
-			// aapt resource value: 0x7f060065
-			public const int send = 2131099749;
+			// aapt resource value: 0x7f060076
+			public const int send = 2131099766;
+			
+			// aapt resource value: 0x7f0600b5
+			public const int sendInfoButton = 2131099829;
 			
 			// aapt resource value: 0x7f06009b
-			public const int sendInfoButton = 2131099803;
+			public const int settings = 2131099803;
 			
-			// aapt resource value: 0x7f060081
-			public const int settings = 2131099777;
-			
-			// aapt resource value: 0x7f06004e
-			public const int shortcut = 2131099726;
+			// aapt resource value: 0x7f06005f
+			public const int shortcut = 2131099743;
 			
 			// aapt resource value: 0x7f060010
 			public const int showCustom = 2131099664;
@@ -2154,6 +2427,15 @@ namespace KangouMessenger.Droid
 			
 			// aapt resource value: 0x7f060012
 			public const int showTitle = 2131099666;
+			
+			// aapt resource value: 0x7f060091
+			public const int signinFbButton = 2131099793;
+			
+			// aapt resource value: 0x7f060092
+			public const int signinGoogleButton = 2131099794;
+			
+			// aapt resource value: 0x7f060048
+			public const int small = 2131099720;
 			
 			// aapt resource value: 0x7f060008
 			public const int split_action_bar = 2131099656;
@@ -2167,77 +2449,86 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f060023
 			public const int src_over = 2131099683;
 			
-			// aapt resource value: 0x7f060096
-			public const int starButton1 = 2131099798;
+			// aapt resource value: 0x7f06003d
+			public const int standard = 2131099709;
 			
-			// aapt resource value: 0x7f060097
-			public const int starButton2 = 2131099799;
+			// aapt resource value: 0x7f0600b0
+			public const int starButton1 = 2131099824;
 			
-			// aapt resource value: 0x7f060098
-			public const int starButton3 = 2131099800;
+			// aapt resource value: 0x7f0600b1
+			public const int starButton2 = 2131099825;
 			
-			// aapt resource value: 0x7f060099
-			public const int starButton4 = 2131099801;
+			// aapt resource value: 0x7f0600b2
+			public const int starButton3 = 2131099826;
 			
-			// aapt resource value: 0x7f06009a
-			public const int starButton5 = 2131099802;
+			// aapt resource value: 0x7f0600b3
+			public const int starButton4 = 2131099827;
 			
-			// aapt resource value: 0x7f06008a
-			public const int stop = 2131099786;
+			// aapt resource value: 0x7f0600b4
+			public const int starButton5 = 2131099828;
+			
+			// aapt resource value: 0x7f0600a4
+			public const int stop = 2131099812;
 			
 			// aapt resource value: 0x7f06002d
 			public const int strict_sandbox = 2131099693;
 			
-			// aapt resource value: 0x7f060060
-			public const int submit_area = 2131099744;
+			// aapt resource value: 0x7f060071
+			public const int submit_area = 2131099761;
 			
-			// aapt resource value: 0x7f060087
-			public const int subtitle = 2131099783;
+			// aapt resource value: 0x7f0600a1
+			public const int subtitle = 2131099809;
 			
 			// aapt resource value: 0x7f06000c
 			public const int tabMode = 2131099660;
 			
-			// aapt resource value: 0x7f060095
-			public const int tableRow2 = 2131099797;
+			// aapt resource value: 0x7f0600af
+			public const int tableRow2 = 2131099823;
 			
 			// aapt resource value: 0x7f060028
 			public const int terrain = 2131099688;
 			
-			// aapt resource value: 0x7f060048
-			public const int textSpacerNoButtons = 2131099720;
+			// aapt resource value: 0x7f060059
+			public const int textSpacerNoButtons = 2131099737;
 			
-			// aapt resource value: 0x7f060069
-			public const int textView1 = 2131099753;
+			// aapt resource value: 0x7f060081
+			public const int textView1 = 2131099777;
 			
-			// aapt resource value: 0x7f060086
-			public const int text_wrapper = 2131099782;
+			// aapt resource value: 0x7f0600a0
+			public const int text_wrapper = 2131099808;
 			
-			// aapt resource value: 0x7f060074
-			public const int timer = 2131099764;
+			// aapt resource value: 0x7f06008c
+			public const int timer = 2131099788;
 			
-			// aapt resource value: 0x7f060073
-			public const int timerTitle = 2131099763;
+			// aapt resource value: 0x7f06008b
+			public const int timerTitle = 2131099787;
 			
-			// aapt resource value: 0x7f060091
-			public const int timerToCancel = 2131099793;
+			// aapt resource value: 0x7f0600ab
+			public const int timerToCancel = 2131099819;
 			
-			// aapt resource value: 0x7f060041
-			public const int title = 2131099713;
+			// aapt resource value: 0x7f060052
+			public const int title = 2131099730;
 			
-			// aapt resource value: 0x7f06007f
-			public const int title_bar = 2131099775;
+			// aapt resource value: 0x7f060099
+			public const int title_bar = 2131099801;
 			
-			// aapt resource value: 0x7f060044
-			public const int title_template = 2131099716;
+			// aapt resource value: 0x7f060055
+			public const int title_template = 2131099733;
 			
-			// aapt resource value: 0x7f06008e
-			public const int to = 2131099790;
+			// aapt resource value: 0x7f0600a8
+			public const int to = 2131099816;
 			
-			// aapt resource value: 0x7f06008f
-			public const int toAddress = 2131099791;
+			// aapt resource value: 0x7f0600a9
+			public const int toAddress = 2131099817;
 			
-			// aapt resource value: 0x7f060043
-			public const int topPanel = 2131099715;
+			// aapt resource value: 0x7f060040
+			public const int top = 2131099712;
+			
+			// aapt resource value: 0x7f060054
+			public const int topPanel = 2131099732;
+			
+			// aapt resource value: 0x7f06003a
+			public const int unknown = 2131099706;
 			
 			// aapt resource value: 0x7f060009
 			public const int up = 2131099657;
@@ -2368,58 +2659,85 @@ namespace KangouMessenger.Droid
 			public const int ClientSignatureView = 2130903065;
 			
 			// aapt resource value: 0x7f03001a
-			public const int ConnectView = 2130903066;
+			public const int com_facebook_activity_layout = 2130903066;
 			
 			// aapt resource value: 0x7f03001b
-			public const int DropOffRouteView = 2130903067;
+			public const int com_facebook_login_fragment = 2130903067;
 			
 			// aapt resource value: 0x7f03001c
-			public const int DropOffTimerView = 2130903068;
+			public const int com_facebook_tooltip_bubble = 2130903068;
 			
 			// aapt resource value: 0x7f03001d
-			public const int HelpView = 2130903069;
+			public const int ConnectView = 2130903069;
 			
 			// aapt resource value: 0x7f03001e
-			public const int LoginView = 2130903070;
+			public const int DropOffRouteView = 2130903070;
 			
 			// aapt resource value: 0x7f03001f
-			public const int mr_media_route_chooser_dialog = 2130903071;
+			public const int DropOffTimerView = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int mr_media_route_controller_material_dialog_b = 2130903072;
+			public const int HelpView = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int mr_media_route_list_item = 2130903073;
+			public const int LoginView = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int PickUpRouteView = 2130903074;
+			public const int messenger_button_send_blue_large = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int PickUpTimerView = 2130903075;
+			public const int messenger_button_send_blue_round = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int ReceivingOrderView = 2130903076;
+			public const int messenger_button_send_blue_small = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int ReviewView = 2130903077;
+			public const int messenger_button_send_white_large = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int select_dialog_item_material = 2130903078;
+			public const int messenger_button_send_white_round = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int select_dialog_multichoice_material = 2130903079;
+			public const int messenger_button_send_white_small = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int select_dialog_singlechoice_material = 2130903080;
+			public const int mr_media_route_chooser_dialog = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int SplashScreen = 2130903081;
+			public const int mr_media_route_controller_material_dialog_b = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int support_simple_spinner_dropdown_item = 2130903082;
+			public const int mr_media_route_list_item = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int WaitingOrderView = 2130903083;
+			public const int PickUpRouteView = 2130903083;
+			
+			// aapt resource value: 0x7f03002c
+			public const int PickUpTimerView = 2130903084;
+			
+			// aapt resource value: 0x7f03002d
+			public const int ReceivingOrderView = 2130903085;
+			
+			// aapt resource value: 0x7f03002e
+			public const int ReviewView = 2130903086;
+			
+			// aapt resource value: 0x7f03002f
+			public const int select_dialog_item_material = 2130903087;
+			
+			// aapt resource value: 0x7f030030
+			public const int select_dialog_multichoice_material = 2130903088;
+			
+			// aapt resource value: 0x7f030031
+			public const int select_dialog_singlechoice_material = 2130903089;
+			
+			// aapt resource value: 0x7f030032
+			public const int SplashScreen = 2130903090;
+			
+			// aapt resource value: 0x7f030033
+			public const int support_simple_spinner_dropdown_item = 2130903091;
+			
+			// aapt resource value: 0x7f030034
+			public const int WaitingOrderView = 2130903092;
 			
 			static Layout()
 			{
@@ -2450,215 +2768,275 @@ namespace KangouMessenger.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f080012
-			public const int abc_action_bar_home_description = 2131230738;
-			
-			// aapt resource value: 0x7f080013
-			public const int abc_action_bar_home_description_format = 2131230739;
-			
-			// aapt resource value: 0x7f080014
-			public const int abc_action_bar_home_subtitle_description_format = 2131230740;
-			
 			// aapt resource value: 0x7f080015
-			public const int abc_action_bar_up_description = 2131230741;
+			public const int abc_action_bar_home_description = 2131230741;
 			
 			// aapt resource value: 0x7f080016
-			public const int abc_action_menu_overflow_description = 2131230742;
+			public const int abc_action_bar_home_description_format = 2131230742;
 			
 			// aapt resource value: 0x7f080017
-			public const int abc_action_mode_done = 2131230743;
+			public const int abc_action_bar_home_subtitle_description_format = 2131230743;
 			
 			// aapt resource value: 0x7f080018
-			public const int abc_activity_chooser_view_see_all = 2131230744;
+			public const int abc_action_bar_up_description = 2131230744;
 			
 			// aapt resource value: 0x7f080019
-			public const int abc_activitychooserview_choose_application = 2131230745;
+			public const int abc_action_menu_overflow_description = 2131230745;
 			
 			// aapt resource value: 0x7f08001a
-			public const int abc_search_hint = 2131230746;
+			public const int abc_action_mode_done = 2131230746;
 			
 			// aapt resource value: 0x7f08001b
-			public const int abc_searchview_description_clear = 2131230747;
+			public const int abc_activity_chooser_view_see_all = 2131230747;
 			
 			// aapt resource value: 0x7f08001c
-			public const int abc_searchview_description_query = 2131230748;
+			public const int abc_activitychooserview_choose_application = 2131230748;
 			
 			// aapt resource value: 0x7f08001d
-			public const int abc_searchview_description_search = 2131230749;
+			public const int abc_search_hint = 2131230749;
 			
 			// aapt resource value: 0x7f08001e
-			public const int abc_searchview_description_submit = 2131230750;
+			public const int abc_searchview_description_clear = 2131230750;
 			
 			// aapt resource value: 0x7f08001f
-			public const int abc_searchview_description_voice = 2131230751;
+			public const int abc_searchview_description_query = 2131230751;
 			
 			// aapt resource value: 0x7f080020
-			public const int abc_shareactionprovider_share_with = 2131230752;
+			public const int abc_searchview_description_search = 2131230752;
 			
 			// aapt resource value: 0x7f080021
-			public const int abc_shareactionprovider_share_with_application = 2131230753;
+			public const int abc_searchview_description_submit = 2131230753;
 			
 			// aapt resource value: 0x7f080022
-			public const int abc_toolbar_collapse_description = 2131230754;
-			
-			// aapt resource value: 0x7f080025
-			public const int accept = 2131230757;
-			
-			// aapt resource value: 0x7f080001
-			public const int app_name = 2131230721;
-			
-			// aapt resource value: 0x7f08002c
-			public const int common_android_wear_notification_needs_update_text = 2131230764;
-			
-			// aapt resource value: 0x7f080039
-			public const int common_android_wear_update_text = 2131230777;
-			
-			// aapt resource value: 0x7f080037
-			public const int common_android_wear_update_title = 2131230775;
-			
-			// aapt resource value: 0x7f080035
-			public const int common_google_play_services_enable_button = 2131230773;
-			
-			// aapt resource value: 0x7f080034
-			public const int common_google_play_services_enable_text = 2131230772;
-			
-			// aapt resource value: 0x7f080033
-			public const int common_google_play_services_enable_title = 2131230771;
-			
-			// aapt resource value: 0x7f08002e
-			public const int common_google_play_services_error_notification_requested_by_msg = 2131230766;
-			
-			// aapt resource value: 0x7f080032
-			public const int common_google_play_services_install_button = 2131230770;
-			
-			// aapt resource value: 0x7f080030
-			public const int common_google_play_services_install_text_phone = 2131230768;
-			
-			// aapt resource value: 0x7f080031
-			public const int common_google_play_services_install_text_tablet = 2131230769;
-			
-			// aapt resource value: 0x7f08002f
-			public const int common_google_play_services_install_title = 2131230767;
-			
-			// aapt resource value: 0x7f08003d
-			public const int common_google_play_services_invalid_account_text = 2131230781;
-			
-			// aapt resource value: 0x7f08003c
-			public const int common_google_play_services_invalid_account_title = 2131230780;
-			
-			// aapt resource value: 0x7f08002d
-			public const int common_google_play_services_needs_enabling_title = 2131230765;
-			
-			// aapt resource value: 0x7f08003b
-			public const int common_google_play_services_network_error_text = 2131230779;
-			
-			// aapt resource value: 0x7f08003a
-			public const int common_google_play_services_network_error_title = 2131230778;
-			
-			// aapt resource value: 0x7f08002a
-			public const int common_google_play_services_notification_needs_installation_title = 2131230762;
-			
-			// aapt resource value: 0x7f08002b
-			public const int common_google_play_services_notification_needs_update_title = 2131230763;
-			
-			// aapt resource value: 0x7f080029
-			public const int common_google_play_services_notification_ticker = 2131230761;
-			
-			// aapt resource value: 0x7f08003e
-			public const int common_google_play_services_unknown_issue = 2131230782;
-			
-			// aapt resource value: 0x7f080040
-			public const int common_google_play_services_unsupported_text = 2131230784;
-			
-			// aapt resource value: 0x7f08003f
-			public const int common_google_play_services_unsupported_title = 2131230783;
-			
-			// aapt resource value: 0x7f080041
-			public const int common_google_play_services_update_button = 2131230785;
-			
-			// aapt resource value: 0x7f080038
-			public const int common_google_play_services_update_text = 2131230776;
-			
-			// aapt resource value: 0x7f080036
-			public const int common_google_play_services_update_title = 2131230774;
-			
-			// aapt resource value: 0x7f080044
-			public const int common_open_on_phone = 2131230788;
-			
-			// aapt resource value: 0x7f080042
-			public const int common_signin_button_text = 2131230786;
-			
-			// aapt resource value: 0x7f080043
-			public const int common_signin_button_text_long = 2131230787;
-			
-			// aapt resource value: 0x7f080028
-			public const int create_calendar_message = 2131230760;
-			
-			// aapt resource value: 0x7f080027
-			public const int create_calendar_title = 2131230759;
-			
-			// aapt resource value: 0x7f080026
-			public const int decline = 2131230758;
-			
-			// aapt resource value: 0x7f080000
-			public const int hello = 2131230720;
-			
-			// aapt resource value: 0x7f080007
-			public const int infoConnect = 2131230727;
-			
-			// aapt resource value: 0x7f080005
-			public const int infoPasswordA = 2131230725;
-			
-			// aapt resource value: 0x7f080006
-			public const int infoPasswordB = 2131230726;
-			
-			// aapt resource value: 0x7f080004
-			public const int loading = 2131230724;
-			
-			// aapt resource value: 0x7f080008
-			public const int mr_media_route_button_content_description = 2131230728;
-			
-			// aapt resource value: 0x7f080009
-			public const int mr_media_route_chooser_searching = 2131230729;
-			
-			// aapt resource value: 0x7f08000a
-			public const int mr_media_route_chooser_title = 2131230730;
-			
-			// aapt resource value: 0x7f08000b
-			public const int mr_media_route_controller_disconnect = 2131230731;
-			
-			// aapt resource value: 0x7f08000c
-			public const int mr_media_route_controller_pause = 2131230732;
-			
-			// aapt resource value: 0x7f08000d
-			public const int mr_media_route_controller_play = 2131230733;
-			
-			// aapt resource value: 0x7f08000e
-			public const int mr_media_route_controller_settings_description = 2131230734;
-			
-			// aapt resource value: 0x7f08000f
-			public const int mr_media_route_controller_stop = 2131230735;
-			
-			// aapt resource value: 0x7f080010
-			public const int mr_system_route_name = 2131230736;
-			
-			// aapt resource value: 0x7f080011
-			public const int mr_user_route_category_name = 2131230737;
-			
-			// aapt resource value: 0x7f080024
-			public const int store_picture_message = 2131230756;
+			public const int abc_searchview_description_voice = 2131230754;
 			
 			// aapt resource value: 0x7f080023
-			public const int store_picture_title = 2131230755;
+			public const int abc_shareactionprovider_share_with = 2131230755;
 			
-			// aapt resource value: 0x7f080003
-			public const int titleDropOffRoute = 2131230723;
+			// aapt resource value: 0x7f080024
+			public const int abc_shareactionprovider_share_with_application = 2131230756;
 			
-			// aapt resource value: 0x7f080002
-			public const int titleWaitingOrder = 2131230722;
+			// aapt resource value: 0x7f080025
+			public const int abc_toolbar_collapse_description = 2131230757;
+			
+			// aapt resource value: 0x7f080028
+			public const int accept = 2131230760;
+			
+			// aapt resource value: 0x7f080000
+			public const int app_id = 2131230720;
+			
+			// aapt resource value: 0x7f080004
+			public const int app_name = 2131230724;
+			
+			// aapt resource value: 0x7f080001
+			public const int cancelled = 2131230721;
+			
+			// aapt resource value: 0x7f080049
+			public const int com_facebook_image_download_unknown_error = 2131230793;
+			
+			// aapt resource value: 0x7f08004a
+			public const int com_facebook_internet_permission_error_message = 2131230794;
+			
+			// aapt resource value: 0x7f08004b
+			public const int com_facebook_internet_permission_error_title = 2131230795;
+			
+			// aapt resource value: 0x7f08004c
+			public const int com_facebook_like_button_liked = 2131230796;
+			
+			// aapt resource value: 0x7f08004d
+			public const int com_facebook_like_button_not_liked = 2131230797;
+			
+			// aapt resource value: 0x7f08004e
+			public const int com_facebook_loading = 2131230798;
+			
+			// aapt resource value: 0x7f08004f
+			public const int com_facebook_loginview_cancel_action = 2131230799;
+			
+			// aapt resource value: 0x7f080050
+			public const int com_facebook_loginview_log_in_button = 2131230800;
+			
+			// aapt resource value: 0x7f080051
+			public const int com_facebook_loginview_log_in_button_long = 2131230801;
+			
+			// aapt resource value: 0x7f080052
+			public const int com_facebook_loginview_log_out_action = 2131230802;
+			
+			// aapt resource value: 0x7f080053
+			public const int com_facebook_loginview_log_out_button = 2131230803;
+			
+			// aapt resource value: 0x7f080054
+			public const int com_facebook_loginview_logged_in_as = 2131230804;
+			
+			// aapt resource value: 0x7f080055
+			public const int com_facebook_loginview_logged_in_using_facebook = 2131230805;
+			
+			// aapt resource value: 0x7f080056
+			public const int com_facebook_send_button_text = 2131230806;
+			
+			// aapt resource value: 0x7f080057
+			public const int com_facebook_share_button_text = 2131230807;
+			
+			// aapt resource value: 0x7f080058
+			public const int com_facebook_tooltip_default = 2131230808;
+			
+			// aapt resource value: 0x7f08002f
+			public const int common_android_wear_notification_needs_update_text = 2131230767;
+			
+			// aapt resource value: 0x7f08003c
+			public const int common_android_wear_update_text = 2131230780;
+			
+			// aapt resource value: 0x7f08003a
+			public const int common_android_wear_update_title = 2131230778;
+			
+			// aapt resource value: 0x7f080038
+			public const int common_google_play_services_enable_button = 2131230776;
+			
+			// aapt resource value: 0x7f080037
+			public const int common_google_play_services_enable_text = 2131230775;
+			
+			// aapt resource value: 0x7f080036
+			public const int common_google_play_services_enable_title = 2131230774;
+			
+			// aapt resource value: 0x7f080031
+			public const int common_google_play_services_error_notification_requested_by_msg = 2131230769;
+			
+			// aapt resource value: 0x7f080035
+			public const int common_google_play_services_install_button = 2131230773;
+			
+			// aapt resource value: 0x7f080033
+			public const int common_google_play_services_install_text_phone = 2131230771;
+			
+			// aapt resource value: 0x7f080034
+			public const int common_google_play_services_install_text_tablet = 2131230772;
+			
+			// aapt resource value: 0x7f080032
+			public const int common_google_play_services_install_title = 2131230770;
+			
+			// aapt resource value: 0x7f080040
+			public const int common_google_play_services_invalid_account_text = 2131230784;
+			
+			// aapt resource value: 0x7f08003f
+			public const int common_google_play_services_invalid_account_title = 2131230783;
+			
+			// aapt resource value: 0x7f080030
+			public const int common_google_play_services_needs_enabling_title = 2131230768;
+			
+			// aapt resource value: 0x7f08003e
+			public const int common_google_play_services_network_error_text = 2131230782;
+			
+			// aapt resource value: 0x7f08003d
+			public const int common_google_play_services_network_error_title = 2131230781;
+			
+			// aapt resource value: 0x7f08002d
+			public const int common_google_play_services_notification_needs_installation_title = 2131230765;
+			
+			// aapt resource value: 0x7f08002e
+			public const int common_google_play_services_notification_needs_update_title = 2131230766;
+			
+			// aapt resource value: 0x7f08002c
+			public const int common_google_play_services_notification_ticker = 2131230764;
+			
+			// aapt resource value: 0x7f080041
+			public const int common_google_play_services_unknown_issue = 2131230785;
+			
+			// aapt resource value: 0x7f080043
+			public const int common_google_play_services_unsupported_text = 2131230787;
+			
+			// aapt resource value: 0x7f080042
+			public const int common_google_play_services_unsupported_title = 2131230786;
+			
+			// aapt resource value: 0x7f080044
+			public const int common_google_play_services_update_button = 2131230788;
+			
+			// aapt resource value: 0x7f08003b
+			public const int common_google_play_services_update_text = 2131230779;
+			
+			// aapt resource value: 0x7f080039
+			public const int common_google_play_services_update_title = 2131230777;
+			
+			// aapt resource value: 0x7f080047
+			public const int common_open_on_phone = 2131230791;
 			
 			// aapt resource value: 0x7f080045
-			public const int wallet_buy_button_place_holder = 2131230789;
+			public const int common_signin_button_text = 2131230789;
+			
+			// aapt resource value: 0x7f080046
+			public const int common_signin_button_text_long = 2131230790;
+			
+			// aapt resource value: 0x7f08002b
+			public const int create_calendar_message = 2131230763;
+			
+			// aapt resource value: 0x7f08002a
+			public const int create_calendar_title = 2131230762;
+			
+			// aapt resource value: 0x7f080029
+			public const int decline = 2131230761;
+			
+			// aapt resource value: 0x7f080003
+			public const int hello = 2131230723;
+			
+			// aapt resource value: 0x7f08000a
+			public const int infoConnect = 2131230730;
+			
+			// aapt resource value: 0x7f080008
+			public const int infoPasswordA = 2131230728;
+			
+			// aapt resource value: 0x7f080009
+			public const int infoPasswordB = 2131230729;
+			
+			// aapt resource value: 0x7f080007
+			public const int loading = 2131230727;
+			
+			// aapt resource value: 0x7f080059
+			public const int messenger_send_button_text = 2131230809;
+			
+			// aapt resource value: 0x7f08000b
+			public const int mr_media_route_button_content_description = 2131230731;
+			
+			// aapt resource value: 0x7f08000c
+			public const int mr_media_route_chooser_searching = 2131230732;
+			
+			// aapt resource value: 0x7f08000d
+			public const int mr_media_route_chooser_title = 2131230733;
+			
+			// aapt resource value: 0x7f08000e
+			public const int mr_media_route_controller_disconnect = 2131230734;
+			
+			// aapt resource value: 0x7f08000f
+			public const int mr_media_route_controller_pause = 2131230735;
+			
+			// aapt resource value: 0x7f080010
+			public const int mr_media_route_controller_play = 2131230736;
+			
+			// aapt resource value: 0x7f080011
+			public const int mr_media_route_controller_settings_description = 2131230737;
+			
+			// aapt resource value: 0x7f080012
+			public const int mr_media_route_controller_stop = 2131230738;
+			
+			// aapt resource value: 0x7f080013
+			public const int mr_system_route_name = 2131230739;
+			
+			// aapt resource value: 0x7f080014
+			public const int mr_user_route_category_name = 2131230740;
+			
+			// aapt resource value: 0x7f080002
+			public const int permission_not_granted = 2131230722;
+			
+			// aapt resource value: 0x7f080027
+			public const int store_picture_message = 2131230759;
+			
+			// aapt resource value: 0x7f080026
+			public const int store_picture_title = 2131230758;
+			
+			// aapt resource value: 0x7f080006
+			public const int titleDropOffRoute = 2131230726;
+			
+			// aapt resource value: 0x7f080005
+			public const int titleWaitingOrder = 2131230725;
+			
+			// aapt resource value: 0x7f080048
+			public const int wallet_buy_button_place_holder = 2131230792;
 			
 			static String()
 			{
@@ -3068,6 +3446,48 @@ namespace KangouMessenger.Droid
 			
 			// aapt resource value: 0x7f070082
 			public const int Base_Widget_AppCompat_Toolbar_Button_Navigation = 2131165314;
+			
+			// aapt resource value: 0x7f070125
+			public const int MessengerButton = 2131165477;
+			
+			// aapt resource value: 0x7f070126
+			public const int MessengerButton_Blue = 2131165478;
+			
+			// aapt resource value: 0x7f070127
+			public const int MessengerButton_Blue_Large = 2131165479;
+			
+			// aapt resource value: 0x7f070128
+			public const int MessengerButton_Blue_Small = 2131165480;
+			
+			// aapt resource value: 0x7f070129
+			public const int MessengerButton_White = 2131165481;
+			
+			// aapt resource value: 0x7f07012a
+			public const int MessengerButton_White_Large = 2131165482;
+			
+			// aapt resource value: 0x7f07012b
+			public const int MessengerButton_White_Small = 2131165483;
+			
+			// aapt resource value: 0x7f07012c
+			public const int MessengerButtonText = 2131165484;
+			
+			// aapt resource value: 0x7f07012d
+			public const int MessengerButtonText_Blue = 2131165485;
+			
+			// aapt resource value: 0x7f07012e
+			public const int MessengerButtonText_Blue_Large = 2131165486;
+			
+			// aapt resource value: 0x7f07012f
+			public const int MessengerButtonText_Blue_Small = 2131165487;
+			
+			// aapt resource value: 0x7f070130
+			public const int MessengerButtonText_White = 2131165488;
+			
+			// aapt resource value: 0x7f070131
+			public const int MessengerButtonText_White_Large = 2131165489;
+			
+			// aapt resource value: 0x7f070132
+			public const int MessengerButtonText_White_Small = 2131165490;
 			
 			// aapt resource value: 0x7f070083
 			public const int Platform_AppCompat = 2131165315;
@@ -3551,6 +3971,27 @@ namespace KangouMessenger.Droid
 			
 			// aapt resource value: 0x7f070004
 			public const int Widget_MediaRouter_MediaRouteButton = 2131165188;
+			
+			// aapt resource value: 0x7f070133
+			public const int com_facebook_button = 2131165491;
+			
+			// aapt resource value: 0x7f070134
+			public const int com_facebook_button_like = 2131165492;
+			
+			// aapt resource value: 0x7f070135
+			public const int com_facebook_button_send = 2131165493;
+			
+			// aapt resource value: 0x7f070136
+			public const int com_facebook_button_share = 2131165494;
+			
+			// aapt resource value: 0x7f070137
+			public const int com_facebook_loginview_default_style = 2131165495;
+			
+			// aapt resource value: 0x7f070138
+			public const int com_facebook_loginview_silver_style = 2131165496;
+			
+			// aapt resource value: 0x7f070139
+			public const int tooltip_bubble_text = 2131165497;
 			
 			static Style()
 			{
@@ -4983,6 +5424,63 @@ namespace KangouMessenger.Droid
 			
 			// aapt resource value: 4
 			public const int WalletFragmentStyle_maskedWalletDetailsTextAppearance = 4;
+			
+			public static int[] com_facebook_like_view = new int[]
+			{
+					2130772219,
+					2130772220,
+					2130772221,
+					2130772222,
+					2130772223,
+					2130772224};
+			
+			// aapt resource value: 4
+			public const int com_facebook_like_view_auxiliary_view_position = 4;
+			
+			// aapt resource value: 0
+			public const int com_facebook_like_view_foreground_color = 0;
+			
+			// aapt resource value: 5
+			public const int com_facebook_like_view_horizontal_alignment = 5;
+			
+			// aapt resource value: 1
+			public const int com_facebook_like_view_object_id = 1;
+			
+			// aapt resource value: 2
+			public const int com_facebook_like_view_object_type = 2;
+			
+			// aapt resource value: 3
+			public const int com_facebook_like_view_style = 3;
+			
+			public static int[] com_facebook_login_view = new int[]
+			{
+					2130772225,
+					2130772226,
+					2130772227,
+					2130772228};
+			
+			// aapt resource value: 0
+			public const int com_facebook_login_view_confirm_logout = 0;
+			
+			// aapt resource value: 1
+			public const int com_facebook_login_view_login_text = 1;
+			
+			// aapt resource value: 2
+			public const int com_facebook_login_view_logout_text = 2;
+			
+			// aapt resource value: 3
+			public const int com_facebook_login_view_tooltip_mode = 3;
+			
+			public static int[] com_facebook_profile_picture_view = new int[]
+			{
+					2130772229,
+					2130772230};
+			
+			// aapt resource value: 1
+			public const int com_facebook_profile_picture_view_is_cropped = 1;
+			
+			// aapt resource value: 0
+			public const int com_facebook_profile_picture_view_preset_size = 0;
 			
 			static Styleable()
 			{

@@ -24,40 +24,9 @@ namespace KangouMessenger.Droid
 	{
 		protected BindableProgress _bindableProgress;
 		private bool _gettingMap;
-
-		public override View OnCreateView (string name, Context context, IAttributeSet attrs)
-		{
-			Console.WriteLine ("********** OnCreateView **********");
-			return base.OnCreateView (name, context, attrs);
-		}
-
-		protected override void OnRestart ()
-		{
-			Console.WriteLine ("********** OnRestart **********");
-			base.OnRestart ();
-		}
-
-		protected override void OnResume ()
-		{
-			Console.WriteLine ("********** OnResume **********");
-			base.OnResume ();
-		}
-
-		protected override void OnDestroy ()
-		{
-			Console.WriteLine ("********** OnDestroy **********");
-			base.OnDestroy ();
-		}
-			
-		protected override void OnPause ()
-		{
-			Console.WriteLine ("********** OnPause **********");
-			base.OnPause ();
-		}
 			
 		protected override void OnCreate(Bundle bundle)
 		{
-			Console.WriteLine ("********** OnCreate **********");
 			base.OnCreate(bundle);
 
 			_bindableProgress = new BindableProgress(this);
@@ -71,24 +40,6 @@ namespace KangouMessenger.Droid
 			set.Bind(_bindableProgress).For(p => p.RetryAction).To(vm => vm.RetryAction);
 			set.Apply();
 		}
-
-		protected override void Dispose (bool disposing)
-		{
-			Console.WriteLine ("********** Dispose **********");
-			base.Dispose (disposing);
-		}
-
-		public override void Dump (string prefix, Java.IO.FileDescriptor fd, Java.IO.PrintWriter writer, string[] args)
-		{
-			Console.WriteLine ("********** Dump **********");
-			base.Dump (prefix, fd, writer, args);
-		}
-
-		public override void OnLowMemory ()
-		{
-			Console.WriteLine ("********** OnLowMemory **********");
-			base.OnLowMemory ();
-		}
 			
 		public override void OnBackPressed ()
 		{
@@ -97,7 +48,6 @@ namespace KangouMessenger.Droid
 
 		protected override void OnStop ()
 		{
-			Console.WriteLine ("********** OnStop **********");
 			base.OnStop ();
 			var viewModel = (BusyMvxViewModel)ViewModel;
 			if (viewModel.ItNeedsToBeRemoved)

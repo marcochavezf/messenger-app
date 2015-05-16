@@ -57,6 +57,7 @@
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.Android.Support.v4.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.Android.Support.v7.AppCompat.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.Android.Support.v7.MediaRouter.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.Facebook.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/KangouAppMessenger.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/KangouAppMessenger.dll.mdb
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/SocketIoClientDotNet.dll

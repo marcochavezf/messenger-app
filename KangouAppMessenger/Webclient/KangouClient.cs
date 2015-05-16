@@ -16,84 +16,105 @@ namespace KangouMessenger.Core
 			_jsonConverter = jsonConverter;
 		}
 
-		public void LoginAsMessenger(string email, string password, string pushDeviceId, string pushDeviceService, Action<string> succesAction, Action<string> errorAction)
-		{
+		private string GetFullEndpoint(string path){
 			#if DEBUG
-			var _endPointOrderData = Config.STAGE_ENDPOINT + "/users/loginAsKangou";
+			var endpoint = Config.STAGE_ENDPOINT + path;
 			if(Config.IS_LOCAL){
-				_endPointOrderData = Config.LOCAL_ENDPOINT + ":" + Config.LOCAL_PORT + "/users/loginAsKangou";
+				endpoint = Config.LOCAL_ENDPOINT + ":" + Config.LOCAL_PORT + path;
 			}
 			#else
-			var _endPointOrderData = Config.PRODUCTION_ENDPOINT + "/users/loginAsKangou";
+			var endpoint = Config.PRODUCTION_ENDPOINT + path;
 			#endif
+			return endpoint;
+		}
 
-			/* Preparing Data. */
-			var request = (HttpWebRequest)WebRequest.Create(_endPointOrderData);
-			request.ContentType = "application/x-www-form-urlencoded";
-			request.Method = "POST";
+		public void RetrieveUserId(string provider, string providerDataId, Action<string, string> callback)
+		{
+			var endpoint = GetFullEndpoint ("/app/courier/users/v1/retrieveId");
+			string data = 
+				"provider=" 				+ provider +
+				"&providerDataId=" 			+ providerDataId;
+			SendPostDataToServer (endpoint, data, callback);
+		}
 
-			string postData = 
+		public void RequestCourierAccess(string userId, string pushDeviceId, string pushDeviceService, Action<string, string> callback)
+		{
+			var endpoint = GetFullEndpoint ("/app/courier/users/v1/requestAccess");
+			string data = 
+				"userId=" 				+ userId + 
+				"&pushDeviceId=" 		+ pushDeviceId +
+				"&pushDeviceService=" 	+ pushDeviceService;
+			SendPostDataToServer (endpoint, data, callback);
+		}
+
+		public void LoginAsMessenger(string email, string password, string pushDeviceId, string pushDeviceService, Action<string> succesAction, Action<string> errorAction)
+		{
+			var endpoint = GetFullEndpoint ("/users/loginAsKangou");
+			string data = 
 				"email=" 				+ email +
 				"&password=" 			+ password +
 				"&pushDeviceId=" 		+ pushDeviceId +
 				"&pushDeviceService=" 	+ pushDeviceService;
-				
-			// Convert the string into a byte array.
-			byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+
+			SendPostDataToServer (endpoint,  data, (err, res) => {
+				if(err != null){
+					errorAction (err);
+					return;
+				}
+
+				var rootObj = _jsonConverter.DeserializeObject<User> (res);
+				var userId = rootObj.userId;
+				if (userId.Equals ("error") || userId.Equals ("not found")){
+					errorAction (rootObj.err);
+				} else {
+					succesAction (userId);
+				}
+			});
+		}
+
+		private	void SendPostDataToServer (String endpoint, string data, Action<string, string> callback)
+		{
+			
+			/* Convert the string into a byte array. */
+			byte[] byteArray = Encoding.UTF8.GetBytes(data);
 
 			/* Sending Data to Server. */
-			request.BeginGetRequestStream (asynchResultReq => {
-
-				try
-				{
-					using (var stream = request.EndGetRequestStream(asynchResultReq))
-					{
-						System.Diagnostics.Debug.WriteLine("******* Writing: {0}",stream.CanWrite);
-
+			var request = (HttpWebRequest)WebRequest.Create(endpoint);
+			request.ContentType = "application/x-www-form-urlencoded";
+			request.Method = "POST";
+			request.BeginGetRequestStream (asynchResultReq =>  {
+				try {
+					using (var stream = request.EndGetRequestStream (asynchResultReq)) {
+						Debug.WriteLine ("******* Writing: {0}", stream.CanWrite);
 						// Write to the request stream.
-						stream.Write(byteArray, 0, postData.Length);
+						stream.Write (byteArray, 0, data.Length);
 						stream.Dispose ();
-
 					}
 				}
-				catch (WebException ex)
-				{
-					var errorString = String.Format("ERROR Requesting Stream: '{0}' when making {1} request to {2}", ex.Message, request.Method, request.RequestUri.AbsoluteUri);
-					Mvx.Error(errorString);
-					errorAction(errorString);
+				catch (WebException ex) {
+					var errorString = String.Format ("ERROR Requesting Stream: '{0}' when making {1} request to {2}", ex.Message, request.Method, request.RequestUri.AbsoluteUri);
+					Mvx.Error (errorString);
+					callback (errorString, null);
 				}
-
 				/* Requesting Response from Server. */
-				request.BeginGetResponse(asynchResultResp =>
-					{
-						try
-						{
-							using (var response = request.EndGetResponse(asynchResultResp))
-							{
-								using (var stream = response.GetResponseStream())
-								{
-									/* Getting Success response from server */
-									var reader = new StreamReader(stream);
-									var rawDataReceived = reader.ReadToEnd();
-									var rootObj = _jsonConverter.DeserializeObject<User>(rawDataReceived);
-									var userId = rootObj.userId;
-									if(userId.Equals("error") || userId.Equals("not found"))
-										errorAction(rootObj.err);
-									else
-										succesAction(userId);
-								}
+				request.BeginGetResponse (asynchResultResp =>  {
+					try {
+						using (var response = request.EndGetResponse (asynchResultResp)) {
+							using (var stream = response.GetResponseStream ()) {
+								/* Getting Success response from server */
+								var reader = new StreamReader (stream);
+								var result = reader.ReadToEnd ();
+								callback(null, result);
 							}
 						}
-						catch (WebException ex)
-						{
-							var errorString = String.Format("ERROR Requesting Response: '{0}' when making {1} request to {2}", ex.Message, request.Method, request.RequestUri.AbsoluteUri);
-							Mvx.Error(errorString);
-							errorAction(errorString);
-						}
-					}, null);
-
+					}
+					catch (WebException ex) {
+						var errorString = String.Format ("ERROR Requesting Response: '{0}' when making {1} request to {2}", ex.Message, request.Method, request.RequestUri.AbsoluteUri);
+						Mvx.Error (errorString);
+						callback (errorString, null);
+					}
+				}, null);
 			}, null);
-
 		}
 	}
 }

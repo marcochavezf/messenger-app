@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
+	<string name="app_id">719361194829076</string>
+	<string name="cancelled">Cancelado</string>
+    <string name="permission_not_granted">No fue posible realizar la acción deseada, ya que no se cuentas con los permisos suficientes.</string>
 	<string name="hello">Conectar</string>
 	<string name="app_name">KangouMessenger.Droid</string>
 	<string name="titleWaitingOrder">En espera de un envío</string>

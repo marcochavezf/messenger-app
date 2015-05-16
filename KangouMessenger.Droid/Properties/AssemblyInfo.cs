@@ -31,6 +31,7 @@ using Android;
 [assembly: UsesPermission(Manifest.Permission.AccessCoarseLocation)]
 [assembly: UsesPermission(Manifest.Permission.Internet)]
 
+
 // This will prevent other apps on the device from receiving GCM messages for this app
 // It is crucial that the package name does not start with an uppercase letter - this is forbidden by Android.
 [assembly: Permission(Name = "@PACKAGE_NAME@.permission.C2D_MESSAGE")]
@@ -47,3 +48,11 @@ using Android;
 
 // Needed to keep the processor from sleeping when a message arrives
 [assembly: UsesPermission(Name = "android.permission.WAKE_LOCK")]
+
+// NOTE: Facebook SDK rquires that the 'Value' point to a string resource
+//       in your values/ folder (eg: strings.xml file).
+//       It will not allow you to use the app_id value directly here!
+[assembly:MetaData ("com.facebook.sdk.ApplicationId", Value ="@string/app_id")]
+
+[assembly:Permission (Name = Android.Manifest.Permission.Internet)]
+[assembly:Permission (Name = Android.Manifest.Permission.WriteExternalStorage)]

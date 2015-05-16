@@ -71,3 +71,4 @@
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Debug/System.Net.Http.Primitives.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Debug/SuperSocket.ClientEngine.Protocol.dll
 /Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Debug/SuperSocket.ClientEngine.Common.dll
+/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Debug/Xamarin.Facebook.dll

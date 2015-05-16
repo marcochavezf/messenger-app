@@ -7,6 +7,7 @@ using System.Diagnostics;
 using System;
 using System.Collections.Generic;
 using Xamarin;
+using Newtonsoft.Json.Linq;
 
 namespace KangouMessenger.Core
 {
@@ -70,49 +71,100 @@ namespace KangouMessenger.Core
 		private MvxCommand _loginCommand;
 		public ICommand LoginCommand {
 			get {
-				_loginCommand = _loginCommand ?? new MvxCommand (DoLoginCommand);
+				_loginCommand = _loginCommand ?? new MvxCommand (DoRequestAccessCommand);
 				return _loginCommand;
 			}
 		}
+
+		public void ClearUserId(){
+			_dataService.AddOrUpdate(new CourierData(){
+				UserId = ""
+			});
+		}
+
+		public bool HasUserId(){
+			var courierData = _dataService.GetCourierData ();
+			if (courierData != null) {
+				var hasUserId = !String.IsNullOrWhiteSpace (courierData.UserId);
+				return hasUserId;
+			} else {
+				return false;
+			}
+		}
 			
-		private void DoLoginCommand ()
-		{
+		public void RetrieveUserId(string provider, string providerDataId, Action<bool, string> callback){
+			IsBusy = true;
+			Task.Run (() => {
+				_kangouClient.RetrieveUserId (provider, providerDataId, (err, res) => {
+					InvokeOnMainThread(delegate {						
+						IsBusy = false;
+					});
+					bool success = false;
+					string errMsg = "";
+					if(res != null){
+						JToken resObj = JToken.Parse(res);
+						success = (bool)resObj["success"];
+						errMsg = (string)resObj["message"];
+
+						var userId = (string)resObj["userId"];
+						var email = (string)resObj["email"];
+						_dataService.AddOrUpdate(new CourierData(){
+							Email = email,
+							UserId = userId
+						});
+					} else {
+						errMsg = "Error al conectarse al servidor. Favor de verificar su conexión a internet e intente de nuevo";
+					}
+					callback(success, errMsg);
+				});
+			});
+		}
+
+		public void RequestCourierAccess(string pushDeviceId, string pushDeviceService, Action<bool, string> callback){
 			IsBusy = true;
 			Task.Run (()=>{
-
-				_kangouClient.LoginAsMessenger(Email, Password, PushDeviceId, PushDeviceService, (userId) => {
-
-					_dataService.AddOrUpdate(new CourierData(){
-						Email = Email,
-						Password = Password,
-						UserId = userId
-					});
-
-					InvokeOnMainThread (delegate {  
-						IsBusy = false;
-					});
+				string userId = "";
+				string email = "";
+				var courierData = _dataService.GetCourierData ();
+				if (courierData != null) {
+					userId = courierData.UserId;
+					email = courierData.Email;
 
 					var traits = new Dictionary<string, string> {
-						{Insights.Traits.Email, Email}
+						{ Insights.Traits.Email, email },
+						{ "userId", userId },
 					};
 					Insights.Identify(userId, traits);
-
-					Debug.WriteLine("userId retrieved: {0}", userId);
-					KangouData.Id = userId;
-					KangouData.AppView = "LoginView";
-					ShowViewModel<WaitingOrderViewModel>();
-
-				}, (error) => {
-
+					_kangouClient.RequestCourierAccess(userId, pushDeviceId, pushDeviceService, (err, res) => {
+						InvokeOnMainThread (delegate {
+							IsBusy = false;
+						});
+						bool success = false;
+						string errMsg = "";
+						if(res != null){
+							JToken resObj = JToken.Parse(res);
+							success = (bool)resObj["success"];
+							errMsg = (string)resObj["message"];
+							if(success){
+								ShowViewModel<WaitingOrderViewModel>();
+								return;
+							}
+						} else {
+							errMsg = "Error en el servidor. Favor de intentar de nuevo";
+						}
+						callback(success, errMsg);
+					});
+				} else {
 					InvokeOnMainThread (delegate {  
 						IsBusy = false;
-						if(LoginError != null)
-							LoginError(error);
 					});
-
-				});
-
+				}
 			});
+		}
+
+		private void DoRequestAccessCommand ()
+		{
+			
 		}
 
 		/* Actions to implement in specific views */

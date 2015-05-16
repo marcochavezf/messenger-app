@@ -179,7 +179,7 @@ namespace KangouMessenger.Core
 					IsBusy = false;
 				});
 
-				KangouData.AppView = "ConnectView";
+				KangouData.AppView = "LoginView";
 				Close(this);
 			});
 

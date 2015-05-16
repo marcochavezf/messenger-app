@@ -99,6 +99,7 @@ class MonoPackageManager_Resources {
 		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.Android.Support.v7.AppCompat.dll",
 		"Xamarin.Android.Support.v7.MediaRouter.dll",
+		"Xamarin.Facebook.dll",
 		"KangouAppMessenger.dll",
 		"System.Collections.Concurrent.dll",
 		"System.Collections.dll",
