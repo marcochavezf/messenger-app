@@ -5,7 +5,9 @@ public class BackgroundManager
 	extends java.lang.Object
 	implements
 		mono.android.IGCUserPeer,
-		android.app.Application.ActivityLifecycleCallbacks
+		android.app.Application.ActivityLifecycleCallbacks,
+		android.content.ComponentCallbacks2,
+		android.content.ComponentCallbacks
 {
 	static final String __md_methods;
 	static {
@@ -17,6 +19,9 @@ public class BackgroundManager
 			"n_onActivitySaveInstanceState:(Landroid/app/Activity;Landroid/os/Bundle;)V:GetOnActivitySaveInstanceState_Landroid_app_Activity_Landroid_os_Bundle_Handler:Android.App.Application/IActivityLifecycleCallbacksInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"n_onActivityStarted:(Landroid/app/Activity;)V:GetOnActivityStarted_Landroid_app_Activity_Handler:Android.App.Application/IActivityLifecycleCallbacksInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"n_onActivityStopped:(Landroid/app/Activity;)V:GetOnActivityStopped_Landroid_app_Activity_Handler:Android.App.Application/IActivityLifecycleCallbacksInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
+			"n_onTrimMemory:(I)V:GetOnTrimMemory_IHandler:Android.Content.IComponentCallbacks2Invoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
+			"n_onConfigurationChanged:(Landroid/content/res/Configuration;)V:GetOnConfigurationChanged_Landroid_content_res_Configuration_Handler:Android.Content.IComponentCallbacksInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
+			"n_onLowMemory:()V:GetOnLowMemoryHandler:Android.Content.IComponentCallbacksInvoker, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\n" +
 			"";
 		mono.android.Runtime.register ("Xamarin.InsightsCore.BackgroundManager, Xamarin.Insights, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null", BackgroundManager.class, __md_methods);
 	}
@@ -91,6 +96,30 @@ public class BackgroundManager
 	}
 
 	private native void n_onActivityStopped (android.app.Activity p0);
+
+
+	public void onTrimMemory (int p0)
+	{
+		n_onTrimMemory (p0);
+	}
+
+	private native void n_onTrimMemory (int p0);
+
+
+	public void onConfigurationChanged (android.content.res.Configuration p0)
+	{
+		n_onConfigurationChanged (p0);
+	}
+
+	private native void n_onConfigurationChanged (android.content.res.Configuration p0);
+
+
+	public void onLowMemory ()
+	{
+		n_onLowMemory ();
+	}
+
+	private native void n_onLowMemory ();
 
 	java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

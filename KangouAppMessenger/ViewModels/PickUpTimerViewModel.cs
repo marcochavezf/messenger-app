@@ -13,52 +13,29 @@ namespace KangouMessenger.Core
     {
 		public CountDownTimer CountDownTimer { get; set; }
 
-		public PickUpTimerViewModel(bool removeNextToLastViewModel = true){
+		public PickUpTimerViewModel(IDataService dataService) 
+			: base (dataService){
 
-			/* This is when the view is trying to open after a running out of memory */ 
-			if (String.IsNullOrEmpty (KangouData.Id)) {
-				Close(this);
+			if (!HasCourierAndOrderId ()) {
+				Close (this);
 				return;
 			}
-
-			RemoveNextToLastViewModel = removeNextToLastViewModel;
-			IsBusy = false;
-
-			ConnectionManager.On (SocketEvents.HasPickedUp, (data) => {
-				ConnectionManager.Off (SocketEvents.HasPickedUp);
-
-				if (CountDownTimer != null) {
-					CountDownTimer.Dispose ();
-					CountDownTimer = null;
-				}
-
-				ItNeedsToBeRemoved = true;
-				InvokeOnMainThread (delegate {  
-					IsBusy = false;
-				});
-				Task.Run(delegate {
-					ShowViewModel<DropOffRouteViewModel> (new BusyMvxViewModelParameters (){ RemoveNextToLastViewModel = true });
-				});
-			});
-				
+			KangouData.AppView = "PickUpTimerView";
+			EnableRetryButton = true;
+			RetryAction = DoPickedUpCommand;
+			
 			CountDownTimer = new CountDownTimer (13, 00);
 			CountDownTimer.TickTime += (readableTime, hasFinished) => {
 
 				TimeRemaining = readableTime;
 				if(hasFinished){
-					Debug.WriteLine("Emitting TimerPickUpHasFinished");
-					var jsonString = String.Format( "{{ \"{0}\": {1} }}", SocketEvents.TimerPickUpHasFinished, true);
-					ConnectionManager.Emit( SocketEvents.TimerPickUpHasFinished, jsonString);
+					//TODO Send to server that timer has finished
 
 					CountDownTimer.TickTime -= null;
 					CountDownTimer.Dispose();
 					CountDownTimer = null;
 				}
 			};
-			KangouData.AppView = "PickUpTimerView";
-
-			EnableRetryButton = true;
-			RetryAction = DoPickedUpCommand;
 		}
 
 		private string _timeRemaining = "13:00";
@@ -77,10 +54,13 @@ namespace KangouMessenger.Core
 		}
 		private void DoPickedUpCommand ()
 		{
-			DoAsyncLongTask (() => {
-				var orderId = DataOrderManager.Instance.DataOrder.Id;
-				var jsonString = String.Format( "{{ \"{0}\": {1}, \"orderId\": \"{2}\" }}", SocketEvents.HasPickedUp, "true", orderId);
-				ConnectionManager.Emit( SocketEvents.HasPickedUp, jsonString);
+			IsBusy = true;
+			KangouClient.HasPickedUp (KangouData.CourierId, KangouData.OrderId, (err, res) => {
+				IsBusy = false;	
+				if(res != null && res.success){
+					ItNeedsToBeRemoved = true;
+					ShowViewModel<DropOffRouteViewModel> ();
+				}
 			});
 		}
 	

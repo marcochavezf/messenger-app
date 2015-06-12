@@ -13,20 +13,20 @@ namespace KangouMessenger.Core
 		private static DataOrderManager instance;
 
 		private volatile bool _isOrderActive;
-		public DataOrder DataOrder { private set; get; }
+		public static Order Order;
 
 		public bool IsOrderActive { 
 			get { return _isOrderActive; } 
-			set { _isOrderActive = value; if (!value) DataOrder = null; }
+			set { _isOrderActive = value; if (!value) Order = null; }
 		}
 			
-		public void SetData(JToken data){
-			DataOrder = new DataOrder (data);
+		public void SetOrder(Order order){
+			Order = order;
 			IsOrderActive = true;
 		}
 
 		private DataOrderManager(){
-			DataOrder = null;
+			Order = null;
 			IsOrderActive = false;
 		}
 

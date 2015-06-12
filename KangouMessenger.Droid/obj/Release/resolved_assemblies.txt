@@ -1,29 +1,29 @@
-/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/Kangou Mensajero.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Kangou Mensajero.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.Xml.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v5.0/Mono.Android.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/Newtonsoft.Json.6.0.8/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/Newtonsoft.Json.6.0.8/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll
 /Users/marcochavezf/GitHub/ModernHttpClientBinaries/1.1.0/MonoAndroid/OkHttp.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.Community.Plugin.Sqlite.3.1.1/lib/MonoAndroid/Cirrious.MvvmCross.Community.Plugins.Sqlite.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.Community.Plugin.Sqlite.3.1.1/lib/MonoAndroid/Cirrious.MvvmCross.Community.Plugins.Sqlite.Droid.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.5.1/lib/MonoAndroid/Cirrious.CrossCore.Droid.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.Binding.Droid.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.5.1/lib/MonoAndroid/Cirrious.CrossCore.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.Binding.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.Localization.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.Plugin.Messenger.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.Plugins.Messenger.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.Plugin.Json.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.Plugins.Json.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.MvvmCrossLibraries.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.Droid.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.MvvmCrossLibraries.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/MvvmCross.HotTuna.Droid.Fragging.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.Droid.Fragging.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/Xamarin.Insights.1.10.1.109/lib/MonoAndroid10/Xamarin.Insights.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/Xamarin.GooglePlayServices.22.0.0.2/lib/MonoAndroid41/GooglePlayServicesLib.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/Xamarin.Android.Support.v4.22.1.1.1/lib/MonoAndroid403/Xamarin.Android.Support.v4.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/Xamarin.Android.Support.v7.AppCompat.22.1.1.1/lib/MonoAndroid403/Xamarin.Android.Support.v7.AppCompat.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/Xamarin.Android.Support.v7.MediaRouter.22.1.1.1/lib/MonoAndroid403/Xamarin.Android.Support.v7.MediaRouter.dll
-/Users/marcochavezf/Google Drive/messenger-app/packages/Xamarin.Facebook.4.0.1.1/lib/MonoAndroid40/Xamarin.Facebook.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/MvvmCross.Community.Plugin.Sqlite.3.1.1/lib/MonoAndroid/Cirrious.MvvmCross.Community.Plugins.Sqlite.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/MvvmCross.Community.Plugin.Sqlite.3.1.1/lib/MonoAndroid/Cirrious.MvvmCross.Community.Plugins.Sqlite.Droid.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.5.1/lib/MonoAndroid/Cirrious.CrossCore.Droid.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.Binding.Droid.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.5.1/lib/MonoAndroid/Cirrious.CrossCore.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.Binding.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/MvvmCross.HotTuna.CrossCore.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.Localization.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/MvvmCross.HotTuna.Plugin.Messenger.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.Plugins.Messenger.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/MvvmCross.HotTuna.Plugin.Json.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.Plugins.Json.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/MvvmCross.HotTuna.MvvmCrossLibraries.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.Droid.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/MvvmCross.HotTuna.MvvmCrossLibraries.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/MvvmCross.HotTuna.Droid.Fragging.3.5.1/lib/MonoAndroid/Cirrious.MvvmCross.Droid.Fragging.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/Xamarin.GooglePlayServices.22.0.0.2/lib/MonoAndroid41/GooglePlayServicesLib.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/Xamarin.Android.Support.v4.22.1.1.1/lib/MonoAndroid403/Xamarin.Android.Support.v4.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/Xamarin.Android.Support.v7.AppCompat.22.1.1.1/lib/MonoAndroid403/Xamarin.Android.Support.v7.AppCompat.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/Xamarin.Android.Support.v7.MediaRouter.22.1.1.1/lib/MonoAndroid403/Xamarin.Android.Support.v7.MediaRouter.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/Xamarin.Facebook.4.2.0.0/lib/MonoAndroid403/Xamarin.Facebook.dll
+/Users/marcochavezf/GitHub/messenger-app/packages/Xamarin.Insights.1.10.4.112/lib/MonoAndroid10/Xamarin.Insights.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.Core.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/KangouAppMessenger.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/KangouAppMessenger.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/mscorlib.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/Facades/System.Collections.Concurrent.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/Facades/System.Collections.dll
@@ -72,14 +72,7 @@
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/Facades/System.Xml.XDocument.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/Facades/System.Xml.XmlSerializer.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.Runtime.Serialization.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/SocketIoClientDotNet.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/EngineIoClientDotNet.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.Net.Http.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/WebSocket4Net.MonoTouch.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/SuperSocket.ClientEngine.Core.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/SuperSocket.ClientEngine.Common.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/SuperSocket.ClientEngine.Protocol.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouMessenger.Droid/bin/Release/ModernHttpClient.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.ComponentModel.DataAnnotations.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.Numerics.dll
 /Library/Frameworks/Mono.framework/External/xbuild-frameworks/MonoAndroid/v1.0/System.ComponentModel.Composition.dll

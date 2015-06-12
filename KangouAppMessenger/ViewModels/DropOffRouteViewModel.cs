@@ -11,26 +11,14 @@ namespace KangouMessenger.Core
 		: BusyMvxViewModel
     {
 		/* Constructor */
-		public DropOffRouteViewModel(bool removeNextToLastViewModel = true){
+		public DropOffRouteViewModel(IDataService dataService) 
+			: base (dataService){
 
-			/* This is when the view is trying to open after a running out of memory */ 
-			if (String.IsNullOrEmpty (KangouData.Id)) {
-				Close(this);
+			if (!HasCourierAndOrderId ()) {
+				Close (this);
 				return;
 			}
 
-			RemoveNextToLastViewModel = removeNextToLastViewModel;
-
-			ConnectionManager.On (SocketEvents.ArrivedToDropOff, (data) => {
-				ConnectionManager.Off (SocketEvents.ArrivedToDropOff);
-				ItNeedsToBeRemoved = true;
-				InvokeOnMainThread (delegate {  
-					IsBusy = false;
-				});
-				Task.Run (delegate {
-					ShowViewModel<DropOffTimerViewModel> (new BusyMvxViewModelParameters (){ RemoveNextToLastViewModel = true });
-				});
-			});
 			KangouData.AppView = "DropOffRouteView";
 
 			EnableRetryButton = true;
@@ -62,11 +50,14 @@ namespace KangouMessenger.Core
 
 		private void DoImHereCommand ()
 		{
-			DoAsyncLongTask (() => {
-				var orderId = DataOrderManager.Instance.DataOrder.Id;
-				var jsonString = String.Format( "{{ \"{0}\": {1}, \"orderId\": \"{2}\" }}", SocketEvents.ArrivedToDropOff, "true", orderId);
-				ConnectionManager.Emit( SocketEvents.ArrivedToDropOff, jsonString);
-			}); 
+			IsBusy = true;
+			KangouClient.ArrivedToDropOff (KangouData.CourierId, KangouData.OrderId, (err, res) => {
+				IsBusy = false;	
+				if(res != null && res.success){
+					ItNeedsToBeRemoved = true;
+					ShowViewModel<DropOffTimerViewModel> ();
+				}
+			});
 		}
     }
 }

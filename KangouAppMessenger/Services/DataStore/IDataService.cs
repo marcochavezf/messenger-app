@@ -7,5 +7,9 @@ namespace KangouMessenger.Core
 
 		void AddOrUpdate(CourierData userData);
 		CourierData GetCourierData();
+		void SaveResumeOrder (Order order);
+		Order GetResumeOrder ();
+		void SaveInfoOrder (Order order);
+		Order GetInfoOrder ();
     }
 }

@@ -1,25 +1,14 @@
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/obj/Release/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/KangouAppMessenger.dll.mdb
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/KangouAppMessenger.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/obj/Release/KangouAppMessenger.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/obj/Release/KangouAppMessenger.dll.mdb
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/Newtonsoft.Json.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/Cirrious.MvvmCross.Community.Plugins.Sqlite.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/Cirrious.CrossCore.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/Cirrious.MvvmCross.Localization.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/Cirrious.MvvmCross.Plugins.Messenger.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/Cirrious.MvvmCross.Plugins.Json.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/Cirrious.MvvmCross.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/Xamarin.Insights.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/SocketIoClientDotNet.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/SocketIoClientDotNet.dll.mdb
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/EngineIoClientDotNet.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/EngineIoClientDotNet.dll.mdb
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/ModernHttpClient.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/ModernHttpClient.dll.mdb
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/System.Net.Http.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/WebSocket4Net.MonoTouch.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/SuperSocket.ClientEngine.Core.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/System.Net.Http.Primitives.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/SuperSocket.ClientEngine.Protocol.dll
-/Users/marcochavezf/Google Drive/messenger-app/KangouAppMessenger/bin/Release/SuperSocket.ClientEngine.Common.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/obj/Release/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/KangouAppMessenger.dll.mdb
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/KangouAppMessenger.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/obj/Release/KangouAppMessenger.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/obj/Release/KangouAppMessenger.dll.mdb
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Newtonsoft.Json.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Cirrious.MvvmCross.Community.Plugins.Sqlite.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Cirrious.CrossCore.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Cirrious.MvvmCross.Localization.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Cirrious.MvvmCross.Plugins.Messenger.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Cirrious.MvvmCross.Plugins.Json.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Cirrious.MvvmCross.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/ModernHttpClient.Portable.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Xamarin.Insights.dll

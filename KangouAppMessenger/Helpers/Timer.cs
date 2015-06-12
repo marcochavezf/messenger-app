@@ -47,7 +47,7 @@ namespace KangouMessenger.Core
 				if(hasTimerFinished){
 					timeRemaining = 0;
 					var jsonString = String.Format( "{{ \"{0}\": {1} }}", SocketEvents.TimerPickUpHasFinished, true);
-					ConnectionManager.Emit( SocketEvents.TimerPickUpHasFinished, jsonString);
+					//ConnectionManager.Emit( SocketEvents.TimerPickUpHasFinished, jsonString);
 				}
 
 				TickTime(ConvertToReadableTime(timeRemaining), hasTimerFinished);

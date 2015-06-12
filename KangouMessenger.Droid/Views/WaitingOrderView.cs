@@ -31,7 +31,6 @@ namespace KangouMessenger.Droid
 		private bool _isCameraUpdated;
 		private WaitingOrderViewModel _viewModel;
 		private BindableProgress _retryingToConnectProgress;
-		private int _ticksToEmitGpsPosition;
 		public static readonly int NOTIFICATION_ID_ORDER_RECEIVED = 265431;
 
 		public static double CurrentLat { get; private set; }
@@ -43,7 +42,6 @@ namespace KangouMessenger.Droid
 			SetContentView(Resource.Layout.WaitingOrderView);
 
 			Console.WriteLine ("OnCreate WaitingOrderView");
-			_ticksToEmitGpsPosition = 0;
 			_viewModel = (WaitingOrderViewModel)ViewModel;
 			_retryingToConnectProgress = new BindableProgress(this, "Desconectado", "Intentando conectar...", true, ()=>{
 				_viewModel.DisconnectCommand.Execute(null);
@@ -69,7 +67,7 @@ namespace KangouMessenger.Droid
 					Console.WriteLine ("Exception _locationManager.RemoveUpdates: {0}", exception);
 					Insights.Report (exception);
 				}
-				ConnectionManager.ConnectionState = ConnectionStates.DISCONNECTED_BY_USER;
+				//ConnectionManager.ConnectionState = ConnectionStates.DISCONNECTED_BY_USER;
 			};
 
 			SetTitle (Resource.String.titleWaitingOrder);
@@ -143,8 +141,8 @@ namespace KangouMessenger.Droid
 
 		public void OnLocationChanged(Location location) {
 
-			if (ConnectionManager.ConnectionState == ConnectionStates.DISCONNECTED_BY_USER)
-				return;
+			//if (ConnectionManager.ConnectionState == ConnectionStates.DISCONNECTED_BY_USER)
+			//	return;
 
 			_currentLocation = location;
 			if (_currentLocation == null){
@@ -153,8 +151,6 @@ namespace KangouMessenger.Droid
 				CurrentLat = _currentLocation.Latitude;
 				CurrentLng = _currentLocation.Longitude;
 				_viewModel.PublishPosition (CurrentLat, CurrentLng);
-
-				var gpsPosString = gpsPosJsonString (CurrentLat, CurrentLng);
 
 				if (!_isCameraUpdated) {
 					_isCameraUpdated = true;
@@ -172,23 +168,7 @@ namespace KangouMessenger.Droid
 						map.MoveCamera (cameraUpdate);
 					});
 				}
-
-				if (_ticksToEmitGpsPosition > 5) {
-					ConnectionManager.Emit (SocketEvents.GpsPosition, gpsPosString);
-					_ticksToEmitGpsPosition = 0;
-				}
-
-				_ticksToEmitGpsPosition++;
 			}
-		}
-
-		private string gpsPosJsonString(double lat, double lng){
-			var latString = String.Format("\"{0}\"", lat).Replace(",",".");
-			var lngString = String.Format("\"{0}\"", lng).Replace(",",".");
-			if (DataOrderManager.Instance.IsOrderActive && KangouData.AppView != "ReceivingOrderView" && KangouData.AppView != "WaitingOrderView")
-				return String.Format( "{{ \"lat\": {0}, \"lng\": {1}, \"orderId\": \"{2}\" }}", latString, lngString,  DataOrderManager.Instance.DataOrder.Id);
-			else
-				return String.Format( "{{ \"lat\": {0}, \"lng\": {1} }}", latString, lngString);
 		}
 
 		public void OnProviderDisabled(string provider) {

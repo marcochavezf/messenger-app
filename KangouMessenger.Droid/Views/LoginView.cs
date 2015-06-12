@@ -147,8 +147,11 @@ namespace KangouMessenger.Droid
 			_googleLoginButton.Click += mGoogleSignIn_Click;
 			//SetGooglePlusButtonText (_googleLoginButton, "Iniciar Sesión con Google+");
 
-			_logoutButton = FindViewById<Button>(Resource.Id.logoutButton); 
-			_logoutButton.Click += (object sender, EventArgs e) => {
+			var logoutConfirmDialog = new AlertDialog.Builder (this);
+			logoutConfirmDialog.SetTitle ("¿Estás seguro de cerrar sesión?");
+			logoutConfirmDialog.SetMessage ("Puedes dejar tu sesión abierta para conectarte rápido la próxima vez. La sesión abierta no consume datos.");
+			logoutConfirmDialog.SetNegativeButton ("Cancelar", (object sender, DialogClickEventArgs args)=>{});
+			logoutConfirmDialog.SetPositiveButton ("Aceptar", (object sender, DialogClickEventArgs args)=>{
 				_viewModel.ClearUserId();
 				RunOnUiThread (delegate {
 					ShowLoginButtons(true);
@@ -163,9 +166,15 @@ namespace KangouMessenger.Droid
 
 				if(!_mGoogleApiClient.IsConnected || _mGoogleApiClient.IsConnecting) 
 					return; 
-				
+
 				PlusClass.AccountApi.RevokeAccessAndDisconnect(_mGoogleApiClient);
 				_mGoogleApiClient.Disconnect ();
+			});
+
+
+			_logoutButton = FindViewById<Button>(Resource.Id.logoutButton); 
+			_logoutButton.Click += (object sender, EventArgs e) => {
+				logoutConfirmDialog.Show();
 			};
 			if (_viewModel.HasUserId ()) {
 				ShowLoginButtons(false);

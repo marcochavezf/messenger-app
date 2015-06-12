@@ -12,27 +12,15 @@ namespace KangouMessenger.Core
 		: BusyMvxViewModel
     {
 		/* Constructor */
-		public ReviewViewModel(){
-			/* This is when the view is trying to open after a running out of memory */ 
-			if (String.IsNullOrEmpty (KangouData.Id)) {
-				Close(this);
+		public ReviewViewModel(IDataService dataService) 
+			: base (dataService){
+
+			if (!HasCourierAndOrderId ()) {
+				Close (this);
 				return;
 			}
 
 			KangouData.AppView = "ReviewView";
-			ConnectionManager.On  ( SocketEvents.ReviewAccepted, (data) => {
-				ConnectionManager.Off  ( SocketEvents.ReviewAccepted );
-				DataOrderManager.Instance.IsOrderActive = false;
-
-				KangouData.AppView = "WaitingOrderView";
-				InvokeOnMainThread (delegate {  
-					IsBusy = false;
-				});
-				Task.Run(delegate {
-					Close(this);
-				});
-			});
-
 			EnableRetryButton = true;
 			RetryAction = DoAcceptCommand;
 		}
@@ -61,14 +49,16 @@ namespace KangouMessenger.Core
 		}
 		private void DoAcceptCommand ()
 		{
-			DoAsyncLongTask (() => {
-				try{
-					var orderId = DataOrderManager.Instance.DataOrder.Id;
-					var jsonString = String.Format( "{{ \"{0}\": {1}, \"commentsAboutClient\": \"{2}\", \"ratingAboutClient\": {3}, \"orderId\": \"{4}\" }}", SocketEvents.ReviewAccepted, "true", CommentsAboutClient.Replace(System.Environment.NewLine," "), RatingAboutClient, orderId);
-					ConnectionManager.Emit( SocketEvents.ReviewAccepted, jsonString);
-				} catch(Exception e){
-					Debug.WriteLine(e);
-					Xamarin.Insights.Report(e);
+			IsBusy = true;
+			KangouClient.ReviewAccepted (KangouData.CourierId, KangouData.OrderId, 
+				CommentsAboutClient.Replace(System.Environment.NewLine," "), RatingAboutClient, (err, res) => {
+				IsBusy = false;	
+				if(res != null && res.success){
+					_dataService.SaveInfoOrder(null);
+					_dataService.SaveResumeOrder(null);
+					KangouData.CancelCurrentActiveOrder();
+					
+					Close(this);
 				}
 			});
 		}

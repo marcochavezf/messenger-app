@@ -15,28 +15,13 @@ namespace KangouMessenger.Core
     {
 
 		/* Constructor */
-		public PickUpRouteViewModel(bool removeNextToLastViewModel = true){
-
-			/* This is when the view is trying to open after a running out of memory */ 
-			if (String.IsNullOrEmpty (KangouData.Id)) {
-				Close(this);
+		public PickUpRouteViewModel(IDataService dataService) 
+			: base (dataService) {
+			if (!HasCourierAndOrderId ()) {
+				Close (this);
 				return;
 			}
-
-			RemoveNextToLastViewModel = removeNextToLastViewModel;
-
-			ConnectionManager.On  ( SocketEvents.ArrivedToPickUp, (data) => {
-				ConnectionManager.Off( SocketEvents.ArrivedToPickUp );
-				ItNeedsToBeRemoved = true;
-				InvokeOnMainThread (delegate {  
-					IsBusy = false;
-				});
-				Task.Run(delegate {
-					ShowViewModel<PickUpTimerViewModel> (new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = true });
-				});
-			});
 			KangouData.AppView = "PickUpRouteView";
-
 			EnableRetryButton = true;
 			RetryAction = DoImHereCommand;
 		}
@@ -66,10 +51,13 @@ namespace KangouMessenger.Core
 
 		private void DoImHereCommand ()
 		{
-			DoAsyncLongTask (() => {
-				var orderId = DataOrderManager.Instance.DataOrder.Id;
-				var jsonString = String.Format( "{{ \"{0}\": {1}, \"orderId\": \"{2}\"}}", SocketEvents.ArrivedToPickUp, "true", orderId);
-				ConnectionManager.Emit( SocketEvents.ArrivedToPickUp, jsonString);
+			IsBusy = true;
+			KangouClient.HasArrivedToPickUp (KangouData.CourierId, KangouData.OrderId, (err, res) => {
+				IsBusy = false;	
+				if(res != null && res.success){
+					ItNeedsToBeRemoved = true;
+					ShowViewModel<PickUpTimerViewModel> ();
+				}
 			});
 		}
     }

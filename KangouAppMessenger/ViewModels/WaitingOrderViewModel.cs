@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Cirrious.MvvmCross.Plugins.Messenger;
 using System.Diagnostics;
 using System;
-using Quobject.SocketIoClientDotNet.Client;
 
 namespace KangouMessenger.Core
 {
@@ -13,119 +12,99 @@ namespace KangouMessenger.Core
     public class WaitingOrderViewModel 
 		: BusyMvxViewModel
     {
-		protected readonly IMvxMessenger _messenger;
+		private int _ticksPositionPublished;
+		private readonly int TICKS_TO_SEND_HEARBEAT = 2;
 
 		/* Constructor */
-		public WaitingOrderViewModel(IMvxMessenger messenger, IDataService dataService){
+		public WaitingOrderViewModel(IDataService dataService, IMvxMessenger messenger)
+			: base(dataService, messenger) {
 
-			IsTryingToReconnect = true;
+			StatusConnection = "Conectado";
+
+			IsTryingToReconnect = false;
 			TitleBindableProgress = "Conectando...";
 			MessageBindableProgress = "Por favor espere";
-			StatusConnection = "Conectando...";
 
-			_messenger = messenger;
+			_ticksPositionPublished = 0;
+
 
 			#if DEBUG
-			if (KangouData.Id == null) {
-				KangouData.Id = "54e0b95d5f0b2755c284ef89";
+			if (KangouData.CourierId == null) {
+				KangouData.CourierId = "54e0b95d5f0b2755c284ef89";
 			}
 			#endif
-			KangouData.Id = dataService.GetCourierData ().UserId;
+			KangouData.CourierId = dataService.GetCourierData ().UserId;
 			KangouData.AppView = "WaitingOrderView";
 
-			ConnectionManager.Connect();
-			ConnectionManager.ConnectionState = ConnectionStates.USER_WANTS_TO_BE_CONNECTED;
+			ResumeOrder (dataService.GetResumeOrder ());
+			InfoOrder (dataService.GetInfoOrder());
+		}
 
-			ConnectionManager.Once(Socket.EVENT_CONNECT, (data) => {
-				Debug.WriteLine("Connected");
+		private void ResumeOrder(Order resumeOrder){
+			if (resumeOrder == null) {
+				return;
+			}
 
-				if(ConnectionManager.ConnectionState == ConnectionStates.USER_WANTS_TO_BE_CONNECTED){
+			KangouData.OrderId = resumeOrder._id;
+			KangouData.ActiveOrder = resumeOrder;
 
-					System.Diagnostics.Debug.WriteLine ("connected On");
-					ConnectionManager.ConnectionState = ConnectionStates.CONNECTED_BY_SERVER;
+			switch (resumeOrder.status) {
+
+			case StatusOrder.KangouGoingToPickUp:
+				ShowViewModel<PickUpRouteViewModel>();
+				break;
+
+			case StatusOrder.KangouWaitingToPickUp:
+				ShowViewModel<PickUpTimerViewModel>();
+				break;
+
+			case StatusOrder.KangouGoingToDropOff:
+				ShowViewModel<DropOffRouteViewModel>();
+				break;
+
+			case StatusOrder.KangouWaitingToDropOff:
+				ShowViewModel<DropOffTimerViewModel>();
+				break;
+
+			case StatusOrder.OrderSignedByClient:
+				ShowViewModel<ReviewViewModel>();
+				break;
+			}
+		}
+
+		private void InfoOrder(Order infoOrder){
+			if (infoOrder == null) {
+				return;
+			}
+			if (KangouData.ActiveOrder != null) {
+				return;
+			}
+			if(!String.IsNullOrWhiteSpace(KangouData.OrderId)){
+				return;
+			}
+			if(KangouData.HasBeenCanceledBefore(infoOrder)){
+				return;
+			}
+			KangouData.OrderId = infoOrder._id;
+			KangouData.ActiveOrder = infoOrder;
+			InvokeOnMainThread (delegate {
+				ReceivingInfoOrderToLocalNotification(infoOrder.pickup.sublocality, infoOrder.dropoff.sublocality);
+			});
+			ShowViewModel<ReceivingOrderViewModel>();
+		}
+
+		public void Heartbeat(double lat, double lng){
+			KangouClient.Heartbeat (KangouData.CourierId, KangouData.OrderId, lat, lng, (err, res) => {
+				if(res != null){
+					InfoOrder(res.orderAvailable);
 					StatusConnection = "Conectado";
-
-					InvokeOnMainThread (delegate {
-						IsBusy = false;
-					});
+					IsTryingToReconnect = false;
+				}
+				if(!String.IsNullOrWhiteSpace(err)){
+					StatusConnection = "Desconectado";
+					IsTryingToReconnect = true;
 				}
 			});
-
-			ConnectionManager.On (SocketEvents.InfoOrder, (data) => {
-
-				if(ConnectionManager.ConnectionState == ConnectionStates.DISCONNECTED_BY_USER)
-					return;
-
-				Debug.WriteLine("listItems: {0}",data["listItems"]);
-
-				Debug.WriteLine("pickUpAdress: {0}",data["pickUpAdress"]);
-				Debug.WriteLine("pickUpRefences: {0}",data["pickUpRefences"]);
-				Debug.WriteLine("pickUpFullName: {0}",data["pickUpFullName"]);
-				Debug.WriteLine("pickUpLat: {0}",data["pickUpLat"]);
-				Debug.WriteLine("pickUpLng: {0}",data["pickUpLng"]);
-
-				Debug.WriteLine("dropOffAdress: {0}",data["dropOffAdress"]);
-				Debug.WriteLine("dropOffRefences: {0}",data["dropOffRefences"]);
-				Debug.WriteLine("dropOffFullName: {0}",data["dropOffFullName"]);
-				Debug.WriteLine("dropOffLat: {0}",data["dropOffLat"]);
-				Debug.WriteLine("dropOffLng: {0}",data["dropOffLng"]);
-
-				Debug.WriteLine("clientName: {0}",data["clientName"]);
-				Debug.WriteLine("clientEmail: {0}",data["clientEmail"]);
-				Debug.WriteLine("clientPhoneNumber: {0}",data["clientPhoneNumber"]);
-
-				Debug.WriteLine("IsActive: {0}",DataOrderManager.Instance.IsOrderActive);
-
-				if(!DataOrderManager.Instance.IsOrderActive){
-					ConnectionManager.Emit(SocketEvents.InfoOrder, "{}");
-					DataOrderManager.Instance.SetData( data );
-					ReceivingInfoOrderToLocalNotification(DataOrderManager.Instance.DataOrder.PickUpAdress, DataOrderManager.Instance.DataOrder.DropOffAdress);
-					ShowViewModel<ReceivingOrderViewModel>();
-				}
-			});
-
-			ConnectionManager.On (SocketEvents.ResumeOrder, (data) => {
-
-				if(ConnectionManager.ConnectionState == ConnectionStates.DISCONNECTED_BY_USER)
-					return;
-
-				ConnectionManager.Emit(SocketEvents.ResumeOrder, "{}");
-				if(!DataOrderManager.Instance.IsOrderActive){
-					DataOrderManager.Instance.SetData( data );
-
-					switch (data["status"].ToString()) {
-						
-					case StatusOrder.KangouGoingToPickUp:
-						ShowViewModel<PickUpRouteViewModel>(new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = false });
-						break;
-
-					case StatusOrder.KangouWaitingToPickUp:
-						ShowViewModel<PickUpTimerViewModel>(new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = false });
-						break;
-
-					case StatusOrder.KangouGoingToDropOff:
-						ShowViewModel<DropOffRouteViewModel>(new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = false });
-						break;
-
-					case StatusOrder.KangouWaitingToDropOff:
-						ShowViewModel<DropOffTimerViewModel>(new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = false });
-						break;
-
-					case StatusOrder.OrderSignedByClient:
-						ShowViewModel<ReviewViewModel>(new BusyMvxViewModelParameters(){ RemoveNextToLastViewModel = false });
-						break;
-					}
-				}
-			});
-
-			ConnectionManager.Instance.TryingToReconnect += (bool obj, string title, string message) => {
-  				if(ConnectionManager.ConnectionState == ConnectionStates.CONNECTED_BY_SERVER){
-					IsTryingToReconnect = obj;
-					TitleBindableProgress = title;
-					MessageBindableProgress = message;
-					StatusConnection = obj ? "Desconectado" : "Conectado";
-				}
-			};
 		}
 			
 		/* Properties */
@@ -171,23 +150,27 @@ namespace KangouMessenger.Core
 
 		private void DoDisconnectCommand ()
 		{
-			IsBusy = true;
-			Task.Run (()=>{
-				ConnectionManager.ConnectionState = ConnectionStates.DISCONNECTED_BY_USER;
-				ConnectionManager.Disconnect();
-				InvokeOnMainThread (delegate {
-					IsBusy = false;
-				});
-
-				KangouData.AppView = "LoginView";
-				Close(this);
+			KangouData.AppView = "LoginView";
+			InvokeOnMainThread (delegate {
+				IsBusy = false;
+				IsTryingToReconnect = false;
 			});
-
+			Close(this);
 		}
 
 		public void PublishPosition(double lat, double lng){
+			if(KangouData.AppView == "LoginView"){
+				return;
+			}
+				
 			var message = new LocationMessage(this,lat,lng);
 			_messenger.Publish (message);
+
+			if (_ticksPositionPublished > TICKS_TO_SEND_HEARBEAT) {
+				Heartbeat (lat, lng);
+				_ticksPositionPublished = 0;
+			}
+			_ticksPositionPublished++;
 		}
 
 		/* Actions to implement in platform specific views */

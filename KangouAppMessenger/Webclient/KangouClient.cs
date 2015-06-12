@@ -5,18 +5,143 @@ using System.IO;
 using Cirrious.CrossCore;
 using Cirrious.CrossCore.Platform;
 using System.Diagnostics;
+using ModernHttpClient;
+using Newtonsoft.Json;
 
 namespace KangouMessenger.Core
 {
 	public class KangouClient
 	{
-		private readonly IMvxJsonConverter _jsonConverter;
-		public KangouClient (IMvxJsonConverter jsonConverter)
+		public static void RetrieveUserId(string provider, string providerDataId, Action<string, RetrieveUserIdResponse> callback)
 		{
-			_jsonConverter = jsonConverter;
+			var endpoint = GetFullEndpoint ("/app/courier/v2/retrieveId");
+			var data = new {
+				provider = provider,
+				providerDataId = providerDataId
+			};
+			SendPostDataToServer (endpoint, JsonConvert.SerializeObject(data).ToString(), (err, res)=>{
+				callback(err, SafeDesarializeObject<RetrieveUserIdResponse>(res));
+			});
 		}
 
-		private string GetFullEndpoint(string path){
+		public static void RequestCourierAccess(string userId, string pushDeviceId, string pushDeviceService, Action<string, RequestCourierAccessResponse> callback)
+		{
+			var endpoint = GetFullEndpoint ("/app/courier/v2/requestAccess");
+			var data = new {
+				userId = userId,
+				pushDeviceId = pushDeviceId,
+				pushDeviceService = pushDeviceService
+			};
+			SendPostDataToServer (endpoint, JsonConvert.SerializeObject(data).ToString(), (err, res)=>{
+				callback(err, SafeDesarializeObject<RequestCourierAccessResponse>(res));
+			});
+		}
+
+		public static void Heartbeat(string userId, string orderId, double lat, double lng, Action<string, HeartbeatResponse> callback)
+		{
+			var endpoint = GetFullEndpoint ("/app/courier/v2/heartbeat");
+			var data = new {
+				orderId = orderId,
+				userId = userId,
+				gpsLocation = new {
+					lat = String.Format("{0}", lat).Replace(",","."),
+					lng = String.Format("{0}", lng).Replace(",",".")
+				}
+			};
+			var dataSerialized = JsonConvert.SerializeObject (data).ToString ();
+			SendPostDataToServer (endpoint, dataSerialized, (err, res)=>{
+				callback(err, SafeDesarializeObject<HeartbeatResponse>(res));
+			});
+		}
+
+		public static void AcceptInfoOrder(string userId, string orderId, Action<string, AcceptInfoOrderResponse> callback)
+		{
+			var endpoint = GetFullEndpoint ("/app/courier/v2/acceptInfoOrder");
+			var data = new {
+				userId = userId,
+				orderId = orderId
+			};
+			SendPostDataToServer (endpoint, JsonConvert.SerializeObject(data).ToString(), (err, res)=>{
+				callback(err, SafeDesarializeObject<AcceptInfoOrderResponse>(res));
+			});
+		}
+
+		public static void CancelInfoOrder(string userId, string orderId, Action<string, GeneralResponse> callback)
+		{
+			var endpoint = GetFullEndpoint ("/app/courier/v2/cancelInfoOrder");
+			var data = new {
+				userId = userId,
+				orderId = orderId
+			};
+			SendPostDataToServer (endpoint, JsonConvert.SerializeObject(data).ToString(), (err, res)=>{
+				callback(err, SafeDesarializeObject<GeneralResponse>(res));
+			});
+		}
+
+		public static void HasArrivedToPickUp(string userId, string orderId, Action<string, GeneralResponse> callback)
+		{
+			var endpoint = GetFullEndpoint ("/app/courier/v2/hasArrivedToPickUp");
+			var data = new {
+				userId = userId,
+				orderId = orderId
+			};
+			SendPostDataToServer (endpoint, JsonConvert.SerializeObject(data).ToString(), (err, res)=>{
+				callback(err, SafeDesarializeObject<GeneralResponse>(res));
+			});
+		}
+
+		public static void HasPickedUp(string userId, string orderId, Action<string, GeneralResponse> callback)
+		{
+			var endpoint = GetFullEndpoint ("/app/courier/v2/hasPickedUp");
+			var data = new {
+				userId = userId,
+				orderId = orderId
+			};
+			SendPostDataToServer (endpoint, JsonConvert.SerializeObject(data).ToString(), (err, res)=>{
+				callback(err, SafeDesarializeObject<GeneralResponse>(res));
+			});
+		}
+
+		public static void ArrivedToDropOff(string userId, string orderId, Action<string, GeneralResponse> callback)
+		{
+			var endpoint = GetFullEndpoint ("/app/courier/v2/arrivedToDropOff");
+			var data = new {
+				userId = userId,
+				orderId = orderId
+			};
+			SendPostDataToServer (endpoint, JsonConvert.SerializeObject(data).ToString(), (err, res)=>{
+				callback(err, SafeDesarializeObject<GeneralResponse>(res));
+			});
+		}
+
+		public static void ClientSignatureAccepted(string userId, string orderId, string signature, Action<string, GeneralResponse> callback)
+		{
+			var endpoint = GetFullEndpoint ("/app/courier/v2/clientSignatureAccepted");
+			var data = new {
+				userId = userId,
+				orderId = orderId,
+				signature = signature,
+			};
+			SendPostDataToServer (endpoint, JsonConvert.SerializeObject(data).ToString(), (err, res)=>{
+				callback(err, SafeDesarializeObject<GeneralResponse>(res));
+			});
+		}
+
+		public static void ReviewAccepted(string userId, string orderId, string commentsAboutClient, int ratingAboutClient,  Action<string, GeneralResponse> callback)
+		{
+			var endpoint = GetFullEndpoint ("/app/courier/v2/reviewAccepted");
+			var data = new {
+				userId = userId,
+				orderId = orderId,
+				commentsAboutClient = commentsAboutClient,
+				ratingAboutClient = ratingAboutClient
+			};
+			SendPostDataToServer (endpoint, JsonConvert.SerializeObject(data).ToString(), (err, res)=>{
+				callback(err, SafeDesarializeObject<GeneralResponse>(res));
+			});
+		}
+
+		private static string GetFullEndpoint(string path){
 			#if DEBUG
 			var endpoint = Config.STAGE_ENDPOINT + path;
 			if(Config.IS_LOCAL){
@@ -28,59 +153,31 @@ namespace KangouMessenger.Core
 			return endpoint;
 		}
 
-		public void RetrieveUserId(string provider, string providerDataId, Action<string, string> callback)
-		{
-			var endpoint = GetFullEndpoint ("/app/courier/users/v1/retrieveId");
-			string data = 
-				"provider=" 				+ provider +
-				"&providerDataId=" 			+ providerDataId;
-			SendPostDataToServer (endpoint, data, callback);
-		}
-
-		public void RequestCourierAccess(string userId, string pushDeviceId, string pushDeviceService, Action<string, string> callback)
-		{
-			var endpoint = GetFullEndpoint ("/app/courier/users/v1/requestAccess");
-			string data = 
-				"userId=" 				+ userId + 
-				"&pushDeviceId=" 		+ pushDeviceId +
-				"&pushDeviceService=" 	+ pushDeviceService;
-			SendPostDataToServer (endpoint, data, callback);
-		}
-
-		public void LoginAsMessenger(string email, string password, string pushDeviceId, string pushDeviceService, Action<string> succesAction, Action<string> errorAction)
-		{
-			var endpoint = GetFullEndpoint ("/users/loginAsKangou");
-			string data = 
-				"email=" 				+ email +
-				"&password=" 			+ password +
-				"&pushDeviceId=" 		+ pushDeviceId +
-				"&pushDeviceService=" 	+ pushDeviceService;
-
-			SendPostDataToServer (endpoint,  data, (err, res) => {
-				if(err != null){
-					errorAction (err);
-					return;
+		private static T SafeDesarializeObject<T>(string objSerialized){
+			T objDeserialized = default(T);
+			if(objSerialized != null){
+				try {
+					objDeserialized = JsonConvert.DeserializeObject<T> (objSerialized);
+				} catch (Exception e){
+					Xamarin.Insights.Report (e);
 				}
-
-				var rootObj = _jsonConverter.DeserializeObject<User> (res);
-				var userId = rootObj.userId;
-				if (userId.Equals ("error") || userId.Equals ("not found")){
-					errorAction (rootObj.err);
-				} else {
-					succesAction (userId);
-				}
-			});
+			}
+			return objDeserialized;
 		}
 
-		private	void SendPostDataToServer (String endpoint, string data, Action<string, string> callback)
+
+		private static void SendPostDataToServer (String endpoint, string data, Action<string, string> callback, bool jsonTypeInput = true)
 		{
-			
 			/* Convert the string into a byte array. */
 			byte[] byteArray = Encoding.UTF8.GetBytes(data);
 
 			/* Sending Data to Server. */
 			var request = (HttpWebRequest)WebRequest.Create(endpoint);
-			request.ContentType = "application/x-www-form-urlencoded";
+			if (jsonTypeInput) {
+				request.ContentType = "application/json";
+			} else {
+				request.ContentType = "application/x-www-form-urlencoded";
+			}
 			request.Method = "POST";
 			request.BeginGetRequestStream (asynchResultReq =>  {
 				try {

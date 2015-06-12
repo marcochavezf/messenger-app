@@ -14,34 +14,20 @@ namespace KangouMessenger.Core
 		: BusyMvxViewModel
     {
 		private readonly MvxSubscriptionToken _token;
-		private readonly IMvxMessenger _messenger;
 		private int _tick;
 
 		/* Constructor */
-		public ReceivingOrderViewModel(IMvxMessenger messenger) : base() {
+		public ReceivingOrderViewModel(IMvxMessenger messenger) 
+			: base (messenger) {
+
+			/* This is when the view is trying to open after a running out of memory */ 
+			if (String.IsNullOrEmpty (KangouData.CourierId)) {
+				Close(this);
+				return;
+			}
 
 			_token = messenger.Subscribe<LocationMessage>(OnLocationMessage);
-			_messenger = messenger;
 			_tick = 30;
-
-			ConnectionManager.On (SocketEvents.AcceptInfoOrder, (data) => {
-				TurnOffConnectionEvents ();
-				ItNeedsToBeRemoved = true;
-				InvokeOnMainThread (delegate {  
-					IsBusy = false;
-				});
-				Task.Run (delegate {
-					ShowViewModel<PickUpRouteViewModel> (new BusyMvxViewModelParameters (){ RemoveNextToLastViewModel = true });
-				});
-			});
-			ConnectionManager.On  ( SocketEvents.OrderTakenFromSomeoneElse, (data) => {
-				Debug.WriteLine("Taken From someone else");
-				TurnOffConnectionEvents();
-				DataOrderManager.Instance.IsOrderActive = false;
-				if(OrderTakenFromSomeoneElse != null)
-					OrderTakenFromSomeoneElse();
-			});
-
 			KangouData.AppView = "ReceivingOrderView";
 		}
 
@@ -51,26 +37,21 @@ namespace KangouMessenger.Core
 				_tick--;
 				TimerToCancel = System.String.Format ("Se autocancelará en {0} seg.", _tick);
 			} else {
+				_tick = 0;
 				_messenger.Unsubscribe<LocationMessage> (_token);
 				DoCancelCommand ();
 			}
 		}
-
-		private void TurnOffConnectionEvents(){
-			ConnectionManager.Off(SocketEvents.CancelInfoOrder);
-			ConnectionManager.Off( SocketEvents.AcceptInfoOrder );
-			ConnectionManager.Off(SocketEvents.OrderTakenFromSomeoneElse);
-		}
 			
 		/* Properties */
-		private string _pickUpShortAddress = DataOrderManager.Instance.DataOrder.PickUpShortAdress;
+		private string _pickUpShortAddress = KangouData.ActiveOrder.pickup.sublocality;
         public string PickUpShortAddress
 		{ 
 			get { return _pickUpShortAddress; }
 			set { _pickUpShortAddress = value; RaisePropertyChanged(() => PickUpShortAddress); }
 		}
 
-		private string _dropOffShortAddress = DataOrderManager.Instance.DataOrder.DropOffShortAdress;
+		private string _dropOffShortAddress = KangouData.ActiveOrder.dropoff.sublocality;
 		public string DropOffShortAddress { 
 			get { return _dropOffShortAddress; }
 			set {
@@ -79,7 +60,7 @@ namespace KangouMessenger.Core
 			}
 		}
 
-		private string _aproximateDistance = DataOrderManager.Instance.DataOrder.AproximateDistance;
+		private string _aproximateDistance = KangouData.ActiveOrder.distancePickUpToDropOff;
 		public string AproximateDistance { 
 			get { return _aproximateDistance; }
 			set {
@@ -119,20 +100,27 @@ namespace KangouMessenger.Core
 			_messenger.Unsubscribe<LocationMessage> (_token);
 			CancelLocalNotification ();
 			TimerToCancel = "Esperando respuesta...";
-
-			if (ConnectionManager.ConnectionState == ConnectionStates.DISCONNECTED_BY_USER) {
-				KangouData.AppView = "ConnectView";
-				IsBusy = false;
-				Close (this);
-				return;
-			}
-
-			DoAsyncLongTask (() => {
-				var jsonString = String.Format( "{{ \"{0}\": {1} }}", SocketEvents.AcceptInfoOrder, true);
-				if(DataOrderManager.Instance.DataOrder != null)
-					jsonString = String.Format( "{{ \"{0}\": {1}, \"orderId\": \"{2}\" }}", SocketEvents.AcceptInfoOrder, "true", DataOrderManager.Instance.DataOrder.Id);
-				Debug.WriteLine("Accept Info Order: {0}",jsonString);
-				ConnectionManager.Emit( SocketEvents.AcceptInfoOrder, jsonString);
+			IsBusy = true;
+			KangouClient.AcceptInfoOrder (KangouData.CourierId, KangouData.OrderId, (err, res) => {
+				ItNeedsToBeRemoved = true;
+				InvokeOnMainThread (delegate {  
+					IsBusy = false;
+				});
+				if(res != null) {
+					if(res.isAccepted){
+						ItNeedsToBeRemoved = true;
+						ShowViewModel<PickUpRouteViewModel> ();
+					} else {
+						if(OrderTakenFromSomeoneElse != null){
+							KangouData.CancelCurrentActiveOrder();
+							InvokeOnMainThread (delegate { 
+								OrderTakenFromSomeoneElse();
+							});
+						}
+					}
+				} else {
+					//TODO tell to user to try again
+				}
 			});
 		}
 
@@ -148,19 +136,20 @@ namespace KangouMessenger.Core
 
 		private void DoCancelCommand()
 		{
-			CancelLocalNotification ();
-			TurnOffConnectionEvents();
-			DataOrderManager.Instance.IsOrderActive = false;
-
-
-			if (ConnectionManager.ConnectionState != ConnectionStates.DISCONNECTED_BY_USER) {
-				var jsonString = String.Format( "{{ \"{0}\": {1} }}", SocketEvents.CancelInfoOrder, "true");
-				ConnectionManager.Emit( SocketEvents.CancelInfoOrder, jsonString);
+			IsBusy = true;
+			if (CancelLocalNotification != null) {
+				InvokeOnMainThread (delegate { 
+					CancelLocalNotification ();
+				});
 			}
-
-			KangouData.AppView = "WaitingOrderView";
-			IsBusy = false;
-			Close(this);
+			KangouClient.CancelInfoOrder (KangouData.CourierId, KangouData.OrderId, (err, res) => {
+				if(res != null && res.success){
+					KangouData.CancelCurrentActiveOrder();
+					KangouData.AppView = "WaitingOrderView";
+					IsBusy = false;
+					Close(this);
+				}
+			});
 		}
 
 		/* Actions to implement in platform specifi view */

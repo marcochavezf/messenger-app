@@ -12,7 +12,7 @@ namespace KangouMessenger.Core
     {
 		public HelpViewModel(){
 			/* This is when the view is trying to open after a running out of memory */ 
-			if (String.IsNullOrEmpty (KangouData.Id)) {
+			if (String.IsNullOrEmpty (KangouData.CourierId)) {
 				Close(this);
 				return;
 			}

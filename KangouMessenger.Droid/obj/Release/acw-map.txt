@@ -2,10 +2,6 @@ KangouMessenger.Droid.SplashScreen, Kangou Mensajero;md5812a52d1f6bfb9d29600df1a
 KangouMessenger.Droid.SplashScreen, Kangou Mensajero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5812a52d1f6bfb9d29600df1a9463568c.SplashScreen
 KangouMessenger.Droid.SplashScreen;md5812a52d1f6bfb9d29600df1a9463568c.SplashScreen
 kangoumessenger.droid.SplashScreen;md5812a52d1f6bfb9d29600df1a9463568c.SplashScreen
-KangouMessenger.Droid.ConnectView, Kangou Mensajero;md5812a52d1f6bfb9d29600df1a9463568c.ConnectView
-KangouMessenger.Droid.ConnectView, Kangou Mensajero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5812a52d1f6bfb9d29600df1a9463568c.ConnectView
-KangouMessenger.Droid.ConnectView;md5812a52d1f6bfb9d29600df1a9463568c.ConnectView
-kangoumessenger.droid.ConnectView;md5812a52d1f6bfb9d29600df1a9463568c.ConnectView
 KangouMessenger.Droid.ClientSignatureView, Kangou Mensajero;md5812a52d1f6bfb9d29600df1a9463568c.ClientSignatureView
 KangouMessenger.Droid.ClientSignatureView, Kangou Mensajero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5812a52d1f6bfb9d29600df1a9463568c.ClientSignatureView
 KangouMessenger.Droid.ClientSignatureView;md5812a52d1f6bfb9d29600df1a9463568c.ClientSignatureView
@@ -262,18 +258,6 @@ Cirrious.MvvmCross.Droid.Fragging.MvxTabsFragmentActivity/TabFactory, Cirrious.M
 Cirrious.MvvmCross.Droid.Fragging.MvxTabsFragmentActivity/TabFactory, Cirrious.MvvmCross.Droid.Fragging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md526035c37b8d1573464bb4caa888f0f5d.MvxTabsFragmentActivity_TabFactory
 Cirrious.MvvmCross.Droid.Fragging.MvxTabsFragmentActivity.TabFactory;md526035c37b8d1573464bb4caa888f0f5d.MvxTabsFragmentActivity_TabFactory
 cirrious.mvvmcross.droid.fragging.MvxTabsFragmentActivity_TabFactory;md526035c37b8d1573464bb4caa888f0f5d.MvxTabsFragmentActivity_TabFactory
-Xamarin.InsightsCore.BackgroundManager, Xamarin.Insights;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
-Xamarin.InsightsCore.BackgroundManager, Xamarin.Insights, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
-Xamarin.InsightsCore.BackgroundManager;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
-xamarin.insightscore.BackgroundManager;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
-Xamarin.InsightsCore.NetworkChangeReceiver, Xamarin.Insights;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
-Xamarin.InsightsCore.NetworkChangeReceiver, Xamarin.Insights, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
-Xamarin.InsightsCore.NetworkChangeReceiver;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
-xamarin.insightscore.NetworkChangeReceiver;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
-Xamarin.InsightsCore.NativeUnhandledExceptionHandler, Xamarin.Insights;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler
-Xamarin.InsightsCore.NativeUnhandledExceptionHandler, Xamarin.Insights, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler
-Xamarin.InsightsCore.NativeUnhandledExceptionHandler;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler
-xamarin.insightscore.NativeUnhandledExceptionHandler;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler
 Android.Gms.Ads.DoubleClick.IAppEventListenerImplementor, GooglePlayServicesLib;mono.com.google.android.gms.ads.doubleclick.AppEventListenerImplementor
 Android.Gms.Ads.DoubleClick.IAppEventListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.ads.doubleclick.AppEventListenerImplementor
 Android.Gms.Ads.DoubleClick.IAppEventListenerImplementor;mono.com.google.android.gms.ads.doubleclick.AppEventListenerImplementor
@@ -598,6 +582,26 @@ Android.Support.V7.Widget.Toolbar/IOnMenuItemClickListenerImplementor, Xamarin.A
 Android.Support.V7.Widget.Toolbar/IOnMenuItemClickListenerImplementor, Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v7.widget.Toolbar_OnMenuItemClickListenerImplementor
 Android.Support.V7.Widget.Toolbar.IOnMenuItemClickListenerImplementor;mono.android.support.v7.widget.Toolbar_OnMenuItemClickListenerImplementor
 android.support.v7.widget.Toolbar_IOnMenuItemClickListenerImplementor;mono.android.support.v7.widget.Toolbar_OnMenuItemClickListenerImplementor
+Xamarin.Facebook.Ads.IAdListenerImplementor, Xamarin.Facebook;mono.com.facebook.ads.AdListenerImplementor
+Xamarin.Facebook.Ads.IAdListenerImplementor, Xamarin.Facebook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.facebook.ads.AdListenerImplementor
+Xamarin.Facebook.Ads.IAdListenerImplementor;mono.com.facebook.ads.AdListenerImplementor
+xamarin.facebook.ads.IAdListenerImplementor;mono.com.facebook.ads.AdListenerImplementor
+Xamarin.Facebook.Ads.IImpressionListenerImplementor, Xamarin.Facebook;mono.com.facebook.ads.ImpressionListenerImplementor
+Xamarin.Facebook.Ads.IImpressionListenerImplementor, Xamarin.Facebook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.facebook.ads.ImpressionListenerImplementor
+Xamarin.Facebook.Ads.IImpressionListenerImplementor;mono.com.facebook.ads.ImpressionListenerImplementor
+xamarin.facebook.ads.IImpressionListenerImplementor;mono.com.facebook.ads.ImpressionListenerImplementor
+Xamarin.Facebook.Ads.Internal.Adapters.IBannerAdapterListenerImplementor, Xamarin.Facebook;mono.com.facebook.ads.internal.adapters.BannerAdapterListenerImplementor
+Xamarin.Facebook.Ads.Internal.Adapters.IBannerAdapterListenerImplementor, Xamarin.Facebook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.facebook.ads.internal.adapters.BannerAdapterListenerImplementor
+Xamarin.Facebook.Ads.Internal.Adapters.IBannerAdapterListenerImplementor;mono.com.facebook.ads.internal.adapters.BannerAdapterListenerImplementor
+xamarin.facebook.ads.internal.adapters.IBannerAdapterListenerImplementor;mono.com.facebook.ads.internal.adapters.BannerAdapterListenerImplementor
+Xamarin.Facebook.Ads.Internal.Adapters.IInterstitialAdapterListenerImplementor, Xamarin.Facebook;mono.com.facebook.ads.internal.adapters.InterstitialAdapterListenerImplementor
+Xamarin.Facebook.Ads.Internal.Adapters.IInterstitialAdapterListenerImplementor, Xamarin.Facebook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.facebook.ads.internal.adapters.InterstitialAdapterListenerImplementor
+Xamarin.Facebook.Ads.Internal.Adapters.IInterstitialAdapterListenerImplementor;mono.com.facebook.ads.internal.adapters.InterstitialAdapterListenerImplementor
+xamarin.facebook.ads.internal.adapters.IInterstitialAdapterListenerImplementor;mono.com.facebook.ads.internal.adapters.InterstitialAdapterListenerImplementor
+Xamarin.Facebook.Ads.NativeAdsManager/IListenerImplementor, Xamarin.Facebook;mono.com.facebook.ads.NativeAdsManager_ListenerImplementor
+Xamarin.Facebook.Ads.NativeAdsManager/IListenerImplementor, Xamarin.Facebook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.facebook.ads.NativeAdsManager_ListenerImplementor
+Xamarin.Facebook.Ads.NativeAdsManager.IListenerImplementor;mono.com.facebook.ads.NativeAdsManager_ListenerImplementor
+xamarin.facebook.ads.NativeAdsManager_IListenerImplementor;mono.com.facebook.ads.NativeAdsManager_ListenerImplementor
 Xamarin.Facebook.Internal.CollectionMapper/IOnErrorListenerImplementor, Xamarin.Facebook;mono.com.facebook.internal.CollectionMapper_OnErrorListenerImplementor
 Xamarin.Facebook.Internal.CollectionMapper/IOnErrorListenerImplementor, Xamarin.Facebook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.facebook.internal.CollectionMapper_OnErrorListenerImplementor
 Xamarin.Facebook.Internal.CollectionMapper.IOnErrorListenerImplementor;mono.com.facebook.internal.CollectionMapper_OnErrorListenerImplementor
@@ -618,3 +622,15 @@ Xamarin.Facebook.Share.Widget.LikeView/IOnErrorListenerImplementor, Xamarin.Face
 Xamarin.Facebook.Share.Widget.LikeView/IOnErrorListenerImplementor, Xamarin.Facebook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.facebook.share.widget.LikeView_OnErrorListenerImplementor
 Xamarin.Facebook.Share.Widget.LikeView.IOnErrorListenerImplementor;mono.com.facebook.share.widget.LikeView_OnErrorListenerImplementor
 xamarin.facebook.share.widget.LikeView_IOnErrorListenerImplementor;mono.com.facebook.share.widget.LikeView_OnErrorListenerImplementor
+Xamarin.InsightsCore.BackgroundManager, Xamarin.Insights;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
+Xamarin.InsightsCore.BackgroundManager, Xamarin.Insights, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
+Xamarin.InsightsCore.BackgroundManager;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
+xamarin.insightscore.BackgroundManager;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
+Xamarin.InsightsCore.NetworkChangeReceiver, Xamarin.Insights;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
+Xamarin.InsightsCore.NetworkChangeReceiver, Xamarin.Insights, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
+Xamarin.InsightsCore.NetworkChangeReceiver;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
+xamarin.insightscore.NetworkChangeReceiver;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
+Xamarin.InsightsCore.NativeUnhandledExceptionHandler, Xamarin.Insights;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler
+Xamarin.InsightsCore.NativeUnhandledExceptionHandler, Xamarin.Insights, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler
+Xamarin.InsightsCore.NativeUnhandledExceptionHandler;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler
+xamarin.insightscore.NativeUnhandledExceptionHandler;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler

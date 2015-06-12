@@ -15,7 +15,6 @@ namespace KangouMessenger.Droid
 			if (handler != null)
 				handler(this, EventArgs.Empty);
 		}
-
 	}
 }
 
