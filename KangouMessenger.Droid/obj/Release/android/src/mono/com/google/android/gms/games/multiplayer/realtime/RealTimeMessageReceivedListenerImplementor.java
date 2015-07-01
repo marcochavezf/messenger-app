@@ -10,9 +10,9 @@ public class RealTimeMessageReceivedListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onRealTimeMessageReceived:(Lcom/google/android/gms/games/multiplayer/realtime/RealTimeMessage;)V:GetOnRealTimeMessageReceived_Lcom_google_android_gms_games_multiplayer_realtime_RealTimeMessage_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRealTimeMessageReceivedListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onRealTimeMessageReceived:(Lcom/google/android/gms/games/multiplayer/realtime/RealTimeMessage;)V:GetOnRealTimeMessageReceived_Lcom_google_android_gms_games_multiplayer_realtime_RealTimeMessage_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRealTimeMessageReceivedListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Games.MultiPlayer.RealTime.IRealTimeMessageReceivedListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", RealTimeMessageReceivedListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Games.MultiPlayer.RealTime.IRealTimeMessageReceivedListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", RealTimeMessageReceivedListenerImplementor.class, __md_methods);
 	}
 
 
@@ -20,7 +20,7 @@ public class RealTimeMessageReceivedListenerImplementor
 	{
 		super ();
 		if (getClass () == RealTimeMessageReceivedListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Games.MultiPlayer.RealTime.IRealTimeMessageReceivedListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Games.MultiPlayer.RealTime.IRealTimeMessageReceivedListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

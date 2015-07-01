@@ -10,9 +10,9 @@ public class WalletFragment_OnStateChangedListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onStateChanged:(Lcom/google/android/gms/wallet/fragment/WalletFragment;IILandroid/os/Bundle;)V:GetOnStateChanged_Lcom_google_android_gms_wallet_fragment_WalletFragment_IILandroid_os_Bundle_Handler:Android.Gms.Wallet.Fragment.WalletFragment/IOnStateChangedListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onStateChanged:(Lcom/google/android/gms/wallet/fragment/WalletFragment;IILandroid/os/Bundle;)V:GetOnStateChanged_Lcom_google_android_gms_wallet_fragment_WalletFragment_IILandroid_os_Bundle_Handler:Android.Gms.Wallet.Fragment.WalletFragment/IOnStateChangedListenerInvoker, Xamarin.GooglePlayServices.Wallet\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Wallet.Fragment.WalletFragment/IOnStateChangedListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", WalletFragment_OnStateChangedListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Wallet.Fragment.WalletFragment/IOnStateChangedListenerImplementor, Xamarin.GooglePlayServices.Wallet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", WalletFragment_OnStateChangedListenerImplementor.class, __md_methods);
 	}
 
 
@@ -20,7 +20,7 @@ public class WalletFragment_OnStateChangedListenerImplementor
 	{
 		super ();
 		if (getClass () == WalletFragment_OnStateChangedListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Wallet.Fragment.WalletFragment/IOnStateChangedListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Wallet.Fragment.WalletFragment/IOnStateChangedListenerImplementor, Xamarin.GooglePlayServices.Wallet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

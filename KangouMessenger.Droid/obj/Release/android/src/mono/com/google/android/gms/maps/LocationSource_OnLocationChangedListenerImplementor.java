@@ -10,9 +10,9 @@ public class LocationSource_OnLocationChangedListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onLocationChanged:(Landroid/location/Location;)V:GetOnLocationChanged_Landroid_location_Location_Handler:Android.Gms.Maps.ILocationSourceOnLocationChangedListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onLocationChanged:(Landroid/location/Location;)V:GetOnLocationChanged_Landroid_location_Location_Handler:Android.Gms.Maps.ILocationSourceOnLocationChangedListenerInvoker, Xamarin.GooglePlayServices.Maps\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Maps.ILocationSourceOnLocationChangedListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", LocationSource_OnLocationChangedListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Maps.ILocationSourceOnLocationChangedListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", LocationSource_OnLocationChangedListenerImplementor.class, __md_methods);
 	}
 
 
@@ -20,7 +20,7 @@ public class LocationSource_OnLocationChangedListenerImplementor
 	{
 		super ();
 		if (getClass () == LocationSource_OnLocationChangedListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Maps.ILocationSourceOnLocationChangedListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Maps.ILocationSourceOnLocationChangedListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

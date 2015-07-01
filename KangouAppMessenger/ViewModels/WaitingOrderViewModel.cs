@@ -14,6 +14,7 @@ namespace KangouMessenger.Core
     {
 		private int _ticksPositionPublished;
 		private readonly int TICKS_TO_SEND_HEARBEAT = 2;
+		public static WaitingOrderViewModel Instance { get; set; }
 
 		/* Constructor */
 		public WaitingOrderViewModel(IDataService dataService, IMvxMessenger messenger)
@@ -26,7 +27,6 @@ namespace KangouMessenger.Core
 			MessageBindableProgress = "Por favor espere";
 
 			_ticksPositionPublished = 0;
-
 
 			#if DEBUG
 			if (KangouData.CourierId == null) {
@@ -72,7 +72,7 @@ namespace KangouMessenger.Core
 			}
 		}
 
-		private void InfoOrder(Order infoOrder){
+		public void InfoOrder(Order infoOrder, bool comesFromPushNotification = false){
 			if (infoOrder == null) {
 				return;
 			}
@@ -87,14 +87,25 @@ namespace KangouMessenger.Core
 			}
 			KangouData.OrderId = infoOrder._id;
 			KangouData.ActiveOrder = infoOrder;
-			InvokeOnMainThread (delegate {
-				ReceivingInfoOrderToLocalNotification(infoOrder.pickup.sublocality, infoOrder.dropoff.sublocality);
-			});
+
+			//If the order comes from push notification
+			if (_dataService.GetInfoOrder () == null) {
+				_dataService.SaveInfoOrder (infoOrder);
+			}
+			if (!comesFromPushNotification) {
+				InvokeOnMainThread (delegate {
+					ReceivingInfoOrderToLocalNotification (infoOrder.pickup.sublocality, infoOrder.dropoff.sublocality);
+				});
+			}
 			ShowViewModel<ReceivingOrderViewModel>();
 		}
 
 		public void Heartbeat(double lat, double lng){
-			KangouClient.Heartbeat (KangouData.CourierId, KangouData.OrderId, lat, lng, (err, res) => {
+			var orderId = KangouData.OrderId;
+			if (KangouData.AppView == "WaitingOrderView" || KangouData.AppView == "ReceivingOrderView") {
+				orderId = "";
+			}
+			KangouClient.Heartbeat (KangouData.CourierId, orderId, lat, lng, (err, res) => {
 				if(res != null){
 					InfoOrder(res.orderAvailable);
 					StatusConnection = "Conectado";

@@ -10,12 +10,12 @@ public class RoomUpdateListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onJoinedRoom:(ILcom/google/android/gms/games/multiplayer/realtime/Room;)V:GetOnJoinedRoom_ILcom_google_android_gms_games_multiplayer_realtime_Room_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomUpdateListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onLeftRoom:(ILjava/lang/String;)V:GetOnLeftRoom_ILjava_lang_String_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomUpdateListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onRoomConnected:(ILcom/google/android/gms/games/multiplayer/realtime/Room;)V:GetOnRoomConnected_ILcom_google_android_gms_games_multiplayer_realtime_Room_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomUpdateListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onRoomCreated:(ILcom/google/android/gms/games/multiplayer/realtime/Room;)V:GetOnRoomCreated_ILcom_google_android_gms_games_multiplayer_realtime_Room_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomUpdateListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onJoinedRoom:(ILcom/google/android/gms/games/multiplayer/realtime/Room;)V:GetOnJoinedRoom_ILcom_google_android_gms_games_multiplayer_realtime_Room_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onLeftRoom:(ILjava/lang/String;)V:GetOnLeftRoom_ILjava_lang_String_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onRoomConnected:(ILcom/google/android/gms/games/multiplayer/realtime/Room;)V:GetOnRoomConnected_ILcom_google_android_gms_games_multiplayer_realtime_Room_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onRoomCreated:(ILcom/google/android/gms/games/multiplayer/realtime/Room;)V:GetOnRoomCreated_ILcom_google_android_gms_games_multiplayer_realtime_Room_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Games.MultiPlayer.RealTime.IRoomUpdateListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", RoomUpdateListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Games.MultiPlayer.RealTime.IRoomUpdateListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", RoomUpdateListenerImplementor.class, __md_methods);
 	}
 
 
@@ -23,7 +23,7 @@ public class RoomUpdateListenerImplementor
 	{
 		super ();
 		if (getClass () == RoomUpdateListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Games.MultiPlayer.RealTime.IRoomUpdateListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Games.MultiPlayer.RealTime.IRoomUpdateListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

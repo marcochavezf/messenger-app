@@ -10,10 +10,10 @@ public class OnTurnBasedMatchUpdateReceivedListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onTurnBasedMatchReceived:(Lcom/google/android/gms/games/multiplayer/turnbased/TurnBasedMatch;)V:GetOnTurnBasedMatchReceived_Lcom_google_android_gms_games_multiplayer_turnbased_TurnBasedMatch_Handler:Android.Gms.Games.MultiPlayer.TurnBased.IOnTurnBasedMatchUpdateReceivedListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onTurnBasedMatchRemoved:(Ljava/lang/String;)V:GetOnTurnBasedMatchRemoved_Ljava_lang_String_Handler:Android.Gms.Games.MultiPlayer.TurnBased.IOnTurnBasedMatchUpdateReceivedListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onTurnBasedMatchReceived:(Lcom/google/android/gms/games/multiplayer/turnbased/TurnBasedMatch;)V:GetOnTurnBasedMatchReceived_Lcom_google_android_gms_games_multiplayer_turnbased_TurnBasedMatch_Handler:Android.Gms.Games.MultiPlayer.TurnBased.IOnTurnBasedMatchUpdateReceivedListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onTurnBasedMatchRemoved:(Ljava/lang/String;)V:GetOnTurnBasedMatchRemoved_Ljava_lang_String_Handler:Android.Gms.Games.MultiPlayer.TurnBased.IOnTurnBasedMatchUpdateReceivedListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Games.MultiPlayer.TurnBased.IOnTurnBasedMatchUpdateReceivedListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", OnTurnBasedMatchUpdateReceivedListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Games.MultiPlayer.TurnBased.IOnTurnBasedMatchUpdateReceivedListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", OnTurnBasedMatchUpdateReceivedListenerImplementor.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class OnTurnBasedMatchUpdateReceivedListenerImplementor
 	{
 		super ();
 		if (getClass () == OnTurnBasedMatchUpdateReceivedListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Games.MultiPlayer.TurnBased.IOnTurnBasedMatchUpdateReceivedListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Games.MultiPlayer.TurnBased.IOnTurnBasedMatchUpdateReceivedListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

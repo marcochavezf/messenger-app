@@ -11,7 +11,7 @@ namespace KangouMessenger.Droid
 {
 
 
-	[Activity(Label = "Recibiendo orden", ScreenOrientation = ScreenOrientation.Portrait)]
+	[Activity(Label = "Recibiendo orden", ScreenOrientation = ScreenOrientation.Portrait, LaunchMode = LaunchMode.SingleTask)]
 	public class ReceivingOrderView : BusyMvxActivity
     {
 		private ReceivingOrderViewModel _viewModel;

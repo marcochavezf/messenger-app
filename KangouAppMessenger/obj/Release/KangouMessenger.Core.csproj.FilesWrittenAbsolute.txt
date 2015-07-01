@@ -3,7 +3,6 @@
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/KangouAppMessenger.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/obj/Release/KangouAppMessenger.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/obj/Release/KangouAppMessenger.dll.mdb
-/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Newtonsoft.Json.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Cirrious.MvvmCross.Community.Plugins.Sqlite.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Cirrious.CrossCore.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Cirrious.MvvmCross.Localization.dll
@@ -12,3 +11,4 @@
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Cirrious.MvvmCross.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/ModernHttpClient.Portable.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Xamarin.Insights.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Newtonsoft.Json.dll

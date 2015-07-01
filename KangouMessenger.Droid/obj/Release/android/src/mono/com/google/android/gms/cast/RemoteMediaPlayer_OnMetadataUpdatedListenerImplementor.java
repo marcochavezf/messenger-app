@@ -10,9 +10,9 @@ public class RemoteMediaPlayer_OnMetadataUpdatedListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onMetadataUpdated:()V:GetOnMetadataUpdatedHandler:Android.Gms.Cast.RemoteMediaPlayer/IOnMetadataUpdatedListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onMetadataUpdated:()V:GetOnMetadataUpdatedHandler:Android.Gms.Cast.RemoteMediaPlayer/IOnMetadataUpdatedListenerInvoker, Xamarin.GooglePlayServices.Cast\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Cast.RemoteMediaPlayer/IOnMetadataUpdatedListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", RemoteMediaPlayer_OnMetadataUpdatedListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Cast.RemoteMediaPlayer/IOnMetadataUpdatedListenerImplementor, Xamarin.GooglePlayServices.Cast, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", RemoteMediaPlayer_OnMetadataUpdatedListenerImplementor.class, __md_methods);
 	}
 
 
@@ -20,7 +20,7 @@ public class RemoteMediaPlayer_OnMetadataUpdatedListenerImplementor
 	{
 		super ();
 		if (getClass () == RemoteMediaPlayer_OnMetadataUpdatedListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Cast.RemoteMediaPlayer/IOnMetadataUpdatedListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Cast.RemoteMediaPlayer/IOnMetadataUpdatedListenerImplementor, Xamarin.GooglePlayServices.Cast, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

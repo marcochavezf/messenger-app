@@ -45,7 +45,12 @@ namespace KangouMessenger.Core
 
 	public class Price
 	{
-		public int amount { get; set; }
+		public float amount { get; set; }
+		public float rushMultiplier { get; set; }
+		public float commissionForCourier { get; set; }
+		public float tipForCourier { get; set; }
+		public float profitForCourier { get; set; }
+		public float totalDeliveryCost { get; set; }
 		public string currency { get; set; }
 	}
 

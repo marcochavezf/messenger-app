@@ -6,12 +6,13 @@ public class LoginView
 	implements
 		mono.android.IGCUserPeer,
 		com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks,
-		com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener,
-		com.google.android.gms.common.GooglePlayServicesClient.OnConnectionFailedListener
+		com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener
 {
 	static final String __md_methods;
 	static {
 		__md_methods = 
+			"n_onCreateOptionsMenu:(Landroid/view/Menu;)Z:GetOnCreateOptionsMenu_Landroid_view_Menu_Handler\n" +
+			"n_onOptionsItemSelected:(Landroid/view/MenuItem;)Z:GetOnOptionsItemSelected_Landroid_view_MenuItem_Handler\n" +
 			"n_onCreate:(Landroid/os/Bundle;)V:GetOnCreate_Landroid_os_Bundle_Handler\n" +
 			"n_onResume:()V:GetOnResumeHandler\n" +
 			"n_onSaveInstanceState:(Landroid/os/Bundle;)V:GetOnSaveInstanceState_Landroid_os_Bundle_Handler\n" +
@@ -20,9 +21,9 @@ public class LoginView
 			"n_onActivityResult:(IILandroid/content/Intent;)V:GetOnActivityResult_IILandroid_content_Intent_Handler\n" +
 			"n_onStart:()V:GetOnStartHandler\n" +
 			"n_onStop:()V:GetOnStopHandler\n" +
-			"n_onConnected:(Landroid/os/Bundle;)V:GetOnConnected_Landroid_os_Bundle_Handler:Android.Gms.Common.Apis.IGoogleApiClientConnectionCallbacksInvoker, GooglePlayServicesLib\n" +
-			"n_onConnectionSuspended:(I)V:GetOnConnectionSuspended_IHandler:Android.Gms.Common.Apis.IGoogleApiClientConnectionCallbacksInvoker, GooglePlayServicesLib\n" +
-			"n_onConnectionFailed:(Lcom/google/android/gms/common/ConnectionResult;)V:GetOnConnectionFailed_Lcom_google_android_gms_common_ConnectionResult_Handler:Android.Gms.Common.Apis.IGoogleApiClientOnConnectionFailedListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onConnected:(Landroid/os/Bundle;)V:GetOnConnected_Landroid_os_Bundle_Handler:Android.Gms.Common.Apis.IGoogleApiClientConnectionCallbacksInvoker, Xamarin.GooglePlayServices.Base\n" +
+			"n_onConnectionSuspended:(I)V:GetOnConnectionSuspended_IHandler:Android.Gms.Common.Apis.IGoogleApiClientConnectionCallbacksInvoker, Xamarin.GooglePlayServices.Base\n" +
+			"n_onConnectionFailed:(Lcom/google/android/gms/common/ConnectionResult;)V:GetOnConnectionFailed_Lcom_google_android_gms_common_ConnectionResult_Handler:Android.Gms.Common.Apis.IGoogleApiClientOnConnectionFailedListenerInvoker, Xamarin.GooglePlayServices.Base\n" +
 			"";
 		mono.android.Runtime.register ("KangouMessenger.Droid.LoginView, Kangou Mensajero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", LoginView.class, __md_methods);
 	}
@@ -34,6 +35,22 @@ public class LoginView
 		if (getClass () == LoginView.class)
 			mono.android.TypeManager.Activate ("KangouMessenger.Droid.LoginView, Kangou Mensajero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
+
+
+	public boolean onCreateOptionsMenu (android.view.Menu p0)
+	{
+		return n_onCreateOptionsMenu (p0);
+	}
+
+	private native boolean n_onCreateOptionsMenu (android.view.Menu p0);
+
+
+	public boolean onOptionsItemSelected (android.view.MenuItem p0)
+	{
+		return n_onOptionsItemSelected (p0);
+	}
+
+	private native boolean n_onOptionsItemSelected (android.view.MenuItem p0);
 
 
 	public void onCreate (android.os.Bundle p0)

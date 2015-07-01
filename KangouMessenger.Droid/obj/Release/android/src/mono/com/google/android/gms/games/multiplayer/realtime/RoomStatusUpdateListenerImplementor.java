@@ -10,20 +10,20 @@ public class RoomStatusUpdateListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onConnectedToRoom:(Lcom/google/android/gms/games/multiplayer/realtime/Room;)V:GetOnConnectedToRoom_Lcom_google_android_gms_games_multiplayer_realtime_Room_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onDisconnectedFromRoom:(Lcom/google/android/gms/games/multiplayer/realtime/Room;)V:GetOnDisconnectedFromRoom_Lcom_google_android_gms_games_multiplayer_realtime_Room_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onP2PConnected:(Ljava/lang/String;)V:GetOnP2PConnected_Ljava_lang_String_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onP2PDisconnected:(Ljava/lang/String;)V:GetOnP2PDisconnected_Ljava_lang_String_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onPeerDeclined:(Lcom/google/android/gms/games/multiplayer/realtime/Room;Ljava/util/List;)V:GetOnPeerDeclined_Lcom_google_android_gms_games_multiplayer_realtime_Room_Ljava_util_List_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onPeerInvitedToRoom:(Lcom/google/android/gms/games/multiplayer/realtime/Room;Ljava/util/List;)V:GetOnPeerInvitedToRoom_Lcom_google_android_gms_games_multiplayer_realtime_Room_Ljava_util_List_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onPeerJoined:(Lcom/google/android/gms/games/multiplayer/realtime/Room;Ljava/util/List;)V:GetOnPeerJoined_Lcom_google_android_gms_games_multiplayer_realtime_Room_Ljava_util_List_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onPeerLeft:(Lcom/google/android/gms/games/multiplayer/realtime/Room;Ljava/util/List;)V:GetOnPeerLeft_Lcom_google_android_gms_games_multiplayer_realtime_Room_Ljava_util_List_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onPeersConnected:(Lcom/google/android/gms/games/multiplayer/realtime/Room;Ljava/util/List;)V:GetOnPeersConnected_Lcom_google_android_gms_games_multiplayer_realtime_Room_Ljava_util_List_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onPeersDisconnected:(Lcom/google/android/gms/games/multiplayer/realtime/Room;Ljava/util/List;)V:GetOnPeersDisconnected_Lcom_google_android_gms_games_multiplayer_realtime_Room_Ljava_util_List_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onRoomAutoMatching:(Lcom/google/android/gms/games/multiplayer/realtime/Room;)V:GetOnRoomAutoMatching_Lcom_google_android_gms_games_multiplayer_realtime_Room_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onRoomConnecting:(Lcom/google/android/gms/games/multiplayer/realtime/Room;)V:GetOnRoomConnecting_Lcom_google_android_gms_games_multiplayer_realtime_Room_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onConnectedToRoom:(Lcom/google/android/gms/games/multiplayer/realtime/Room;)V:GetOnConnectedToRoom_Lcom_google_android_gms_games_multiplayer_realtime_Room_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onDisconnectedFromRoom:(Lcom/google/android/gms/games/multiplayer/realtime/Room;)V:GetOnDisconnectedFromRoom_Lcom_google_android_gms_games_multiplayer_realtime_Room_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onP2PConnected:(Ljava/lang/String;)V:GetOnP2PConnected_Ljava_lang_String_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onP2PDisconnected:(Ljava/lang/String;)V:GetOnP2PDisconnected_Ljava_lang_String_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onPeerDeclined:(Lcom/google/android/gms/games/multiplayer/realtime/Room;Ljava/util/List;)V:GetOnPeerDeclined_Lcom_google_android_gms_games_multiplayer_realtime_Room_Ljava_util_List_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onPeerInvitedToRoom:(Lcom/google/android/gms/games/multiplayer/realtime/Room;Ljava/util/List;)V:GetOnPeerInvitedToRoom_Lcom_google_android_gms_games_multiplayer_realtime_Room_Ljava_util_List_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onPeerJoined:(Lcom/google/android/gms/games/multiplayer/realtime/Room;Ljava/util/List;)V:GetOnPeerJoined_Lcom_google_android_gms_games_multiplayer_realtime_Room_Ljava_util_List_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onPeerLeft:(Lcom/google/android/gms/games/multiplayer/realtime/Room;Ljava/util/List;)V:GetOnPeerLeft_Lcom_google_android_gms_games_multiplayer_realtime_Room_Ljava_util_List_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onPeersConnected:(Lcom/google/android/gms/games/multiplayer/realtime/Room;Ljava/util/List;)V:GetOnPeersConnected_Lcom_google_android_gms_games_multiplayer_realtime_Room_Ljava_util_List_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onPeersDisconnected:(Lcom/google/android/gms/games/multiplayer/realtime/Room;Ljava/util/List;)V:GetOnPeersDisconnected_Lcom_google_android_gms_games_multiplayer_realtime_Room_Ljava_util_List_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onRoomAutoMatching:(Lcom/google/android/gms/games/multiplayer/realtime/Room;)V:GetOnRoomAutoMatching_Lcom_google_android_gms_games_multiplayer_realtime_Room_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onRoomConnecting:(Lcom/google/android/gms/games/multiplayer/realtime/Room;)V:GetOnRoomConnecting_Lcom_google_android_gms_games_multiplayer_realtime_Room_Handler:Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", RoomStatusUpdateListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", RoomStatusUpdateListenerImplementor.class, __md_methods);
 	}
 
 
@@ -31,7 +31,7 @@ public class RoomStatusUpdateListenerImplementor
 	{
 		super ();
 		if (getClass () == RoomStatusUpdateListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

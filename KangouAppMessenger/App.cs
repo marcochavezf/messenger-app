@@ -1,4 +1,6 @@
 using Cirrious.CrossCore.IoC;
+using Cirrious.CrossCore;
+using Cirrious.MvvmCross.ViewModels;
 
 namespace KangouMessenger.Core
 {
@@ -12,7 +14,6 @@ namespace KangouMessenger.Core
                 .RegisterAsLazySingleton();
 
 			RegisterAppStart<KangouMessenger.Core.LoginViewModel>();
-			//RegisterAppStart<KangouMessenger.Core.WaitingOrderViewModel>();
         }
     }
 }

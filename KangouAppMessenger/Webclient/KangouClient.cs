@@ -40,13 +40,17 @@ namespace KangouMessenger.Core
 		public static void Heartbeat(string userId, string orderId, double lat, double lng, Action<string, HeartbeatResponse> callback)
 		{
 			var endpoint = GetFullEndpoint ("/app/courier/v2/heartbeat");
+			var gpsLocation = new {
+				lat = String.Format ("{0}", lat).Replace (",", "."),
+				lng = String.Format ("{0}", lng).Replace (",", ".")
+			};
+			if (lat == 0 && lng == 0) {
+				gpsLocation = null;
+			}
 			var data = new {
 				orderId = orderId,
 				userId = userId,
-				gpsLocation = new {
-					lat = String.Format("{0}", lat).Replace(",","."),
-					lng = String.Format("{0}", lng).Replace(",",".")
-				}
+				gpsLocation = gpsLocation
 			};
 			var dataSerialized = JsonConvert.SerializeObject (data).ToString ();
 			SendPostDataToServer (endpoint, dataSerialized, (err, res)=>{

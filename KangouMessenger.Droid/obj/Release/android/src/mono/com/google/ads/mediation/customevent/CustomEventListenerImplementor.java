@@ -10,12 +10,12 @@ public class CustomEventListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onDismissScreen:()V:GetOnDismissScreenHandler:Google.Ads.Mediation.CustomEvent.ICustomEventListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onFailedToReceiveAd:()V:GetOnFailedToReceiveAdHandler:Google.Ads.Mediation.CustomEvent.ICustomEventListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onLeaveApplication:()V:GetOnLeaveApplicationHandler:Google.Ads.Mediation.CustomEvent.ICustomEventListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onPresentScreen:()V:GetOnPresentScreenHandler:Google.Ads.Mediation.CustomEvent.ICustomEventListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onDismissScreen:()V:GetOnDismissScreenHandler:Google.Ads.Mediation.CustomEvent.ICustomEventListenerInvoker, Xamarin.GooglePlayServices.Ads\n" +
+			"n_onFailedToReceiveAd:()V:GetOnFailedToReceiveAdHandler:Google.Ads.Mediation.CustomEvent.ICustomEventListenerInvoker, Xamarin.GooglePlayServices.Ads\n" +
+			"n_onLeaveApplication:()V:GetOnLeaveApplicationHandler:Google.Ads.Mediation.CustomEvent.ICustomEventListenerInvoker, Xamarin.GooglePlayServices.Ads\n" +
+			"n_onPresentScreen:()V:GetOnPresentScreenHandler:Google.Ads.Mediation.CustomEvent.ICustomEventListenerInvoker, Xamarin.GooglePlayServices.Ads\n" +
 			"";
-		mono.android.Runtime.register ("Google.Ads.Mediation.CustomEvent.ICustomEventListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", CustomEventListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Google.Ads.Mediation.CustomEvent.ICustomEventListenerImplementor, Xamarin.GooglePlayServices.Ads, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", CustomEventListenerImplementor.class, __md_methods);
 	}
 
 
@@ -23,7 +23,7 @@ public class CustomEventListenerImplementor
 	{
 		super ();
 		if (getClass () == CustomEventListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Google.Ads.Mediation.CustomEvent.ICustomEventListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Google.Ads.Mediation.CustomEvent.ICustomEventListenerImplementor, Xamarin.GooglePlayServices.Ads, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

@@ -69,6 +69,15 @@ namespace KangouMessenger.Core
 			}
 		}
 
+		private string _profit = String.Format("{0} {1}", KangouData.ActiveOrder.price.profitForCourier.ToString("C"), KangouData.ActiveOrder.price.currency);
+		public string Profit { 
+			get { return _profit; }
+			set {
+				_profit = value;
+				RaisePropertyChanged (() => Profit);
+			}
+		}
+
 		private string _timerToCancel;
 		public string TimerToCancel { 
 			get { return _timerToCancel; }

@@ -10,10 +10,10 @@ public class OnRequestReceivedListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onRequestReceived:(Lcom/google/android/gms/games/request/GameRequest;)V:GetOnRequestReceived_Lcom_google_android_gms_games_request_GameRequest_Handler:Android.Gms.Games.Request.IOnRequestReceivedListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onRequestRemoved:(Ljava/lang/String;)V:GetOnRequestRemoved_Ljava_lang_String_Handler:Android.Gms.Games.Request.IOnRequestReceivedListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onRequestReceived:(Lcom/google/android/gms/games/request/GameRequest;)V:GetOnRequestReceived_Lcom_google_android_gms_games_request_GameRequest_Handler:Android.Gms.Games.Request.IOnRequestReceivedListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onRequestRemoved:(Ljava/lang/String;)V:GetOnRequestRemoved_Ljava_lang_String_Handler:Android.Gms.Games.Request.IOnRequestReceivedListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Games.Request.IOnRequestReceivedListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", OnRequestReceivedListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Games.Request.IOnRequestReceivedListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", OnRequestReceivedListenerImplementor.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class OnRequestReceivedListenerImplementor
 	{
 		super ();
 		if (getClass () == OnRequestReceivedListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Games.Request.IOnRequestReceivedListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Games.Request.IOnRequestReceivedListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

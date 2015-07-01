@@ -22,7 +22,7 @@ using System.Threading.Tasks;
 
 namespace KangouMessenger.Droid
 {
-	[Activity(Label = "Conectando... Espere por favor", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
+	[Activity(Label = "Conectando... Espere por favor", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait, LaunchMode = LaunchMode.SingleTask)]
 	public class WaitingOrderView : BusyMvxFragmentActivity, ILocationListener
 	{
 		private Location _currentLocation;
@@ -31,7 +31,8 @@ namespace KangouMessenger.Droid
 		private bool _isCameraUpdated;
 		private WaitingOrderViewModel _viewModel;
 		private BindableProgress _retryingToConnectProgress;
-		public static readonly int NOTIFICATION_ID_ORDER_RECEIVED = 265431;
+		private System.Timers.Timer _heartbeatTimer;
+		public static int NOTIFICATION_ID_ORDER_RECEIVED = 265431;
 
 		public static double CurrentLat { get; private set; }
 		public static double CurrentLng { get; private set; }
@@ -43,12 +44,12 @@ namespace KangouMessenger.Droid
 
 			Console.WriteLine ("OnCreate WaitingOrderView");
 			_viewModel = (WaitingOrderViewModel)ViewModel;
+			WaitingOrderViewModel.Instance = _viewModel;
 			_retryingToConnectProgress = new BindableProgress(this, "Desconectado", "Intentando conectar...", true, ()=>{
 				_viewModel.DisconnectCommand.Execute(null);
 			}, "Cancelar");
 
 			var set = this.CreateBindingSet<WaitingOrderView, WaitingOrderViewModel>();
-			set.Bind(_retryingToConnectProgress).For(p => p.Visible).To(vm => vm.IsTryingToReconnect);
 			set.Bind(_retryingToConnectProgress).For(p => p.Visible).To(vm => vm.IsTryingToReconnect);
 			set.Bind(_retryingToConnectProgress).For(p => p.Title).To(vm => vm.TitleBindableProgress);
 			set.Bind(_retryingToConnectProgress).For(p => p.Message).To(vm => vm.MessageBindableProgress);
@@ -67,10 +68,32 @@ namespace KangouMessenger.Droid
 					Console.WriteLine ("Exception _locationManager.RemoveUpdates: {0}", exception);
 					Insights.Report (exception);
 				}
-				//ConnectionManager.ConnectionState = ConnectionStates.DISCONNECTED_BY_USER;
 			};
 
 			SetTitle (Resource.String.titleWaitingOrder);
+
+			CurrentLat = 0;
+			CurrentLng = 0;
+
+			_heartbeatTimer = new System.Timers.Timer();
+			_heartbeatTimer.Interval = 4000;
+			_heartbeatTimer.AutoReset = true;
+			_heartbeatTimer.Elapsed += new System.Timers.ElapsedEventHandler((object sender, System.Timers.ElapsedEventArgs e)=>{
+				Task.Run(delegate {
+					if(KangouData.AppView == "LoginView" && _heartbeatTimer != null){
+						try{
+							_heartbeatTimer.Stop();
+							_heartbeatTimer.Close();
+						} catch(Exception exception){
+								
+							Xamarin.Insights.Report(exception);
+						}
+					} else {
+						_viewModel.PublishPosition (CurrentLat, CurrentLng);
+					}
+				});
+			});
+			_heartbeatTimer.Start();
 		}
 
 		private void gpsDisableAlertDialog(String title, String message){
@@ -96,9 +119,9 @@ namespace KangouMessenger.Droid
 					// Create a PendingIntent; we're only using one PendingIntent (ID = 0):
 					const int pendingIntentId = 0;
 					PendingIntent pendingIntent = PendingIntent.GetActivity (this, pendingIntentId, intent, PendingIntentFlags.OneShot);
-
+				
 					// Instantiate the builder and set notification elements:
-					NotificationCompat.Builder builder = new NotificationCompat.Builder (this)
+					Notification.Builder builder = new Notification.Builder (this)
 						.SetContentIntent (pendingIntent)
 						.SetContentTitle ("Orden Registrada")
 						.SetContentText (String.Format ("De {0} a {1}", shortPickUpAddress, shortDropOffAddress))
@@ -110,6 +133,11 @@ namespace KangouMessenger.Droid
 							0,5000,1000,5000,1000,5000,1000,5000,5000,1000,5000,1000,5000,1000,5000,1000,5000,1000,5000,5000,1000,5000,1000,5000
 						});
 
+					if ((int) Android.OS.Build.VERSION.SdkInt >= 21) {
+						builder.SetCategory (Notification.CategoryCall);
+						builder.SetVisibility (NotificationVisibility.Public);
+					}
+
 					// Build the notification:
 					Notification notification = builder.Build ();
 
@@ -119,15 +147,25 @@ namespace KangouMessenger.Droid
 					// Publish the notification:
 					try {
 						notificationManager.Notify (NOTIFICATION_ID_ORDER_RECEIVED, notification);
+						var cancelNotificationTimer = new System.Timers.Timer();
+						cancelNotificationTimer.Interval = 30000; //30 seconds
+						cancelNotificationTimer.Elapsed += new System.Timers.ElapsedEventHandler((object sender, System.Timers.ElapsedEventArgs e)=>{
+							Task.Run(delegate {
+								notificationManager.Cancel(NOTIFICATION_ID_ORDER_RECEIVED);
+								WaitingOrderView.NOTIFICATION_ID_ORDER_RECEIVED++;
+							});
+						});
+						cancelNotificationTimer.Start();
 					} catch (Exception e) {
 						Console.WriteLine ("Exception: {0}", e);
 						Insights.Report (e);
 					}
+						
 
 				});
 			};
 		}
-
+			
 		protected override void OnResume ()
 		{
 			base.OnResume ();
@@ -139,10 +177,34 @@ namespace KangouMessenger.Droid
 			}
 		}
 
-		public void OnLocationChanged(Location location) {
+		protected override void OnStop ()
+		{
+			base.OnStop ();
+			if(KangouData.AppView == "LoginView" && _heartbeatTimer != null){
+				try{
+					_heartbeatTimer.Stop();
+					_heartbeatTimer.Close();
+				} catch(Exception exception){
+					Xamarin.Insights.Report(exception);
+				}
+			}
+		}
 
-			//if (ConnectionManager.ConnectionState == ConnectionStates.DISCONNECTED_BY_USER)
-			//	return;
+		protected override void OnDestroy ()
+		{
+			WaitingOrderViewModel.Instance = null;
+			if (_heartbeatTimer != null) {
+				try {
+					_heartbeatTimer.Stop ();
+					_heartbeatTimer.Close ();
+				} catch (Exception exception) {
+					Xamarin.Insights.Report (exception);
+				}
+			}
+			base.OnDestroy ();
+		}
+
+		public void OnLocationChanged(Location location) {
 
 			_currentLocation = location;
 			if (_currentLocation == null){
@@ -150,7 +212,6 @@ namespace KangouMessenger.Droid
 			} else {
 				CurrentLat = _currentLocation.Latitude;
 				CurrentLng = _currentLocation.Longitude;
-				_viewModel.PublishPosition (CurrentLat, CurrentLng);
 
 				if (!_isCameraUpdated) {
 					_isCameraUpdated = true;
@@ -162,11 +223,16 @@ namespace KangouMessenger.Droid
 					var cameraPosition = builder.Build ();
 					var cameraUpdate = CameraUpdateFactory.NewCameraPosition (cameraPosition);
 
+					RunOnUiThread (delegate {
+						SetUpMapIfNeeded (Resource.Id.map, (map) => {
+							map.MyLocationEnabled = true;
+							map.MoveCamera (cameraUpdate);
+						});
 
-					SetUpMapIfNeeded (Resource.Id.map, (map) => {
-						map.MyLocationEnabled = true;
-						map.MoveCamera (cameraUpdate);
+						var msgLocationNotFound = FindViewById<TextView>(Resource.Id.msgLocationNotFound);
+						msgLocationNotFound.Visibility = Android.Views.ViewStates.Gone;
 					});
+
 				}
 			}
 		}

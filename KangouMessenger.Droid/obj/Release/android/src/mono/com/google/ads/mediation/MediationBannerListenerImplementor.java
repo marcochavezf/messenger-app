@@ -10,14 +10,14 @@ public class MediationBannerListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onClick:(Lcom/google/ads/mediation/MediationBannerAdapter;)V:GetOnClick_Lcom_google_ads_mediation_MediationBannerAdapter_Handler:Google.Ads.Mediation.IMediationBannerListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onDismissScreen:(Lcom/google/ads/mediation/MediationBannerAdapter;)V:GetOnDismissScreen_Lcom_google_ads_mediation_MediationBannerAdapter_Handler:Google.Ads.Mediation.IMediationBannerListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onFailedToReceiveAd:(Lcom/google/ads/mediation/MediationBannerAdapter;Lcom/google/ads/AdRequest$ErrorCode;)V:GetOnFailedToReceiveAd_Lcom_google_ads_mediation_MediationBannerAdapter_Lcom_google_ads_AdRequest_ErrorCode_Handler:Google.Ads.Mediation.IMediationBannerListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onLeaveApplication:(Lcom/google/ads/mediation/MediationBannerAdapter;)V:GetOnLeaveApplication_Lcom_google_ads_mediation_MediationBannerAdapter_Handler:Google.Ads.Mediation.IMediationBannerListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onPresentScreen:(Lcom/google/ads/mediation/MediationBannerAdapter;)V:GetOnPresentScreen_Lcom_google_ads_mediation_MediationBannerAdapter_Handler:Google.Ads.Mediation.IMediationBannerListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onReceivedAd:(Lcom/google/ads/mediation/MediationBannerAdapter;)V:GetOnReceivedAd_Lcom_google_ads_mediation_MediationBannerAdapter_Handler:Google.Ads.Mediation.IMediationBannerListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onClick:(Lcom/google/ads/mediation/MediationBannerAdapter;)V:GetOnClick_Lcom_google_ads_mediation_MediationBannerAdapter_Handler:Google.Ads.Mediation.IMediationBannerListenerInvoker, Xamarin.GooglePlayServices.Ads\n" +
+			"n_onDismissScreen:(Lcom/google/ads/mediation/MediationBannerAdapter;)V:GetOnDismissScreen_Lcom_google_ads_mediation_MediationBannerAdapter_Handler:Google.Ads.Mediation.IMediationBannerListenerInvoker, Xamarin.GooglePlayServices.Ads\n" +
+			"n_onFailedToReceiveAd:(Lcom/google/ads/mediation/MediationBannerAdapter;Lcom/google/ads/AdRequest$ErrorCode;)V:GetOnFailedToReceiveAd_Lcom_google_ads_mediation_MediationBannerAdapter_Lcom_google_ads_AdRequest_ErrorCode_Handler:Google.Ads.Mediation.IMediationBannerListenerInvoker, Xamarin.GooglePlayServices.Ads\n" +
+			"n_onLeaveApplication:(Lcom/google/ads/mediation/MediationBannerAdapter;)V:GetOnLeaveApplication_Lcom_google_ads_mediation_MediationBannerAdapter_Handler:Google.Ads.Mediation.IMediationBannerListenerInvoker, Xamarin.GooglePlayServices.Ads\n" +
+			"n_onPresentScreen:(Lcom/google/ads/mediation/MediationBannerAdapter;)V:GetOnPresentScreen_Lcom_google_ads_mediation_MediationBannerAdapter_Handler:Google.Ads.Mediation.IMediationBannerListenerInvoker, Xamarin.GooglePlayServices.Ads\n" +
+			"n_onReceivedAd:(Lcom/google/ads/mediation/MediationBannerAdapter;)V:GetOnReceivedAd_Lcom_google_ads_mediation_MediationBannerAdapter_Handler:Google.Ads.Mediation.IMediationBannerListenerInvoker, Xamarin.GooglePlayServices.Ads\n" +
 			"";
-		mono.android.Runtime.register ("Google.Ads.Mediation.IMediationBannerListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MediationBannerListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Google.Ads.Mediation.IMediationBannerListenerImplementor, Xamarin.GooglePlayServices.Ads, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MediationBannerListenerImplementor.class, __md_methods);
 	}
 
 
@@ -25,7 +25,7 @@ public class MediationBannerListenerImplementor
 	{
 		super ();
 		if (getClass () == MediationBannerListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Google.Ads.Mediation.IMediationBannerListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Google.Ads.Mediation.IMediationBannerListenerImplementor, Xamarin.GooglePlayServices.Ads, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

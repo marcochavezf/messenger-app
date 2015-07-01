@@ -34,9 +34,8 @@ namespace KangouMessenger.Touch
 			NavigationItem.Title = "Ir a entregar";
 
 			//Setting origin and destiny directions
-			var dataOrder = DataOrderManager.Instance.DataOrder;
 			var origin = new CLLocationCoordinate2D (LocationManager.Instance.Lat, LocationManager.Instance.Lng);
-			var destination = new CLLocationCoordinate2D (dataOrder.DropOffLat, dataOrder.DropOffLng);
+			var destination = new CLLocationCoordinate2D (KangouData.ActiveOrder.dropoff.lat, KangouData.ActiveOrder.dropoff.lng);
 
 
 			//Adding map
@@ -54,7 +53,7 @@ namespace KangouMessenger.Touch
 			MapDelegate.CreateRoute (mapView, origin, destination);
 			var pointAnnotation = new MKPointAnnotation () {
 				Coordinate = destination,
-				Title = dataOrder.DropOffAdress
+				Title = KangouData.ActiveOrder.dropoff.
 			};
 			mapView.AddAnnotation (pointAnnotation);
 			Add (mapView);

@@ -10,7 +10,7 @@ public class MyOnMapReady
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onMapReady:(Lcom/google/android/gms/maps/GoogleMap;)V:GetOnMapReady_Lcom_google_android_gms_maps_GoogleMap_Handler:Android.Gms.Maps.IOnMapReadyCallbackInvoker, GooglePlayServicesLib\n" +
+			"n_onMapReady:(Lcom/google/android/gms/maps/GoogleMap;)V:GetOnMapReady_Lcom_google_android_gms_maps_GoogleMap_Handler:Android.Gms.Maps.IOnMapReadyCallbackInvoker, Xamarin.GooglePlayServices.Maps\n" +
 			"";
 		mono.android.Runtime.register ("KangouMessenger.Droid.MyOnMapReady, Kangou Mensajero, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MyOnMapReady.class, __md_methods);
 	}

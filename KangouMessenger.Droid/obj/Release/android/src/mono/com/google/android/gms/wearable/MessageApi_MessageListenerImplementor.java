@@ -10,9 +10,9 @@ public class MessageApi_MessageListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onMessageReceived:(Lcom/google/android/gms/wearable/MessageEvent;)V:GetOnMessageReceived_Lcom_google_android_gms_wearable_MessageEvent_Handler:Android.Gms.Wearable.IMessageApiMessageListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onMessageReceived:(Lcom/google/android/gms/wearable/MessageEvent;)V:GetOnMessageReceived_Lcom_google_android_gms_wearable_MessageEvent_Handler:Android.Gms.Wearable.IMessageApiMessageListenerInvoker, Xamarin.GooglePlayServices.Wearable\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Wearable.IMessageApiMessageListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MessageApi_MessageListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Wearable.IMessageApiMessageListenerImplementor, Xamarin.GooglePlayServices.Wearable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MessageApi_MessageListenerImplementor.class, __md_methods);
 	}
 
 
@@ -20,7 +20,7 @@ public class MessageApi_MessageListenerImplementor
 	{
 		super ();
 		if (getClass () == MessageApi_MessageListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Wearable.IMessageApiMessageListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Wearable.IMessageApiMessageListenerImplementor, Xamarin.GooglePlayServices.Wearable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

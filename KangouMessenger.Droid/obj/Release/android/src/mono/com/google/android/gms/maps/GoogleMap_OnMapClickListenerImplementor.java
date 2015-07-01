@@ -10,9 +10,9 @@ public class GoogleMap_OnMapClickListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onMapClick:(Lcom/google/android/gms/maps/model/LatLng;)V:GetOnMapClick_Lcom_google_android_gms_maps_model_LatLng_Handler:Android.Gms.Maps.GoogleMap/IOnMapClickListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onMapClick:(Lcom/google/android/gms/maps/model/LatLng;)V:GetOnMapClick_Lcom_google_android_gms_maps_model_LatLng_Handler:Android.Gms.Maps.GoogleMap/IOnMapClickListenerInvoker, Xamarin.GooglePlayServices.Maps\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Maps.GoogleMap/IOnMapClickListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", GoogleMap_OnMapClickListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Maps.GoogleMap/IOnMapClickListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", GoogleMap_OnMapClickListenerImplementor.class, __md_methods);
 	}
 
 
@@ -20,7 +20,7 @@ public class GoogleMap_OnMapClickListenerImplementor
 	{
 		super ();
 		if (getClass () == GoogleMap_OnMapClickListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Maps.GoogleMap/IOnMapClickListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Maps.GoogleMap/IOnMapClickListenerImplementor, Xamarin.GooglePlayServices.Maps, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

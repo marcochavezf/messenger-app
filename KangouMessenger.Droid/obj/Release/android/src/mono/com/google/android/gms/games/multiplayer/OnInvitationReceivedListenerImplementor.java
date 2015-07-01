@@ -10,10 +10,10 @@ public class OnInvitationReceivedListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onInvitationReceived:(Lcom/google/android/gms/games/multiplayer/Invitation;)V:GetOnInvitationReceived_Lcom_google_android_gms_games_multiplayer_Invitation_Handler:Android.Gms.Games.MultiPlayer.IOnInvitationReceivedListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onInvitationRemoved:(Ljava/lang/String;)V:GetOnInvitationRemoved_Ljava_lang_String_Handler:Android.Gms.Games.MultiPlayer.IOnInvitationReceivedListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onInvitationReceived:(Lcom/google/android/gms/games/multiplayer/Invitation;)V:GetOnInvitationReceived_Lcom_google_android_gms_games_multiplayer_Invitation_Handler:Android.Gms.Games.MultiPlayer.IOnInvitationReceivedListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
+			"n_onInvitationRemoved:(Ljava/lang/String;)V:GetOnInvitationRemoved_Ljava_lang_String_Handler:Android.Gms.Games.MultiPlayer.IOnInvitationReceivedListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Games.MultiPlayer.IOnInvitationReceivedListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", OnInvitationReceivedListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Games.MultiPlayer.IOnInvitationReceivedListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", OnInvitationReceivedListenerImplementor.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class OnInvitationReceivedListenerImplementor
 	{
 		super ();
 		if (getClass () == OnInvitationReceivedListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Games.MultiPlayer.IOnInvitationReceivedListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Games.MultiPlayer.IOnInvitationReceivedListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

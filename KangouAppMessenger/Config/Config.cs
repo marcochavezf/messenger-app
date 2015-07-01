@@ -15,4 +15,3 @@ namespace KangouMessenger.Core
 		public static bool IS_LOCAL = false;
 	}
 }
-

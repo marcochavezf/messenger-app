@@ -23,6 +23,11 @@ using Java.Interop;
 using Xamarin.Facebook.Login;
 using Xamarin.Facebook.AppEvents;
 using Xamarin.Facebook.Login.Widget;
+using Android.Gms.AppInvite;
+using Android.Gms.Analytics;
+using Xamarin.Facebook.Share.Widget;
+using Xamarin.Facebook.Share.Model;
+using Rivets;
 
 [assembly:Permission (Name = Android.Manifest.Permission.Internet)]
 [assembly:Permission (Name = Android.Manifest.Permission.WriteExternalStorage)]
@@ -31,9 +36,13 @@ using Xamarin.Facebook.Login.Widget;
 
 namespace KangouMessenger.Droid
 {
-	[Activity(Label = "Iniciar Sesión", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
+	[Activity(Label = "Iniciar Sesión", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait, LaunchMode = LaunchMode.SingleTask)]
+	[IntentFilter(new [] {Android.Content.Intent.ActionView }, DataScheme="kangou", DataHost="courier", Categories=new [] { Intent.CategoryDefault, Intent.CategoryBrowsable })]
+	[IntentFilter(new [] {Android.Content.Intent.ActionView }, DataScheme="https", DataHost="registro.kangou.mx", Categories=new [] { Intent.CategoryDefault, Intent.CategoryBrowsable })]
 	public class LoginView : BusyMvxActivity, IGoogleApiClientConnectionCallbacks, IGoogleApiClientOnConnectionFailedListener
     {
+		public static bool IS_OPEN_FROM_PUSH_NOTIFICATION = false;
+
 		//General Variables
 		private LocationManager _locationManager;
 		private AlertDialog.Builder _openSettingsDialog;
@@ -59,6 +68,51 @@ namespace KangouMessenger.Droid
 		enum PendingAction
 		{
 			NONE
+		}
+
+		int RequestSignIn = 0;
+		int RequestInvite = 1;
+		void SendInviteGooglePlus()
+		{
+			var intent = new AppInviteInvitation.IntentBuilder("Invita a tus a amigos a la comunidad Kangou")
+				.SetMessage("¡Gana más de $7,000 MXN mensuales en tu tiempo libre!")
+				.Build();
+			StartActivityForResult(intent, RequestInvite);
+		}
+
+		void SendInviteFacebook(){
+			String appLinkUrl, previewImageUrl;
+
+			appLinkUrl = "https://registro.kangou.mx";
+			previewImageUrl = "https://kangou.mx/images/homepage/kangou.png";
+
+			if (AppInviteDialog.CanShow()) {
+				AppInviteContent content = new AppInviteContent.Builder ()
+					.SetApplinkUrl (appLinkUrl)
+					.SetPreviewImageUrl (previewImageUrl)
+					.Build () as AppInviteContent;
+				AppInviteDialog.Show(this, content);
+			}
+		}
+
+		public override bool OnCreateOptionsMenu(IMenu menu)
+		{
+			MenuInflater.Inflate(Resource.Menu.menu, menu);
+			return base.OnCreateOptionsMenu(menu);
+		}
+
+		public override bool OnOptionsItemSelected(IMenuItem item)
+		{
+			switch (item.ItemId)
+			{
+			case Resource.Id.shareInGooglePlus:
+				SendInviteGooglePlus ();
+				return true;
+			case Resource.Id.shareInFacebook:
+				SendInviteFacebook ();
+				return true;
+			}
+			return base.OnOptionsItemSelected(item);
 		}
 
         protected override void OnCreate(Bundle bundle)
@@ -115,7 +169,6 @@ namespace KangouMessenger.Droid
 			LoginManager.Instance.RegisterCallback (callbackManager, loginCallback);
 			SetContentView(Resource.Layout.LoginView);
 
-			/*
 			Task.Run (() => {
 				try {
 					MapView mv = new MapView(this);
@@ -125,8 +178,7 @@ namespace KangouMessenger.Droid
 				}catch (Exception ignored){
 
 				}
-			}); 
-			*/
+			});
 
 			/* Retrieving necesary data */
 			_viewModel = (LoginViewModel)ViewModel;
@@ -136,7 +188,7 @@ namespace KangouMessenger.Droid
 			GoogleApiClientBuilder builder = new GoogleApiClientBuilder(this);
 			builder.AddConnectionCallbacks(this);
 			builder.AddOnConnectionFailedListener(this);
-			builder.AddApi(PlusClass.Api);
+			builder.AddApi(PlusClass.API);
 			builder.AddScope(PlusClass.ScopePlusProfile);
 			builder.AddScope(PlusClass.ScopePlusLogin);
 
@@ -149,7 +201,7 @@ namespace KangouMessenger.Droid
 
 			var logoutConfirmDialog = new AlertDialog.Builder (this);
 			logoutConfirmDialog.SetTitle ("¿Estás seguro de cerrar sesión?");
-			logoutConfirmDialog.SetMessage ("Puedes dejar tu sesión abierta para conectarte rápido la próxima vez. La sesión abierta no consume datos.");
+			logoutConfirmDialog.SetMessage ("Puedes dejar tu sesión abierta para conectarte rápido la próxima vez. La sesión abierta no consume datos ni batería.");
 			logoutConfirmDialog.SetNegativeButton ("Cancelar", (object sender, DialogClickEventArgs args)=>{});
 			logoutConfirmDialog.SetPositiveButton ("Aceptar", (object sender, DialogClickEventArgs args)=>{
 				_viewModel.ClearUserId();
@@ -233,7 +285,10 @@ namespace KangouMessenger.Droid
 			registerButton.Click += delegate {
 				Intent browserIntent = new Intent(Intent.ActionView, Android.Net.Uri.Parse("https://registro.kangou.mx"));
 				StartActivity(browserIntent);
+				//Rivets.AppLinks.Navigator.Navigate("https://registro.kangou.mx");
 			};
+
+			AppLinks.DefaultResolver = new FacebookIndexAppLinkResolver ("719361194829076", "db74c002c5b99340d7b719dbd4753f14");
         }
 
 		private void ShowLoginButtons(bool show){
@@ -292,6 +347,14 @@ namespace KangouMessenger.Droid
 			RunOnUiThread (delegate {
 				_requestAccessButton.Enabled = true;
 			});
+
+			if (IS_OPEN_FROM_PUSH_NOTIFICATION) {
+				IS_OPEN_FROM_PUSH_NOTIFICATION = false;
+				if (_requestAccessButton.Enabled) {
+					_requestAccessButton.CallOnClick ();
+				}
+			}
+			AppEventsLogger.ActivateApp(this, "719361194829076");
 		}
 
 		protected override void OnSaveInstanceState (Bundle outState)
@@ -308,8 +371,12 @@ namespace KangouMessenger.Droid
 
 		protected override void OnDestroy ()
 		{
+			try{
+				profileTracker.StopTracking ();
+			}catch(Exception e){
+				Xamarin.Insights.Report (e);
+			}
 			base.OnDestroy ();
-			profileTracker.StopTracking ();
 		}
 			
 		protected void SetGooglePlusButtonText(SignInButton signInButton, String buttonText) {
@@ -353,7 +420,7 @@ namespace KangouMessenger.Droid
 			callbackManager.OnActivityResult (requestCode, (int)resultCode, data);
 
 			//Google
-			if (requestCode == 0) {
+			if (requestCode == RequestSignIn) {
 				if (resultCode != Result.Ok) {
 					mSignInClicked = false;
 				}
@@ -362,6 +429,22 @@ namespace KangouMessenger.Droid
 
 				if (!_mGoogleApiClient.IsConnecting) {
 					_mGoogleApiClient.Connect();
+				}
+			}
+
+			if (requestCode == RequestInvite)
+			{
+				if (resultCode == Result.Ok)
+				{
+					//Check how many invitations were sent. You could optionally track this data as
+					//the Ids will be consistent when you receive them
+					var ids = AppInviteInvitation.GetInvitationIds((int)resultCode, data);
+					Toast.MakeText (this, "Tus invitaciones se han enviado con éxito", ToastLength.Long).Show();
+				}
+				else
+				{
+					// Sending failed or it was canceled, show failure message to the user
+					Toast.MakeText (this, "Las invitaciones no pudieron ser enviadas :( Vuelve a intentar más tarde", ToastLength.Long).Show();
 				}
 			}
 		}

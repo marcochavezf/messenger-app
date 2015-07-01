@@ -10,9 +10,9 @@ public class DataApi_DataListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onDataChanged:(Lcom/google/android/gms/wearable/DataEventBuffer;)V:GetOnDataChanged_Lcom_google_android_gms_wearable_DataEventBuffer_Handler:Android.Gms.Wearable.IDataApiDataListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onDataChanged:(Lcom/google/android/gms/wearable/DataEventBuffer;)V:GetOnDataChanged_Lcom_google_android_gms_wearable_DataEventBuffer_Handler:Android.Gms.Wearable.IDataApiDataListenerInvoker, Xamarin.GooglePlayServices.Wearable\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Wearable.IDataApiDataListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", DataApi_DataListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Wearable.IDataApiDataListenerImplementor, Xamarin.GooglePlayServices.Wearable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", DataApi_DataListenerImplementor.class, __md_methods);
 	}
 
 
@@ -20,7 +20,7 @@ public class DataApi_DataListenerImplementor
 	{
 		super ();
 		if (getClass () == DataApi_DataListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Wearable.IDataApiDataListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Wearable.IDataApiDataListenerImplementor, Xamarin.GooglePlayServices.Wearable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

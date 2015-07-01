@@ -10,9 +10,9 @@ public class QuestUpdateListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onQuestCompleted:(Lcom/google/android/gms/games/quest/Quest;)V:GetOnQuestCompleted_Lcom_google_android_gms_games_quest_Quest_Handler:Android.Gms.Games.Quest.IQuestUpdateListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onQuestCompleted:(Lcom/google/android/gms/games/quest/Quest;)V:GetOnQuestCompleted_Lcom_google_android_gms_games_quest_Quest_Handler:Android.Gms.Games.Quest.IQuestUpdateListenerInvoker, Xamarin.GooglePlayServices.Games\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Games.Quest.IQuestUpdateListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", QuestUpdateListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Games.Quest.IQuestUpdateListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", QuestUpdateListenerImplementor.class, __md_methods);
 	}
 
 
@@ -20,7 +20,7 @@ public class QuestUpdateListenerImplementor
 	{
 		super ();
 		if (getClass () == QuestUpdateListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Games.Quest.IQuestUpdateListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Games.Quest.IQuestUpdateListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

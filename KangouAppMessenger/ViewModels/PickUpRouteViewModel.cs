@@ -13,7 +13,6 @@ namespace KangouMessenger.Core
     public class PickUpRouteViewModel 
 		: BusyMvxViewModel
     {
-
 		/* Constructor */
 		public PickUpRouteViewModel(IDataService dataService) 
 			: base (dataService) {

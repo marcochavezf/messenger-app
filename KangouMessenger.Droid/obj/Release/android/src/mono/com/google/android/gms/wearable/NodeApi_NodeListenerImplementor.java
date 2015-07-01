@@ -10,10 +10,10 @@ public class NodeApi_NodeListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onPeerConnected:(Lcom/google/android/gms/wearable/Node;)V:GetOnPeerConnected_Lcom_google_android_gms_wearable_Node_Handler:Android.Gms.Wearable.INodeApiNodeListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onPeerDisconnected:(Lcom/google/android/gms/wearable/Node;)V:GetOnPeerDisconnected_Lcom_google_android_gms_wearable_Node_Handler:Android.Gms.Wearable.INodeApiNodeListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onPeerConnected:(Lcom/google/android/gms/wearable/Node;)V:GetOnPeerConnected_Lcom_google_android_gms_wearable_Node_Handler:Android.Gms.Wearable.INodeApiNodeListenerInvoker, Xamarin.GooglePlayServices.Wearable\n" +
+			"n_onPeerDisconnected:(Lcom/google/android/gms/wearable/Node;)V:GetOnPeerDisconnected_Lcom_google_android_gms_wearable_Node_Handler:Android.Gms.Wearable.INodeApiNodeListenerInvoker, Xamarin.GooglePlayServices.Wearable\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Wearable.INodeApiNodeListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", NodeApi_NodeListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Wearable.INodeApiNodeListenerImplementor, Xamarin.GooglePlayServices.Wearable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", NodeApi_NodeListenerImplementor.class, __md_methods);
 	}
 
 
@@ -21,7 +21,7 @@ public class NodeApi_NodeListenerImplementor
 	{
 		super ();
 		if (getClass () == NodeApi_NodeListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Wearable.INodeApiNodeListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Wearable.INodeApiNodeListenerImplementor, Xamarin.GooglePlayServices.Wearable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 
