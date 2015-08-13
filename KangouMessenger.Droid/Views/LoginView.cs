@@ -267,6 +267,7 @@ namespace KangouMessenger.Droid
 				});
 				if(!_locationManager.IsProviderEnabled(LocationManager.GpsProvider)){
 					_openSettingsDialog.Show();
+					_requestAccessButton.Enabled = true;
 					return;
 				}
 				var prefs = Application.Context.GetSharedPreferences("KangouCourier", FileCreationMode.Private);  
@@ -372,7 +373,9 @@ namespace KangouMessenger.Droid
 		protected override void OnDestroy ()
 		{
 			try{
-				profileTracker.StopTracking ();
+				if(profileTracker != null){
+					profileTracker.StopTracking ();
+				}
 			}catch(Exception e){
 				Xamarin.Insights.Report (e);
 			}

@@ -1,4 +1,4 @@
-/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/MonoAndroid,Version=v5.0.AssemblyAttribute.cs
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/MonoAndroid,Version=v5.1.AssemblyAttribute.cs
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Kangou Mensajero.dll.mdb
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Kangou Mensajero.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/com.kangou.messenger.android.apk
@@ -51,33 +51,25 @@
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Cirrious.MvvmCross.Droid.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Cirrious.MvvmCross.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Cirrious.MvvmCross.Droid.Fragging.dll
-/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.Facebook.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Newtonsoft.Json.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Rivets.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.Insights.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.Facebook.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.Android.Support.v4.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.Android.Support.v7.AppCompat.dll
-/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.Android.Support.v7.MediaRouter.dll
-/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Newtonsoft.Json.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Base.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Ads.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Analytics.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.AppIndexing.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.AppInvite.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.AppState.dll
-/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Cast.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Drive.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Maps.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Location.dll
-/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Fitness.dll
-/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Games.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Gcm.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Identity.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Nearby.dll
-/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Panorama.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Plus.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.SafetyNet.dll
-/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Wallet.dll
-/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.Wearable.dll
-/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/GooglePlayServicesLib.dll
-/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Rivets.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/KangouAppMessenger.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/KangouAppMessenger.dll.mdb

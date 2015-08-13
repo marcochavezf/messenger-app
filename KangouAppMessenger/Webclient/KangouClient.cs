@@ -12,6 +12,15 @@ namespace KangouMessenger.Core
 {
 	public class KangouClient
 	{
+
+		public static void RetrieveMapDensityData(Action<string, OrdersMapDensity> callback)
+		{
+			var endpoint = GetFullEndpoint ("/app/courier/v2/orders/map/density");
+			RequestGetDataToServer (endpoint, (err, res)=>{
+				callback(err, SafeDesarializeObject<OrdersMapDensity>(res));
+			});
+		}
+
 		public static void RetrieveUserId(string provider, string providerDataId, Action<string, RetrieveUserIdResponse> callback)
 		{
 			var endpoint = GetFullEndpoint ("/app/courier/v2/retrieveId");
@@ -169,6 +178,35 @@ namespace KangouMessenger.Core
 			return objDeserialized;
 		}
 
+		private static void RequestGetDataToServer (String endpoint, Action<string, string> callback, bool jsonTypeInput = true)
+		{
+			/* Sending Data to Server. */
+			var request = (HttpWebRequest)WebRequest.Create(endpoint);
+			if (jsonTypeInput) {
+				request.ContentType = "application/json";
+			} else {
+				request.ContentType = "application/x-www-form-urlencoded";
+			}
+			request.Method = "GET";
+			/* Requesting Response from Server. */
+			request.BeginGetResponse (asynchResultResp =>  {
+				try {
+					using (var response = request.EndGetResponse (asynchResultResp)) {
+						using (var stream = response.GetResponseStream ()) {
+							/* Getting Success response from server */
+							var reader = new StreamReader (stream);
+							var result = reader.ReadToEnd ();
+							callback(null, result);
+						}
+					}
+				}
+				catch (WebException ex) {
+					var errorString = String.Format ("ERROR Requesting Response: '{0}' when making {1} request to {2}", ex.Message, request.Method, request.RequestUri.AbsoluteUri);
+					Mvx.Error (errorString);
+					callback (errorString, null);
+				}
+			}, null);
+		}
 
 		private static void SendPostDataToServer (String endpoint, string data, Action<string, string> callback, bool jsonTypeInput = true)
 		{

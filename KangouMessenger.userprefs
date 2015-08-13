@@ -1,10 +1,38 @@
-﻿<Properties StartupItem="KangouAppMessenger/KangouMessenger.Core.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="KangouAppMessenger/ViewModels/ReceivingOrderViewModel.cs">
+﻿<Properties StartupItem="KangouMessenger.Droid/KangouMessenger.Droid.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" PreferredExecutionTarget="Android.Nexus S (KitKat)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="KangouMessenger.Droid/Views/WaitingOrderView.cs">
     <Files>
-      <File FileName="KangouAppMessenger/ViewModels/ReceivingOrderViewModel.cs" Line="42" Column="24" />
-      <File FileName="KangouMessenger.Droid/Views/ReceivingOrderView.cs" Line="33" Column="9" />
+      <File FileName="KangouAppMessenger/ViewModels/WaitingOrderViewModel.cs" Line="40" Column="43" />
+      <File FileName="KangouMessenger.Droid/Views/WaitingOrderView.cs" Line="143" Column="8" />
+      <File FileName="KangouMessenger.Droid/Helpers/BusyMvxFragmentActivity.cs" Line="57" Column="67" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="KangouMessenger" expanded="True">
+            <Node name="KangouMessenger.Core" expanded="True">
+              <Node name="ViewModels" expanded="True" />
+            </Node>
+            <Node name="KangouMessenger.Core.Tests" expanded="True" />
+            <Node name="KangouMessenger.Droid" expanded="True">
+              <Node name="Packages" expanded="True" />
+              <Node name="Helpers" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Resources" expanded="True" />
+              <Node name="Views" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>indexColor</Value>
+          <Value>color</Value>
+          <Value>res.gradients</Value>
+          <Value>colorValue</Value>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

@@ -258,6 +258,18 @@ Cirrious.MvvmCross.Droid.Fragging.MvxTabsFragmentActivity/TabFactory, Cirrious.M
 Cirrious.MvvmCross.Droid.Fragging.MvxTabsFragmentActivity/TabFactory, Cirrious.MvvmCross.Droid.Fragging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md526035c37b8d1573464bb4caa888f0f5d.MvxTabsFragmentActivity_TabFactory
 Cirrious.MvvmCross.Droid.Fragging.MvxTabsFragmentActivity.TabFactory;md526035c37b8d1573464bb4caa888f0f5d.MvxTabsFragmentActivity_TabFactory
 cirrious.mvvmcross.droid.fragging.MvxTabsFragmentActivity_TabFactory;md526035c37b8d1573464bb4caa888f0f5d.MvxTabsFragmentActivity_TabFactory
+Xamarin.InsightsCore.BackgroundManager, Xamarin.Insights;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
+Xamarin.InsightsCore.BackgroundManager, Xamarin.Insights, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
+Xamarin.InsightsCore.BackgroundManager;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
+xamarin.insightscore.BackgroundManager;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
+Xamarin.InsightsCore.NetworkChangeReceiver, Xamarin.Insights;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
+Xamarin.InsightsCore.NetworkChangeReceiver, Xamarin.Insights, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
+Xamarin.InsightsCore.NetworkChangeReceiver;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
+xamarin.insightscore.NetworkChangeReceiver;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
+Xamarin.InsightsCore.NativeUnhandledExceptionHandler, Xamarin.Insights;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler
+Xamarin.InsightsCore.NativeUnhandledExceptionHandler, Xamarin.Insights, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler
+Xamarin.InsightsCore.NativeUnhandledExceptionHandler;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler
+xamarin.insightscore.NativeUnhandledExceptionHandler;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler
 Xamarin.Facebook.Ads.IAdListenerImplementor, Xamarin.Facebook;mono.com.facebook.ads.AdListenerImplementor
 Xamarin.Facebook.Ads.IAdListenerImplementor, Xamarin.Facebook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.facebook.ads.AdListenerImplementor
 Xamarin.Facebook.Ads.IAdListenerImplementor;mono.com.facebook.ads.AdListenerImplementor
@@ -274,6 +286,10 @@ Xamarin.Facebook.Ads.Internal.Adapters.IInterstitialAdapterListenerImplementor, 
 Xamarin.Facebook.Ads.Internal.Adapters.IInterstitialAdapterListenerImplementor, Xamarin.Facebook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.facebook.ads.internal.adapters.InterstitialAdapterListenerImplementor
 Xamarin.Facebook.Ads.Internal.Adapters.IInterstitialAdapterListenerImplementor;mono.com.facebook.ads.internal.adapters.InterstitialAdapterListenerImplementor
 xamarin.facebook.ads.internal.adapters.IInterstitialAdapterListenerImplementor;mono.com.facebook.ads.internal.adapters.InterstitialAdapterListenerImplementor
+Xamarin.Facebook.Ads.Internal.Ssp.ANAdRenderer/IListenerImplementor, Xamarin.Facebook;mono.com.facebook.ads.internal.ssp.ANAdRenderer_ListenerImplementor
+Xamarin.Facebook.Ads.Internal.Ssp.ANAdRenderer/IListenerImplementor, Xamarin.Facebook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.facebook.ads.internal.ssp.ANAdRenderer_ListenerImplementor
+Xamarin.Facebook.Ads.Internal.Ssp.ANAdRenderer.IListenerImplementor;mono.com.facebook.ads.internal.ssp.ANAdRenderer_ListenerImplementor
+xamarin.facebook.ads.internal.ssp.ANAdRenderer_IListenerImplementor;mono.com.facebook.ads.internal.ssp.ANAdRenderer_ListenerImplementor
 Xamarin.Facebook.Ads.NativeAdsManager/IListenerImplementor, Xamarin.Facebook;mono.com.facebook.ads.NativeAdsManager_ListenerImplementor
 Xamarin.Facebook.Ads.NativeAdsManager/IListenerImplementor, Xamarin.Facebook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.facebook.ads.NativeAdsManager_ListenerImplementor
 Xamarin.Facebook.Ads.NativeAdsManager.IListenerImplementor;mono.com.facebook.ads.NativeAdsManager_ListenerImplementor
@@ -298,18 +314,6 @@ Xamarin.Facebook.Share.Widget.LikeView/IOnErrorListenerImplementor, Xamarin.Face
 Xamarin.Facebook.Share.Widget.LikeView/IOnErrorListenerImplementor, Xamarin.Facebook, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.facebook.share.widget.LikeView_OnErrorListenerImplementor
 Xamarin.Facebook.Share.Widget.LikeView.IOnErrorListenerImplementor;mono.com.facebook.share.widget.LikeView_OnErrorListenerImplementor
 xamarin.facebook.share.widget.LikeView_IOnErrorListenerImplementor;mono.com.facebook.share.widget.LikeView_OnErrorListenerImplementor
-Xamarin.InsightsCore.BackgroundManager, Xamarin.Insights;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
-Xamarin.InsightsCore.BackgroundManager, Xamarin.Insights, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
-Xamarin.InsightsCore.BackgroundManager;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
-xamarin.insightscore.BackgroundManager;md55aa83cb61847c4249bb0dd44fd0a56e6.BackgroundManager
-Xamarin.InsightsCore.NetworkChangeReceiver, Xamarin.Insights;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
-Xamarin.InsightsCore.NetworkChangeReceiver, Xamarin.Insights, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
-Xamarin.InsightsCore.NetworkChangeReceiver;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
-xamarin.insightscore.NetworkChangeReceiver;md55aa83cb61847c4249bb0dd44fd0a56e6.NetworkChangeReceiver
-Xamarin.InsightsCore.NativeUnhandledExceptionHandler, Xamarin.Insights;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler
-Xamarin.InsightsCore.NativeUnhandledExceptionHandler, Xamarin.Insights, Version=1.10.0.0, Culture=neutral, PublicKeyToken=null;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler
-Xamarin.InsightsCore.NativeUnhandledExceptionHandler;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler
-xamarin.insightscore.NativeUnhandledExceptionHandler;md55aa83cb61847c4249bb0dd44fd0a56e6.NativeUnhandledExceptionHandler
 Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.View.ViewPager/IOnPageChangeListenerImplementor, Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
 Android.Support.V4.View.ViewPager.IOnPageChangeListenerImplementor;mono.android.support.v4.view.ViewPager_OnPageChangeListenerImplementor
@@ -542,26 +546,6 @@ Android.Gms.Tagmanager.IContainerHolderContainerAvailableListenerImplementor, Xa
 Android.Gms.Tagmanager.IContainerHolderContainerAvailableListenerImplementor, Xamarin.GooglePlayServices.Analytics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.tagmanager.ContainerHolder_ContainerAvailableListenerImplementor
 Android.Gms.Tagmanager.IContainerHolderContainerAvailableListenerImplementor;mono.com.google.android.gms.tagmanager.ContainerHolder_ContainerAvailableListenerImplementor
 android.gms.tagmanager.IContainerHolderContainerAvailableListenerImplementor;mono.com.google.android.gms.tagmanager.ContainerHolder_ContainerAvailableListenerImplementor
-Android.Gms.Cast.Games.GameManagerClient/IListenerImplementor, Xamarin.GooglePlayServices.Cast;mono.com.google.android.gms.cast.games.GameManagerClient_ListenerImplementor
-Android.Gms.Cast.Games.GameManagerClient/IListenerImplementor, Xamarin.GooglePlayServices.Cast, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.cast.games.GameManagerClient_ListenerImplementor
-Android.Gms.Cast.Games.GameManagerClient.IListenerImplementor;mono.com.google.android.gms.cast.games.GameManagerClient_ListenerImplementor
-android.gms.cast.games.GameManagerClient_IListenerImplementor;mono.com.google.android.gms.cast.games.GameManagerClient_ListenerImplementor
-Android.Gms.Cast.RemoteMediaPlayer/IOnMetadataUpdatedListenerImplementor, Xamarin.GooglePlayServices.Cast;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnMetadataUpdatedListenerImplementor
-Android.Gms.Cast.RemoteMediaPlayer/IOnMetadataUpdatedListenerImplementor, Xamarin.GooglePlayServices.Cast, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnMetadataUpdatedListenerImplementor
-Android.Gms.Cast.RemoteMediaPlayer.IOnMetadataUpdatedListenerImplementor;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnMetadataUpdatedListenerImplementor
-android.gms.cast.RemoteMediaPlayer_IOnMetadataUpdatedListenerImplementor;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnMetadataUpdatedListenerImplementor
-Android.Gms.Cast.RemoteMediaPlayer/IOnPreloadStatusUpdatedListenerImplementor, Xamarin.GooglePlayServices.Cast;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnPreloadStatusUpdatedListenerImplementor
-Android.Gms.Cast.RemoteMediaPlayer/IOnPreloadStatusUpdatedListenerImplementor, Xamarin.GooglePlayServices.Cast, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnPreloadStatusUpdatedListenerImplementor
-Android.Gms.Cast.RemoteMediaPlayer.IOnPreloadStatusUpdatedListenerImplementor;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnPreloadStatusUpdatedListenerImplementor
-android.gms.cast.RemoteMediaPlayer_IOnPreloadStatusUpdatedListenerImplementor;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnPreloadStatusUpdatedListenerImplementor
-Android.Gms.Cast.RemoteMediaPlayer/IOnQueueStatusUpdatedListenerImplementor, Xamarin.GooglePlayServices.Cast;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnQueueStatusUpdatedListenerImplementor
-Android.Gms.Cast.RemoteMediaPlayer/IOnQueueStatusUpdatedListenerImplementor, Xamarin.GooglePlayServices.Cast, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnQueueStatusUpdatedListenerImplementor
-Android.Gms.Cast.RemoteMediaPlayer.IOnQueueStatusUpdatedListenerImplementor;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnQueueStatusUpdatedListenerImplementor
-android.gms.cast.RemoteMediaPlayer_IOnQueueStatusUpdatedListenerImplementor;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnQueueStatusUpdatedListenerImplementor
-Android.Gms.Cast.RemoteMediaPlayer/IOnStatusUpdatedListenerImplementor, Xamarin.GooglePlayServices.Cast;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnStatusUpdatedListenerImplementor
-Android.Gms.Cast.RemoteMediaPlayer/IOnStatusUpdatedListenerImplementor, Xamarin.GooglePlayServices.Cast, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnStatusUpdatedListenerImplementor
-Android.Gms.Cast.RemoteMediaPlayer.IOnStatusUpdatedListenerImplementor;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnStatusUpdatedListenerImplementor
-android.gms.cast.RemoteMediaPlayer_IOnStatusUpdatedListenerImplementor;mono.com.google.android.gms.cast.RemoteMediaPlayer_OnStatusUpdatedListenerImplementor
 Android.Gms.Drive.IDriveFileDownloadProgressListenerImplementor, Xamarin.GooglePlayServices.Drive;mono.com.google.android.gms.drive.DriveFile_DownloadProgressListenerImplementor
 Android.Gms.Drive.IDriveFileDownloadProgressListenerImplementor, Xamarin.GooglePlayServices.Drive, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.drive.DriveFile_DownloadProgressListenerImplementor
 Android.Gms.Drive.IDriveFileDownloadProgressListenerImplementor;mono.com.google.android.gms.drive.DriveFile_DownloadProgressListenerImplementor
@@ -630,38 +614,6 @@ Android.Gms.Location.ILocationListenerImplementor, Xamarin.GooglePlayServices.Lo
 Android.Gms.Location.ILocationListenerImplementor, Xamarin.GooglePlayServices.Location, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.location.LocationListenerImplementor
 Android.Gms.Location.ILocationListenerImplementor;mono.com.google.android.gms.location.LocationListenerImplementor
 android.gms.location.ILocationListenerImplementor;mono.com.google.android.gms.location.LocationListenerImplementor
-Android.Gms.Fitness.Request.IOnDataPointListenerImplementor, Xamarin.GooglePlayServices.Fitness;mono.com.google.android.gms.fitness.request.OnDataPointListenerImplementor
-Android.Gms.Fitness.Request.IOnDataPointListenerImplementor, Xamarin.GooglePlayServices.Fitness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.fitness.request.OnDataPointListenerImplementor
-Android.Gms.Fitness.Request.IOnDataPointListenerImplementor;mono.com.google.android.gms.fitness.request.OnDataPointListenerImplementor
-android.gms.fitness.request.IOnDataPointListenerImplementor;mono.com.google.android.gms.fitness.request.OnDataPointListenerImplementor
-Android.Gms.Games.MultiPlayer.IOnInvitationReceivedListenerImplementor, Xamarin.GooglePlayServices.Games;mono.com.google.android.gms.games.multiplayer.OnInvitationReceivedListenerImplementor
-Android.Gms.Games.MultiPlayer.IOnInvitationReceivedListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.games.multiplayer.OnInvitationReceivedListenerImplementor
-Android.Gms.Games.MultiPlayer.IOnInvitationReceivedListenerImplementor;mono.com.google.android.gms.games.multiplayer.OnInvitationReceivedListenerImplementor
-android.gms.games.multiplayer.IOnInvitationReceivedListenerImplementor;mono.com.google.android.gms.games.multiplayer.OnInvitationReceivedListenerImplementor
-Android.Gms.Games.MultiPlayer.RealTime.IRealTimeMessageReceivedListenerImplementor, Xamarin.GooglePlayServices.Games;mono.com.google.android.gms.games.multiplayer.realtime.RealTimeMessageReceivedListenerImplementor
-Android.Gms.Games.MultiPlayer.RealTime.IRealTimeMessageReceivedListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.games.multiplayer.realtime.RealTimeMessageReceivedListenerImplementor
-Android.Gms.Games.MultiPlayer.RealTime.IRealTimeMessageReceivedListenerImplementor;mono.com.google.android.gms.games.multiplayer.realtime.RealTimeMessageReceivedListenerImplementor
-android.gms.games.multiplayer.realtime.IRealTimeMessageReceivedListenerImplementor;mono.com.google.android.gms.games.multiplayer.realtime.RealTimeMessageReceivedListenerImplementor
-Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerImplementor, Xamarin.GooglePlayServices.Games;mono.com.google.android.gms.games.multiplayer.realtime.RoomStatusUpdateListenerImplementor
-Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.games.multiplayer.realtime.RoomStatusUpdateListenerImplementor
-Android.Gms.Games.MultiPlayer.RealTime.IRoomStatusUpdateListenerImplementor;mono.com.google.android.gms.games.multiplayer.realtime.RoomStatusUpdateListenerImplementor
-android.gms.games.multiplayer.realtime.IRoomStatusUpdateListenerImplementor;mono.com.google.android.gms.games.multiplayer.realtime.RoomStatusUpdateListenerImplementor
-Android.Gms.Games.MultiPlayer.RealTime.IRoomUpdateListenerImplementor, Xamarin.GooglePlayServices.Games;mono.com.google.android.gms.games.multiplayer.realtime.RoomUpdateListenerImplementor
-Android.Gms.Games.MultiPlayer.RealTime.IRoomUpdateListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.games.multiplayer.realtime.RoomUpdateListenerImplementor
-Android.Gms.Games.MultiPlayer.RealTime.IRoomUpdateListenerImplementor;mono.com.google.android.gms.games.multiplayer.realtime.RoomUpdateListenerImplementor
-android.gms.games.multiplayer.realtime.IRoomUpdateListenerImplementor;mono.com.google.android.gms.games.multiplayer.realtime.RoomUpdateListenerImplementor
-Android.Gms.Games.MultiPlayer.TurnBased.IOnTurnBasedMatchUpdateReceivedListenerImplementor, Xamarin.GooglePlayServices.Games;mono.com.google.android.gms.games.multiplayer.turnbased.OnTurnBasedMatchUpdateReceivedListenerImplementor
-Android.Gms.Games.MultiPlayer.TurnBased.IOnTurnBasedMatchUpdateReceivedListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.games.multiplayer.turnbased.OnTurnBasedMatchUpdateReceivedListenerImplementor
-Android.Gms.Games.MultiPlayer.TurnBased.IOnTurnBasedMatchUpdateReceivedListenerImplementor;mono.com.google.android.gms.games.multiplayer.turnbased.OnTurnBasedMatchUpdateReceivedListenerImplementor
-android.gms.games.multiplayer.turnbased.IOnTurnBasedMatchUpdateReceivedListenerImplementor;mono.com.google.android.gms.games.multiplayer.turnbased.OnTurnBasedMatchUpdateReceivedListenerImplementor
-Android.Gms.Games.Quest.IQuestUpdateListenerImplementor, Xamarin.GooglePlayServices.Games;mono.com.google.android.gms.games.quest.QuestUpdateListenerImplementor
-Android.Gms.Games.Quest.IQuestUpdateListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.games.quest.QuestUpdateListenerImplementor
-Android.Gms.Games.Quest.IQuestUpdateListenerImplementor;mono.com.google.android.gms.games.quest.QuestUpdateListenerImplementor
-android.gms.games.quest.IQuestUpdateListenerImplementor;mono.com.google.android.gms.games.quest.QuestUpdateListenerImplementor
-Android.Gms.Games.Request.IOnRequestReceivedListenerImplementor, Xamarin.GooglePlayServices.Games;mono.com.google.android.gms.games.request.OnRequestReceivedListenerImplementor
-Android.Gms.Games.Request.IOnRequestReceivedListenerImplementor, Xamarin.GooglePlayServices.Games, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.games.request.OnRequestReceivedListenerImplementor
-Android.Gms.Games.Request.IOnRequestReceivedListenerImplementor;mono.com.google.android.gms.games.request.OnRequestReceivedListenerImplementor
-android.gms.games.request.IOnRequestReceivedListenerImplementor;mono.com.google.android.gms.games.request.OnRequestReceivedListenerImplementor
 Android.Gms.Nearby.Connection.IConnectionsConnectionRequestListenerImplementor, Xamarin.GooglePlayServices.Nearby;mono.com.google.android.gms.nearby.connection.Connections_ConnectionRequestListenerImplementor
 Android.Gms.Nearby.Connection.IConnectionsConnectionRequestListenerImplementor, Xamarin.GooglePlayServices.Nearby, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.nearby.connection.Connections_ConnectionRequestListenerImplementor
 Android.Gms.Nearby.Connection.IConnectionsConnectionRequestListenerImplementor;mono.com.google.android.gms.nearby.connection.Connections_ConnectionRequestListenerImplementor
@@ -678,31 +630,3 @@ Android.Gms.Plus.PlusOneButton/IOnPlusOneClickListenerImplementor, Xamarin.Googl
 Android.Gms.Plus.PlusOneButton/IOnPlusOneClickListenerImplementor, Xamarin.GooglePlayServices.Plus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.plus.PlusOneButton_OnPlusOneClickListenerImplementor
 Android.Gms.Plus.PlusOneButton.IOnPlusOneClickListenerImplementor;mono.com.google.android.gms.plus.PlusOneButton_OnPlusOneClickListenerImplementor
 android.gms.plus.PlusOneButton_IOnPlusOneClickListenerImplementor;mono.com.google.android.gms.plus.PlusOneButton_OnPlusOneClickListenerImplementor
-Android.Gms.Wallet.Fragment.SupportWalletFragment/IOnStateChangedListenerImplementor, Xamarin.GooglePlayServices.Wallet;mono.com.google.android.gms.wallet.fragment.SupportWalletFragment_OnStateChangedListenerImplementor
-Android.Gms.Wallet.Fragment.SupportWalletFragment/IOnStateChangedListenerImplementor, Xamarin.GooglePlayServices.Wallet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.wallet.fragment.SupportWalletFragment_OnStateChangedListenerImplementor
-Android.Gms.Wallet.Fragment.SupportWalletFragment.IOnStateChangedListenerImplementor;mono.com.google.android.gms.wallet.fragment.SupportWalletFragment_OnStateChangedListenerImplementor
-android.gms.wallet.fragment.SupportWalletFragment_IOnStateChangedListenerImplementor;mono.com.google.android.gms.wallet.fragment.SupportWalletFragment_OnStateChangedListenerImplementor
-Android.Gms.Wallet.Fragment.WalletFragment/IOnStateChangedListenerImplementor, Xamarin.GooglePlayServices.Wallet;mono.com.google.android.gms.wallet.fragment.WalletFragment_OnStateChangedListenerImplementor
-Android.Gms.Wallet.Fragment.WalletFragment/IOnStateChangedListenerImplementor, Xamarin.GooglePlayServices.Wallet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.wallet.fragment.WalletFragment_OnStateChangedListenerImplementor
-Android.Gms.Wallet.Fragment.WalletFragment.IOnStateChangedListenerImplementor;mono.com.google.android.gms.wallet.fragment.WalletFragment_OnStateChangedListenerImplementor
-android.gms.wallet.fragment.WalletFragment_IOnStateChangedListenerImplementor;mono.com.google.android.gms.wallet.fragment.WalletFragment_OnStateChangedListenerImplementor
-Android.Gms.Wearable.ICapabilityApiCapabilityListenerImplementor, Xamarin.GooglePlayServices.Wearable;mono.com.google.android.gms.wearable.CapabilityApi_CapabilityListenerImplementor
-Android.Gms.Wearable.ICapabilityApiCapabilityListenerImplementor, Xamarin.GooglePlayServices.Wearable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.wearable.CapabilityApi_CapabilityListenerImplementor
-Android.Gms.Wearable.ICapabilityApiCapabilityListenerImplementor;mono.com.google.android.gms.wearable.CapabilityApi_CapabilityListenerImplementor
-android.gms.wearable.ICapabilityApiCapabilityListenerImplementor;mono.com.google.android.gms.wearable.CapabilityApi_CapabilityListenerImplementor
-Android.Gms.Wearable.IChannelApiChannelListenerImplementor, Xamarin.GooglePlayServices.Wearable;mono.com.google.android.gms.wearable.ChannelApi_ChannelListenerImplementor
-Android.Gms.Wearable.IChannelApiChannelListenerImplementor, Xamarin.GooglePlayServices.Wearable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.wearable.ChannelApi_ChannelListenerImplementor
-Android.Gms.Wearable.IChannelApiChannelListenerImplementor;mono.com.google.android.gms.wearable.ChannelApi_ChannelListenerImplementor
-android.gms.wearable.IChannelApiChannelListenerImplementor;mono.com.google.android.gms.wearable.ChannelApi_ChannelListenerImplementor
-Android.Gms.Wearable.IDataApiDataListenerImplementor, Xamarin.GooglePlayServices.Wearable;mono.com.google.android.gms.wearable.DataApi_DataListenerImplementor
-Android.Gms.Wearable.IDataApiDataListenerImplementor, Xamarin.GooglePlayServices.Wearable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.wearable.DataApi_DataListenerImplementor
-Android.Gms.Wearable.IDataApiDataListenerImplementor;mono.com.google.android.gms.wearable.DataApi_DataListenerImplementor
-android.gms.wearable.IDataApiDataListenerImplementor;mono.com.google.android.gms.wearable.DataApi_DataListenerImplementor
-Android.Gms.Wearable.IMessageApiMessageListenerImplementor, Xamarin.GooglePlayServices.Wearable;mono.com.google.android.gms.wearable.MessageApi_MessageListenerImplementor
-Android.Gms.Wearable.IMessageApiMessageListenerImplementor, Xamarin.GooglePlayServices.Wearable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.wearable.MessageApi_MessageListenerImplementor
-Android.Gms.Wearable.IMessageApiMessageListenerImplementor;mono.com.google.android.gms.wearable.MessageApi_MessageListenerImplementor
-android.gms.wearable.IMessageApiMessageListenerImplementor;mono.com.google.android.gms.wearable.MessageApi_MessageListenerImplementor
-Android.Gms.Wearable.INodeApiNodeListenerImplementor, Xamarin.GooglePlayServices.Wearable;mono.com.google.android.gms.wearable.NodeApi_NodeListenerImplementor
-Android.Gms.Wearable.INodeApiNodeListenerImplementor, Xamarin.GooglePlayServices.Wearable, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;mono.com.google.android.gms.wearable.NodeApi_NodeListenerImplementor
-Android.Gms.Wearable.INodeApiNodeListenerImplementor;mono.com.google.android.gms.wearable.NodeApi_NodeListenerImplementor
-android.gms.wearable.INodeApiNodeListenerImplementor;mono.com.google.android.gms.wearable.NodeApi_NodeListenerImplementor

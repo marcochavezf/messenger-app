@@ -1,4 +1,5 @@
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/obj/Release/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/obj/Release/KangouAppMessenger.Helpers.GeoJsonFiles.colonies.cdmx.geojson
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/KangouAppMessenger.dll.mdb
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/KangouAppMessenger.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/obj/Release/KangouAppMessenger.dll
@@ -10,5 +11,5 @@
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Cirrious.MvvmCross.Plugins.Json.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Cirrious.MvvmCross.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/ModernHttpClient.Portable.dll
-/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Xamarin.Insights.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Newtonsoft.Json.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Xamarin.Insights.dll

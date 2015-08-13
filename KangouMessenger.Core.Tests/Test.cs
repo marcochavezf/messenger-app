@@ -10,9 +10,31 @@ namespace KangouMessenger.Core.Tests
 	[TestFixture ()]
 	public class Test
 	{
+		[Test ()]
+		public void GeoJsonParserTest ()
+		{
+			//OrdersMapDensity
+			GeoJsonColonies geoJsonColonies = GeoJsonParser.GetCDMXColonies();
+			Assert.AreEqual (geoJsonColonies.features.Count, 2097);
+		}
 
 		[Test ()]
-		public void KangouClientTestCase ()
+		[Ignore("Ignore a test")]
+		public void KangouClientGetTestCase ()
+		{
+			var cbHelper = new CallbackHelper();
+			//OrdersMapDensity
+			KangouClient.RetrieveMapDensityData((err, res) => {
+				Assert.AreEqual(res.gradients.Count, 5);
+				Assert.AreEqual(res.density.Count, 40);
+				cbHelper.Done("RetrieveUserId");
+			});
+			cbHelper.WaitAndAssert ("RetrieveUserId");
+		}
+			
+		[Test ()]
+		[Ignore("Ignore a test")]
+		public void KangouClientPostTestCase ()
 		{
 			var cbHelper = new CallbackHelper();
 

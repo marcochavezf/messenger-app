@@ -32,6 +32,7 @@ namespace KangouMessenger.Droid
 		private WaitingOrderViewModel _viewModel;
 		private BindableProgress _retryingToConnectProgress;
 		private System.Timers.Timer _heartbeatTimer;
+		private GoogleMap _map;
 		public static int NOTIFICATION_ID_ORDER_RECEIVED = 265431;
 
 		public static double CurrentLat { get; private set; }
@@ -90,13 +91,65 @@ namespace KangouMessenger.Droid
 						}
 					} else {
 						_viewModel.PublishPosition (CurrentLat, CurrentLng);
+						UpdateCameraAndPosition();
 					}
 				});
 			});
 			_heartbeatTimer.Start();
+
+			var gpsLocation = _locationManager.GetLastKnownLocation (LocationManager.GpsProvider);
+			if (gpsLocation == null) {
+				var networkLocation = _locationManager.GetLastKnownLocation (LocationManager.NetworkProvider);
+				if (networkLocation != null) {
+					CurrentLat = networkLocation.Latitude;
+					CurrentLng = networkLocation.Longitude;
+					UpdateCameraAndPosition ();
+				}
+			} else {
+				CurrentLat = gpsLocation.Latitude;
+				CurrentLng = gpsLocation.Longitude;
+				UpdateCameraAndPosition ();
+			}
+
+			KangouClient.RetrieveMapDensityData((err, res) => {
+				if(res == null || err != null) return;
+				Task.Run(delegate {
+					GeoJsonColonies geoJsonColonies = GeoJsonParser.GetCDMXColonies();
+					if(_map == null) return;
+					try {
+						var highestDensity = res.density[0].numberOfOrdersLastMonth;
+						foreach(var densityData in res.density){
+							var coordinates = geoJsonColonies.features[densityData.index].geometry.coordinates[0];
+							var polygonLatLng = new List<LatLng>();
+							foreach(var coord in coordinates){
+								polygonLatLng.Add(new LatLng(coord[1], coord[0]));
+							}
+							var indexColor = (int) Math.Round((float)densityData.numberOfOrdersLastMonth / (highestDensity/res.gradients.Count)) - 1;
+							if (indexColor < 0) {
+								indexColor = 0;
+							}
+							var alpha = "#AA";
+							if (densityData.numberOfOrdersLastMonth <= 2){
+								alpha = "#44";
+							}
+							var color = alpha + res.gradients[indexColor].TrimStart('#');
+							RunOnUiThread (delegate {
+								var polygonOptions = new PolygonOptions();
+								polygonOptions.Add(polygonLatLng.ToArray());
+								Polygon polygon = _map.AddPolygon(polygonOptions);
+								polygon.FillColor = Color.ParseColor(color);
+								polygon.StrokeColor = Color.ParseColor(color);
+								polygon.StrokeWidth = 1;
+							});
+						}
+					} catch (Exception e){
+						Xamarin.Insights.Report(e);
+					}
+				});
+			});
 		}
 
-		private void gpsDisableAlertDialog(String title, String message){
+		private void gpsDisabledAlertDialog(String title, String message){
 			var openSettingsDialog = new AlertDialog.Builder (this);
 			openSettingsDialog.SetTitle (title);
 			openSettingsDialog.SetMessage (message);
@@ -170,9 +223,9 @@ namespace KangouMessenger.Droid
 		{
 			base.OnResume ();
 			try{
-				_locationManager.RequestLocationUpdates(_locationProvider, 0, 0, this);
+				_locationManager.RequestLocationUpdates(_locationProvider, 1000L, 0, this);
 			} catch (Exception e) {
-				gpsDisableAlertDialog ("GPS no habilitado", "Favor de encender el localizador GPS");
+				gpsDisabledAlertDialog ("GPS no habilitado", "Favor de encender el localizador GPS");
 				Insights.Report(e);
 			}
 		}
@@ -212,28 +265,6 @@ namespace KangouMessenger.Droid
 			} else {
 				CurrentLat = _currentLocation.Latitude;
 				CurrentLng = _currentLocation.Longitude;
-
-				if (!_isCameraUpdated) {
-					_isCameraUpdated = true;
-
-					var newLocation = new LatLng (_currentLocation.Latitude, _currentLocation.Longitude);
-					var builder = CameraPosition.InvokeBuilder ();
-					builder.Target (newLocation);
-					builder.Zoom (14);
-					var cameraPosition = builder.Build ();
-					var cameraUpdate = CameraUpdateFactory.NewCameraPosition (cameraPosition);
-
-					RunOnUiThread (delegate {
-						SetUpMapIfNeeded (Resource.Id.map, (map) => {
-							map.MyLocationEnabled = true;
-							map.MoveCamera (cameraUpdate);
-						});
-
-						var msgLocationNotFound = FindViewById<TextView>(Resource.Id.msgLocationNotFound);
-						msgLocationNotFound.Visibility = Android.Views.ViewStates.Gone;
-					});
-
-				}
 			}
 		}
 
@@ -245,7 +276,9 @@ namespace KangouMessenger.Droid
 			Console.WriteLine ("OnProviderEnabled: {0}",provider);
 		}
 
-		public void OnStatusChanged(string provider, Availability status, Bundle extras) {}
+		public void OnStatusChanged(string provider, Availability status, Bundle extras) {
+			
+		}
 
 		void InitializeLocationManager()
 		{
@@ -253,14 +286,44 @@ namespace KangouMessenger.Droid
 			_locationManager = (LocationManager)GetSystemService(LocationService);
 
 			Criteria criteriaForLocationService = new Criteria{
-				Accuracy = Accuracy.Low
+				HorizontalAccuracy = Accuracy.High
 			};
 			IList<string> acceptableLocationProviders = _locationManager.GetProviders(criteriaForLocationService, true);
-
 			if (acceptableLocationProviders.Any()) {
 				_locationProvider = acceptableLocationProviders.First();
 			} else {
 				_locationProvider = String.Empty;
+			}
+		}
+
+		private void UpdateCameraAndPosition(){
+			if (!_isCameraUpdated) {
+				_isCameraUpdated = true;
+
+				if (CurrentLat == 0 && CurrentLng == 0) {
+					return;
+				}
+
+				RunOnUiThread (delegate {
+					var newLocation = new LatLng (CurrentLat, CurrentLng);
+					var builder = CameraPosition.InvokeBuilder ();
+					builder.Target (newLocation);
+					builder.Zoom (14);
+					var cameraPosition = builder.Build ();
+					var cameraUpdate = CameraUpdateFactory.NewCameraPosition (cameraPosition);
+
+					SetUpMapIfNeeded (Resource.Id.map, (map) => {
+						RunOnUiThread (delegate {
+							map.MyLocationEnabled = true;
+							map.MoveCamera (cameraUpdate);
+							_map = map;
+						});
+					});
+
+					var msgLocationNotFound = FindViewById<TextView>(Resource.Id.msgLocationNotFound);
+					msgLocationNotFound.Visibility = Android.Views.ViewStates.Gone;
+				});
+
 			}
 		}
 	}

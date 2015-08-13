@@ -12,6 +12,6 @@ namespace KangouMessenger.Core
 		public static int LOCAL_PORT = 3000;
 		public static int SERVER_PORT = 80;
 
-		public static bool IS_LOCAL = false;
+		public static bool IS_LOCAL = true;
 	}
 }

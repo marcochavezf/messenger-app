@@ -45,9 +45,11 @@ namespace KangouMessenger.Droid
 		protected override void OnStop ()
 		{
 			base.OnStop ();
-			var viewModel = (BusyMvxViewModel)ViewModel;
-			if (viewModel.ItNeedsToBeRemoved)
-				Finish ();
+			if (ViewModel != null) {
+				var viewModel = (BusyMvxViewModel)ViewModel;
+				if (viewModel.ItNeedsToBeRemoved)
+					Finish ();
+			}
 		}
 
 	}

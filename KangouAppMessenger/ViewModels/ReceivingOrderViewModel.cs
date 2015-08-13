@@ -19,16 +19,21 @@ namespace KangouMessenger.Core
 		/* Constructor */
 		public ReceivingOrderViewModel(IMvxMessenger messenger) 
 			: base (messenger) {
+			try {
+				/* This is when the view is trying to open after a running out of memory */ 
+				if (String.IsNullOrEmpty (KangouData.CourierId)) {
+					Close(this);
+					return;
+				}
 
-			/* This is when the view is trying to open after a running out of memory */ 
-			if (String.IsNullOrEmpty (KangouData.CourierId)) {
-				Close(this);
-				return;
+				if (_messenger != null) {
+					_token = _messenger.Subscribe<LocationMessage> (OnLocationMessage);
+				}
+				_tick = 30;
+				KangouData.AppView = "ReceivingOrderView";
+			} catch (Exception e){
+				Xamarin.Insights.Report (e);
 			}
-
-			_token = messenger.Subscribe<LocationMessage>(OnLocationMessage);
-			_tick = 30;
-			KangouData.AppView = "ReceivingOrderView";
 		}
 
 		private void OnLocationMessage(LocationMessage locationMessage)
@@ -38,7 +43,9 @@ namespace KangouMessenger.Core
 				TimerToCancel = System.String.Format ("Se autocancelará en {0} seg.", _tick);
 			} else {
 				_tick = 0;
-				_messenger.Unsubscribe<LocationMessage> (_token);
+				if (_messenger != null) {
+					_messenger.Unsubscribe<LocationMessage> (_token);
+				}
 				DoCancelCommand ();
 			}
 		}
@@ -106,7 +113,9 @@ namespace KangouMessenger.Core
 		private void DoAcceptCommand ()
 		{
 			_tick = 30;
-			_messenger.Unsubscribe<LocationMessage> (_token);
+			if (_messenger != null) {
+				_messenger.Unsubscribe<LocationMessage> (_token);
+			}
 			CancelLocalNotification ();
 			TimerToCancel = "Esperando respuesta...";
 			IsBusy = true;
