@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Cirrious.CrossCore.Platform;
 using System.Diagnostics;
 using Cirrious.MvvmCross.Plugins.Messenger;
+using System.Windows.Input;
 
 namespace KangouMessenger.Core
 {
@@ -18,6 +19,7 @@ namespace KangouMessenger.Core
 
 		public BusyMvxViewModel(){
 			ItNeedsToBeRemoved = false;
+			EnableMenuDetails = false;
 		}
 
 		public BusyMvxViewModel(IDataService dataService)
@@ -129,6 +131,15 @@ namespace KangouMessenger.Core
 			set { _itNeeedsToBeRemoved = value; }
 		}				//For Android version
 
+		private volatile bool _enableMenuDetails;
+		public bool EnableMenuDetails { 
+			get { return _enableMenuDetails; }
+			set {
+				_enableMenuDetails = value;
+				RaisePropertyChanged (() => EnableMenuDetails);
+			}
+		}
+
 		protected void DoAsyncLongTask(Action action){
 			Task.Run (() => {
 				//InvokeOnMainThread (delegate {  
@@ -136,6 +147,30 @@ namespace KangouMessenger.Core
 				//});
 			});
 			action();
+		}
+
+		private MvxCommand _openOrderDetailsCommand;
+		public ICommand OpenOrderDetailsCommand {
+			get {
+				_openOrderDetailsCommand = _openOrderDetailsCommand ?? new MvxCommand (DoOpenOrderDetailsCommand);
+				return _openOrderDetailsCommand;
+			}
+		}
+		private void DoOpenOrderDetailsCommand ()
+		{
+			ShowViewModel<OrderDetailsViewModel> ();    
+		}
+
+		private MvxCommand _openKangouBookCommand;
+		public ICommand OpenKangouBookCommand {
+			get {
+				_openKangouBookCommand = _openKangouBookCommand ?? new MvxCommand (OpenKangouBookCommandFn);
+				return _openKangouBookCommand;
+			}
+		}
+		private void OpenKangouBookCommandFn ()
+		{
+			ShowViewModel<KangouBookWebViewModel>();
 		}
 	}
 }

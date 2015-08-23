@@ -1795,11 +1795,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0009
 			public const int MvxBindingTagUnique = 2131492873;
 			
-			// aapt resource value: 0x7f0c009d
-			public const int acceptButton = 2131493021;
+			// aapt resource value: 0x7f0c00a9
+			public const int acceptButton = 2131493033;
 			
-			// aapt resource value: 0x7f0c0087
-			public const int action0 = 2131492999;
+			// aapt resource value: 0x7f0c0088
+			public const int action0 = 2131493000;
 			
 			// aapt resource value: 0x7f0c0057
 			public const int action_bar = 2131492951;
@@ -1825,8 +1825,8 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0058
 			public const int action_context_bar = 2131492952;
 			
-			// aapt resource value: 0x7f0c008b
-			public const int action_divider = 2131493003;
+			// aapt resource value: 0x7f0c008c
+			public const int action_divider = 2131493004;
 			
 			// aapt resource value: 0x7f0c0002
 			public const int action_menu_divider = 2131492866;
@@ -1882,11 +1882,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0078
 			public const int callToCustomer = 2131492984;
 			
-			// aapt resource value: 0x7f0c009c
-			public const int cancelButton = 2131493020;
+			// aapt resource value: 0x7f0c00a8
+			public const int cancelButton = 2131493032;
 			
-			// aapt resource value: 0x7f0c0088
-			public const int cancel_action = 2131493000;
+			// aapt resource value: 0x7f0c0089
+			public const int cancel_action = 2131493001;
 			
 			// aapt resource value: 0x7f0c0069
 			public const int canvasSignature = 2131492969;
@@ -1897,8 +1897,8 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c004f
 			public const int checkbox = 2131492943;
 			
-			// aapt resource value: 0x7f0c008e
-			public const int chronometer = 2131493006;
+			// aapt resource value: 0x7f0c008f
+			public const int chronometer = 2131493007;
 			
 			// aapt resource value: 0x7f0c0068
 			public const int clean = 2131492968;
@@ -1933,8 +1933,8 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c006d
 			public const int com_facebook_tooltip_bubble_view_top_pointer = 2131492973;
 			
-			// aapt resource value: 0x7f0c009e
-			public const int comments = 2131493022;
+			// aapt resource value: 0x7f0c00aa
+			public const int comments = 2131493034;
 			
 			// aapt resource value: 0x7f0c0048
 			public const int contentPanel = 2131492936;
@@ -1944,6 +1944,15 @@ namespace KangouMessenger.Droid
 			
 			// aapt resource value: 0x7f0c004b
 			public const int customPanel = 2131492939;
+			
+			// aapt resource value: 0x7f0c0096
+			public const int customerEmail = 2131493014;
+			
+			// aapt resource value: 0x7f0c0095
+			public const int customerName = 2131493013;
+			
+			// aapt resource value: 0x7f0c0097
+			public const int customerPhone = 2131493015;
 			
 			// aapt resource value: 0x7f0c0055
 			public const int decor_content_parent = 2131492949;
@@ -1957,11 +1966,23 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0013
 			public const int disableHome = 2131492883;
 			
-			// aapt resource value: 0x7f0c00a6
-			public const int disconnectButton = 2131493030;
+			// aapt resource value: 0x7f0c00b2
+			public const int disconnectButton = 2131493042;
 			
 			// aapt resource value: 0x7f0c0036
 			public const int display_always = 2131492918;
+			
+			// aapt resource value: 0x7f0c009a
+			public const int distancePickUpToDropOff = 2131493018;
+			
+			// aapt resource value: 0x7f0c009e
+			public const int dropOffAddress = 2131493022;
+			
+			// aapt resource value: 0x7f0c009f
+			public const int dropOffReferences = 2131493023;
+			
+			// aapt resource value: 0x7f0c00a0
+			public const int dropOffRouteMapUrl = 2131493024;
 			
 			// aapt resource value: 0x7f0c0022
 			public const int dropdown = 2131492898;
@@ -1972,8 +1993,8 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c001a
 			public const int end = 2131492890;
 			
-			// aapt resource value: 0x7f0c0093
-			public const int end_padder = 2131493011;
+			// aapt resource value: 0x7f0c0094
+			public const int end_padder = 2131493012;
 			
 			// aapt resource value: 0x7f0c003e
 			public const int expand_activities_button = 2131492926;
@@ -1981,11 +2002,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c004e
 			public const int expanded_menu = 2131492942;
 			
-			// aapt resource value: 0x7f0c0095
-			public const int from = 2131493013;
+			// aapt resource value: 0x7f0c00a1
+			public const int from = 2131493025;
 			
-			// aapt resource value: 0x7f0c0096
-			public const int fromAddress = 2131493014;
+			// aapt resource value: 0x7f0c00a2
+			public const int fromAddress = 2131493026;
 			
 			// aapt resource value: 0x7f0c0075
 			public const int helpButton = 2131492981;
@@ -2011,14 +2032,14 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c003f
 			public const int image = 2131492927;
 			
-			// aapt resource value: 0x7f0c0092
-			public const int info = 2131493010;
+			// aapt resource value: 0x7f0c0093
+			public const int info = 2131493011;
 			
-			// aapt resource value: 0x7f0c0082
-			public const int infoPasswordA = 2131492994;
+			// aapt resource value: 0x7f0c0083
+			public const int infoPasswordA = 2131492995;
 			
-			// aapt resource value: 0x7f0c0084
-			public const int infoPasswordB = 2131492996;
+			// aapt resource value: 0x7f0c0085
+			public const int infoPasswordB = 2131492997;
 			
 			// aapt resource value: 0x7f0c0030
 			public const int inline = 2131492912;
@@ -2026,8 +2047,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0066
 			public const int instructions = 2131492966;
 			
-			// aapt resource value: 0x7f0c0094
-			public const int items = 2131493012;
+			// aapt resource value: 0x7f0c0099
+			public const int items = 2131493017;
+			
+			// aapt resource value: 0x7f0c00b6
+			public const int kangouBook = 2131493046;
 			
 			// aapt resource value: 0x7f0c007e
 			public const int labelHelp = 2131492990;
@@ -2038,11 +2062,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0033
 			public const int left = 2131492915;
 			
-			// aapt resource value: 0x7f0c008c
-			public const int line1 = 2131493004;
+			// aapt resource value: 0x7f0c008d
+			public const int line1 = 2131493005;
 			
-			// aapt resource value: 0x7f0c0090
-			public const int line3 = 2131493008;
+			// aapt resource value: 0x7f0c0091
+			public const int line3 = 2131493009;
 			
 			// aapt resource value: 0x7f0c0071
 			public const int linearLayout4 = 2131492977;
@@ -2053,29 +2077,29 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0041
 			public const int list_item = 2131492929;
 			
-			// aapt resource value: 0x7f0c0085
-			public const int loginButton = 2131492997;
+			// aapt resource value: 0x7f0c0086
+			public const int loginButton = 2131492998;
 			
-			// aapt resource value: 0x7f0c007f
-			public const int logoutButton = 2131492991;
+			// aapt resource value: 0x7f0c0080
+			public const int logoutButton = 2131492992;
 			
 			// aapt resource value: 0x7f0c0077
 			public const int map = 2131492983;
 			
-			// aapt resource value: 0x7f0c00a7
-			public const int map_layout = 2131493031;
+			// aapt resource value: 0x7f0c00b3
+			public const int map_layout = 2131493043;
 			
-			// aapt resource value: 0x7f0c008a
-			public const int media_actions = 2131493002;
+			// aapt resource value: 0x7f0c008b
+			public const int media_actions = 2131493003;
 			
-			// aapt resource value: 0x7f0c0086
-			public const int messenger_send_button = 2131492998;
+			// aapt resource value: 0x7f0c0087
+			public const int messenger_send_button = 2131492999;
 			
 			// aapt resource value: 0x7f0c001b
 			public const int middle = 2131492891;
 			
-			// aapt resource value: 0x7f0c00a8
-			public const int msgLocationNotFound = 2131493032;
+			// aapt resource value: 0x7f0c00b4
+			public const int msgLocationNotFound = 2131493044;
 			
 			// aapt resource value: 0x7f0c0024
 			public const int multiply = 2131492900;
@@ -2098,20 +2122,35 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0029
 			public const int open_graph = 2131492905;
 			
+			// aapt resource value: 0x7f0c00b5
+			public const int orderDetails = 2131493045;
+			
+			// aapt resource value: 0x7f0c0098
+			public const int orderNumber = 2131493016;
+			
 			// aapt resource value: 0x7f0c002a
 			public const int page = 2131492906;
 			
 			// aapt resource value: 0x7f0c0044
 			public const int parentPanel = 2131492932;
 			
+			// aapt resource value: 0x7f0c009b
+			public const int pickUpAddress = 2131493019;
+			
+			// aapt resource value: 0x7f0c009c
+			public const int pickUpReferences = 2131493020;
+			
+			// aapt resource value: 0x7f0c009d
+			public const int pickUpRouteMapUrl = 2131493021;
+			
 			// aapt resource value: 0x7f0c0079
 			public const int pickedButton = 2131492985;
 			
-			// aapt resource value: 0x7f0c009a
-			public const int profict = 2131493018;
+			// aapt resource value: 0x7f0c00a6
+			public const int profict = 2131493030;
 			
-			// aapt resource value: 0x7f0c0099
-			public const int profitLabel = 2131493017;
+			// aapt resource value: 0x7f0c00a5
+			public const int profitLabel = 2131493029;
 			
 			// aapt resource value: 0x7f0c0005
 			public const int progress_circular = 2131492869;
@@ -2125,8 +2164,8 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0073
 			public const int references = 2131492979;
 			
-			// aapt resource value: 0x7f0c0083
-			public const int register = 2131492995;
+			// aapt resource value: 0x7f0c0084
+			public const int register = 2131492996;
 			
 			// aapt resource value: 0x7f0c0034
 			public const int right = 2131492916;
@@ -2176,14 +2215,14 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0067
 			public const int send = 2131492967;
 			
-			// aapt resource value: 0x7f0c00a5
-			public const int sendInfoButton = 2131493029;
+			// aapt resource value: 0x7f0c00b1
+			public const int sendInfoButton = 2131493041;
 			
-			// aapt resource value: 0x7f0c00a9
-			public const int shareInFacebook = 2131493033;
+			// aapt resource value: 0x7f0c00b7
+			public const int shareInFacebook = 2131493047;
 			
-			// aapt resource value: 0x7f0c00aa
-			public const int shareInGooglePlus = 2131493034;
+			// aapt resource value: 0x7f0c00b8
+			public const int shareInGooglePlus = 2131493048;
 			
 			// aapt resource value: 0x7f0c0050
 			public const int shortcut = 2131492944;
@@ -2197,11 +2236,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0017
 			public const int showTitle = 2131492887;
 			
-			// aapt resource value: 0x7f0c0080
-			public const int signinFbButton = 2131492992;
-			
 			// aapt resource value: 0x7f0c0081
-			public const int signinGoogleButton = 2131492993;
+			public const int signinFbButton = 2131492993;
+			
+			// aapt resource value: 0x7f0c0082
+			public const int signinGoogleButton = 2131492994;
 			
 			// aapt resource value: 0x7f0c0039
 			public const int small = 2131492921;
@@ -2221,23 +2260,23 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c002e
 			public const int standard = 2131492910;
 			
-			// aapt resource value: 0x7f0c00a0
-			public const int starButton1 = 2131493024;
+			// aapt resource value: 0x7f0c00ac
+			public const int starButton1 = 2131493036;
 			
-			// aapt resource value: 0x7f0c00a1
-			public const int starButton2 = 2131493025;
+			// aapt resource value: 0x7f0c00ad
+			public const int starButton2 = 2131493037;
 			
-			// aapt resource value: 0x7f0c00a2
-			public const int starButton3 = 2131493026;
+			// aapt resource value: 0x7f0c00ae
+			public const int starButton3 = 2131493038;
 			
-			// aapt resource value: 0x7f0c00a3
-			public const int starButton4 = 2131493027;
+			// aapt resource value: 0x7f0c00af
+			public const int starButton4 = 2131493039;
 			
-			// aapt resource value: 0x7f0c00a4
-			public const int starButton5 = 2131493028;
+			// aapt resource value: 0x7f0c00b0
+			public const int starButton5 = 2131493040;
 			
-			// aapt resource value: 0x7f0c0089
-			public const int status_bar_latest_event_content = 2131493001;
+			// aapt resource value: 0x7f0c008a
+			public const int status_bar_latest_event_content = 2131493002;
 			
 			// aapt resource value: 0x7f0c0062
 			public const int submit_area = 2131492962;
@@ -2245,23 +2284,23 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0012
 			public const int tabMode = 2131492882;
 			
-			// aapt resource value: 0x7f0c009f
-			public const int tableRow2 = 2131493023;
+			// aapt resource value: 0x7f0c00ab
+			public const int tableRow2 = 2131493035;
 			
 			// aapt resource value: 0x7f0c000e
 			public const int terrain = 2131492878;
 			
-			// aapt resource value: 0x7f0c0091
-			public const int text = 2131493009;
+			// aapt resource value: 0x7f0c0092
+			public const int text = 2131493010;
 			
-			// aapt resource value: 0x7f0c008f
-			public const int text2 = 2131493007;
+			// aapt resource value: 0x7f0c0090
+			public const int text2 = 2131493008;
 			
 			// aapt resource value: 0x7f0c004a
 			public const int textSpacerNoButtons = 2131492938;
 			
-			// aapt resource value: 0x7f0c008d
-			public const int time = 2131493005;
+			// aapt resource value: 0x7f0c008e
+			public const int time = 2131493006;
 			
 			// aapt resource value: 0x7f0c007b
 			public const int timer = 2131492987;
@@ -2269,8 +2308,8 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c007a
 			public const int timerTitle = 2131492986;
 			
-			// aapt resource value: 0x7f0c009b
-			public const int timerToCancel = 2131493019;
+			// aapt resource value: 0x7f0c00a7
+			public const int timerToCancel = 2131493031;
 			
 			// aapt resource value: 0x7f0c0043
 			public const int title = 2131492931;
@@ -2278,11 +2317,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0046
 			public const int title_template = 2131492934;
 			
-			// aapt resource value: 0x7f0c0097
-			public const int to = 2131493015;
+			// aapt resource value: 0x7f0c00a3
+			public const int to = 2131493027;
 			
-			// aapt resource value: 0x7f0c0098
-			public const int toAddress = 2131493016;
+			// aapt resource value: 0x7f0c00a4
+			public const int toAddress = 2131493028;
 			
 			// aapt resource value: 0x7f0c0031
 			public const int top = 2131492913;
@@ -2298,6 +2337,9 @@ namespace KangouMessenger.Droid
 			
 			// aapt resource value: 0x7f0c0018
 			public const int useLogo = 2131492888;
+			
+			// aapt resource value: 0x7f0c007f
+			public const int webview = 2131492991;
 			
 			// aapt resource value: 0x7f0c0020
 			public const int withText = 2131492896;
@@ -2446,79 +2488,85 @@ namespace KangouMessenger.Droid
 			public const int HelpView = 2130903071;
 			
 			// aapt resource value: 0x7f030020
-			public const int LoginView = 2130903072;
+			public const int KangouBookWebView = 2130903072;
 			
 			// aapt resource value: 0x7f030021
-			public const int messenger_button_send_blue_large = 2130903073;
+			public const int LoginView = 2130903073;
 			
 			// aapt resource value: 0x7f030022
-			public const int messenger_button_send_blue_round = 2130903074;
+			public const int messenger_button_send_blue_large = 2130903074;
 			
 			// aapt resource value: 0x7f030023
-			public const int messenger_button_send_blue_small = 2130903075;
+			public const int messenger_button_send_blue_round = 2130903075;
 			
 			// aapt resource value: 0x7f030024
-			public const int messenger_button_send_white_large = 2130903076;
+			public const int messenger_button_send_blue_small = 2130903076;
 			
 			// aapt resource value: 0x7f030025
-			public const int messenger_button_send_white_round = 2130903077;
+			public const int messenger_button_send_white_large = 2130903077;
 			
 			// aapt resource value: 0x7f030026
-			public const int messenger_button_send_white_small = 2130903078;
+			public const int messenger_button_send_white_round = 2130903078;
 			
 			// aapt resource value: 0x7f030027
-			public const int notification_media_action = 2130903079;
+			public const int messenger_button_send_white_small = 2130903079;
 			
 			// aapt resource value: 0x7f030028
-			public const int notification_media_cancel_action = 2130903080;
+			public const int notification_media_action = 2130903080;
 			
 			// aapt resource value: 0x7f030029
-			public const int notification_template_big_media = 2130903081;
+			public const int notification_media_cancel_action = 2130903081;
 			
 			// aapt resource value: 0x7f03002a
-			public const int notification_template_big_media_narrow = 2130903082;
+			public const int notification_template_big_media = 2130903082;
 			
 			// aapt resource value: 0x7f03002b
-			public const int notification_template_lines = 2130903083;
+			public const int notification_template_big_media_narrow = 2130903083;
 			
 			// aapt resource value: 0x7f03002c
-			public const int notification_template_media = 2130903084;
+			public const int notification_template_lines = 2130903084;
 			
 			// aapt resource value: 0x7f03002d
-			public const int notification_template_part_chronometer = 2130903085;
+			public const int notification_template_media = 2130903085;
 			
 			// aapt resource value: 0x7f03002e
-			public const int notification_template_part_time = 2130903086;
+			public const int notification_template_part_chronometer = 2130903086;
 			
 			// aapt resource value: 0x7f03002f
-			public const int PickUpRouteView = 2130903087;
+			public const int notification_template_part_time = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int PickUpTimerView = 2130903088;
+			public const int OrderDetailsView = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int ReceivingOrderView = 2130903089;
+			public const int PickUpRouteView = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int ReviewView = 2130903090;
+			public const int PickUpTimerView = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public const int select_dialog_item_material = 2130903091;
+			public const int ReceivingOrderView = 2130903091;
 			
 			// aapt resource value: 0x7f030034
-			public const int select_dialog_multichoice_material = 2130903092;
+			public const int ReviewView = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int select_dialog_singlechoice_material = 2130903093;
+			public const int select_dialog_item_material = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int SplashScreen = 2130903094;
+			public const int select_dialog_multichoice_material = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int support_simple_spinner_dropdown_item = 2130903095;
+			public const int select_dialog_singlechoice_material = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int WaitingOrderView = 2130903096;
+			public const int SplashScreen = 2130903096;
+			
+			// aapt resource value: 0x7f030039
+			public const int support_simple_spinner_dropdown_item = 2130903097;
+			
+			// aapt resource value: 0x7f03003a
+			public const int WaitingOrderView = 2130903098;
 			
 			static Layout()
 			{
@@ -2534,7 +2582,10 @@ namespace KangouMessenger.Droid
 		{
 			
 			// aapt resource value: 0x7f0d0000
-			public const int menu = 2131558400;
+			public const int menuActiveOrder = 2131558400;
+			
+			// aapt resource value: 0x7f0d0001
+			public const int menuLoginView = 2131558401;
 			
 			static Menu()
 			{
@@ -2789,6 +2840,9 @@ namespace KangouMessenger.Droid
 			
 			// aapt resource value: 0x7f07004e
 			public const int hello = 2131165262;
+			
+			// aapt resource value: 0x7f070058
+			public const int helpInfo = 2131165272;
 			
 			// aapt resource value: 0x7f070055
 			public const int infoConnect = 2131165269;

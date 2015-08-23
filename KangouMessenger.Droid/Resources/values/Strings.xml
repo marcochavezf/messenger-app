@@ -13,4 +13,5 @@
 	<string name="infoConnect">IMPORTANTE:\n\nUna vez presionado el botón &quot;Conectar&quot;, será responsable de realizar la orden de envío hasta entregar lo pedido al cliente.\n\nPara ello es indispensable que su celular cuente con batería y datos suficientes para concluir el servicio satisfactoriamente.</string>
 	<string name="titleLocationNotFound">Ubicación no disponible</string>
 	<string name="msgLocationNotFound">ESPERANDO POSICIÓN...\n\nPara poder tener un buen servicio es importante que tu posición aparezca en el mapa.</string>
+	<string name="helpInfo">Ante cualquier problema favor de comunicarte con el cliente. En caso de ser un problema mayor favor de ponerte en contacto con Alfonso.</string>
 </resources>

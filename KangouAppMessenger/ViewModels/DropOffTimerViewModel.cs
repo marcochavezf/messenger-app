@@ -22,14 +22,15 @@ namespace KangouMessenger.Core
 
 			KangouData.AppView = "DropOffTimerView";
 			EnableRetryButton = true;
+			EnableMenuDetails = true;
+
 			RetryAction = DoDroppedOffCommand;
-	
+			
 			CountDownTimer = new CountDownTimer (13, 0);
 			CountDownTimer.TickTime += (readableTime, hasFinished) => {
 				TimeRemaining = readableTime;
 				if(hasFinished){
 					//TODO Send to server that timer has finished
-
 					CountDownTimer.TickTime -= null;
 					CountDownTimer.Dispose();
 					CountDownTimer = null;

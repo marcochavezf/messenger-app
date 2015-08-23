@@ -22,6 +22,8 @@ namespace KangouMessenger.Core
 			}
 			KangouData.AppView = "PickUpTimerView";
 			EnableRetryButton = true;
+			EnableMenuDetails = true;
+
 			RetryAction = DoPickedUpCommand;
 			
 			CountDownTimer = new CountDownTimer (13, 00);

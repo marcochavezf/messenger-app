@@ -8,7 +8,7 @@ using System;
 namespace KangouMessenger.Core
 {
 	public class HelpViewModel
-		: MvxViewModel
+		: BusyMvxViewModel
     {
 		public HelpViewModel(){
 			/* This is when the view is trying to open after a running out of memory */ 

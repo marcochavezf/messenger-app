@@ -22,6 +22,7 @@ namespace KangouMessenger.Core
 			}
 			KangouData.AppView = "PickUpRouteView";
 			EnableRetryButton = true;
+			EnableMenuDetails = true;
 			RetryAction = DoImHereCommand;
 		}
 
@@ -36,7 +37,6 @@ namespace KangouMessenger.Core
 
 		private void DoHelpCommand ()
 		{
-			System.Diagnostics.Debug.WriteLine ("Help");    
 			ShowViewModel<HelpViewModel> ();
 		}
 

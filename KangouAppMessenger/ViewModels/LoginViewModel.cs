@@ -63,6 +63,7 @@ namespace KangouMessenger.Core
 			}
 		}
 
+
 		public void ClearUserId(){
 			_dataService.AddOrUpdate(new CourierData(){
 				UserId = ""

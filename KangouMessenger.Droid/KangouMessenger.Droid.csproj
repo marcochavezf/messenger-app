@@ -97,9 +97,6 @@
     <Reference Include="Rivets">
       <HintPath>..\Components\rivets-1.0.5.1\lib\android\Rivets.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Insights">
-      <HintPath>..\packages\Xamarin.Insights.1.10.5\lib\MonoAndroid10\Xamarin.Insights.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Facebook">
       <HintPath>..\packages\Xamarin.Facebook.Android.4.4.0.1\lib\MonoAndroid403\Xamarin.Facebook.dll</HintPath>
     </Reference>
@@ -151,6 +148,9 @@
     <Reference Include="Xamarin.GooglePlayServices.SafetyNet">
       <HintPath>..\packages\Xamarin.GooglePlayServices.SafetyNet.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.SafetyNet.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.10.6\lib\MonoAndroid10\Xamarin.Insights.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -180,6 +180,8 @@
     <Compile Include="Bootstrap\JsonPluginBootstrap.cs" />
     <Compile Include="DebugTrace.cs" />
     <Compile Include="Helpers\MyOnMapReady.cs" />
+    <Compile Include="Views\KangouBookWebView.cs" />
+    <Compile Include="Views\OrderDetailsView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -218,10 +220,13 @@
     <AndroidResource Include="Resources\drawable\starReviewOn.png" />
     <AndroidResource Include="Resources\values\MvxBindingAttributes.xml" />
     <AndroidResource Include="Resources\values\SplashStyle.xml" />
-    <AndroidResource Include="Resources\menu\menu.xml" />
+    <AndroidResource Include="Resources\layout\KangouBookWebView.axml" />
+    <AndroidResource Include="Resources\menu\menuLoginView.xml" />
+    <AndroidResource Include="Resources\menu\menuActiveOrder.xml" />
+    <AndroidResource Include="Resources\layout\OrderDetailsView.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <Import Project="..\packages\Xamarin.Insights.1.10.5\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.10.5\build\MonoAndroid10\Xamarin.Insights.targets')" />
+  <Import Project="..\packages\Xamarin.Insights.1.10.6\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.10.6\build\MonoAndroid10\Xamarin.Insights.targets')" />
   <ItemGroup>
     <ProjectReference Include="..\KangouAppMessenger\KangouMessenger.Core.csproj">
       <Project>{30BF415F-033F-4BA5-8A12-C05735EA7957}</Project>

@@ -95,9 +95,13 @@ namespace KangouMessenger.Droid
 			}
 		}
 
+		private void OpenKangouBook(){
+			_viewModel.OpenKangouBookCommand.Execute (null);
+		}
+
 		public override bool OnCreateOptionsMenu(IMenu menu)
 		{
-			MenuInflater.Inflate(Resource.Menu.menu, menu);
+			MenuInflater.Inflate(Resource.Menu.menuLoginView, menu);
 			return base.OnCreateOptionsMenu(menu);
 		}
 
@@ -111,7 +115,11 @@ namespace KangouMessenger.Droid
 			case Resource.Id.shareInFacebook:
 				SendInviteFacebook ();
 				return true;
+			case Resource.Id.kangouBook:
+				OpenKangouBook ();
+				return true;
 			}
+
 			return base.OnOptionsItemSelected(item);
 		}
 

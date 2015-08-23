@@ -73,3 +73,7 @@
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/Xamarin.GooglePlayServices.SafetyNet.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/KangouAppMessenger.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Release/KangouAppMessenger.dll.mdb
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/res/layout/kangoubookwebview.xml
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/res/menu/menuloginview.xml
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/res/menu/menuactiveorder.xml
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/res/layout/orderdetailsview.xml

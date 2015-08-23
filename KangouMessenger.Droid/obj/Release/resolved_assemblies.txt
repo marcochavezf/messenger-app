@@ -17,7 +17,6 @@
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/android/assets/Cirrious.MvvmCross.Droid.Fragging.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/android/assets/Newtonsoft.Json.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/android/assets/Rivets.dll
-/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/android/assets/Xamarin.Insights.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/android/assets/Xamarin.Facebook.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/android/assets/Xamarin.Android.Support.v4.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/android/assets/Xamarin.Android.Support.v7.AppCompat.dll
@@ -35,6 +34,7 @@
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/android/assets/Xamarin.GooglePlayServices.Nearby.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/android/assets/Xamarin.GooglePlayServices.Plus.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/android/assets/Xamarin.GooglePlayServices.SafetyNet.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/android/assets/Xamarin.Insights.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/android/assets/System.Core.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/android/assets/KangouAppMessenger.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Release/android/assets/mscorlib.dll

@@ -22,6 +22,8 @@ namespace KangouMessenger.Core
 			KangouData.AppView = "DropOffRouteView";
 
 			EnableRetryButton = true;
+			EnableMenuDetails = true;
+
 			RetryAction = DoImHereCommand;
 		}
 			

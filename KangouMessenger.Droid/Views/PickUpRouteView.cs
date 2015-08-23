@@ -20,6 +20,7 @@ using Android.Graphics;
 using System.Threading;
 using Android.Content.PM;
 using Xamarin;
+using Android.Views;
 
 namespace KangouMessenger.Droid
 {
