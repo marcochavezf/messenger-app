@@ -191,7 +191,6 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Helpers\Constants.cs" />
     <Compile Include="Views\ClientSignatureView.cs" />
-    <Compile Include="Views\ConnectView.cs" />
     <Compile Include="Views\DropOffRouteView.cs" />
     <Compile Include="Views\DropOffTimerView.cs" />
     <Compile Include="Views\HelpView.cs" />

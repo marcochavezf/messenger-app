@@ -1,17 +1,16 @@
 ﻿<Properties StartupItem="KangouMessenger.Droid/KangouMessenger.Droid.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.TA883036D6" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="KangouMessenger.Droid/Views/LoginView.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="KangouAppMessenger/ViewModels/LoginViewModel.cs" Line="1" Column="1" />
-      <File FileName="KangouAppMessenger/ViewModels/WaitingOrderViewModel.cs" Line="1" Column="1" />
-      <File FileName="KangouMessenger.Droid/Views/LoginView.cs" Line="49" Column="51" />
+      <File FileName="KangouMessenger.Droid/Views/OrderDetailsView.cs" Line="15" Column="39" />
+      <File FileName="KangouMessenger.Droid/Views/DropOffTimerView.cs" Line="42" Column="43" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/Users/marcochavezf/GitHub/EngineIoClientDotNet.Pcl4.5.Profile78/EngineIoClientDotNet.mono/Parser/Packet.cs" line="269" column="1" />
+      <Breakpoint file="/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/Views/OrderDetailsView.cs" line="26" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.KangouMessenger.Droid AndroidDesignerPreferredDevice="Nexus 4" />
+  <MonoDevelop.Ide.ItemProperties.KangouMessenger.Droid AndroidDesignerPreferredDevice="3.2&quot; HVGA slider (ADP1)" />
 </Properties>

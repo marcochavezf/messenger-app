@@ -10,9 +10,9 @@ public class ContainerHolder_ContainerAvailableListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onContainerAvailable:(Lcom/google/android/gms/tagmanager/ContainerHolder;Ljava/lang/String;)V:GetOnContainerAvailable_Lcom_google_android_gms_tagmanager_ContainerHolder_Ljava_lang_String_Handler:Android.Gms.Tagmanager.IContainerHolderContainerAvailableListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onContainerAvailable:(Lcom/google/android/gms/tagmanager/ContainerHolder;Ljava/lang/String;)V:GetOnContainerAvailable_Lcom_google_android_gms_tagmanager_ContainerHolder_Ljava_lang_String_Handler:Android.Gms.Tagmanager.IContainerHolderContainerAvailableListenerInvoker, Xamarin.GooglePlayServices.Analytics\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Tagmanager.IContainerHolderContainerAvailableListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", ContainerHolder_ContainerAvailableListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Tagmanager.IContainerHolderContainerAvailableListenerImplementor, Xamarin.GooglePlayServices.Analytics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", ContainerHolder_ContainerAvailableListenerImplementor.class, __md_methods);
 	}
 
 
@@ -20,7 +20,7 @@ public class ContainerHolder_ContainerAvailableListenerImplementor
 	{
 		super ();
 		if (getClass () == ContainerHolder_ContainerAvailableListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Tagmanager.IContainerHolderContainerAvailableListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Tagmanager.IContainerHolderContainerAvailableListenerImplementor, Xamarin.GooglePlayServices.Analytics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

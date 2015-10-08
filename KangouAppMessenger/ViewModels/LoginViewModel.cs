@@ -14,14 +14,9 @@ namespace KangouMessenger.Core
     public class LoginViewModel 
 		: BusyMvxViewModel
     {
-		private readonly KangouClient _kangouClient;
-		private readonly IDataService _dataService;
-
-		public LoginViewModel (IDataService dataService, IMvxJsonConverter jsonConverter) : base()
+		public LoginViewModel (IDataService dataService) 
+			: base(dataService)
 		{
-			_kangouClient = new KangouClient (jsonConverter);
-			_dataService = dataService;
-
 			#if DEBUG
 			_email = "test@kangou.mx";
 			_password = "123";
@@ -68,13 +63,6 @@ namespace KangouMessenger.Core
 			}
 		}
 
-		private MvxCommand _loginCommand;
-		public ICommand LoginCommand {
-			get {
-				_loginCommand = _loginCommand ?? new MvxCommand (DoRequestAccessCommand);
-				return _loginCommand;
-			}
-		}
 
 		public void ClearUserId(){
 			_dataService.AddOrUpdate(new CourierData(){
@@ -95,27 +83,20 @@ namespace KangouMessenger.Core
 		public void RetrieveUserId(string provider, string providerDataId, Action<bool, string> callback){
 			IsBusy = true;
 			Task.Run (() => {
-				_kangouClient.RetrieveUserId (provider, providerDataId, (err, res) => {
+				KangouClient.RetrieveUserId (provider, providerDataId, (err, res) => {
 					InvokeOnMainThread(delegate {						
 						IsBusy = false;
 					});
-					bool success = false;
-					string errMsg = "";
 					if(res != null){
-						JToken resObj = JToken.Parse(res);
-						success = (bool)resObj["success"];
-						errMsg = (string)resObj["message"];
-
-						var userId = (string)resObj["userId"];
-						var email = (string)resObj["email"];
 						_dataService.AddOrUpdate(new CourierData(){
-							Email = email,
-							UserId = userId
+							Email = res.email,
+							UserId = res.userId
 						});
+						callback(res.success, res.message);
 					} else {
-						errMsg = "Error al conectarse al servidor. Favor de verificar su conexión a internet e intente de nuevo";
+						var errMsg = "Error al conectarse al servidor. Favor de verificar su conexión a internet e intente de nuevo";
+						callback(false, errMsg);
 					}
-					callback(success, errMsg);
 				});
 			});
 		}
@@ -135,24 +116,22 @@ namespace KangouMessenger.Core
 						{ "userId", userId },
 					};
 					Insights.Identify(userId, traits);
-					_kangouClient.RequestCourierAccess(userId, pushDeviceId, pushDeviceService, (err, res) => {
+					KangouClient.RequestCourierAccess(userId, pushDeviceId, pushDeviceService, (err, res) => {
 						InvokeOnMainThread (delegate {
 							IsBusy = false;
 						});
-						bool success = false;
-						string errMsg = "";
 						if(res != null){
-							JToken resObj = JToken.Parse(res);
-							success = (bool)resObj["success"];
-							errMsg = (string)resObj["message"];
-							if(success){
+							_dataService.SaveInfoOrder(res.infoOrder);
+							_dataService.SaveResumeOrder(res.resumeOrder);
+
+							if(res.success){
 								ShowViewModel<WaitingOrderViewModel>();
-								return;
+							} else {
+								callback(false, res.message);
 							}
 						} else {
-							errMsg = "Error en el servidor. Favor de intentar de nuevo";
+							callback(false, "Error al conectarse al servidor. Favor de verificar su conexión a internet e intente de nuevo");
 						}
-						callback(success, errMsg);
 					});
 				} else {
 					InvokeOnMainThread (delegate {  
@@ -160,11 +139,6 @@ namespace KangouMessenger.Core
 					});
 				}
 			});
-		}
-
-		private void DoRequestAccessCommand ()
-		{
-			
 		}
 
 		/* Actions to implement in specific views */

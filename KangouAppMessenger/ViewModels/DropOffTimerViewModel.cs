@@ -12,48 +12,30 @@ namespace KangouMessenger.Core
     {
 		public CountDownTimer CountDownTimer { get; set; }
 		
-		public DropOffTimerViewModel(bool removeNextToLastViewModel = true){
+		public DropOffTimerViewModel(IDataService dataService) 
+			: base (dataService){
 
-			/* This is when the view is trying to open after a running out of memory */ 
-			if (String.IsNullOrEmpty (KangouData.Id)) {
-				Close(this);
+			if (!HasCourierAndOrderId ()) {
+				Close (this);
 				return;
 			}
 
-			RemoveNextToLastViewModel = removeNextToLastViewModel;
-			
-			ConnectionManager.On (SocketEvents.HasDroppedOff, (data) => {
-				ConnectionManager.Off (SocketEvents.HasDroppedOff);
+			KangouData.AppView = "DropOffTimerView";
+			EnableRetryButton = true;
+			EnableMenuDetails = true;
 
-				if (CountDownTimer != null) {
-					CountDownTimer.Dispose ();
-					CountDownTimer = null;
-				}
-				ItNeedsToBeRemoved = true;
-				InvokeOnMainThread (delegate {  
-					IsBusy = false;
-				});
-				Task.Run (delegate {
-					ShowViewModel<ClientSignatureViewModel> (new BusyMvxViewModelParameters (){ RemoveNextToLastViewModel = true });
-				});
-			});
+			RetryAction = DoDroppedOffCommand;
+			
 			CountDownTimer = new CountDownTimer (13, 0);
 			CountDownTimer.TickTime += (readableTime, hasFinished) => {
 				TimeRemaining = readableTime;
 				if(hasFinished){
-					var jsonString = String.Format( "{{ \"{0}\": {1} }}", SocketEvents.TimerDropOffHasFinished, true);
-					ConnectionManager.Emit( SocketEvents.TimerDropOffHasFinished, jsonString);
-
+					//TODO Send to server that timer has finished
 					CountDownTimer.TickTime -= null;
 					CountDownTimer.Dispose();
 					CountDownTimer = null;
 				}
 			};
-
-			KangouData.AppView = "DropOffTimerView";
-
-			EnableRetryButton = true;
-			RetryAction = DoDroppedOffCommand;
 		}
 
 		private string _timeRemaining = "13:00";
@@ -72,12 +54,8 @@ namespace KangouMessenger.Core
 		}
 		private void DoDroppedOffCommand ()
 		{
-
-			DoAsyncLongTask (() => {
-				var orderId = DataOrderManager.Instance.DataOrder.Id;
-				var jsonString = String.Format( "{{ \"{0}\": {1}, \"orderId\": \"{2}\" }}", SocketEvents.HasDroppedOff, "true", orderId);
-				ConnectionManager.Emit( SocketEvents.HasDroppedOff, jsonString);
-			});
+			ItNeedsToBeRemoved = true;
+			ShowViewModel<ClientSignatureViewModel> ();
 		}
     }
 }

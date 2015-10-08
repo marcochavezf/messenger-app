@@ -1,2 +1,8 @@
 
 *.mdb
+
+KangouMessenger.Droid/bin/Debug/com.kangou.messenger.android-Signed.apk
+
+KangouMessenger.Droid/bin/Debug/com.kangou.messenger.android.apk
+
+*.dll

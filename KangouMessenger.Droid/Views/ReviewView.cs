@@ -14,14 +14,6 @@ namespace KangouMessenger.Droid
 	{
 		protected override void OnCreate(Bundle bundle)
 		{
-			/* Finish this view when it's trying to open after a running out of memory */ 
-			if (String.IsNullOrEmpty (KangouData.Id)) {
-				SetTitle (Resource.String.loading);
-				Finish ();
-				base.OnCreate (bundle);
-				return;
-			}
-
 			base.OnCreate(bundle);
 			SetContentView(Resource.Layout.ReviewView);
 

@@ -33,5 +33,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             class="com.google.android.gms.maps.MapFragment" />
+        <TextView
+            android:id="@+id/msgLocationNotFound"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="#7d000000"
+            android:textDirection="locale"
+            android:gravity="center"
+            android:textSize="17.5dp"
+            android:text="@string/msgLocationNotFound"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentStart="false"
+            android:padding="25dp"
+            android:layout_marginTop="95dp"
+            android:textColor="#ffcbcbcb" />
     </RelativeLayout>
 </LinearLayout>

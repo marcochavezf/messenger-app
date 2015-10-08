@@ -11,26 +11,14 @@ namespace KangouMessenger.Core
 		: BusyMvxViewModel
     {
 		/* Constructor */
-		public ClientSignatureViewModel(){
-
-			/* This is when the view is trying to open after a running out of memory */ 
-			if (String.IsNullOrEmpty (KangouData.Id)) {
-				Close(this);
+		public ClientSignatureViewModel(IDataService dataService) 
+			: base (dataService){
+			if (!HasCourierAndOrderId ()) {
+				Close (this);
 				return;
 			}
 
-			ConnectionManager.On (SocketEvents.ClientSignatureAccepted, (data) => {
-				ConnectionManager.Off (SocketEvents.ClientSignatureAccepted);
-				ItNeedsToBeRemoved = true;
-				InvokeOnMainThread (delegate {  
-					IsBusy = false;
-				});
-				Task.Run (delegate {
-					ShowViewModel<ReviewViewModel> (new BusyMvxViewModelParameters (){ RemoveNextToLastViewModel = true });
-				});
-			});
 			KangouData.AppView = "ClientSignatureView";
-
 			EnableRetryButton = true;
 			RetryAction = DoAcceptCommand;
 		}
@@ -49,13 +37,15 @@ namespace KangouMessenger.Core
 		private void DoAcceptCommand ()
 		{
 			IsBusy = true;
-
-			var orderId = DataOrderManager.Instance.DataOrder.Id;
-			var jsonString = String.Format( "{{ \"{0}\": {1}, \"orderId\": \"{2}\", \"signature\": {3} }}", SocketEvents.ClientSignatureAccepted, "true", orderId, SignatureJson);
-			ConnectionManager.Emit( SocketEvents.ClientSignatureAccepted, jsonString);
-			SavingImage();
-			InvokeOnMainThread (delegate {
-				IsBusy = false;
+			Task.Run (delegate {
+				SavingImage();
+			});
+			KangouClient.ClientSignatureAccepted (KangouData.CourierId, KangouData.OrderId, SignatureJson, (err, res) => {
+				IsBusy = false;	
+				if(res != null && res.success){
+					ItNeedsToBeRemoved = true;
+					ShowViewModel<ReviewViewModel> ();
+				}
 			});
 		}
 

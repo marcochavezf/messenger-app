@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -65,7 +64,34 @@ namespace KangouMessenger.Droid
 				actionWhenMapIsReady(mapReadyCallback.Map);
 			};
 			frag.GetMapAsync(mapReadyCallback); 
-		} 
+		}
+
+		public override bool OnCreateOptionsMenu(IMenu menu)
+		{
+			var viewModel = (BusyMvxViewModel)ViewModel;
+			if (viewModel.EnableMenuDetails) {
+				MenuInflater.Inflate (Resource.Menu.menuActiveOrder, menu);
+			}
+			return base.OnCreateOptionsMenu(menu);
+		}
+
+		public override bool OnOptionsItemSelected(IMenuItem item)
+		{
+			var viewModel = (BusyMvxViewModel)ViewModel;
+			if (viewModel.EnableMenuDetails) {
+				switch (item.ItemId)
+				{
+				case Resource.Id.orderDetails:
+					viewModel.OpenOrderDetailsCommand.Execute (null);
+					return true;
+
+				case Resource.Id.kangouBook:
+					viewModel.OpenKangouBookCommand.Execute (null);
+					return true;
+				}
+			}
+			return base.OnOptionsItemSelected(item);
+		}
+
 	}
 }
-

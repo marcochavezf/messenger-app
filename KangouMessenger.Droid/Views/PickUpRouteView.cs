@@ -20,6 +20,7 @@ using Android.Graphics;
 using System.Threading;
 using Android.Content.PM;
 using Xamarin;
+using Android.Views;
 
 namespace KangouMessenger.Droid
 {
@@ -30,30 +31,20 @@ namespace KangouMessenger.Droid
 
 		protected override void OnCreate(Bundle bundle)
 		{
-
-			/* Finish this view when it's trying to open after a running out of memory */ 
-			if (String.IsNullOrEmpty (KangouData.Id)) {
-				Finish ();
-				base.OnCreate (bundle);
-				return;
-			}
-				
 			base.OnCreate (bundle);
 
 			SetContentView(Resource.Layout.PickUpRouteView);
 			_viewModel = (PickUpRouteViewModel)ViewModel;
-
-			var dataOrder = DataOrderManager.Instance.DataOrder;
 
 			var nameTextView = FindViewById<TextView> (Resource.Id.name);
 			var itemsTextView = FindViewById<TextView> (Resource.Id.items);
 			var addressTextView = FindViewById<TextView> (Resource.Id.address);
 			var referencesTextView = FindViewById<TextView> (Resource.Id.references);
 
-			nameTextView.Text = "Nombre: " + dataOrder.PickUpFullName;
-			itemsTextView.Text = "Recoger: " + dataOrder.ListItems;
-			addressTextView.Text = "Dirección: " + dataOrder.PickUpAdress;
-			referencesTextView.Text = "Referencia: " + dataOrder.PickUpRefences;
+			nameTextView.Text = "Nombre: " + KangouData.ActiveOrder.customer.displayName;
+			itemsTextView.Text = "Recoger: " + KangouData.ActiveOrder.items;
+			addressTextView.Text = "Dirección: " + KangouData.ActiveOrder.pickup.street + ", " + KangouData.ActiveOrder.pickup.sublocality;
+			referencesTextView.Text = "Referencia: " + KangouData.ActiveOrder.pickup.references;
 
 			var imNotNearDialog = new AlertDialog.Builder (this);
 			imNotNearDialog.SetTitle ("Se encuentra todavía lejos");
@@ -66,7 +57,7 @@ namespace KangouMessenger.Droid
 			var imHereButton = FindViewById<Button> (Resource.Id.imHereButton);
 			imHereButton.Click += (object sender, EventArgs e) => {
 				var currentLocation = new Coordinates (WaitingOrderView.CurrentLat, WaitingOrderView.CurrentLng);
-				var finalLocation = new Coordinates (dataOrder.PickUpLat, dataOrder.PickUpLng);
+				var finalLocation = new Coordinates (KangouData.ActiveOrder.pickup.lat, KangouData.ActiveOrder.pickup.lng);
 				var distance = (int)Coordinates.DistanceBetween(currentLocation,finalLocation);
 				if (distance > 5000)
 					imNotNearDialog.Show();
@@ -74,9 +65,9 @@ namespace KangouMessenger.Droid
 					_viewModel.ImHereCommand.Execute(null);
 			};
 
-			if (dataOrder.IsAPurchase) {
+			if (KangouData.ActiveOrder.IsAPurchase()) {
 				Title = "Ir a Comprar";
-				itemsTextView.Text = "Comprar: " + dataOrder.ListItems;
+				itemsTextView.Text = "Comprar: " + KangouData.ActiveOrder.items;
 			} else {
 				Title = "Ir a Recoger";
 			}
@@ -89,9 +80,8 @@ namespace KangouMessenger.Droid
 			SetUpMapIfNeeded (Resource.Id.map, (map)=>{
 
 				//Setting origin and destiny directions
-				var dataOrder = DataOrderManager.Instance.DataOrder;
 				var origin = new LatLng (WaitingOrderView.CurrentLat, WaitingOrderView.CurrentLng);
-				var destiny = new LatLng (dataOrder.PickUpLat, dataOrder.PickUpLng);
+				var destiny = new LatLng (KangouData.ActiveOrder.pickup.lat, KangouData.ActiveOrder.pickup.lng);
 
 				var builder = CameraPosition.InvokeBuilder ();
 				builder.Target (origin);

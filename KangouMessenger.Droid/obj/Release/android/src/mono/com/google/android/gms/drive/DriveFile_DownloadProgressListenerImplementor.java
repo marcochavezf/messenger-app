@@ -10,9 +10,9 @@ public class DriveFile_DownloadProgressListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onProgress:(JJ)V:GetOnProgress_JJHandler:Android.Gms.Drive.IDriveFileDownloadProgressListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onProgress:(JJ)V:GetOnProgress_JJHandler:Android.Gms.Drive.IDriveFileDownloadProgressListenerInvoker, Xamarin.GooglePlayServices.Drive\n" +
 			"";
-		mono.android.Runtime.register ("Android.Gms.Drive.IDriveFileDownloadProgressListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", DriveFile_DownloadProgressListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Android.Gms.Drive.IDriveFileDownloadProgressListenerImplementor, Xamarin.GooglePlayServices.Drive, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", DriveFile_DownloadProgressListenerImplementor.class, __md_methods);
 	}
 
 
@@ -20,7 +20,7 @@ public class DriveFile_DownloadProgressListenerImplementor
 	{
 		super ();
 		if (getClass () == DriveFile_DownloadProgressListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Android.Gms.Drive.IDriveFileDownloadProgressListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Android.Gms.Drive.IDriveFileDownloadProgressListenerImplementor, Xamarin.GooglePlayServices.Drive, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

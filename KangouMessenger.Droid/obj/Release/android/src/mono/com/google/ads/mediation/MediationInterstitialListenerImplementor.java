@@ -10,13 +10,13 @@ public class MediationInterstitialListenerImplementor
 	static final String __md_methods;
 	static {
 		__md_methods = 
-			"n_onDismissScreen:(Lcom/google/ads/mediation/MediationInterstitialAdapter;)V:GetOnDismissScreen_Lcom_google_ads_mediation_MediationInterstitialAdapter_Handler:Google.Ads.Mediation.IMediationInterstitialListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onFailedToReceiveAd:(Lcom/google/ads/mediation/MediationInterstitialAdapter;Lcom/google/ads/AdRequest$ErrorCode;)V:GetOnFailedToReceiveAd_Lcom_google_ads_mediation_MediationInterstitialAdapter_Lcom_google_ads_AdRequest_ErrorCode_Handler:Google.Ads.Mediation.IMediationInterstitialListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onLeaveApplication:(Lcom/google/ads/mediation/MediationInterstitialAdapter;)V:GetOnLeaveApplication_Lcom_google_ads_mediation_MediationInterstitialAdapter_Handler:Google.Ads.Mediation.IMediationInterstitialListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onPresentScreen:(Lcom/google/ads/mediation/MediationInterstitialAdapter;)V:GetOnPresentScreen_Lcom_google_ads_mediation_MediationInterstitialAdapter_Handler:Google.Ads.Mediation.IMediationInterstitialListenerInvoker, GooglePlayServicesLib\n" +
-			"n_onReceivedAd:(Lcom/google/ads/mediation/MediationInterstitialAdapter;)V:GetOnReceivedAd_Lcom_google_ads_mediation_MediationInterstitialAdapter_Handler:Google.Ads.Mediation.IMediationInterstitialListenerInvoker, GooglePlayServicesLib\n" +
+			"n_onDismissScreen:(Lcom/google/ads/mediation/MediationInterstitialAdapter;)V:GetOnDismissScreen_Lcom_google_ads_mediation_MediationInterstitialAdapter_Handler:Google.Ads.Mediation.IMediationInterstitialListenerInvoker, Xamarin.GooglePlayServices.Ads\n" +
+			"n_onFailedToReceiveAd:(Lcom/google/ads/mediation/MediationInterstitialAdapter;Lcom/google/ads/AdRequest$ErrorCode;)V:GetOnFailedToReceiveAd_Lcom_google_ads_mediation_MediationInterstitialAdapter_Lcom_google_ads_AdRequest_ErrorCode_Handler:Google.Ads.Mediation.IMediationInterstitialListenerInvoker, Xamarin.GooglePlayServices.Ads\n" +
+			"n_onLeaveApplication:(Lcom/google/ads/mediation/MediationInterstitialAdapter;)V:GetOnLeaveApplication_Lcom_google_ads_mediation_MediationInterstitialAdapter_Handler:Google.Ads.Mediation.IMediationInterstitialListenerInvoker, Xamarin.GooglePlayServices.Ads\n" +
+			"n_onPresentScreen:(Lcom/google/ads/mediation/MediationInterstitialAdapter;)V:GetOnPresentScreen_Lcom_google_ads_mediation_MediationInterstitialAdapter_Handler:Google.Ads.Mediation.IMediationInterstitialListenerInvoker, Xamarin.GooglePlayServices.Ads\n" +
+			"n_onReceivedAd:(Lcom/google/ads/mediation/MediationInterstitialAdapter;)V:GetOnReceivedAd_Lcom_google_ads_mediation_MediationInterstitialAdapter_Handler:Google.Ads.Mediation.IMediationInterstitialListenerInvoker, Xamarin.GooglePlayServices.Ads\n" +
 			"";
-		mono.android.Runtime.register ("Google.Ads.Mediation.IMediationInterstitialListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MediationInterstitialListenerImplementor.class, __md_methods);
+		mono.android.Runtime.register ("Google.Ads.Mediation.IMediationInterstitialListenerImplementor, Xamarin.GooglePlayServices.Ads, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", MediationInterstitialListenerImplementor.class, __md_methods);
 	}
 
 
@@ -24,7 +24,7 @@ public class MediationInterstitialListenerImplementor
 	{
 		super ();
 		if (getClass () == MediationInterstitialListenerImplementor.class)
-			mono.android.TypeManager.Activate ("Google.Ads.Mediation.IMediationInterstitialListenerImplementor, GooglePlayServicesLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("Google.Ads.Mediation.IMediationInterstitialListenerImplementor, Xamarin.GooglePlayServices.Ads, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

@@ -30,26 +30,18 @@ namespace KangouMessenger.Droid
 
 		protected override void OnCreate(Bundle bundle)
 		{
-			/* Finish this view when it's trying to open after a running out of memory */ 
-			if (String.IsNullOrEmpty (KangouData.Id)) {
-				Finish ();
-				base.OnCreate (bundle);
-				return;
-			}
-
 			base.OnCreate(bundle);
 			SetContentView(Resource.Layout.DropOffRouteView);
 			_viewModel = (DropOffRouteViewModel)ViewModel;
 
-			var dataOrder = DataOrderManager.Instance.DataOrder;
-			var destiny = new LatLng (dataOrder.DropOffLat, dataOrder.DropOffLng);
+			var destiny = new LatLng (KangouData.ActiveOrder.dropoff.lat, KangouData.ActiveOrder.dropoff.lng);
 			var addressTextView = FindViewById<TextView> (Resource.Id.address);
 			var referencesTextView = FindViewById<TextView> (Resource.Id.references);
 			var nameTextView = FindViewById<TextView> (Resource.Id.name);
 
-			addressTextView.Text = "Dirección: " + dataOrder.DropOffAdress;
-			referencesTextView.Text = "Referencia: " + dataOrder.DropOffRefences;
-			nameTextView.Text = "Nombre: " + dataOrder.DropOffFullName;
+			addressTextView.Text = "Dirección: " + KangouData.ActiveOrder.dropoff.street + ", " + KangouData.ActiveOrder.dropoff.sublocality;
+			referencesTextView.Text = "Referencia: " + KangouData.ActiveOrder.dropoff.references;
+			nameTextView.Text = "Nombre: " + KangouData.ActiveOrder.dropoff.fullname;
 
 			var imNotNearDialog = new AlertDialog.Builder (this);
 			imNotNearDialog.SetTitle ("Se encuentra todavía lejos");
@@ -78,9 +70,8 @@ namespace KangouMessenger.Droid
 			SetUpMapIfNeeded (Resource.Id.map, (map)=>{
 
 				//Setting origin and destiny directions
-				var dataOrder = DataOrderManager.Instance.DataOrder;
 				var origin = new LatLng (WaitingOrderView.CurrentLat, WaitingOrderView.CurrentLng);
-				var destiny = new LatLng (dataOrder.DropOffLat, dataOrder.DropOffLng);
+				var destiny = new LatLng (KangouData.ActiveOrder.dropoff.lat, KangouData.ActiveOrder.dropoff.lng);
 				var builder = CameraPosition.InvokeBuilder ();
 				builder.Target (origin);
 				builder.Zoom (14);
