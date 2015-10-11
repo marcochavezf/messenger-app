@@ -97,59 +97,47 @@
     <Reference Include="Rivets">
       <HintPath>..\Components\rivets-1.0.5.1\lib\android\Rivets.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Facebook">
-      <HintPath>..\packages\Xamarin.Facebook.Android.4.4.0.1\lib\MonoAndroid403\Xamarin.Facebook.dll</HintPath>
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.11.1\lib\MonoAndroid10\Xamarin.Insights.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.v4">
-      <HintPath>..\packages\Xamarin.Android.Support.v4.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.0.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.GooglePlayServices.Base">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.Base.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Base.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Ads">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.Ads.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Ads.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Analytics">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.Analytics.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Analytics.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.AppIndexing">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.AppIndexing.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.AppIndexing.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.AppInvite">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.AppInvite.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.AppInvite.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.AppState">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.AppState.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.AppState.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Drive">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.Drive.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Drive.dll</HintPath>
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Base.26.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Base.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.GooglePlayServices.Maps">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.Maps.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Maps.dll</HintPath>
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Maps.26.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Maps.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.GooglePlayServices.Location">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.Location.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Location.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Gcm">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.Gcm.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Gcm.dll</HintPath>
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Location.26.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Location.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.GooglePlayServices.Identity">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.Identity.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Identity.dll</HintPath>
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Identity.26.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Identity.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.Nearby">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.Nearby.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Nearby.dll</HintPath>
+    <Reference Include="Xamarin.GooglePlayServices.Gcm">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Gcm.26.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Gcm.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.AppState">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.AppState.26.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.AppState.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.AppInvite">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.AppInvite.26.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.AppInvite.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.AppIndexing">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.AppIndexing.26.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.AppIndexing.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.GooglePlayServices.Analytics">
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Analytics.26.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Facebook">
+      <HintPath>..\packages\Xamarin.Facebook.Android.4.6.0.0\lib\MonoAndroid403\Xamarin.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.0.1.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.GooglePlayServices.Plus">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.Plus.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Plus.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.GooglePlayServices.SafetyNet">
-      <HintPath>..\packages\Xamarin.GooglePlayServices.SafetyNet.25.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.SafetyNet.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Insights">
-      <HintPath>..\packages\Xamarin.Insights.1.10.6\lib\MonoAndroid10\Xamarin.Insights.dll</HintPath>
+      <HintPath>..\packages\Xamarin.GooglePlayServices.Plus.26.0.0.0\lib\MonoAndroid41\Xamarin.GooglePlayServices.Plus.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +170,11 @@
     <Compile Include="Helpers\MyOnMapReady.cs" />
     <Compile Include="Views\KangouBookWebView.cs" />
     <Compile Include="Views\OrderDetailsView.cs" />
+    <Compile Include="Views\SignupView.cs" />
+    <Compile Include="Helpers\FacebookCallback.cs" />
+    <Compile Include="Helpers\CustomFacebookProfileTracker.cs" />
+    <Compile Include="Helpers\FacebookGraphCallback.cs" />
+    <Compile Include="Views\FormRegisterCourierView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -224,9 +217,11 @@
     <AndroidResource Include="Resources\menu\menuLoginView.xml" />
     <AndroidResource Include="Resources\menu\menuActiveOrder.xml" />
     <AndroidResource Include="Resources\layout\OrderDetailsView.axml" />
+    <AndroidResource Include="Resources\layout\SignupView.axml" />
+    <AndroidResource Include="Resources\layout\FormRegisterCourierView.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
-  <Import Project="..\packages\Xamarin.Insights.1.10.6\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.10.6\build\MonoAndroid10\Xamarin.Insights.targets')" />
+  <Import Project="..\packages\Xamarin.Insights.1.11.1\build\MonoAndroid10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.1\build\MonoAndroid10\Xamarin.Insights.targets')" />
   <ItemGroup>
     <ProjectReference Include="..\KangouAppMessenger\KangouMessenger.Core.csproj">
       <Project>{30BF415F-033F-4BA5-8A12-C05735EA7957}</Project>

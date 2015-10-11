@@ -18,7 +18,6 @@ namespace KangouMessenger.Droid
 
         protected override void OnCreate(Bundle bundle)
         {
-			Console.WriteLine ("OnCreate");
             base.OnCreate(bundle);
 			SetContentView(Resource.Layout.ReceivingOrderView);
 

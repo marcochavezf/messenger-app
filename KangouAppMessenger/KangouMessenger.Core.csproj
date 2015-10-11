@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{30BF415F-033F-4BA5-8A12-C05735EA7957}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>KangouAppMessenger</RootNamespace>
+    <RootNamespace>KangouMessenger.Core</RootNamespace>
     <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
     <ReleaseVersion>1.0.0</ReleaseVersion>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
@@ -84,9 +84,17 @@
     <Compile Include="Webclient\JsonStructures\GeoJsonColonies.cs" />
     <Compile Include="ViewModels\KangouBookWebViewModel.cs" />
     <Compile Include="ViewModels\OrderDetailsViewModel.cs" />
+    <Compile Include="ViewModels\SignupViewModel.cs" />
+    <Compile Include="Webclient\JsonStructures\UserCourier.cs" />
+    <Compile Include="ViewModels\FormRegisterCourierViewModel.cs" />
+    <Compile Include="Webclient\JsonStructures\SaveCourierDataResponse.cs" />
+    <Compile Include="Webclient\GeneralWebClient.cs" />
+    <Compile Include="Webclient\GoogleClient.cs" />
+    <Compile Include="Webclient\JsonStructures\Google\GoogleMapsPlaceDetails.cs" />
+    <Compile Include="Webclient\JsonStructures\Google\GoogleMapsPlaceAutocompleteResponse.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <Import Project="..\packages\Xamarin.Insights.1.10.6\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.10.6\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.targets')" />
+  <Import Project="..\packages\Xamarin.Insights.1.11.1\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.1\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.targets')" />
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="ToDo-MvvmCross\_ Core.txt" />
@@ -118,7 +126,7 @@
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Insights">
-      <HintPath>..\packages\Xamarin.Insights.1.10.6\lib\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Insights.1.11.1\lib\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -129,6 +137,7 @@
     <Folder Include="Services\DataStore\" />
     <Folder Include="Webclient\JsonStructures\" />
     <Folder Include="Helpers\GeoJsonFiles\" />
+    <Folder Include="Webclient\JsonStructures\Google\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Helpers\GeoJsonFiles\colonies.cdmx.geojson" />

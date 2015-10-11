@@ -53,7 +53,7 @@ namespace KangouMessenger.Touch
 			MapDelegate.CreateRoute (mapView, origin, destination);
 			var pointAnnotation = new MKPointAnnotation () {
 				Coordinate = destination,
-				Title = KangouData.ActiveOrder.dropoff.
+				Title = KangouData.ActiveOrder.dropoff
 			};
 			mapView.AddAnnotation (pointAnnotation);
 			Add (mapView);

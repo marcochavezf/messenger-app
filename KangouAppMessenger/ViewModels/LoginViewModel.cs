@@ -80,6 +80,19 @@ namespace KangouMessenger.Core
 			}
 		}
 			
+		private MvxCommand _openSignupViewCommand;
+		public ICommand OpenSignupViewCommand {
+			get {
+				_openSignupViewCommand = _openSignupViewCommand ?? new MvxCommand (DoOpenSignupViewCommand);
+				return _openSignupViewCommand;
+			}
+		}
+		private void DoOpenSignupViewCommand ()
+		{
+			//ShowViewModel<SignupViewModel>();   
+			ShowViewModel<FormRegisterCourierViewModel>(new FormRegisterParameter() { CourierDataSerialized = "{}" });
+		}
+
 		public void RetrieveUserId(string provider, string providerDataId, Action<bool, string> callback){
 			IsBusy = true;
 			Task.Run (() => {
@@ -94,7 +107,7 @@ namespace KangouMessenger.Core
 						});
 						callback(res.success, res.message);
 					} else {
-						var errMsg = "Error al conectarse al servidor. Favor de verificar su conexión a internet e intente de nuevo";
+						var errMsg = "Favor de verificar su conexión a internet e intente de nuevo";
 						callback(false, errMsg);
 					}
 				});
@@ -134,7 +147,7 @@ namespace KangouMessenger.Core
 						}
 					});
 				} else {
-					InvokeOnMainThread (delegate {  
+					InvokeOnMainThread (delegate {
 						IsBusy = false;
 					});
 				}
