@@ -48,6 +48,7 @@ namespace KangouMessenger.Droid
 		private AlertDialog.Builder _openSettingsDialog;
 		private AlertDialog.Builder _errorLoginDialog;
 		private Button _logoutButton;
+		private Button _registerButton;
 		private Button _requestAccessButton;
 		private LoginViewModel _viewModel;
 
@@ -127,7 +128,7 @@ namespace KangouMessenger.Droid
         {
             base.OnCreate(bundle);
 
-			FacebookSdk.SdkInitialize (this.ApplicationContext);
+			FacebookSdk.SdkInitialize(this.ApplicationContext);
 			callbackManager = CallbackManagerFactory.Create ();
 
 			var loginCallback = new FacebookCallback<LoginResult> {
@@ -191,7 +192,7 @@ namespace KangouMessenger.Droid
 			/* Retrieving necesary data */
 			_viewModel = (LoginViewModel)ViewModel;
 			_requestAccessButton = FindViewById<Button>(Resource.Id.loginButton);
-			var registerButton = FindViewById<Button>(Resource.Id.register);
+			_registerButton = FindViewById<Button>(Resource.Id.register);
 
 			GoogleApiClientBuilder builder = new GoogleApiClientBuilder(this);
 			builder.AddConnectionCallbacks(this);
@@ -291,10 +292,11 @@ namespace KangouMessenger.Droid
 					}
 				});
 			};
-			registerButton.Click += delegate {
-				Intent browserIntent = new Intent(Intent.ActionView, Android.Net.Uri.Parse("https://registro.kangou.mx"));
-				StartActivity(browserIntent);
+			_registerButton.Click += delegate {
+				//Intent browserIntent = new Intent(Intent.ActionView, Android.Net.Uri.Parse("https://registro.kangou.mx"));
+				//StartActivity(browserIntent);
 				//Rivets.AppLinks.Navigator.Navigate("https://registro.kangou.mx");
+				_viewModel.OpenSignupViewCommand.Execute(null);
 			};
 
 			AppLinks.DefaultResolver = new FacebookIndexAppLinkResolver ("719361194829076", "db74c002c5b99340d7b719dbd4753f14");
@@ -312,6 +314,8 @@ namespace KangouMessenger.Droid
 					_fbLoginButton.Visibility = ViewStates.Visible;
 					_fbLoginButton.Enabled = true;
 				}
+				_registerButton.Visibility = ViewStates.Visible;
+				_registerButton.Enabled = true;
 
 			} else {
 				_googleLoginButton.Visibility = ViewStates.Invisible;
@@ -320,6 +324,8 @@ namespace KangouMessenger.Droid
 					_fbLoginButton.Visibility = ViewStates.Invisible;
 					_fbLoginButton.Enabled = false;
 				}
+				_registerButton.Visibility = ViewStates.Invisible;
+				_registerButton.Enabled = false;
 			}
 		}
 
@@ -352,7 +358,6 @@ namespace KangouMessenger.Droid
 		protected override void OnResume ()
 		{
 			base.OnResume ();
-			AppEventsLogger.ActivateApp (this);
 			RunOnUiThread (delegate {
 				_requestAccessButton.Enabled = true;
 			});
@@ -537,48 +542,6 @@ namespace KangouMessenger.Droid
 					//errors until the user is signed in, or the cancel
 					ResolveSignInError();
 				}
-			}
-		}
-
-		class FacebookCallback<TResult> : Java.Lang.Object, IFacebookCallback where TResult : Java.Lang.Object
-		{
-			public Action HandleCancel { get; set; }
-			public Action<FacebookException> HandleError { get; set; }
-			public Action<TResult> HandleSuccess { get; set; }
-
-			public void OnCancel ()
-			{
-				var c = HandleCancel;
-				if (c != null)
-					c ();
-			}
-
-			public void OnError (FacebookException error)
-			{
-				var c = HandleError;
-				if (c != null)
-					c (error);
-			}
-
-			public void OnSuccess (Java.Lang.Object result)
-			{
-				var c = HandleSuccess;
-				if (c != null)
-					c (result.JavaCast<TResult> ());
-			}
-		}
-
-		class CustomProfileTracker : ProfileTracker
-		{
-			public delegate void CurrentProfileChangedDelegate (Profile oldProfile, Profile currentProfile);
-
-			public CurrentProfileChangedDelegate HandleCurrentProfileChanged { get; set; }
-
-			protected override void OnCurrentProfileChanged (Profile oldProfile, Profile currentProfile)
-			{
-				var p = HandleCurrentProfileChanged;
-				if (p != null)
-					p (oldProfile, currentProfile);
 			}
 		}
 

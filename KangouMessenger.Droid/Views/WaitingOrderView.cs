@@ -110,9 +110,12 @@ namespace KangouMessenger.Droid
 				CurrentLng = gpsLocation.Longitude;
 				UpdateCameraAndPosition ();
 			}
-
+				
 			KangouClient.RetrieveMapDensityData((err, res) => {
-				if(res == null || err != null) return;
+				if(res == null || err != null){ 
+					Toast.MakeText ( this , "Hubo un problema para cargar las zonas de mayor demanda (No afecta en la funcionalidad normal de la aplicación)." , ToastLength.Long ).Show ();
+					return;
+				}
 				Task.Run(delegate {
 					GeoJsonColonies geoJsonColonies = GeoJsonParser.GetCDMXColonies();
 					if(_map == null) return;
@@ -127,6 +130,9 @@ namespace KangouMessenger.Droid
 							var indexColor = (int) Math.Round((float)densityData.numberOfOrdersLastMonth / (highestDensity/res.gradients.Count)) - 1;
 							if (indexColor < 0) {
 								indexColor = 0;
+							}
+							if (indexColor >= res.gradients.Count){
+								indexColor  = res.gradients.Count - 1;
 							}
 							var alpha = "#AA";
 							if (densityData.numberOfOrdersLastMonth <= 2){
@@ -144,6 +150,7 @@ namespace KangouMessenger.Droid
 						}
 					} catch (Exception e){
 						Xamarin.Insights.Report(e);
+						Toast.MakeText ( this , "Hubo un problema para cargar las zonas de mayor demanda (No afecta en la funcionalidad normal de la aplicación)." , ToastLength.Long ).Show ();
 					}
 				});
 			});
