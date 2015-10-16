@@ -2,13 +2,24 @@
 using Newtonsoft.Json;
 using System.IO;
 using System.Reflection;
+using System.Threading.Tasks;
 
 namespace KangouMessenger.Core
 {
 	public class GeoJsonParser
 	{
+		public static GeoJsonColonies _geoJsonColonies;
+		public static void LoadData(){
+			Task.Run (delegate {
+				GetCDMXColonies();
+			});
+		}
+
 		public static GeoJsonColonies GetCDMXColonies(){
-			return DesearializeGeoJson (0);
+			if (_geoJsonColonies == null) {
+				_geoJsonColonies = DesearializeGeoJson (0);
+			}
+			return _geoJsonColonies;
 		}
 
 		private static GeoJsonColonies DesearializeGeoJson(int indexEmbeddedResource){

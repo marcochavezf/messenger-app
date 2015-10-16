@@ -93,6 +93,7 @@ namespace KangouMessenger.Core
 						callback(false, errMsg);
 					} else  {
 						res = res ?? new UserCourier();
+						res.provider = provider;
 						res.providerData = providerData;
 						var courierDataSerialized = JsonConvert.SerializeObject(res);
 						ShowViewModel<FormRegisterCourierViewModel>(new FormRegisterParameter() { CourierDataSerialized = courierDataSerialized });

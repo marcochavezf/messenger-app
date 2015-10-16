@@ -26,6 +26,10 @@ namespace KangouMessenger.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLStorage.Resource.String.ApplicationName = global::KangouMessenger.Droid.Resource.String.ApplicationName;
+			global::PCLStorage.Resource.String.Hello = global::KangouMessenger.Droid.Resource.String.Hello;
+			global::PCLCrypto.Resource.String.ApplicationName = global::KangouMessenger.Droid.Resource.String.ApplicationName;
+			global::PCLCrypto.Resource.String.Hello = global::KangouMessenger.Droid.Resource.String.Hello;
 		}
 		
 		public partial class Animation
@@ -1615,208 +1619,226 @@ namespace KangouMessenger.Droid
 			public const int abc_textfield_search_material = 2130837565;
 			
 			// aapt resource value: 0x7f02003e
-			public const int big_icon = 2130837566;
+			public const int bici = 2130837566;
 			
 			// aapt resource value: 0x7f02003f
-			public const int com_facebook_button_background = 2130837567;
+			public const int biciSola = 2130837567;
 			
 			// aapt resource value: 0x7f020040
-			public const int com_facebook_button_icon = 2130837568;
+			public const int big_icon = 2130837568;
 			
 			// aapt resource value: 0x7f020041
-			public const int com_facebook_button_like_background = 2130837569;
+			public const int coche = 2130837569;
 			
 			// aapt resource value: 0x7f020042
-			public const int com_facebook_button_like_icon_selected = 2130837570;
+			public const int cocheSola = 2130837570;
 			
 			// aapt resource value: 0x7f020043
-			public const int com_facebook_button_login_silver_background = 2130837571;
+			public const int com_facebook_button_background = 2130837571;
 			
 			// aapt resource value: 0x7f020044
-			public const int com_facebook_button_send_background = 2130837572;
+			public const int com_facebook_button_icon = 2130837572;
 			
 			// aapt resource value: 0x7f020045
-			public const int com_facebook_button_send_icon = 2130837573;
+			public const int com_facebook_button_like_background = 2130837573;
 			
 			// aapt resource value: 0x7f020046
-			public const int com_facebook_close = 2130837574;
+			public const int com_facebook_button_like_icon_selected = 2130837574;
 			
 			// aapt resource value: 0x7f020047
-			public const int com_facebook_profile_picture_blank_portrait = 2130837575;
+			public const int com_facebook_button_login_silver_background = 2130837575;
 			
 			// aapt resource value: 0x7f020048
-			public const int com_facebook_profile_picture_blank_square = 2130837576;
+			public const int com_facebook_button_send_background = 2130837576;
 			
 			// aapt resource value: 0x7f020049
-			public const int com_facebook_tooltip_black_background = 2130837577;
+			public const int com_facebook_button_send_icon = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int com_facebook_tooltip_black_bottomnub = 2130837578;
+			public const int com_facebook_close = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int com_facebook_tooltip_black_topnub = 2130837579;
+			public const int com_facebook_profile_picture_blank_portrait = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
-			public const int com_facebook_tooltip_black_xout = 2130837580;
+			public const int com_facebook_profile_picture_blank_square = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int com_facebook_tooltip_blue_background = 2130837581;
+			public const int com_facebook_tooltip_black_background = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int com_facebook_tooltip_blue_bottomnub = 2130837582;
+			public const int com_facebook_tooltip_black_bottomnub = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int com_facebook_tooltip_blue_topnub = 2130837583;
+			public const int com_facebook_tooltip_black_topnub = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int com_facebook_tooltip_blue_xout = 2130837584;
+			public const int com_facebook_tooltip_black_xout = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int common_full_open_on_phone = 2130837585;
+			public const int com_facebook_tooltip_blue_background = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int common_ic_googleplayservices = 2130837586;
+			public const int com_facebook_tooltip_blue_bottomnub = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int common_signin_btn_icon_dark = 2130837587;
+			public const int com_facebook_tooltip_blue_topnub = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int common_signin_btn_icon_disabled_dark = 2130837588;
+			public const int com_facebook_tooltip_blue_xout = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int common_signin_btn_icon_disabled_focus_dark = 2130837589;
+			public const int common_full_open_on_phone = 2130837589;
 			
 			// aapt resource value: 0x7f020056
-			public const int common_signin_btn_icon_disabled_focus_light = 2130837590;
+			public const int common_ic_googleplayservices = 2130837590;
 			
 			// aapt resource value: 0x7f020057
-			public const int common_signin_btn_icon_disabled_light = 2130837591;
+			public const int common_signin_btn_icon_dark = 2130837591;
 			
 			// aapt resource value: 0x7f020058
-			public const int common_signin_btn_icon_focus_dark = 2130837592;
+			public const int common_signin_btn_icon_disabled_dark = 2130837592;
 			
 			// aapt resource value: 0x7f020059
-			public const int common_signin_btn_icon_focus_light = 2130837593;
+			public const int common_signin_btn_icon_disabled_focus_dark = 2130837593;
 			
 			// aapt resource value: 0x7f02005a
-			public const int common_signin_btn_icon_light = 2130837594;
+			public const int common_signin_btn_icon_disabled_focus_light = 2130837594;
 			
 			// aapt resource value: 0x7f02005b
-			public const int common_signin_btn_icon_normal_dark = 2130837595;
+			public const int common_signin_btn_icon_disabled_light = 2130837595;
 			
 			// aapt resource value: 0x7f02005c
-			public const int common_signin_btn_icon_normal_light = 2130837596;
+			public const int common_signin_btn_icon_focus_dark = 2130837596;
 			
 			// aapt resource value: 0x7f02005d
-			public const int common_signin_btn_icon_pressed_dark = 2130837597;
+			public const int common_signin_btn_icon_focus_light = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int common_signin_btn_icon_pressed_light = 2130837598;
+			public const int common_signin_btn_icon_light = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int common_signin_btn_text_dark = 2130837599;
+			public const int common_signin_btn_icon_normal_dark = 2130837599;
 			
 			// aapt resource value: 0x7f020060
-			public const int common_signin_btn_text_disabled_dark = 2130837600;
+			public const int common_signin_btn_icon_normal_light = 2130837600;
 			
 			// aapt resource value: 0x7f020061
-			public const int common_signin_btn_text_disabled_focus_dark = 2130837601;
+			public const int common_signin_btn_icon_pressed_dark = 2130837601;
 			
 			// aapt resource value: 0x7f020062
-			public const int common_signin_btn_text_disabled_focus_light = 2130837602;
+			public const int common_signin_btn_icon_pressed_light = 2130837602;
 			
 			// aapt resource value: 0x7f020063
-			public const int common_signin_btn_text_disabled_light = 2130837603;
+			public const int common_signin_btn_text_dark = 2130837603;
 			
 			// aapt resource value: 0x7f020064
-			public const int common_signin_btn_text_focus_dark = 2130837604;
+			public const int common_signin_btn_text_disabled_dark = 2130837604;
 			
 			// aapt resource value: 0x7f020065
-			public const int common_signin_btn_text_focus_light = 2130837605;
+			public const int common_signin_btn_text_disabled_focus_dark = 2130837605;
 			
 			// aapt resource value: 0x7f020066
-			public const int common_signin_btn_text_light = 2130837606;
+			public const int common_signin_btn_text_disabled_focus_light = 2130837606;
 			
 			// aapt resource value: 0x7f020067
-			public const int common_signin_btn_text_normal_dark = 2130837607;
+			public const int common_signin_btn_text_disabled_light = 2130837607;
 			
 			// aapt resource value: 0x7f020068
-			public const int common_signin_btn_text_normal_light = 2130837608;
+			public const int common_signin_btn_text_focus_dark = 2130837608;
 			
 			// aapt resource value: 0x7f020069
-			public const int common_signin_btn_text_pressed_dark = 2130837609;
+			public const int common_signin_btn_text_focus_light = 2130837609;
 			
 			// aapt resource value: 0x7f02006a
-			public const int common_signin_btn_text_pressed_light = 2130837610;
+			public const int common_signin_btn_text_light = 2130837610;
 			
 			// aapt resource value: 0x7f02006b
-			public const int ic_action_accept = 2130837611;
+			public const int common_signin_btn_text_normal_dark = 2130837611;
 			
 			// aapt resource value: 0x7f02006c
-			public const int ic_marker = 2130837612;
+			public const int common_signin_btn_text_normal_light = 2130837612;
 			
 			// aapt resource value: 0x7f02006d
-			public const int ic_menu_refresh = 2130837613;
+			public const int common_signin_btn_text_pressed_dark = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int ic_plusone_medium_off_client = 2130837614;
+			public const int common_signin_btn_text_pressed_light = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int ic_plusone_small_off_client = 2130837615;
+			public const int ic_action_accept = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int ic_plusone_standard_off_client = 2130837616;
+			public const int ic_marker = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int ic_plusone_tall_off_client = 2130837617;
+			public const int ic_menu_refresh = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int Icon = 2130837618;
+			public const int ic_plusone_medium_off_client = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int messenger_bubble_large_blue = 2130837619;
+			public const int ic_plusone_small_off_client = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int messenger_bubble_large_white = 2130837620;
+			public const int ic_plusone_standard_off_client = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int messenger_bubble_small_blue = 2130837621;
+			public const int ic_plusone_tall_off_client = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int messenger_bubble_small_white = 2130837622;
+			public const int Icon = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int messenger_button_blue_bg_round = 2130837623;
+			public const int messenger_bubble_large_blue = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int messenger_button_blue_bg_selector = 2130837624;
+			public const int messenger_bubble_large_white = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int messenger_button_send_round_shadow = 2130837625;
+			public const int messenger_bubble_small_blue = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int messenger_button_white_bg_round = 2130837626;
+			public const int messenger_bubble_small_white = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int messenger_button_white_bg_selector = 2130837627;
-			
-			// aapt resource value: 0x7f020081
-			public const int notification_template_icon_bg = 2130837633;
+			public const int messenger_button_blue_bg_round = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int powered_by_google_dark = 2130837628;
+			public const int messenger_button_blue_bg_selector = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int powered_by_google_light = 2130837629;
+			public const int messenger_button_send_round_shadow = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int splash = 2130837630;
+			public const int messenger_button_white_bg_round = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int starReviewOff = 2130837631;
+			public const int messenger_button_white_bg_selector = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int starReviewOn = 2130837632;
+			public const int moto = 2130837632;
+			
+			// aapt resource value: 0x7f020081
+			public const int motoSola = 2130837633;
+			
+			// aapt resource value: 0x7f020087
+			public const int notification_template_icon_bg = 2130837639;
+			
+			// aapt resource value: 0x7f020082
+			public const int powered_by_google_dark = 2130837634;
+			
+			// aapt resource value: 0x7f020083
+			public const int powered_by_google_light = 2130837635;
+			
+			// aapt resource value: 0x7f020084
+			public const int splash = 2130837636;
+			
+			// aapt resource value: 0x7f020085
+			public const int starReviewOff = 2130837637;
+			
+			// aapt resource value: 0x7f020086
+			public const int starReviewOn = 2130837638;
 			
 			static Drawable()
 			{
@@ -1834,11 +1856,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0009
 			public const int MvxBindingTagUnique = 2131492873;
 			
-			// aapt resource value: 0x7f0c00bf
-			public const int acceptButton = 2131493055;
+			// aapt resource value: 0x7f0c00cf
+			public const int acceptButton = 2131493071;
 			
-			// aapt resource value: 0x7f0c009e
-			public const int action0 = 2131493022;
+			// aapt resource value: 0x7f0c00ae
+			public const int action0 = 2131493038;
 			
 			// aapt resource value: 0x7f0c0055
 			public const int action_bar = 2131492949;
@@ -1864,8 +1886,8 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0056
 			public const int action_context_bar = 2131492950;
 			
-			// aapt resource value: 0x7f0c00a2
-			public const int action_divider = 2131493026;
+			// aapt resource value: 0x7f0c00b2
+			public const int action_divider = 2131493042;
 			
 			// aapt resource value: 0x7f0c0002
 			public const int action_menu_divider = 2131492866;
@@ -1888,6 +1910,18 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0070
 			public const int address = 2131492976;
 			
+			// aapt resource value: 0x7f0c0097
+			public const int addressProofButton = 2131493015;
+			
+			// aapt resource value: 0x7f0c0095
+			public const int addressProofImageView = 2131493013;
+			
+			// aapt resource value: 0x7f0c0096
+			public const int addressProofProgressBar = 2131493014;
+			
+			// aapt resource value: 0x7f0c0094
+			public const int addressProofViewSwitcher = 2131493012;
+			
 			// aapt resource value: 0x7f0c0025
 			public const int adjust_height = 2131492901;
 			
@@ -1900,14 +1934,20 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c001c
 			public const int always = 2131492892;
 			
-			// aapt resource value: 0x7f0c0085
-			public const int autoCompleteCity = 2131492997;
+			// aapt resource value: 0x7f0c0088
+			public const int autoCompleteCity = 2131493000;
+			
+			// aapt resource value: 0x7f0c0089
+			public const int autoCompleteCityProgressBar = 2131493001;
 			
 			// aapt resource value: 0x7f0c0033
 			public const int automatic = 2131492915;
 			
 			// aapt resource value: 0x7f0c0019
 			public const int beginning = 2131492889;
+			
+			// aapt resource value: 0x7f0c009d
+			public const int bikeButton = 2131493021;
 			
 			// aapt resource value: 0x7f0c002d
 			public const int bottom = 2131492909;
@@ -1918,29 +1958,26 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c002b
 			public const int button = 2131492907;
 			
-			// aapt resource value: 0x7f0c0088
-			public const int button1 = 2131493000;
-			
-			// aapt resource value: 0x7f0c008a
-			public const int button2 = 2131493002;
-			
-			// aapt resource value: 0x7f0c008b
-			public const int button3 = 2131493003;
-			
 			// aapt resource value: 0x7f0c004b
 			public const int buttonPanel = 2131492939;
 			
 			// aapt resource value: 0x7f0c0076
 			public const int callToCustomer = 2131492982;
 			
-			// aapt resource value: 0x7f0c00be
-			public const int cancelButton = 2131493054;
+			// aapt resource value: 0x7f0c00ce
+			public const int cancelButton = 2131493070;
 			
-			// aapt resource value: 0x7f0c009f
-			public const int cancel_action = 2131493023;
+			// aapt resource value: 0x7f0c00af
+			public const int cancel_action = 2131493039;
 			
 			// aapt resource value: 0x7f0c0067
 			public const int canvasSignature = 2131492967;
+			
+			// aapt resource value: 0x7f0c009f
+			public const int carButton = 2131493023;
+			
+			// aapt resource value: 0x7f0c0099
+			public const int cardToDepositEditText = 2131493017;
 			
 			// aapt resource value: 0x7f0c0030
 			public const int center = 2131492912;
@@ -1948,8 +1985,8 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c004d
 			public const int checkbox = 2131492941;
 			
-			// aapt resource value: 0x7f0c00a5
-			public const int chronometer = 2131493029;
+			// aapt resource value: 0x7f0c00b5
+			public const int chronometer = 2131493045;
 			
 			// aapt resource value: 0x7f0c0066
 			public const int clean = 2131492966;
@@ -1984,8 +2021,8 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c006b
 			public const int com_facebook_tooltip_bubble_view_top_pointer = 2131492971;
 			
-			// aapt resource value: 0x7f0c00c0
-			public const int comments = 2131493056;
+			// aapt resource value: 0x7f0c00d0
+			public const int comments = 2131493072;
 			
 			// aapt resource value: 0x7f0c0046
 			public const int contentPanel = 2131492934;
@@ -1996,14 +2033,14 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0049
 			public const int customPanel = 2131492937;
 			
-			// aapt resource value: 0x7f0c00ac
-			public const int customerEmail = 2131493036;
+			// aapt resource value: 0x7f0c00bc
+			public const int customerEmail = 2131493052;
 			
-			// aapt resource value: 0x7f0c00ab
-			public const int customerName = 2131493035;
+			// aapt resource value: 0x7f0c00bb
+			public const int customerName = 2131493051;
 			
-			// aapt resource value: 0x7f0c00ad
-			public const int customerPhone = 2131493037;
+			// aapt resource value: 0x7f0c00bd
+			public const int customerPhone = 2131493053;
 			
 			// aapt resource value: 0x7f0c0053
 			public const int decor_content_parent = 2131492947;
@@ -2014,38 +2051,35 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c000d
 			public const int disableHome = 2131492877;
 			
-			// aapt resource value: 0x7f0c00ca
-			public const int disconnectButton = 2131493066;
+			// aapt resource value: 0x7f0c00da
+			public const int disconnectButton = 2131493082;
 			
 			// aapt resource value: 0x7f0c0034
 			public const int display_always = 2131492916;
 			
-			// aapt resource value: 0x7f0c00b0
-			public const int distancePickUpToDropOff = 2131493040;
+			// aapt resource value: 0x7f0c00c0
+			public const int distancePickUpToDropOff = 2131493056;
 			
-			// aapt resource value: 0x7f0c00b4
-			public const int dropOffAddress = 2131493044;
+			// aapt resource value: 0x7f0c00c4
+			public const int dropOffAddress = 2131493060;
 			
-			// aapt resource value: 0x7f0c00b5
-			public const int dropOffReferences = 2131493045;
+			// aapt resource value: 0x7f0c00c5
+			public const int dropOffReferences = 2131493061;
 			
-			// aapt resource value: 0x7f0c00b6
-			public const int dropOffRouteMapUrl = 2131493046;
-			
-			// aapt resource value: 0x7f0c008d
-			public const int editText5 = 2131493005;
+			// aapt resource value: 0x7f0c00c6
+			public const int dropOffRouteMapUrl = 2131493062;
 			
 			// aapt resource value: 0x7f0c0057
 			public const int edit_query = 2131492951;
 			
-			// aapt resource value: 0x7f0c0083
-			public const int email = 2131492995;
+			// aapt resource value: 0x7f0c0086
+			public const int email = 2131492998;
 			
 			// aapt resource value: 0x7f0c001a
 			public const int end = 2131492890;
 			
-			// aapt resource value: 0x7f0c00aa
-			public const int end_padder = 2131493034;
+			// aapt resource value: 0x7f0c00ba
+			public const int end_padder = 2131493050;
 			
 			// aapt resource value: 0x7f0c003c
 			public const int expand_activities_button = 2131492924;
@@ -2053,17 +2087,23 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c004c
 			public const int expanded_menu = 2131492940;
 			
-			// aapt resource value: 0x7f0c007d
-			public const int firstName = 2131492989;
+			// aapt resource value: 0x7f0c0080
+			public const int firstName = 2131492992;
 			
-			// aapt resource value: 0x7f0c00b7
-			public const int from = 2131493047;
+			// aapt resource value: 0x7f0c00c7
+			public const int from = 2131493063;
 			
-			// aapt resource value: 0x7f0c00b8
-			public const int fromAddress = 2131493048;
+			// aapt resource value: 0x7f0c00c8
+			public const int fromAddress = 2131493064;
 			
 			// aapt resource value: 0x7f0c0073
 			public const int helpButton = 2131492979;
+			
+			// aapt resource value: 0x7f0c00a5
+			public const int helpEmailButton = 2131493029;
+			
+			// aapt resource value: 0x7f0c00a4
+			public const int helpEmailTextView = 2131493028;
 			
 			// aapt resource value: 0x7f0c0004
 			public const int home = 2131492868;
@@ -2077,6 +2117,18 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0040
 			public const int icon = 2131492928;
 			
+			// aapt resource value: 0x7f0c0093
+			public const int identificationButton = 2131493011;
+			
+			// aapt resource value: 0x7f0c0091
+			public const int identificationImageView = 2131493009;
+			
+			// aapt resource value: 0x7f0c0092
+			public const int identificationProgressBar = 2131493010;
+			
+			// aapt resource value: 0x7f0c0090
+			public const int identificationViewSwitcher = 2131493008;
+			
 			// aapt resource value: 0x7f0c001e
 			public const int ifRoom = 2131492894;
 			
@@ -2086,23 +2138,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c003d
 			public const int image = 2131492925;
 			
-			// aapt resource value: 0x7f0c0091
-			public const int imageButton4 = 2131493009;
+			// aapt resource value: 0x7f0c00b9
+			public const int info = 2131493049;
 			
-			// aapt resource value: 0x7f0c0092
-			public const int imageButton5 = 2131493010;
-			
-			// aapt resource value: 0x7f0c0093
-			public const int imageButton6 = 2131493011;
-			
-			// aapt resource value: 0x7f0c0087
-			public const int imageView1 = 2131492999;
-			
-			// aapt resource value: 0x7f0c00a9
-			public const int info = 2131493033;
-			
-			// aapt resource value: 0x7f0c00c9
-			public const int infoSignUp = 2131493065;
+			// aapt resource value: 0x7f0c00d9
+			public const int infoSignUp = 2131493081;
 			
 			// aapt resource value: 0x7f0c002e
 			public const int inline = 2131492910;
@@ -2110,29 +2150,32 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0064
 			public const int instructions = 2131492964;
 			
-			// aapt resource value: 0x7f0c00af
-			public const int items = 2131493039;
+			// aapt resource value: 0x7f0c00bf
+			public const int items = 2131493055;
 			
-			// aapt resource value: 0x7f0c00ce
-			public const int kangouBook = 2131493070;
+			// aapt resource value: 0x7f0c00de
+			public const int kangouBook = 2131493086;
 			
-			// aapt resource value: 0x7f0c0096
-			public const int labelHelp = 2131493014;
+			// aapt resource value: 0x7f0c00a6
+			public const int labelHelp = 2131493030;
 			
 			// aapt resource value: 0x7f0c0036
 			public const int large = 2131492918;
 			
-			// aapt resource value: 0x7f0c007f
-			public const int lastName = 2131492991;
+			// aapt resource value: 0x7f0c0082
+			public const int lastName = 2131492994;
 			
 			// aapt resource value: 0x7f0c0031
 			public const int left = 2131492913;
 			
-			// aapt resource value: 0x7f0c00a3
-			public const int line1 = 2131493027;
+			// aapt resource value: 0x7f0c00b3
+			public const int line1 = 2131493043;
 			
-			// aapt resource value: 0x7f0c00a7
-			public const int line3 = 2131493031;
+			// aapt resource value: 0x7f0c00b7
+			public const int line3 = 2131493047;
+			
+			// aapt resource value: 0x7f0c007c
+			public const int linearLayout2 = 2131492988;
 			
 			// aapt resource value: 0x7f0c006f
 			public const int linearLayout4 = 2131492975;
@@ -2143,29 +2186,32 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c003f
 			public const int list_item = 2131492927;
 			
-			// aapt resource value: 0x7f0c009c
-			public const int loginButton = 2131493020;
+			// aapt resource value: 0x7f0c00ac
+			public const int loginButton = 2131493036;
 			
-			// aapt resource value: 0x7f0c0098
-			public const int logoutButton = 2131493016;
+			// aapt resource value: 0x7f0c00a8
+			public const int logoutButton = 2131493032;
 			
 			// aapt resource value: 0x7f0c0075
 			public const int map = 2131492981;
 			
-			// aapt resource value: 0x7f0c00cb
-			public const int map_layout = 2131493067;
+			// aapt resource value: 0x7f0c00db
+			public const int map_layout = 2131493083;
 			
-			// aapt resource value: 0x7f0c00a1
-			public const int media_actions = 2131493025;
+			// aapt resource value: 0x7f0c00b1
+			public const int media_actions = 2131493041;
 			
-			// aapt resource value: 0x7f0c009d
-			public const int messenger_send_button = 2131493021;
+			// aapt resource value: 0x7f0c00ad
+			public const int messenger_send_button = 2131493037;
 			
 			// aapt resource value: 0x7f0c001b
 			public const int middle = 2131492891;
 			
-			// aapt resource value: 0x7f0c00cc
-			public const int msgLocationNotFound = 2131493068;
+			// aapt resource value: 0x7f0c009e
+			public const int motorbikeButton = 2131493022;
+			
+			// aapt resource value: 0x7f0c00dc
+			public const int msgLocationNotFound = 2131493084;
 			
 			// aapt resource value: 0x7f0c0014
 			public const int multiply = 2131492884;
@@ -2188,11 +2234,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0027
 			public const int open_graph = 2131492903;
 			
-			// aapt resource value: 0x7f0c00cd
-			public const int orderDetails = 2131493069;
+			// aapt resource value: 0x7f0c00dd
+			public const int orderDetails = 2131493085;
 			
-			// aapt resource value: 0x7f0c00ae
-			public const int orderNumber = 2131493038;
+			// aapt resource value: 0x7f0c00be
+			public const int orderNumber = 2131493054;
 			
 			// aapt resource value: 0x7f0c0028
 			public const int page = 2131492904;
@@ -2200,26 +2246,29 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0042
 			public const int parentPanel = 2131492930;
 			
-			// aapt resource value: 0x7f0c0081
-			public const int phoneNumber = 2131492993;
+			// aapt resource value: 0x7f0c0084
+			public const int phoneNumber = 2131492996;
 			
-			// aapt resource value: 0x7f0c00b1
-			public const int pickUpAddress = 2131493041;
+			// aapt resource value: 0x7f0c00c1
+			public const int pickUpAddress = 2131493057;
 			
-			// aapt resource value: 0x7f0c00b2
-			public const int pickUpReferences = 2131493042;
+			// aapt resource value: 0x7f0c00c2
+			public const int pickUpReferences = 2131493058;
 			
-			// aapt resource value: 0x7f0c00b3
-			public const int pickUpRouteMapUrl = 2131493043;
+			// aapt resource value: 0x7f0c00c3
+			public const int pickUpRouteMapUrl = 2131493059;
 			
 			// aapt resource value: 0x7f0c0077
 			public const int pickedButton = 2131492983;
 			
-			// aapt resource value: 0x7f0c00bc
-			public const int profict = 2131493052;
+			// aapt resource value: 0x7f0c00a2
+			public const int privacyPolicy = 2131493026;
 			
-			// aapt resource value: 0x7f0c00bb
-			public const int profitLabel = 2131493051;
+			// aapt resource value: 0x7f0c00cc
+			public const int profict = 2131493068;
+			
+			// aapt resource value: 0x7f0c00cb
+			public const int profitLabel = 2131493067;
 			
 			// aapt resource value: 0x7f0c0005
 			public const int progress_circular = 2131492869;
@@ -2233,8 +2282,8 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0071
 			public const int references = 2131492977;
 			
-			// aapt resource value: 0x7f0c009b
-			public const int register = 2131493019;
+			// aapt resource value: 0x7f0c00ab
+			public const int register = 2131493035;
 			
 			// aapt resource value: 0x7f0c0032
 			public const int right = 2131492914;
@@ -2242,8 +2291,8 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0023
 			public const int satellite = 2131492899;
 			
-			// aapt resource value: 0x7f0c0095
-			public const int saveData = 2131493013;
+			// aapt resource value: 0x7f0c00a1
+			public const int saveData = 2131493025;
 			
 			// aapt resource value: 0x7f0c0015
 			public const int screen = 2131492885;
@@ -2284,17 +2333,29 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0063
 			public const int select_dialog_listview = 2131492963;
 			
+			// aapt resource value: 0x7f0c008e
+			public const int selfieButton = 2131493006;
+			
+			// aapt resource value: 0x7f0c008c
+			public const int selfieImageView = 2131493004;
+			
+			// aapt resource value: 0x7f0c008d
+			public const int selfieProgressBar = 2131493005;
+			
+			// aapt resource value: 0x7f0c008b
+			public const int selfieViewSwitcher = 2131493003;
+			
 			// aapt resource value: 0x7f0c0065
 			public const int send = 2131492965;
 			
-			// aapt resource value: 0x7f0c00c7
-			public const int sendInfoButton = 2131493063;
+			// aapt resource value: 0x7f0c00d7
+			public const int sendInfoButton = 2131493079;
 			
-			// aapt resource value: 0x7f0c00cf
-			public const int shareInFacebook = 2131493071;
+			// aapt resource value: 0x7f0c00df
+			public const int shareInFacebook = 2131493087;
 			
-			// aapt resource value: 0x7f0c00d0
-			public const int shareInGooglePlus = 2131493072;
+			// aapt resource value: 0x7f0c00e0
+			public const int shareInGooglePlus = 2131493088;
 			
 			// aapt resource value: 0x7f0c004e
 			public const int shortcut = 2131492942;
@@ -2308,11 +2369,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0012
 			public const int showTitle = 2131492882;
 			
-			// aapt resource value: 0x7f0c0099
-			public const int signinFbButton = 2131493017;
+			// aapt resource value: 0x7f0c00a9
+			public const int signinFbButton = 2131493033;
 			
-			// aapt resource value: 0x7f0c009a
-			public const int signinGoogleButton = 2131493018;
+			// aapt resource value: 0x7f0c00aa
+			public const int signinGoogleButton = 2131493034;
 			
 			// aapt resource value: 0x7f0c0037
 			public const int small = 2131492919;
@@ -2332,23 +2393,23 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c002c
 			public const int standard = 2131492908;
 			
-			// aapt resource value: 0x7f0c00c2
-			public const int starButton1 = 2131493058;
+			// aapt resource value: 0x7f0c00d2
+			public const int starButton1 = 2131493074;
 			
-			// aapt resource value: 0x7f0c00c3
-			public const int starButton2 = 2131493059;
+			// aapt resource value: 0x7f0c00d3
+			public const int starButton2 = 2131493075;
 			
-			// aapt resource value: 0x7f0c00c4
-			public const int starButton3 = 2131493060;
+			// aapt resource value: 0x7f0c00d4
+			public const int starButton3 = 2131493076;
 			
-			// aapt resource value: 0x7f0c00c5
-			public const int starButton4 = 2131493061;
+			// aapt resource value: 0x7f0c00d5
+			public const int starButton4 = 2131493077;
 			
-			// aapt resource value: 0x7f0c00c6
-			public const int starButton5 = 2131493062;
+			// aapt resource value: 0x7f0c00d6
+			public const int starButton5 = 2131493078;
 			
-			// aapt resource value: 0x7f0c00a0
-			public const int status_bar_latest_event_content = 2131493024;
+			// aapt resource value: 0x7f0c00b0
+			public const int status_bar_latest_event_content = 2131493040;
 			
 			// aapt resource value: 0x7f0c0060
 			public const int submit_area = 2131492960;
@@ -2356,59 +2417,68 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c000c
 			public const int tabMode = 2131492876;
 			
-			// aapt resource value: 0x7f0c008f
-			public const int tableLayout1 = 2131493007;
+			// aapt resource value: 0x7f0c009b
+			public const int tableLayout1 = 2131493019;
 			
-			// aapt resource value: 0x7f0c0090
-			public const int tableRow1 = 2131493008;
+			// aapt resource value: 0x7f0c009c
+			public const int tableRow1 = 2131493020;
 			
-			// aapt resource value: 0x7f0c00c1
-			public const int tableRow2 = 2131493057;
+			// aapt resource value: 0x7f0c00d1
+			public const int tableRow2 = 2131493073;
+			
+			// aapt resource value: 0x7f0c00a3
+			public const int termsAndConditions = 2131493027;
 			
 			// aapt resource value: 0x7f0c0024
 			public const int terrain = 2131492900;
 			
-			// aapt resource value: 0x7f0c00a8
-			public const int text = 2131493032;
+			// aapt resource value: 0x7f0c00b8
+			public const int text = 2131493048;
 			
-			// aapt resource value: 0x7f0c00a6
-			public const int text2 = 2131493030;
+			// aapt resource value: 0x7f0c00b6
+			public const int text2 = 2131493046;
 			
 			// aapt resource value: 0x7f0c0048
 			public const int textSpacerNoButtons = 2131492936;
 			
-			// aapt resource value: 0x7f0c007c
-			public const int textView1 = 2131492988;
+			// aapt resource value: 0x7f0c007f
+			public const int textView1 = 2131492991;
 			
-			// aapt resource value: 0x7f0c0094
-			public const int textView10 = 2131493012;
+			// aapt resource value: 0x7f0c00a0
+			public const int textView10 = 2131493024;
+			
+			// aapt resource value: 0x7f0c007d
+			public const int textView11 = 2131492989;
 			
 			// aapt resource value: 0x7f0c007e
-			public const int textView2 = 2131492990;
+			public const int textView12 = 2131492990;
 			
-			// aapt resource value: 0x7f0c0080
-			public const int textView3 = 2131492992;
+			// aapt resource value: 0x7f0c0081
+			public const int textView2 = 2131492993;
 			
-			// aapt resource value: 0x7f0c0082
-			public const int textView4 = 2131492994;
+			// aapt resource value: 0x7f0c0083
+			public const int textView3 = 2131492995;
 			
-			// aapt resource value: 0x7f0c0084
-			public const int textView5 = 2131492996;
+			// aapt resource value: 0x7f0c0085
+			public const int textView4 = 2131492997;
 			
-			// aapt resource value: 0x7f0c0086
-			public const int textView6 = 2131492998;
+			// aapt resource value: 0x7f0c0087
+			public const int textView5 = 2131492999;
 			
-			// aapt resource value: 0x7f0c0089
-			public const int textView7 = 2131493001;
+			// aapt resource value: 0x7f0c008a
+			public const int textView6 = 2131493002;
 			
-			// aapt resource value: 0x7f0c008c
-			public const int textView8 = 2131493004;
+			// aapt resource value: 0x7f0c008f
+			public const int textView7 = 2131493007;
 			
-			// aapt resource value: 0x7f0c008e
-			public const int textView9 = 2131493006;
+			// aapt resource value: 0x7f0c0098
+			public const int textView8 = 2131493016;
 			
-			// aapt resource value: 0x7f0c00a4
-			public const int time = 2131493028;
+			// aapt resource value: 0x7f0c009a
+			public const int textView9 = 2131493018;
+			
+			// aapt resource value: 0x7f0c00b4
+			public const int time = 2131493044;
 			
 			// aapt resource value: 0x7f0c0079
 			public const int timer = 2131492985;
@@ -2416,23 +2486,23 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0078
 			public const int timerTitle = 2131492984;
 			
-			// aapt resource value: 0x7f0c00bd
-			public const int timerToCancel = 2131493053;
+			// aapt resource value: 0x7f0c00cd
+			public const int timerToCancel = 2131493069;
 			
 			// aapt resource value: 0x7f0c0041
 			public const int title = 2131492929;
 			
-			// aapt resource value: 0x7f0c00c8
-			public const int titleSignup = 2131493064;
+			// aapt resource value: 0x7f0c00d8
+			public const int titleSignup = 2131493080;
 			
 			// aapt resource value: 0x7f0c0044
 			public const int title_template = 2131492932;
 			
-			// aapt resource value: 0x7f0c00b9
-			public const int to = 2131493049;
+			// aapt resource value: 0x7f0c00c9
+			public const int to = 2131493065;
 			
-			// aapt resource value: 0x7f0c00ba
-			public const int toAddress = 2131493050;
+			// aapt resource value: 0x7f0c00ca
+			public const int toAddress = 2131493066;
 			
 			// aapt resource value: 0x7f0c002f
 			public const int top = 2131492911;
@@ -2449,8 +2519,8 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f0c0013
 			public const int useLogo = 2131492883;
 			
-			// aapt resource value: 0x7f0c0097
-			public const int webview = 2131493015;
+			// aapt resource value: 0x7f0c00a7
+			public const int webview = 2131493031;
 			
 			// aapt resource value: 0x7f0c0020
 			public const int withText = 2131492896;
@@ -2730,6 +2800,12 @@ namespace KangouMessenger.Droid
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f060035
+			public const int ApplicationName = 2131099701;
+			
+			// aapt resource value: 0x7f060034
+			public const int Hello = 2131099700;
+			
 			// aapt resource value: 0x7f060000
 			public const int abc_action_bar_home_description = 2131099648;
 			
@@ -2781,11 +2857,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f060010
 			public const int abc_toolbar_collapse_description = 2131099664;
 			
-			// aapt resource value: 0x7f060045
-			public const int app_id = 2131099717;
+			// aapt resource value: 0x7f060047
+			public const int app_id = 2131099719;
 			
-			// aapt resource value: 0x7f060049
-			public const int app_name = 2131099721;
+			// aapt resource value: 0x7f06004b
+			public const int app_name = 2131099723;
 			
 			// aapt resource value: 0x7f060013
 			public const int auth_google_play_services_client_facebook_display_name = 2131099667;
@@ -2793,56 +2869,56 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f060012
 			public const int auth_google_play_services_client_google_display_name = 2131099666;
 			
-			// aapt resource value: 0x7f060046
-			public const int cancelled = 2131099718;
-			
-			// aapt resource value: 0x7f060034
-			public const int com_facebook_image_download_unknown_error = 2131099700;
-			
-			// aapt resource value: 0x7f060035
-			public const int com_facebook_internet_permission_error_message = 2131099701;
+			// aapt resource value: 0x7f060048
+			public const int cancelled = 2131099720;
 			
 			// aapt resource value: 0x7f060036
-			public const int com_facebook_internet_permission_error_title = 2131099702;
+			public const int com_facebook_image_download_unknown_error = 2131099702;
 			
 			// aapt resource value: 0x7f060037
-			public const int com_facebook_like_button_liked = 2131099703;
+			public const int com_facebook_internet_permission_error_message = 2131099703;
 			
 			// aapt resource value: 0x7f060038
-			public const int com_facebook_like_button_not_liked = 2131099704;
+			public const int com_facebook_internet_permission_error_title = 2131099704;
 			
 			// aapt resource value: 0x7f060039
-			public const int com_facebook_loading = 2131099705;
+			public const int com_facebook_like_button_liked = 2131099705;
 			
 			// aapt resource value: 0x7f06003a
-			public const int com_facebook_loginview_cancel_action = 2131099706;
+			public const int com_facebook_like_button_not_liked = 2131099706;
 			
 			// aapt resource value: 0x7f06003b
-			public const int com_facebook_loginview_log_in_button = 2131099707;
+			public const int com_facebook_loading = 2131099707;
 			
 			// aapt resource value: 0x7f06003c
-			public const int com_facebook_loginview_log_in_button_long = 2131099708;
+			public const int com_facebook_loginview_cancel_action = 2131099708;
 			
 			// aapt resource value: 0x7f06003d
-			public const int com_facebook_loginview_log_out_action = 2131099709;
+			public const int com_facebook_loginview_log_in_button = 2131099709;
 			
 			// aapt resource value: 0x7f06003e
-			public const int com_facebook_loginview_log_out_button = 2131099710;
+			public const int com_facebook_loginview_log_in_button_long = 2131099710;
 			
 			// aapt resource value: 0x7f06003f
-			public const int com_facebook_loginview_logged_in_as = 2131099711;
+			public const int com_facebook_loginview_log_out_action = 2131099711;
 			
 			// aapt resource value: 0x7f060040
-			public const int com_facebook_loginview_logged_in_using_facebook = 2131099712;
+			public const int com_facebook_loginview_log_out_button = 2131099712;
 			
 			// aapt resource value: 0x7f060041
-			public const int com_facebook_send_button_text = 2131099713;
+			public const int com_facebook_loginview_logged_in_as = 2131099713;
 			
 			// aapt resource value: 0x7f060042
-			public const int com_facebook_share_button_text = 2131099714;
+			public const int com_facebook_loginview_logged_in_using_facebook = 2131099714;
 			
 			// aapt resource value: 0x7f060043
-			public const int com_facebook_tooltip_default = 2131099715;
+			public const int com_facebook_send_button_text = 2131099715;
+			
+			// aapt resource value: 0x7f060044
+			public const int com_facebook_share_button_text = 2131099716;
+			
+			// aapt resource value: 0x7f060045
+			public const int com_facebook_tooltip_default = 2131099717;
 			
 			// aapt resource value: 0x7f060016
 			public const int common_android_wear_notification_needs_update_text = 2131099670;
@@ -2940,44 +3016,44 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f06002f
 			public const int common_signin_button_text_long = 2131099695;
 			
-			// aapt resource value: 0x7f060048
-			public const int hello = 2131099720;
+			// aapt resource value: 0x7f06004a
+			public const int hello = 2131099722;
 			
-			// aapt resource value: 0x7f060052
-			public const int helpInfo = 2131099730;
-			
-			// aapt resource value: 0x7f06004f
-			public const int infoConnect = 2131099727;
-			
-			// aapt resource value: 0x7f06004d
-			public const int infoPasswordA = 2131099725;
-			
-			// aapt resource value: 0x7f06004e
-			public const int infoPasswordB = 2131099726;
-			
-			// aapt resource value: 0x7f06004c
-			public const int loading = 2131099724;
-			
-			// aapt resource value: 0x7f060044
-			public const int messenger_send_button_text = 2131099716;
+			// aapt resource value: 0x7f060054
+			public const int helpInfo = 2131099732;
 			
 			// aapt resource value: 0x7f060051
-			public const int msgLocationNotFound = 2131099729;
+			public const int infoConnect = 2131099729;
 			
-			// aapt resource value: 0x7f060047
-			public const int permission_not_granted = 2131099719;
+			// aapt resource value: 0x7f06004f
+			public const int infoPasswordA = 2131099727;
+			
+			// aapt resource value: 0x7f060050
+			public const int infoPasswordB = 2131099728;
+			
+			// aapt resource value: 0x7f06004e
+			public const int loading = 2131099726;
+			
+			// aapt resource value: 0x7f060046
+			public const int messenger_send_button_text = 2131099718;
+			
+			// aapt resource value: 0x7f060053
+			public const int msgLocationNotFound = 2131099731;
+			
+			// aapt resource value: 0x7f060049
+			public const int permission_not_granted = 2131099721;
 			
 			// aapt resource value: 0x7f060011
 			public const int status_bar_notification_info_overflow = 2131099665;
 			
-			// aapt resource value: 0x7f06004b
-			public const int titleDropOffRoute = 2131099723;
+			// aapt resource value: 0x7f06004d
+			public const int titleDropOffRoute = 2131099725;
 			
-			// aapt resource value: 0x7f060050
-			public const int titleLocationNotFound = 2131099728;
+			// aapt resource value: 0x7f060052
+			public const int titleLocationNotFound = 2131099730;
 			
-			// aapt resource value: 0x7f06004a
-			public const int titleWaitingOrder = 2131099722;
+			// aapt resource value: 0x7f06004c
+			public const int titleWaitingOrder = 2131099724;
 			
 			static String()
 			{
@@ -2992,35 +3068,35 @@ namespace KangouMessenger.Droid
 		public partial class Style
 		{
 			
-			// aapt resource value: 0x7f080078
-			public const int AlertDialog_AppCompat = 2131230840;
-			
-			// aapt resource value: 0x7f080079
-			public const int AlertDialog_AppCompat_Light = 2131230841;
-			
 			// aapt resource value: 0x7f08007a
-			public const int Animation_AppCompat_Dialog = 2131230842;
+			public const int AlertDialog_AppCompat = 2131230842;
 			
 			// aapt resource value: 0x7f08007b
-			public const int Animation_AppCompat_DropDownUp = 2131230843;
+			public const int AlertDialog_AppCompat_Light = 2131230843;
 			
 			// aapt resource value: 0x7f08007c
-			public const int Base_AlertDialog_AppCompat = 2131230844;
+			public const int Animation_AppCompat_Dialog = 2131230844;
 			
 			// aapt resource value: 0x7f08007d
-			public const int Base_AlertDialog_AppCompat_Light = 2131230845;
+			public const int Animation_AppCompat_DropDownUp = 2131230845;
 			
 			// aapt resource value: 0x7f08007e
-			public const int Base_Animation_AppCompat_Dialog = 2131230846;
+			public const int Base_AlertDialog_AppCompat = 2131230846;
 			
 			// aapt resource value: 0x7f08007f
-			public const int Base_Animation_AppCompat_DropDownUp = 2131230847;
+			public const int Base_AlertDialog_AppCompat_Light = 2131230847;
 			
 			// aapt resource value: 0x7f080080
-			public const int Base_DialogWindowTitle_AppCompat = 2131230848;
+			public const int Base_Animation_AppCompat_Dialog = 2131230848;
 			
 			// aapt resource value: 0x7f080081
-			public const int Base_DialogWindowTitleBackground_AppCompat = 2131230849;
+			public const int Base_Animation_AppCompat_DropDownUp = 2131230849;
+			
+			// aapt resource value: 0x7f080082
+			public const int Base_DialogWindowTitle_AppCompat = 2131230850;
+			
+			// aapt resource value: 0x7f080083
+			public const int Base_DialogWindowTitleBackground_AppCompat = 2131230851;
 			
 			// aapt resource value: 0x7f08002d
 			public const int Base_TextAppearance_AppCompat = 2131230765;
@@ -3076,8 +3152,8 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f08003a
 			public const int Base_TextAppearance_AppCompat_Menu = 2131230778;
 			
-			// aapt resource value: 0x7f080082
-			public const int Base_TextAppearance_AppCompat_SearchResult = 2131230850;
+			// aapt resource value: 0x7f080084
+			public const int Base_TextAppearance_AppCompat_SearchResult = 2131230852;
 			
 			// aapt resource value: 0x7f08003b
 			public const int Base_TextAppearance_AppCompat_SearchResult_Subtitle = 2131230779;
@@ -3127,11 +3203,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f080047
 			public const int Base_TextAppearance_AppCompat_Widget_Button = 2131230791;
 			
-			// aapt resource value: 0x7f080083
-			public const int Base_TextAppearance_AppCompat_Widget_Button_Inverse = 2131230851;
+			// aapt resource value: 0x7f080076
+			public const int Base_TextAppearance_AppCompat_Widget_Button_Inverse = 2131230838;
 			
-			// aapt resource value: 0x7f080084
-			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131230852;
+			// aapt resource value: 0x7f080085
+			public const int Base_TextAppearance_AppCompat_Widget_DropDownItem = 2131230853;
 			
 			// aapt resource value: 0x7f080048
 			public const int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = 2131230792;
@@ -3145,8 +3221,8 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f08004b
 			public const int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = 2131230795;
 			
-			// aapt resource value: 0x7f080085
-			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131230853;
+			// aapt resource value: 0x7f080086
+			public const int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = 2131230854;
 			
 			// aapt resource value: 0x7f08004c
 			public const int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = 2131230796;
@@ -3157,20 +3233,20 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f08004e
 			public const int Base_Theme_AppCompat = 2131230798;
 			
-			// aapt resource value: 0x7f080086
-			public const int Base_Theme_AppCompat_CompactMenu = 2131230854;
+			// aapt resource value: 0x7f080087
+			public const int Base_Theme_AppCompat_CompactMenu = 2131230855;
 			
 			// aapt resource value: 0x7f080009
 			public const int Base_Theme_AppCompat_Dialog = 2131230729;
 			
-			// aapt resource value: 0x7f080087
-			public const int Base_Theme_AppCompat_Dialog_Alert = 2131230855;
-			
 			// aapt resource value: 0x7f080088
-			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131230856;
+			public const int Base_Theme_AppCompat_Dialog_Alert = 2131230856;
 			
 			// aapt resource value: 0x7f080089
-			public const int Base_Theme_AppCompat_Dialog_MinWidth = 2131230857;
+			public const int Base_Theme_AppCompat_Dialog_FixedSize = 2131230857;
+			
+			// aapt resource value: 0x7f08008a
+			public const int Base_Theme_AppCompat_Dialog_MinWidth = 2131230858;
 			
 			// aapt resource value: 0x7f080001
 			public const int Base_Theme_AppCompat_DialogWhenLarge = 2131230721;
@@ -3178,38 +3254,38 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f08004f
 			public const int Base_Theme_AppCompat_Light = 2131230799;
 			
-			// aapt resource value: 0x7f08008a
-			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131230858;
+			// aapt resource value: 0x7f08008b
+			public const int Base_Theme_AppCompat_Light_DarkActionBar = 2131230859;
 			
 			// aapt resource value: 0x7f08000a
 			public const int Base_Theme_AppCompat_Light_Dialog = 2131230730;
 			
-			// aapt resource value: 0x7f08008b
-			public const int Base_Theme_AppCompat_Light_Dialog_Alert = 2131230859;
-			
 			// aapt resource value: 0x7f08008c
-			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131230860;
+			public const int Base_Theme_AppCompat_Light_Dialog_Alert = 2131230860;
 			
 			// aapt resource value: 0x7f08008d
-			public const int Base_Theme_AppCompat_Light_Dialog_MinWidth = 2131230861;
+			public const int Base_Theme_AppCompat_Light_Dialog_FixedSize = 2131230861;
+			
+			// aapt resource value: 0x7f08008e
+			public const int Base_Theme_AppCompat_Light_Dialog_MinWidth = 2131230862;
 			
 			// aapt resource value: 0x7f080002
 			public const int Base_Theme_AppCompat_Light_DialogWhenLarge = 2131230722;
 			
-			// aapt resource value: 0x7f08008e
-			public const int Base_ThemeOverlay_AppCompat = 2131230862;
-			
 			// aapt resource value: 0x7f08008f
-			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131230863;
+			public const int Base_ThemeOverlay_AppCompat = 2131230863;
 			
 			// aapt resource value: 0x7f080090
-			public const int Base_ThemeOverlay_AppCompat_Dark = 2131230864;
+			public const int Base_ThemeOverlay_AppCompat_ActionBar = 2131230864;
 			
 			// aapt resource value: 0x7f080091
-			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131230865;
+			public const int Base_ThemeOverlay_AppCompat_Dark = 2131230865;
 			
 			// aapt resource value: 0x7f080092
-			public const int Base_ThemeOverlay_AppCompat_Light = 2131230866;
+			public const int Base_ThemeOverlay_AppCompat_Dark_ActionBar = 2131230866;
+			
+			// aapt resource value: 0x7f080093
+			public const int Base_ThemeOverlay_AppCompat_Light = 2131230867;
 			
 			// aapt resource value: 0x7f08000b
 			public const int Base_V11_Theme_AppCompat_Dialog = 2131230731;
@@ -3241,38 +3317,38 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f080075
 			public const int Base_V22_Theme_AppCompat_Light = 2131230837;
 			
-			// aapt resource value: 0x7f080076
-			public const int Base_V23_Theme_AppCompat = 2131230838;
-			
 			// aapt resource value: 0x7f080077
-			public const int Base_V23_Theme_AppCompat_Light = 2131230839;
+			public const int Base_V23_Theme_AppCompat = 2131230839;
 			
-			// aapt resource value: 0x7f080093
-			public const int Base_V7_Theme_AppCompat = 2131230867;
+			// aapt resource value: 0x7f080078
+			public const int Base_V23_Theme_AppCompat_Light = 2131230840;
 			
 			// aapt resource value: 0x7f080094
-			public const int Base_V7_Theme_AppCompat_Dialog = 2131230868;
+			public const int Base_V7_Theme_AppCompat = 2131230868;
 			
 			// aapt resource value: 0x7f080095
-			public const int Base_V7_Theme_AppCompat_Light = 2131230869;
+			public const int Base_V7_Theme_AppCompat_Dialog = 2131230869;
 			
 			// aapt resource value: 0x7f080096
-			public const int Base_V7_Theme_AppCompat_Light_Dialog = 2131230870;
+			public const int Base_V7_Theme_AppCompat_Light = 2131230870;
 			
 			// aapt resource value: 0x7f080097
-			public const int Base_V7_Widget_AppCompat_AutoCompleteTextView = 2131230871;
+			public const int Base_V7_Theme_AppCompat_Light_Dialog = 2131230871;
 			
 			// aapt resource value: 0x7f080098
-			public const int Base_V7_Widget_AppCompat_EditText = 2131230872;
+			public const int Base_V7_Widget_AppCompat_AutoCompleteTextView = 2131230872;
 			
 			// aapt resource value: 0x7f080099
-			public const int Base_Widget_AppCompat_ActionBar = 2131230873;
+			public const int Base_V7_Widget_AppCompat_EditText = 2131230873;
 			
 			// aapt resource value: 0x7f08009a
-			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131230874;
+			public const int Base_Widget_AppCompat_ActionBar = 2131230874;
 			
 			// aapt resource value: 0x7f08009b
-			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131230875;
+			public const int Base_Widget_AppCompat_ActionBar_Solid = 2131230875;
+			
+			// aapt resource value: 0x7f08009c
+			public const int Base_Widget_AppCompat_ActionBar_TabBar = 2131230876;
 			
 			// aapt resource value: 0x7f080054
 			public const int Base_Widget_AppCompat_ActionBar_TabText = 2131230804;
@@ -3289,11 +3365,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f080058
 			public const int Base_Widget_AppCompat_ActionButton_Overflow = 2131230808;
 			
-			// aapt resource value: 0x7f08009c
-			public const int Base_Widget_AppCompat_ActionMode = 2131230876;
-			
 			// aapt resource value: 0x7f08009d
-			public const int Base_Widget_AppCompat_ActivityChooserView = 2131230877;
+			public const int Base_Widget_AppCompat_ActionMode = 2131230877;
+			
+			// aapt resource value: 0x7f08009e
+			public const int Base_Widget_AppCompat_ActivityChooserView = 2131230878;
 			
 			// aapt resource value: 0x7f080016
 			public const int Base_Widget_AppCompat_AutoCompleteTextView = 2131230742;
@@ -3307,11 +3383,11 @@ namespace KangouMessenger.Droid
 			// aapt resource value: 0x7f08005b
 			public const int Base_Widget_AppCompat_Button_Borderless_Colored = 2131230811;
 			
-			// aapt resource value: 0x7f08009e
-			public const int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131230878;
-			
 			// aapt resource value: 0x7f08009f
-			public const int Base_Widget_AppCompat_Button_Colored = 2131230879;
+			public const int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = 2131230879;
+			
+			// aapt resource value: 0x7f080079
+			public const int Base_Widget_AppCompat_Button_Colored = 2131230841;
 			
 			// aapt resource value: 0x7f08005c
 			public const int Base_Widget_AppCompat_Button_Small = 2131230812;

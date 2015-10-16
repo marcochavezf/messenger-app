@@ -39,6 +39,7 @@
             android:layout_height="wrap_content"
             android:text="Crear Cuenta"
             android:gravity="center"
+            android:layout_marginTop="20dp"
             android:layout_gravity="center_vertical"
             android:layout_below="@+id/signinGoogleButton" />
         <Button

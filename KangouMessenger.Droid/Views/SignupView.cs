@@ -293,7 +293,7 @@ namespace KangouMessenger.Droid
 		}
 
 		/************************
-		 *  Override Methods
+		 *  Private Methods
 		 ************************/
 
 		private void ShowAlert (string title, string msg, string buttonText = "Aceptar"){

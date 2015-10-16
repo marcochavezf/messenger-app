@@ -1,32 +1,26 @@
 ﻿<Properties StartupItem="KangouMessenger.Droid/KangouMessenger.Droid.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.TA883036D6" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="KangouAppMessenger/Webclient/GeneralWebClient.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="KangouMessenger.Droid/Views/FormRegisterCourierView.cs">
     <Files>
-      <File FileName="KangouMessenger.Droid/Views/OrderDetailsView.cs" Line="1" Column="1" />
-      <File FileName="KangouMessenger.Droid/Views/LoginView.cs" Line="26" Column="8" />
-      <File FileName="KangouMessenger.Droid/Views/FormRegisterCourierView.cs" Line="32" Column="4" />
-      <File FileName="KangouAppMessenger/ViewModels/FormRegisterCourierViewModel.cs" Line="61" Column="22" />
-      <File FileName="KangouAppMessenger/Webclient/KangouClient.cs" Line="11" Column="31" />
-      <File FileName="KangouAppMessenger/Webclient/GeneralWebClient.cs" Line="3" Column="31" />
+      <File FileName="KangouMessenger.Droid/Views/FormRegisterCourierView.cs" Line="314" Column="5" />
+      <File FileName="KangouAppMessenger/ViewModels/FormRegisterCourierViewModel.cs" Line="1" Column="1" />
+      <File FileName="KangouAppMessenger/Webclient/KangouClient.cs" Line="1" Column="1" />
+      <File FileName="KangouAppMessenger/Webclient/GeneralWebClient.cs" Line="1" Column="1" />
+      <File FileName="KangouMessenger.Touch2/Views/DropOffRouteView.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ClassPad">
-        <State name="__root__">
-          <Node name="KangouMessenger" expanded="True" selected="True" />
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>_courierData</Value>
-          <Value>byteArray</Value>
-          <Value>data</Value>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/Views/FormRegisterCourierView.cs" line="371" column="27" />
+      <Breakpoint file="/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/Views/FormRegisterCourierView.cs" line="320" column="28" />
+      <Breakpoint file="/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/Views/FormRegisterCourierView.cs" line="377" column="1" />
+      <Breakpoint file="/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/Views/FormRegisterCourierView.cs" line="382" column="1" />
+      <Breakpoint file="/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/Views/FormRegisterCourierView.cs" line="364" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <DisabledProjects>
+    <String>KangouMessenger.Touch2/KangouMessenger.Touch.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.ItemProperties.KangouMessenger.Droid AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>

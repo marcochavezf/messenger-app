@@ -1,4 +1,4 @@
-/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Debug/MonoAndroid,Version=v5.1.AssemblyAttribute.cs
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Debug/MonoAndroid,Version=v6.0.AssemblyAttribute.cs
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/Kangou Mensajero.dll.mdb
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/Kangou Mensajero.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/com.kangou.messenger.android.apk
@@ -72,5 +72,21 @@
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/Xamarin.Facebook.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/Xamarin.Android.Support.v7.AppCompat.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/Xamarin.GooglePlayServices.Plus.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/PCLStorage.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/PCLStorage.Abstractions.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/PCLCrypto.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/Validation.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/System.Net.Http.Primitives.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/System.Net.Http.Extensions.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/AWSSDK.Core.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/AWSSDK.S3.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/AWSSDK.SecurityToken.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/AWSSDK.CognitoIdentity.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/KangouAppMessenger.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/bin/Debug/KangouAppMessenger.dll.mdb
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Debug/res/drawable/bici.png
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Debug/res/drawable/bicisola.png
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Debug/res/drawable/coche.png
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Debug/res/drawable/cochesola.png
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Debug/res/drawable/moto.png
+/Users/marcochavezf/GitHub/messenger-app/KangouMessenger.Droid/obj/Debug/res/drawable/motosola.png

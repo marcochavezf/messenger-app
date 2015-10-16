@@ -48,6 +48,7 @@ namespace KangouMessenger.Droid
 		private AlertDialog.Builder _openSettingsDialog;
 		private AlertDialog.Builder _errorLoginDialog;
 		private Button _logoutButton;
+		private Button _registerButton;
 		private Button _requestAccessButton;
 		private LoginViewModel _viewModel;
 
@@ -191,7 +192,7 @@ namespace KangouMessenger.Droid
 			/* Retrieving necesary data */
 			_viewModel = (LoginViewModel)ViewModel;
 			_requestAccessButton = FindViewById<Button>(Resource.Id.loginButton);
-			var registerButton = FindViewById<Button>(Resource.Id.register);
+			_registerButton = FindViewById<Button>(Resource.Id.register);
 
 			GoogleApiClientBuilder builder = new GoogleApiClientBuilder(this);
 			builder.AddConnectionCallbacks(this);
@@ -291,7 +292,7 @@ namespace KangouMessenger.Droid
 					}
 				});
 			};
-			registerButton.Click += delegate {
+			_registerButton.Click += delegate {
 				//Intent browserIntent = new Intent(Intent.ActionView, Android.Net.Uri.Parse("https://registro.kangou.mx"));
 				//StartActivity(browserIntent);
 				//Rivets.AppLinks.Navigator.Navigate("https://registro.kangou.mx");
@@ -313,6 +314,8 @@ namespace KangouMessenger.Droid
 					_fbLoginButton.Visibility = ViewStates.Visible;
 					_fbLoginButton.Enabled = true;
 				}
+				_registerButton.Visibility = ViewStates.Visible;
+				_registerButton.Enabled = true;
 
 			} else {
 				_googleLoginButton.Visibility = ViewStates.Invisible;
@@ -321,6 +324,8 @@ namespace KangouMessenger.Droid
 					_fbLoginButton.Visibility = ViewStates.Invisible;
 					_fbLoginButton.Enabled = false;
 				}
+				_registerButton.Visibility = ViewStates.Invisible;
+				_registerButton.Enabled = false;
 			}
 		}
 

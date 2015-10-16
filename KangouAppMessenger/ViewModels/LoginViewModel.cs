@@ -27,6 +27,7 @@ namespace KangouMessenger.Core
 				_password = courierData.Password;
 			}
 			#endif
+			GeoJsonParser.LoadData();
 		}
 
 		private string _email;
@@ -89,8 +90,7 @@ namespace KangouMessenger.Core
 		}
 		private void DoOpenSignupViewCommand ()
 		{
-			//ShowViewModel<SignupViewModel>();   
-			ShowViewModel<FormRegisterCourierViewModel>(new FormRegisterParameter() { CourierDataSerialized = "{}" });
+			ShowViewModel<SignupViewModel>();   
 		}
 
 		public void RetrieveUserId(string provider, string providerDataId, Action<bool, string> callback){

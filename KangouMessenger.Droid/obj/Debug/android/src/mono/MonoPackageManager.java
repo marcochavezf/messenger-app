@@ -109,6 +109,16 @@ class MonoPackageManager_Resources {
 		"Xamarin.Facebook.dll",
 		"Xamarin.Android.Support.v7.AppCompat.dll",
 		"Xamarin.GooglePlayServices.Plus.dll",
+		"PCLStorage.dll",
+		"PCLStorage.Abstractions.dll",
+		"PCLCrypto.dll",
+		"Validation.dll",
+		"System.Net.Http.Primitives.dll",
+		"System.Net.Http.Extensions.dll",
+		"AWSSDK.Core.dll",
+		"AWSSDK.S3.dll",
+		"AWSSDK.SecurityToken.dll",
+		"AWSSDK.CognitoIdentity.dll",
 		"KangouAppMessenger.dll",
 		"System.Collections.Concurrent.dll",
 		"System.Collections.dll",
@@ -159,5 +169,5 @@ class MonoPackageManager_Resources {
 	};
 	public static final String[] Dependencies = new String[]{
 	};
-	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_22";
+	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_23";
 }

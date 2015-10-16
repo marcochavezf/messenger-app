@@ -1,5 +1,5 @@
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/obj/Release/.NETPortable,Version=v4.5,Profile=Profile78.AssemblyAttribute.cs
-/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/obj/Release/KangouAppMessenger.Helpers.GeoJsonFiles.colonies.cdmx.geojson
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/obj/Release/KangouMessenger.Core.Helpers.GeoJsonFiles.colonies.cdmx.geojson
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/KangouAppMessenger.dll.mdb
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/KangouAppMessenger.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/obj/Release/KangouAppMessenger.dll
@@ -13,3 +13,14 @@
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/ModernHttpClient.Portable.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Newtonsoft.Json.dll
 /Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Xamarin.Insights.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/System.Net.Http.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/System.Net.Http.Primitives.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/System.Net.Http.Extensions.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/PCLStorage.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/PCLStorage.Abstractions.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/PCLCrypto.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/AWSSDK.S3.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/Validation.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/AWSSDK.Core.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/AWSSDK.SecurityToken.dll
+/Users/marcochavezf/GitHub/messenger-app/KangouAppMessenger/bin/Release/AWSSDK.CognitoIdentity.dll
