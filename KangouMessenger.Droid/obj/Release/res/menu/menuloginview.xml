@@ -1,1 +1,0 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android"><item android:id="@+id/shareInFacebook" android:title="Invitar amigos en Facebook" /><item android:id="@+id/shareInGooglePlus" android:title="Invitar amigos en Google+" /><item android:id="@+id/kangouBook" android:title="Kangou Book" /></menu>
