@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-using Xamarin.Forms;
+﻿using AppCreator.Pages;
+using Kangou.ViewModels;
 
 namespace Kangou.Pages {
-	public partial class NewOrderPage : ContentPage {
+	public partial class NewOrderPage : BasePage<NewOrderViewModel> {
 		public NewOrderPage() {
 			InitializeComponent();
 		}

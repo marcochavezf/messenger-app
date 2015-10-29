@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-using Xamarin.Forms;
+﻿using AppCreator.Pages;
+using Kangou.ViewModels;
 
 namespace Kangou.Pages {
-	public partial class ProfilePage : ContentPage {
+	public partial class ProfilePage : BasePage<ProfileViewModel> {
 		public ProfilePage() {
 			InitializeComponent();
 		}
