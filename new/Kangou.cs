@@ -7,8 +7,10 @@ using AppCreator.UI.Pages;
 namespace Kangou {
 	public class App : Application {
 		public App() {
-			MainPage = new WelcomePage();
+			MainPage = new NewOrderPage();
 			return;
+
+			MainPage = new WelcomePage();
 			MainPage = new CompleteProfilePage();
 			MainPage = new RegisterPage();
 			MainPage = new LoginPage();

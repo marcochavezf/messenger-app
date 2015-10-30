@@ -10,11 +10,43 @@
 	xmlns:am="clr-namespace:AppCreator.Markup;assembly=AppCreator"
 	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
 	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
-	x:Class="Kangou.Pages.WelcomePage">
+	x:Class="Kangou.Pages.WelcomePage"
+	AddStatusBarPadding="True">
 	<StackLayout
 		Orientation="Vertical"
-		Padding="0"
-		Spacing="0">
-		<!-- Your content here -->
+		Padding="15, 50"
+		Spacing="15">
+		<accu:VectorIcon
+			Icon="fa-check"
+			Color="00FF00"
+			Size="100"
+			HorizontalOptions="Center" />
+		<Label
+			Text="Bienvenido a bordo Kangou!"
+			FontSize="16"
+			HorizontalOptions="Center" />
+		<Label
+			Text="Haz finalizado tu pre-registro con exito. Que sigue?"
+			HorizontalOptions="Center" />
+		<Label
+			Text="- Espera el correo con la fecha de la proxima capacitacion."
+			HorizontalOptions="Center" />
+		<Label
+			Text="- Espera el correo confirmando la activacion de tu cuenta."
+			HorizontalOptions="Center" />
+		<acc:Spacer
+			Space="50" />
+		<Label
+			Text="Unete a la comunidad Kangou"
+			HorizontalOptions="Center"
+			FontAttributes="Bold" />
+		<Label
+			Text="Nuestra comunidad es lo mas importante. Unete a ella y comparte con nosotros la experiencia de ser un Kangou."
+			HorizontalOptions="Center" />
+		<Button
+			BackgroundColor="#3B5998"
+			Text="Comunidad Kangou en Facebook"
+			Command="{Binding FacebookCommand}"
+			HorizontalOptions="FillAndExpand" />
 	</StackLayout>
 </acp:BasePage>
