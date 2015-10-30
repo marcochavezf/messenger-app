@@ -68,6 +68,8 @@ namespace KangouMessenger.Core
 		public string username { get; set; }
 		public string displayName { get; set; }
 		public string phoneNumber { get; set; }
+		public string birthday { get; set; }
+		public string gender { get; set; }
 		public string provider { get; set; }
 		public string photo { get; set; }
 		public ProviderData providerData { get; set; }

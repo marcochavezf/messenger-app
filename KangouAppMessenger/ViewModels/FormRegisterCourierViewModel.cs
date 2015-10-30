@@ -119,9 +119,27 @@ namespace KangouMessenger.Core
 			}
 		} 
 
+		public string Birthday { 
+			get { return _courierData.birthday; }
+			set {
+				_courierData.birthday = value;
+				RaisePropertyChanged (() => Birthday);
+			}
+		}
+
+		public string Gender { 
+			get { return _courierData.gender; }
+			set {
+				_courierData.gender = value;
+				RaisePropertyChanged (() => Gender);
+			}
+		}
+
 		public string OperativeSystem {
 			set { _courierData.dataCourier.phoneOperativeSystem = value; }
 		}
+
+
 
 		public async Task<bool>  SaveImageToS3(string fileName, string path, int requestCode){
 			var s3Client = S3Utils.S3Client;
@@ -294,16 +312,22 @@ namespace KangouMessenger.Core
 
 		public string MissedFields(){
 			var missedFields = "";
+			if (String.IsNullOrWhiteSpace(_courierData.birthday)) {
+				missedFields += "\n - Fecha de nacimiento";
+			}
+			if (String.IsNullOrWhiteSpace(_courierData.gender)) {
+				missedFields += "\n - Género";
+			}
 			if (_courierData.legalAddress == null) {
 				missedFields += "\n - Ciudad";
 			}
 			if (String.IsNullOrWhiteSpace(_courierData.photo)) {
 				missedFields += "\n - Foto de perfil (selfie)";
 			}
-			if (_courierData.dataCourier.files.identification == null) {
+			if (_courierData.dataCourier.files.identification == null || _courierData.dataCourier.files.identification.Count==0) {
 				missedFields += "\n - Identificación (IFE o Pasaporte)";
 			}
-			if (_courierData.dataCourier.files.addressProof == null) {
+			if (_courierData.dataCourier.files.addressProof == null || _courierData.dataCourier.files.addressProof.Count==0) {
 				missedFields += "\n - Comprobante de domicilio";
 			}
 			if (String.IsNullOrWhiteSpace(_courierData.dataCourier.cardToDeposit.number)) {

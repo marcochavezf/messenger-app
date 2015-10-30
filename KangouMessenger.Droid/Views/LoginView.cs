@@ -39,7 +39,7 @@ namespace KangouMessenger.Droid
 	[Activity(Label = "Iniciar Sesión", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait, LaunchMode = LaunchMode.SingleTask)]
 	[IntentFilter(new [] {Android.Content.Intent.ActionView }, DataScheme="kangou", DataHost="courier", Categories=new [] { Intent.CategoryDefault, Intent.CategoryBrowsable })]
 	[IntentFilter(new [] {Android.Content.Intent.ActionView }, DataScheme="https", DataHost="registro.kangou.mx", Categories=new [] { Intent.CategoryDefault, Intent.CategoryBrowsable })]
-	public class LoginView : BusyMvxActivity, IGoogleApiClientConnectionCallbacks, IGoogleApiClientOnConnectionFailedListener
+	public class LoginView : BusyMvxActivity, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
     {
 		public static bool IS_OPEN_FROM_PUSH_NOTIFICATION = false;
 
@@ -53,7 +53,7 @@ namespace KangouMessenger.Droid
 		private LoginViewModel _viewModel;
 
 		//Google Variables
-		private IGoogleApiClient _mGoogleApiClient;
+		private GoogleApiClient _mGoogleApiClient;
 		private ConnectionResult _connectionResult;
 		private SignInButton _googleLoginButton;
 		private bool mIntentInProgress;
@@ -194,7 +194,7 @@ namespace KangouMessenger.Droid
 			_requestAccessButton = FindViewById<Button>(Resource.Id.loginButton);
 			_registerButton = FindViewById<Button>(Resource.Id.register);
 
-			GoogleApiClientBuilder builder = new GoogleApiClientBuilder(this);
+			GoogleApiClient.Builder builder = new GoogleApiClient.Builder(this);
 			builder.AddConnectionCallbacks(this);
 			builder.AddOnConnectionFailedListener(this);
 			builder.AddApi(PlusClass.API);

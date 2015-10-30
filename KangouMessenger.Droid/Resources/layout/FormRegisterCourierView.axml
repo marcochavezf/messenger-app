@@ -116,6 +116,67 @@
                 android:layout_alignRight="@id/autoCompleteCity"
                 android:layout_marginRight="5dp" />
         </RelativeLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tableBirthday">
+            <TableRow
+                android:id="@+id/tableRowBirthday"
+                android:gravity="left">
+                <TextView
+                    android:text="Fecha de nacimiento:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/labelTextView"
+                    android:layout_marginLeft="20dp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/dateTextView"
+                    android:layout_marginLeft="10dp"
+                    local:MvxBind="Text Birthday" />
+            </TableRow>
+        </TableLayout>
+        <Button
+            android:text="Cambiar fecha de nacimiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dateButton"
+            android:textAllCaps="false"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:id="@+id/tableLayout1">
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:gravity="left">
+                <TextView
+                    android:text="Género:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView5"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="10dp" />
+                <RadioButton
+                    android:text="Hombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/maleGender"
+                    android:layout_marginLeft="15dp" />
+                <RadioButton
+                    android:text="Mujer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/femaleGender"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp" />
+            </TableRow>
+        </TableLayout>
         <TextView
             android:text="Foto (sonríe, que la comunidad te conozca)  "
             android:layout_width="wrap_content"

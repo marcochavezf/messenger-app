@@ -42,14 +42,14 @@ namespace KangouMessenger.Droid
 {
 	[Activity(Label = "Iniciar Sesión", Icon="@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait, LaunchMode = LaunchMode.SingleTask)]
 	[IntentFilter(new [] {Android.Content.Intent.ActionView }, DataScheme="kangou", DataHost="courier", Categories=new [] { Intent.CategoryDefault, Intent.CategoryBrowsable })]
-	public class SignupView : BusyMvxActivity, IGoogleApiClientConnectionCallbacks, IGoogleApiClientOnConnectionFailedListener
+	public class SignupView : BusyMvxActivity, GoogleApiClient.IConnectionCallbacks, GoogleApiClient.IOnConnectionFailedListener
     {
 		//General Variables
 		private AlertDialog.Builder _generalAlertDialog;
 		private SignupViewModel _viewModel;
 
 		//Google Variables
-		private IGoogleApiClient _mGoogleApiClient;
+		private GoogleApiClient _mGoogleApiClient;
 		private ConnectionResult _connectionResult;
 		private SignInButton _googleLoginButton;
 		private bool mIntentInProgress;
@@ -139,7 +139,7 @@ namespace KangouMessenger.Droid
 			/* Ends Facebook Configuration */
 
 			/* Begins Google Plus Configuration */
-			GoogleApiClientBuilder builder = new GoogleApiClientBuilder(this);
+			GoogleApiClient.Builder builder = new GoogleApiClient.Builder(this);
 			builder.AddConnectionCallbacks(this);
 			builder.AddOnConnectionFailedListener(this);
 			builder.AddApi(PlusClass.API);

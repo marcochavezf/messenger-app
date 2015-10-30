@@ -27,6 +27,7 @@ using Amazon;
 using Amazon.S3.Model;
 using Amazon.S3.Transfer;
 using System.Net.Http;
+using Java.Util;
 
 namespace KangouMessenger.Droid
 {
@@ -38,15 +39,18 @@ namespace KangouMessenger.Droid
 			public static File _dir;     
 			public static Bitmap bitmap;
 		}
+		const int DATE_DIALOG_ID = 0;
 
 		private FormRegisterCourierViewModel _viewModel;
 		private List<Prediction> _lastPredictions;
+		private volatile bool _isLoadingImage;
 
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
 			SetContentView(Resource.Layout.FormRegisterCourierView);
 			_viewModel = (FormRegisterCourierViewModel)ViewModel;
+			_isLoadingImage = false;
 
 			Title = "Registro";
 
@@ -108,6 +112,30 @@ namespace KangouMessenger.Droid
 			termsAndConditions.Click += (object sender, EventArgs e) => {
 				OpenWebPage("https://kangou.mx/contenido/terminos");
 			};
+
+			//Birthday Button
+			var pickDate = FindViewById<Button> (Resource.Id.dateButton);
+			pickDate.Click += delegate { ShowDialog (DATE_DIALOG_ID); };
+
+			//Gender Radio Buttons
+			var maleRadioButton = FindViewById<RadioButton> (Resource.Id.maleGender);
+			var femaleRadioButton = FindViewById<RadioButton> (Resource.Id.femaleGender);
+			maleRadioButton.Click += (object sender, EventArgs e) => {
+				femaleRadioButton.Checked = false;
+				_viewModel.Gender = "Hombre";
+			};
+			femaleRadioButton.Click += (object sender, EventArgs e) => {
+				maleRadioButton.Checked = false;
+				_viewModel.Gender = "Mujer";
+			};
+			switch (_viewModel.Gender) {
+			case "Hombre":
+				maleRadioButton.Checked = true;
+				break;
+			case "Mujer":
+				femaleRadioButton.Checked = true;
+				break;
+			}
 
 			_viewModel.OperativeSystem = String.Format("Android {0}", Android.OS.Build.VERSION.Release);
 		}
@@ -272,6 +300,15 @@ namespace KangouMessenger.Droid
 		}
 
 		private void ClickPhotosButton(int requestCode){
+			var isLoadingImageDialog = new AlertDialog.Builder (this);
+			isLoadingImageDialog.SetTitle ("Cargando imagen");
+			isLoadingImageDialog.SetMessage ("Se está cargando una imagen, favor de esperar a que termine");
+			isLoadingImageDialog.SetNeutralButton ("Aceptar", (object sender, DialogClickEventArgs args)=>{});
+			if (_isLoadingImage) {
+				isLoadingImageDialog.Show ();
+				return;
+			}
+
 			Intent intent = new Intent (MediaStore.ActionImageCapture);
 			App._file = new File (App._dir, String.Format ("{0}.jpg", Guid.NewGuid ()));
 			intent.PutExtra (MediaStore.ExtraOutput, Uri.FromFile (App._file));
@@ -497,6 +534,29 @@ namespace KangouMessenger.Droid
 		 *  Override Methods
 		 ************************/
 
+		protected override Dialog OnCreateDialog (int id)
+		{
+			switch (id) {
+			case DATE_DIALOG_ID:
+				int year, month, day;
+				if (String.IsNullOrWhiteSpace (_viewModel.Birthday)) {
+					var date = DateTime.Now;
+					year = date.Year;
+					month = date.Month;
+					day = date.Day;
+				} else {
+					string[] birthday = _viewModel.Birthday.Split('/');
+					Int32.TryParse(birthday [0], out day);
+					Int32.TryParse(birthday [1], out month);
+					Int32.TryParse(birthday [2], out year);
+				}
+				return new DatePickerDialog (this, (_, e)=>{
+					_viewModel.Birthday = e.Date.ToString ("dd/MM/yyyy");
+				}, year, month-1, day); 			
+			}
+			return null;
+		}
+
 		protected override async void OnActivityResult(int requestCode, Android.App.Result resultCode, Intent data)
 		{
 			base.OnActivityResult(requestCode, resultCode, data);
@@ -530,7 +590,10 @@ namespace KangouMessenger.Droid
 
 			var path = App._file.AbsolutePath;
 			var fileName = App._file.Name;
+
+			_isLoadingImage = true;
 			var isImageSaved = await _viewModel.SaveImageToS3 (fileName, path, requestCode);
+			_isLoadingImage = false;
 
 			viewSwitcher.ShowPrevious ();
 
