@@ -10,11 +10,57 @@
 	xmlns:am="clr-namespace:AppCreator.Markup;assembly=AppCreator"
 	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
 	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
-	x:Class="Kangou.Pages.NewOrderPage">
+	xmlns:c="clr-namespace:Kangou.Custom;assembly=Kangou"
+	x:Class="Kangou.Pages.NewOrderPage"
+	Title="Nuevo Kangou">
 	<StackLayout
 		Orientation="Vertical"
-		Padding="0"
-		Spacing="0">
-		<!-- Your content here -->
+		Padding="20"
+		Spacing="30">
+		<c:SeparatorText
+			Text="Donde recoger?" />
+		<StackLayout
+			Padding="20"
+			Spacing="0"
+			BackgroundColor="#CCCCCC">
+			<Label
+				Text="Bahia de todos los Santos #74&#xD;&#xA;Col. Veronica Anzures&#xD;&#xA;Del. Miguel Hidalgo&#xD;&#xA;CP: 11300" />
+		</StackLayout>
+		<c:SeparatorText
+			Text="Donde entregar?" />
+		<StackLayout
+			Padding="20"
+			Spacing="0"
+			BackgroundColor="#CCCCCC">
+			<Label
+				Text="Rio Tiber #27&#xD;&#xA;Col Cuauhtemoc&#xD;&#xA;Del Cuauhtemoc&#xD;&#xA;CP: 06500" />
+		</StackLayout>
+		<StackLayout
+			Padding="0"
+			Spacing="0"
+			Orientation="Horizontal">
+			<Label
+				Text="Ganancia"
+				HorizontalOptions="StartAndExpand" />
+			<Label
+				Text="$ 15 MXN"
+				HorizontalOptions="StartAndExpand"
+				FontAttributes="Bold" />
+		</StackLayout>
+		<acc:Spacer
+			Space="100" />
+		<StackLayout
+			Padding="0"
+			Spacing="0"
+			Orientation="Horizontal">
+			<Button
+				Text="Cancelar"
+				Command="{Binding CancelCommand}"
+				HorizontalOptions="StartAndExpand" />
+			<Button
+				Text="Aceptar"
+				Command="{Binding OkCommand}"
+				HorizontalOptions="EndAndExpand" />
+		</StackLayout>
 	</StackLayout>
 </acp:BasePage>
