@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<acp:BasePage
+	x:TypeArguments="v:MenuViewModel"
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:acp="clr-namespace:AppCreator.Pages;assembly=AppCreator"
+	xmlns:ac="clr-namespace:AppCreator.Custom;assembly=AppCreator"
+	xmlns:acc="clr-namespace:AppCreator.UI.Controls;assembly=AppCreator.UI"
+	xmlns:acvm="clr-namespace:AppCreator.ViewModels;assembly=AppCreator"
+	xmlns:accu="clr-namespace:AppCreator.Custom;assembly=AppCreator"
+	xmlns:am="clr-namespace:AppCreator.Markup;assembly=AppCreator"
+	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
+	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
+	xmlns:c="clr-namespace:Kangou.Custom;assembly=Kangou"
+	x:Class="Kangou.Pages.MenuPage">
+	<RelativeLayout
+		HorizontalOptions="FillAndExpand"
+		VerticalOptions="FillAndExpand">
+		<StackLayout
+			Orientation="Vertical"
+			Padding="0"
+			Spacing="10">
+			<c:RoundedImage
+				HorizontalOptions="Center" />
+			<acc:Spacer
+				Space="50" />
+			<Label
+				Text="Raul Jimenez"
+				FontSize="14"
+				HorizontalOptions="Center" />
+			<Label
+				Text="Rookie"
+				FontSize="10"
+				HorizontalOptions="Center" />
+			<acc:Spacer
+				Space="150" />
+			<Grid
+				Padding="0">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="2.5*" />
+					<ColumnDefinition
+						Width="10*" />
+					<ColumnDefinition
+						Width="2.5*" />
+					<ColumnDefinition
+						Width="75*" />
+					<ColumnDefinition
+						Width="2.5*" />
+					<ColumnDefinition
+						Width="10*" />
+				</Grid.ColumnDefinitions>
+				<ac:VectorIcon
+					Grid.Column="1"
+					Size="20"
+					Icon="fa-book"
+					Color="000000">
+				</ac:VectorIcon>
+				<Label
+					Text="Kangou Book"
+					Grid.Column="3">
+				</Label>
+				<ac:VectorIcon
+					Grid.Column="5"
+					Size="20"
+					Icon="fa-angle-right"
+					Color="000000">
+				</ac:VectorIcon>
+			</Grid>
+			<Grid
+				Padding="0">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="2.5*" />
+					<ColumnDefinition
+						Width="10*" />
+					<ColumnDefinition
+						Width="2.5*" />
+					<ColumnDefinition
+						Width="75*" />
+					<ColumnDefinition
+						Width="2.5*" />
+					<ColumnDefinition
+						Width="10*" />
+				</Grid.ColumnDefinitions>
+				<ac:VectorIcon
+					Grid.Column="1"
+					Size="20"
+					Icon="fa-credit-card"
+					Color="000000">
+				</ac:VectorIcon>
+				<Label
+					Text="Kangou ID"
+					Grid.Column="3">
+				</Label>
+				<ac:VectorIcon
+					Grid.Column="5"
+					Size="20"
+					Icon="fa-angle-right"
+					Color="000000">
+				</ac:VectorIcon>
+			</Grid>
+		</StackLayout>
+		<StackLayout
+			Orientation="Horizontal"
+			BackgroundColor="Red"
+			Padding="0"
+			Spacing="0"
+			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.05}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.95}"
+			RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.025}"
+			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.94}">
+		</StackLayout>
+	</RelativeLayout>
+</acp:BasePage>

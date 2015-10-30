@@ -9,12 +9,121 @@
 	xmlns:accu="clr-namespace:AppCreator.Custom;assembly=AppCreator"
 	xmlns:am="clr-namespace:AppCreator.Markup;assembly=AppCreator"
 	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
+	xmlns:c="clr-namespace:Kangou.Custom;assembly=Kangou"
 	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
 	x:Class="Kangou.Pages.CompleteProfilePage">
-	<StackLayout
-		Orientation="Vertical"
-		Padding="0"
-		Spacing="0">
-		<!-- Your content here -->
-	</StackLayout>
+	<ScrollView>
+		<StackLayout
+			Orientation="Vertical"
+			Padding="30"
+			Spacing="5">
+			<Label
+				Text="Completa tu perfil"
+				HorizontalOptions="CenterAndExpand" />
+			<acc:Spacer
+				Space="30" />
+			<c:SeparatorText
+				Text="Datos personales" />
+			<acc:Spacer
+				Space="30" />
+			<Label
+				Text="Nombre(s)"
+				HorizontalOptions="Start" />
+			<Entry
+				Placeholder=""
+				Text="{Binding Name}" />
+			<acc:Spacer
+				Space="10" />
+			<Label
+				Text="Apellido(s)"
+				HorizontalOptions="Start" />
+			<Entry
+				Placeholder=""
+				Text="{Binding Surnames}" />
+			<acc:Spacer
+				Space="10" />
+			<Label
+				Text="Telefono celular"
+				HorizontalOptions="Start" />
+			<Entry
+				Placeholder=""
+				Text="{Binding Cellphone}" />
+			<acc:Spacer
+				Space="10" />
+			<Label
+				Text="Correo electronico"
+				HorizontalOptions="Start" />
+			<Entry
+				Placeholder=""
+				Text="{Binding Email}" />
+			<acc:Spacer
+				Space="10" />
+			<Label
+				Text="Pais"
+				HorizontalOptions="Start" />
+			<acc:BindablePicker
+				ItemsSource="{Binding Countries}"
+				SelectedItem="{Binding Country}" />
+			<acc:Spacer
+				Space="10" />
+			<Label
+				Text="Estado"
+				HorizontalOptions="Start" />
+			<acc:BindablePicker
+				ItemsSource="{Binding States}"
+				SelectedItem="{Binding State}" />
+			<acc:Spacer
+				Space="10" />
+			<c:SeparatorText
+				Text="Foto" />
+			<Image
+				HeightRequest="100"
+				HorizontalOptions="Center"
+				Source="http://lorempixel.com/400/200/cats/Foto/" />
+			<c:SeparatorText
+				Text="Comprobantes" />
+			<Image
+				HeightRequest="100"
+				HorizontalOptions="FillAndExpand"
+				Source="http://lorempixel.com/400/200/cats/La-INE/" />
+			<Button
+				Text="Echanos la poderosa, adjunta tu INE" />
+			<Image
+				HeightRequest="100"
+				HorizontalOptions="FillAndExpand"
+				Source="http://lorempixel.com/400/200/cats/Comprobante-Domicilio/" />
+			<Button
+				Text="Necesitamos saber donde vives..." />
+			<c:SeparatorText
+				Text="Donde te depositamos?" />
+			<Label
+				Text="Tarjeta Bancomer"
+				HorizontalOptions="Start" />
+			<Entry
+				Placeholder=""
+				Text="{Binding Card}" />
+			<acc:Spacer
+				Space="10" />
+			<c:SeparatorText
+				Text="Como te mueves?" />
+			<StackLayout
+				Orientation="Horizontal"
+				Padding="0"
+				Spacing="15">
+				<Image
+					HeightRequest="100"
+					Source="http://lorempixel.com/200/200/cats/Bici/" />
+				<Image
+					HeightRequest="100"
+					Source="http://lorempixel.com/200/200/cats/Moto/" />
+				<Image
+					HeightRequest="100"
+					Source="http://lorempixel.com/200/200/cats/Coche/" />
+			</StackLayout>
+			<c:SeparatorText
+				Text="Terminaste?" />
+			<Button
+				Text="Finalizar registro" />
+		</StackLayout>
+	</ScrollView>
 </acp:BasePage>

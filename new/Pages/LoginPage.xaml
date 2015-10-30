@@ -10,11 +10,34 @@
 	xmlns:am="clr-namespace:AppCreator.Markup;assembly=AppCreator"
 	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
 	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
+	AddStatusBarPadding="True"
 	x:Class="Kangou.Pages.LoginPage">
 	<StackLayout
 		Orientation="Vertical"
+		VerticalOptions="FillAndExpand"
+		HorizontalOptions="FillAndExpand"
 		Padding="0"
 		Spacing="0">
-		<!-- Your content here -->
+		<Label
+			Text="Inicia sesion"
+			HorizontalOptions="Center" />
+		<Button
+			Text="Iniciar con Facebook"
+			Command="{Binding FacebookCommand}"
+			HorizontalOptions="Center" />
+		<Button
+			Text="Iniciar con Google"
+			Command="{Binding GoogleCommand}"
+			HorizontalOptions="Center" />
+		<acc:Spacer
+			Space="50" />
+		<Label
+			Text="Inicia sesion"
+			HorizontalOptions="Center">
+			<Label.GestureRecognizers>
+				<TapGestureRecognizer
+					Command="{Binding RegisterCommand}" />
+			</Label.GestureRecognizers>
+		</Label>
 	</StackLayout>
 </acp:BasePage>

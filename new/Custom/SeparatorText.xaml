@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Grid
+	xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="Kangou.Custom.SeparatorText"
+	Padding="0"
+	HorizontalOptions="FillAndExpand"
+	HeightRequest="30">
+	<Grid.ColumnDefinitions>
+		<ColumnDefinition
+			Width="15*" />
+		<ColumnDefinition
+			Width="70*" />
+		<ColumnDefinition
+			Width="15*" />
+	</Grid.ColumnDefinitions>
+	<BoxView
+		Grid.Column="0"
+		Color="#CCCCCC"
+		HeightRequest="1"
+		VerticalOptions="Center" />
+	<Label
+		Grid.Column="1"
+		Text="{Binding Text}"
+		FontSize="12"
+		XAlign="Center"
+		YAlign="Center" />
+	<BoxView
+		Grid.Column="2"
+		Color="#CCCCCC"
+		HeightRequest="1"
+		VerticalOptions="Center" />
+</Grid>

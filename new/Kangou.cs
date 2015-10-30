@@ -1,34 +1,34 @@
 ﻿using System;
 
 using Xamarin.Forms;
+using Kangou.Pages;
+using AppCreator.UI.Pages;
 
 namespace Kangou {
 	public class App : Application {
 		public App() {
-			// The root page of your application
-			MainPage = new ContentPage {
-				Content = new StackLayout {
-					VerticalOptions = LayoutOptions.Center,
-					Children = {
-						new Label {
-							XAlign = TextAlignment.Center,
-							Text = "Welcome to Xamarin Forms!"
-						}
-					}
+			MainPage = new WelcomePage();
+			return;
+			MainPage = new CompleteProfilePage();
+			MainPage = new RegisterPage();
+			MainPage = new LoginPage();
+			MainPage = new MasterDetailPage {
+				Detail = new CustomNavPage(new HomePage()) { 
+					Title = "Kangou Mensajero",
+				},
+				Master = new MenuPage {
+					Title = "---"
 				}
 			};
 		}
 
 		protected override void OnStart() {
-			// Handle when your app starts
 		}
 
 		protected override void OnSleep() {
-			// Handle when your app sleeps
 		}
 
 		protected override void OnResume() {
-			// Handle when your app resumes
 		}
 	}
 }

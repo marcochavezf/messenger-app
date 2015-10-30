@@ -13,8 +13,34 @@
 	x:Class="Kangou.Pages.RegisterPage">
 	<StackLayout
 		Orientation="Vertical"
-		Padding="0"
-		Spacing="0">
-		<!-- Your content here -->
+		Padding="50"
+		Spacing="20">
+		<Label
+			Text="Kangourizate"
+			HorizontalOptions="CenterAndExpand" />
+		<Label
+			Text="Agiliza tu registro iniciando sesion con tu red social favorita"
+			HorizontalOptions="CenterAndExpand" />
+		<acc:Spacer
+			Space="30" />
+		<Button
+			Text="Usar mi cuenta de Google"
+			Command="{Binding GoogleCommand}"
+			HorizontalOptions="CenterAndExpand" />
+		<Button
+			Text="Usar mi cuenta de Facebook"
+			Command="{Binding FacebookCommand}"
+			HorizontalOptions="CenterAndExpand" />
+		<acc:Spacer
+			Space="30" />
+		<Label
+			Text="El registro con Gmail es mas rapido y facil."
+			HorizontalOptions="CenterAndExpand" />
+		<acc:Spacer
+			Space="90" />
+		<Label
+			Text="Aviso de privacidad"
+			HorizontalOptions="CenterAndExpand"
+			FontAttributes="Bold" />
 	</StackLayout>
 </acp:BasePage>

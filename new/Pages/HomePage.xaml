@@ -10,11 +10,21 @@
 	xmlns:am="clr-namespace:AppCreator.Markup;assembly=AppCreator"
 	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
 	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
+	xmlns:c="clr-namespace:Kangou.Custom;assembly=Kangou"
 	x:Class="Kangou.Pages.HomePage">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem
+			Text="ON"
+			Command="{Binding ToggleCommand}" />
+	</ContentPage.ToolbarItems>
 	<StackLayout
 		Orientation="Vertical"
 		Padding="0"
 		Spacing="0">
-		<!-- Your content here -->
+		<c:CustomMap
+			x:Name="Map"
+			IsShowingUser="True"
+			HorizontalOptions="FillAndExpand"
+			VerticalOptions="FillAndExpand" />
 	</StackLayout>
 </acp:BasePage>
