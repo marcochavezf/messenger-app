@@ -10,11 +10,71 @@
 	xmlns:am="clr-namespace:AppCreator.Markup;assembly=AppCreator"
 	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
 	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
+	xmlns:c="clr-namespace:Kangou.Custom;assembly=Kangou"
 	x:Class="Kangou.Pages.MapPage">
-	<StackLayout
-		Orientation="Vertical"
-		Padding="0"
-		Spacing="0">
-		<!-- Your content here -->
-	</StackLayout>
+	<ContentPage.ToolbarItems>
+		<ToolbarItem
+			Text="Detalles"
+			Command="{Binding ToggleCommand}" />
+	</ContentPage.ToolbarItems>
+	<RelativeLayout>
+		<c:CustomMap
+			x:Name="Map"
+			IsShowingUser="True"
+			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" />
+		<!--						RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.025}"
+			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.94}"-->
+		<StackLayout
+			x:Name="NoDetails"
+			Orientation="Vertical"
+			Padding="10"
+			Spacing="0"
+			BackgroundColor="#CCFFFFFF"
+			IsVisible="False"
+			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.25}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.90}"
+			RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.05}"
+			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.05}">
+			<Label
+				Text="Juan Perez Anaya"
+				FontAttributes="Bold" />
+			<Label
+				Text="Bahia de todos los Santos #74&#xD;&#xA;Col. Veronica Anzures&#xD;&#xA;Del. Miguel Hidalgo&#xD;&#xA;CP: 11300" />
+		</StackLayout>
+		<StackLayout
+			x:Name="WithDetails"
+			Orientation="Vertical"
+			Padding="10"
+			Spacing="0"
+			BackgroundColor="#CCFFFFFF"
+			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.75}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.90}"
+			RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.05}"
+			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.05}">
+			<Label
+				Text="Juan Perez Anaya"
+				FontAttributes="Bold" />
+			<Label
+				Text="Bahia de todos los Santos #74&#xD;&#xA;Col. Veronica Anzures&#xD;&#xA;Del. Miguel Hidalgo&#xD;&#xA;CP: 11300" />
+			<Label
+				Text="Referencia"
+				FontAttributes="Bold" />
+			<Label
+				Text="Porton negro frente a farmacia" />
+			<Label
+				Text="Orden"
+				FontAttributes="Bold" />
+			<Label
+				Text="5 tacos al pastor sin cebolla&#xD;&#xA;1 agua de horchata&#xD;&#xA;1 orden de frijoles" />
+		</StackLayout>
+		<Button
+			Text="Ya estoy aqui"
+			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.09}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.90}"
+			RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.05}"
+			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.88}"
+			BackgroundColor="#FF6600"
+			Command="{Binding DoneCommand}" />
+	</RelativeLayout>
 </acp:BasePage>
