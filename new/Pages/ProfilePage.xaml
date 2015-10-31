@@ -10,11 +10,48 @@
 	xmlns:am="clr-namespace:AppCreator.Markup;assembly=AppCreator"
 	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
 	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
+	xmlns:c="clr-namespace:Kangou.Custom;assembly=Kangou"
 	x:Class="Kangou.Pages.ProfilePage">
 	<StackLayout
 		Orientation="Vertical"
-		Padding="0"
-		Spacing="0">
-		<!-- Your content here -->
+		Padding="0, 50, 0, 0"
+		Spacing="10">
+		<c:RoundedImage
+			Source="http://lorempixel.com/200/200/cats/Foto/"
+			HorizontalOptions="Center" />
+		<acc:Spacer
+			Space="10" />
+		<Label
+			Text="Raul Jimenez"
+			FontSize="14"
+			HorizontalOptions="Center" />
+		<Label
+			Text="Rookie"
+			FontSize="10"
+			HorizontalOptions="Center" />
+		<acc:Spacer
+			Space="30" />
+		<StackLayout
+			Orientation="Vertical"
+			Padding="0"
+			Spacing="10">
+		</StackLayout>
+		<StackLayout
+			Orientation="Horizontal"
+			HorizontalOptions="CenterAndExpand"
+			Padding="0"
+			Spacing="30">
+			<Image
+				Source="http://lorempixel.com/300/200/cats/Correos/" />
+			<Image
+				Source="http://lorempixel.com/300/200/cats/Kangou/" />
+		</StackLayout>
+		<acc:Spacer
+			Space="30" />
+		<Label
+			Text="Kangou autorizado"
+			FontSize="20"
+			FontAttributes="Bold"
+			HorizontalOptions="Center" />
 	</StackLayout>
 </acp:BasePage>

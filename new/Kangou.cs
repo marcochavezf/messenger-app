@@ -7,9 +7,18 @@ using AppCreator.UI.Pages;
 namespace Kangou {
 	public class App : Application {
 		public App() {
-			MainPage = new CustomNavPage(new SignPage());
+			MainPage = new MasterDetailPage {
+				Detail = new CustomNavPage(new HomePage()) { 
+					Title = "Kangou Mensajero",
+				},
+				Master = new MenuPage {
+					Title = "---"
+				}
+			};
 			return;
 
+			MainPage = new CustomNavPage(new ProfilePage());
+			MainPage = new CustomNavPage(new SignPage());
 			MainPage = new CustomNavPage(new WaitingPage(true));
 			MainPage = new CustomNavPage(new MapPage(true));
 			MainPage = new CustomNavPage(new NewOrderPage());
