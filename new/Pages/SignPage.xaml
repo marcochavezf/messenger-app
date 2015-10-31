@@ -10,11 +10,21 @@
 	xmlns:am="clr-namespace:AppCreator.Markup;assembly=AppCreator"
 	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
 	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
-	x:Class="Kangou.Pages.SignPage">
-	<StackLayout
-		Orientation="Vertical"
-		Padding="0"
-		Spacing="0">
-		<!-- Your content here -->
-	</StackLayout>
+	xmlns:acr="clr-namespace:Acr.XamForms.SignaturePad;assembly=Acr.XamForms.SignaturePad"
+	x:Class="Kangou.Pages.SignPage"
+	Title="Firma del cliente">
+	<ContentPage.ToolbarItems>
+		<ToolbarItem
+			Text="ENVIAR"
+			Command="{Binding SendCommand}" />
+	</ContentPage.ToolbarItems>
+	<acr:SignaturePadView
+		x:Name="padView"
+		BackgroundColor="#EEEEEE"
+		CaptionText="Por favor firma"
+		CaptionTextColor="Black"
+		StrokeColor="Black"
+		StrokeWidth="2"
+		HorizontalOptions="FillAndExpand"
+		VerticalOptions="FillAndExpand" />
 </acp:BasePage>

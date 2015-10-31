@@ -159,6 +159,9 @@
     <Reference Include="Xamarin.Forms.Maps">
       <HintPath>packages\Xamarin.Forms.Maps.1.5.1.6471\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.Maps.dll</HintPath>
     </Reference>
+    <Reference Include="Acr.XamForms.SignaturePad">
+      <HintPath>packages\Acr.XamForms.SignaturePad.2.0.5\lib\portable-win+net45+MonoAndroid10+Xamarin.iOS10+wp8\Acr.XamForms.SignaturePad.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

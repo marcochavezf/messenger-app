@@ -7,9 +7,10 @@ using AppCreator.UI.Pages;
 namespace Kangou {
 	public class App : Application {
 		public App() {
-			MainPage = new CustomNavPage(new WaitingPage(true));
+			MainPage = new CustomNavPage(new SignPage());
 			return;
 
+			MainPage = new CustomNavPage(new WaitingPage(true));
 			MainPage = new CustomNavPage(new MapPage(true));
 			MainPage = new CustomNavPage(new NewOrderPage());
 			MainPage = new WelcomePage();

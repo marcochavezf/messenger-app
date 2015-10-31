@@ -153,6 +153,15 @@
     <Reference Include="Xamarin.Forms.Maps">
       <HintPath>..\packages\Xamarin.Forms.Maps.1.5.1.6471\lib\Xamarin.iOS10\Xamarin.Forms.Maps.dll</HintPath>
     </Reference>
+    <Reference Include="Acr.XamForms.SignaturePad">
+      <HintPath>..\packages\Acr.XamForms.SignaturePad.2.0.5\lib\Xamarin.iOS10\Acr.XamForms.SignaturePad.dll</HintPath>
+    </Reference>
+    <Reference Include="Acr.XamForms.SignaturePad.iOS">
+      <HintPath>..\packages\Acr.XamForms.SignaturePad.2.0.5\lib\Xamarin.iOS10\Acr.XamForms.SignaturePad.iOS.dll</HintPath>
+    </Reference>
+    <Reference Include="SignaturePad.iOS">
+      <HintPath>..\packages\Acr.XamForms.SignaturePad.2.0.5\lib\Xamarin.iOS10\SignaturePad.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Kangou.csproj">
@@ -194,6 +203,7 @@
     <Compile Include="AppDelegate.cs" />
     <Compile Include="AsyncErrorHandler.cs" />
     <Compile Include="Initializers\Init.cs" />
+    <Compile Include="Bootstrap\SignaturePadBootstrap.cs" />
   </ItemGroup>
   <ItemGroup>
     <ITunesArtwork Include="ITunesArtwork" />
