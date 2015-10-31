@@ -11,10 +11,67 @@
 	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
 	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
 	x:Class="Kangou.Pages.WaitingPage">
-	<StackLayout
-		Orientation="Vertical"
-		Padding="0"
-		Spacing="0">
-		<!-- Your content here -->
-	</StackLayout>
+	<RelativeLayout
+		HorizontalOptions="FillAndExpand"
+		VerticalOptions="FillAndExpand">
+		<StackLayout
+			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+			Orientation="Vertical"
+			Padding="20"
+			Spacing="0">
+			<StackLayout
+				HorizontalOptions="CenterAndExpand"
+				Orientation="Horizontal"
+				Padding="0"
+				Spacing="20">
+				<accu:VectorIcon
+					Icon="fa-clock-o"
+					Color="CCCCCC"
+					Size="30" />
+				<Label
+					Text="Tiempo de espera"
+					YAlign="Center" />
+			</StackLayout>
+			<acc:Spacer
+				Space="30" />
+			<StackLayout
+				Orientation="Vertical"
+				Padding="15"
+				Spacing="0"
+				HorizontalOptions="FillAndExpand"
+				BackgroundColor="#EEEEEE">
+				<StackLayout
+					Orientation="Horizontal"
+					Padding="0"
+					Spacing="0">
+					<Label
+						Text="Raul Jimenez"
+						HorizontalOptions="StartAndExpand" />
+					<Label
+						Text="(55) 3800-4715"
+						HorizontalOptions="EndAndExpand" />
+				</StackLayout>
+				<acc:Spacer
+					Space="20" />
+				<Button
+					BackgroundColor="#CCCCCC"
+					Text="Llamar al cliente"
+					Command="{Binding CallCommand}" />
+			</StackLayout>
+			<acc:Spacer
+				Space="90" />
+			<Label
+				Text="12:58"
+				HorizontalOptions="CenterAndExpand"
+				FontSize="60"
+				FontAttributes="Bold" />
+		</StackLayout>
+		<Button
+			Text="Ya entregue"
+			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.05}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.95}"
+			RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.025}"
+			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.90}" />
+	</RelativeLayout>
 </acp:BasePage>

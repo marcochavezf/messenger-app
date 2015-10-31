@@ -3,8 +3,10 @@ using Kangou.ViewModels;
 
 namespace Kangou.Pages {
 	public partial class WaitingPage : BasePage<WaitingViewModel> {
-		public WaitingPage() {
+		public WaitingPage(bool retrieving) {
 			InitializeComponent();
+
+			BackingModel.Retrieving = retrieving;
 		}
 	}
 }

@@ -7,11 +7,10 @@ using AppCreator.UI.Pages;
 namespace Kangou {
 	public class App : Application {
 		public App() {
-			MainPage = new CustomNavPage(new MapPage { 
-				Retrieving = true 
-			});
+			MainPage = new CustomNavPage(new WaitingPage(true));
 			return;
 
+			MainPage = new CustomNavPage(new MapPage(true));
 			MainPage = new CustomNavPage(new NewOrderPage());
 			MainPage = new WelcomePage();
 			MainPage = new CompleteProfilePage();
