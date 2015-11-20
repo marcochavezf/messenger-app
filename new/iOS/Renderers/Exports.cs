@@ -7,3 +7,4 @@ using Kangou.Custom;
 [assembly: ExportRenderer(typeof(WhiteButton), typeof(WhiteButtonRenderer))]
 [assembly: ExportRenderer(typeof(Entry), typeof(CustomEntryRenderer))]
 [assembly: ExportRenderer(typeof(OrangeNavPage), typeof(OrangeNavPageRenderer))]
+[assembly: ExportRenderer(typeof(SmallNavPage), typeof(SmallNavPageRenderer))]

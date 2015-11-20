@@ -7,5 +7,10 @@ namespace Kangou.Custom {
 		public OrangeNavPage(Page p) : base(p) {
 		}
 	}
+
+	public class SmallNavPage : CustomNavPage {
+		public SmallNavPage(Page p) : base(p) {
+		}
+	}
 }
 

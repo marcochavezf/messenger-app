@@ -9,7 +9,7 @@ namespace Kangou {
 	public class App : Application {
 		public App() {
 			MainPage = new MasterDetailPage {
-				Detail = new OrangeNavPage(new HomePage()) { 
+				Detail = new SmallNavPage(new HomePage()) { 
 					Title = "Kangou Mensajero",
 				},
 				Master = new MenuPage {
@@ -17,22 +17,24 @@ namespace Kangou {
 					Title = "---"
 				}
 			};
+			MainPage = new SmallNavPage(new MapPage(true));
 			return;
 
-			MainPage = new CustomNavPage(new ProfilePage());
-			MainPage = new CustomNavPage(new SignPage());
-			MainPage = new CustomNavPage(new WaitingPage(true));
-			MainPage = new CustomNavPage(new MapPage(true));
-			MainPage = new CustomNavPage(new NewOrderPage());
+			MainPage = new SmallNavPage(new ProfilePage());
+			MainPage = new SmallNavPage(new SignPage());
+			MainPage = new SmallNavPage(new WaitingPage(true));
+			MainPage = new SmallNavPage(new MapPage(true));
+			MainPage = new SmallNavPage(new NewOrderPage());
 			MainPage = new CustomNavPage(new WelcomePage());
 			MainPage = new CustomNavPage(new CompleteProfilePage());
 			MainPage = new CustomNavPage(new RegisterPage());
 			MainPage = new LoginPage();
 			MainPage = new MasterDetailPage {
-				Detail = new CustomNavPage(new HomePage()) { 
+				Detail = new SmallNavPage(new HomePage()) { 
 					Title = "Kangou Mensajero",
 				},
 				Master = new MenuPage {
+					Icon = "menu.png",
 					Title = "---"
 				}
 			};

@@ -43,5 +43,16 @@ namespace Kangou.iOS.Renderers {
 			NavigationBar.BarTintColor = Color.FromHex("#F88D00").ToUIColor();
 		}
 	}
+
+	public class SmallNavPageRenderer : OrangeNavPageRenderer {
+		public override void ViewDidLoad() {
+			base.ViewDidLoad();
+
+			NavigationBar.TitleTextAttributes = new UIStringAttributes {
+				Font = UIFont.FromName("Roboto-Light", (nfloat) 17),
+				ForegroundColor = Color.FromHex("#FFFFFF").ToUIColor(),
+			};
+		}
+	}
 }
 

@@ -232,7 +232,13 @@
     <BundleResource Include="Resources\Roboto-Light.ttf" />
     <BundleResource Include="Resources\Roboto-Medium.ttf" />
     <BundleResource Include="Resources\disabled.png" />
+    <BundleResource Include="Resources\disabled%402x.png" />
+    <BundleResource Include="Resources\disabled%403x.png" />
     <BundleResource Include="Resources\enabled.png" />
+    <BundleResource Include="Resources\enabled%402x.png" />
+    <BundleResource Include="Resources\enabled%403x.png" />
     <BundleResource Include="Resources\menu.png" />
+    <BundleResource Include="Resources\menu%402x.png" />
+    <BundleResource Include="Resources\menu%403x.png" />
   </ItemGroup>
 </Project>

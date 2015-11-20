@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <acp:BasePage
+	BackgroundColor="#ECECEC"
 	x:TypeArguments="v:NewOrderViewModel"
 	xmlns="http://xamarin.com/schemas/2014/forms"
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -13,46 +14,59 @@
 	xmlns:c="clr-namespace:Kangou.Custom;assembly=Kangou"
 	x:Class="Kangou.Pages.NewOrderPage"
 	Title="Nuevo Kangou">
-	<StackLayout
-		Orientation="Vertical"
-		Padding="20"
-		Spacing="30">
-		<c:SeparatorText
-			Text="Donde recoger?" />
+	<RelativeLayout
+		VerticalOptions="FillAndExpand"
+		HorizontalOptions="FillAndExpand">
 		<StackLayout
-			Padding="20"
-			Spacing="0"
-			BackgroundColor="#CCCCCC">
-			<Label
-				Text="Bahia de todos los Santos #74&#xD;&#xA;Col. Veronica Anzures&#xD;&#xA;Del. Miguel Hidalgo&#xD;&#xA;CP: 11300" />
-		</StackLayout>
-		<c:SeparatorText
-			Text="Donde entregar?" />
-		<StackLayout
-			Padding="20"
-			Spacing="0"
-			BackgroundColor="#CCCCCC">
-			<Label
-				Text="Rio Tiber #27&#xD;&#xA;Col Cuauhtemoc&#xD;&#xA;Del Cuauhtemoc&#xD;&#xA;CP: 06500" />
+			Orientation="Vertical"
+			Padding="15"
+			Spacing="10"
+			RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.0}"
+			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.0}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.90}">
+			<c:SeparatorText
+				Text="¿Dónde recoger?" />
+			<StackLayout
+				Padding="10"
+				Spacing="0"
+				BackgroundColor="#CCCCCC">
+				<c:RobotoLLabel
+					Text="Bahia de todos los Santos #74&#xD;&#xA;Col. Veronica Anzures&#xD;&#xA;Del. Miguel Hidalgo&#xD;&#xA;CP: 11300" />
+			</StackLayout>
+			<c:SeparatorText
+				Text="¿Dónde entregar?" />
+			<StackLayout
+				Padding="10"
+				Spacing="0"
+				BackgroundColor="#CCCCCC">
+				<c:RobotoLLabel
+					Text="Rio Tiber #27&#xD;&#xA;Col Cuauhtemoc&#xD;&#xA;Del Cuauhtemoc&#xD;&#xA;CP: 06500" />
+			</StackLayout>
+			<StackLayout
+				Padding="0"
+				Spacing="0"
+				Orientation="Horizontal">
+				<c:RobotoLLabel
+					Text="Ganancia"
+					HorizontalOptions="StartAndExpand" />
+				<c:RobotoLLabel
+					Text="$ 15 MXN"
+					HorizontalOptions="EndAndExpand"
+					XAlign="End"
+					FontAttributes="Bold" />
+			</StackLayout>
+			<acc:Spacer
+				Space="20" />
 		</StackLayout>
 		<StackLayout
 			Padding="0"
 			Spacing="0"
-			Orientation="Horizontal">
-			<Label
-				Text="Ganancia"
-				HorizontalOptions="StartAndExpand" />
-			<Label
-				Text="$ 15 MXN"
-				HorizontalOptions="StartAndExpand"
-				FontAttributes="Bold" />
-		</StackLayout>
-		<acc:Spacer
-			Space="100" />
-		<StackLayout
-			Padding="0"
-			Spacing="0"
-			Orientation="Horizontal">
+			Orientation="Horizontal"
+			RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.05}"
+			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.85}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.9}"
+			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.20}">
 			<Button
 				Text="Cancelar"
 				Command="{Binding CancelCommand}"
@@ -62,5 +76,5 @@
 				Command="{Binding OkCommand}"
 				HorizontalOptions="EndAndExpand" />
 		</StackLayout>
-	</StackLayout>
+	</RelativeLayout>
 </acp:BasePage>
