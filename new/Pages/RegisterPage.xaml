@@ -10,37 +10,42 @@
 	xmlns:am="clr-namespace:AppCreator.Markup;assembly=AppCreator"
 	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
 	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
+	xmlns:c="clr-namespace:Kangou.Custom;assembly=Kangou"
+	Title="Kangourízate"
 	x:Class="Kangou.Pages.RegisterPage">
 	<StackLayout
 		Orientation="Vertical"
 		Padding="50"
 		Spacing="20">
-		<Label
-			Text="Kangourizate"
-			HorizontalOptions="CenterAndExpand" />
-		<Label
-			Text="Agiliza tu registro iniciando sesion con tu red social favorita"
-			HorizontalOptions="CenterAndExpand" />
+		<c:RobotoLLabel
+			Text="Agiliza tu registro iniciando sesión con tu red social favorita"
+			HorizontalOptions="CenterAndExpand"
+			FontSize="12"
+			TextColor="#666666" />
 		<acc:Spacer
 			Space="30" />
-		<Button
+		<c:OrangeButton
 			Text="Usar mi cuenta de Google"
 			Command="{Binding GoogleCommand}"
-			HorizontalOptions="CenterAndExpand" />
-		<Button
+			HorizontalOptions="FillAndExpand" />
+		<c:OrangeButton
 			Text="Usar mi cuenta de Facebook"
 			Command="{Binding FacebookCommand}"
-			HorizontalOptions="CenterAndExpand" />
+			HorizontalOptions="FillAndExpand" />
 		<acc:Spacer
 			Space="30" />
-		<Label
+		<c:RobotoLLabel
 			Text="El registro con Gmail es mas rapido y facil."
-			HorizontalOptions="CenterAndExpand" />
+			HorizontalOptions="CenterAndExpand"
+			FontSize="12"
+			TextColor="#666666" />
 		<acc:Spacer
 			Space="90" />
-		<Label
+		<c:RobotoLLabel
 			Text="Aviso de privacidad"
 			HorizontalOptions="CenterAndExpand"
-			FontAttributes="Bold" />
+			FontAttributes="Bold"
+			FontSize="12"
+			TextColor="#F88D00" />
 	</StackLayout>
 </acp:BasePage>

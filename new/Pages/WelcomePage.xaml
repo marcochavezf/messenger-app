@@ -10,43 +10,76 @@
 	xmlns:am="clr-namespace:AppCreator.Markup;assembly=AppCreator"
 	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
 	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
+	xmlns:c="clr-namespace:Kangou.Custom;assembly=Kangou"
 	x:Class="Kangou.Pages.WelcomePage"
 	AddStatusBarPadding="True">
-	<StackLayout
-		Orientation="Vertical"
-		Padding="15, 50"
-		Spacing="15">
-		<accu:VectorIcon
-			Icon="fa-check"
-			Color="00FF00"
-			Size="100"
-			HorizontalOptions="Center" />
-		<Label
-			Text="Bienvenido a bordo Kangou!"
-			FontSize="16"
-			HorizontalOptions="Center" />
-		<Label
-			Text="Haz finalizado tu pre-registro con exito. Que sigue?"
-			HorizontalOptions="Center" />
-		<Label
-			Text="- Espera el correo con la fecha de la proxima capacitacion."
-			HorizontalOptions="Center" />
-		<Label
-			Text="- Espera el correo confirmando la activacion de tu cuenta."
-			HorizontalOptions="Center" />
-		<acc:Spacer
-			Space="50" />
-		<Label
-			Text="Unete a la comunidad Kangou"
-			HorizontalOptions="Center"
-			FontAttributes="Bold" />
-		<Label
-			Text="Nuestra comunidad es lo mas importante. Unete a ella y comparte con nosotros la experiencia de ser un Kangou."
-			HorizontalOptions="Center" />
-		<Button
-			BackgroundColor="#3B5998"
-			Text="Comunidad Kangou en Facebook"
-			Command="{Binding FacebookCommand}"
-			HorizontalOptions="FillAndExpand" />
-	</StackLayout>
+	<RelativeLayout
+		VerticalOptions="FillAndExpand"
+		HorizontalOptions="FillAndExpand">
+		<StackLayout
+			Orientation="Vertical"
+			Padding="15"
+			Spacing="5"
+			RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.0}"
+			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.0}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.60}">
+			<accu:VectorIcon
+				Icon="fa-check"
+				Color="7ED321"
+				Size="100"
+				HorizontalOptions="Center" />
+			<acc:Spacer
+				Space="10" />
+			<c:RobotoLLabel
+				Text="Bienvenido a bordo Kangou!"
+				FontSize="24"
+				TextColor="#666666"
+				HorizontalOptions="Center" />
+			<acc:Spacer
+				Space="30" />
+			<c:RobotoLLabel
+				Text="Has finalizado tu pre-registro con éxito. Qué sigue?"
+				FontSize="12"
+				TextColor="#666666"
+				HorizontalOptions="Center" />
+			<acc:Spacer
+				Space="5" />
+			<c:RobotoLLabel
+				Text="- Espera el correo con la fecha de la próxima capacitación."
+				FontSize="12"
+				TextColor="#666666"
+				HorizontalOptions="Center" />
+			<c:RobotoLLabel
+				Text="- Espera el correo confirmando la activacion de tu cuenta."
+				FontSize="12"
+				TextColor="#666666"
+				HorizontalOptions="Center" />
+		</StackLayout>
+		<StackLayout
+			Orientation="Vertical"
+			Padding="0"
+			Spacing="5"
+			RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.05}"
+			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.8}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.9}"
+			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.20}">
+			<c:RobotoMLabel
+				Text="Únete a la comunidad Kangou"
+				FontSize="14"
+				TextColor="#666666"
+				HorizontalOptions="Center"
+				FontAttributes="Bold" />
+			<c:RobotoLLabel
+				Text="Nuestra comunidad es lo mas importante. Únete a ella y comparte con nosotros la experiencia de ser un Kangou."
+				FontSize="12"
+				TextColor="#666666"
+				HorizontalOptions="Center" />
+			<c:WhiteButton
+				BackgroundColor="#3B5998"
+				Text="Comunidad Kangou en Facebook"
+				Command="{Binding FacebookCommand}"
+				HorizontalOptions="FillAndExpand" />
+		</StackLayout>
+	</RelativeLayout>
 </acp:BasePage>

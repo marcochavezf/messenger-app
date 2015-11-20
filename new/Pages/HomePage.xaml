@@ -11,10 +11,11 @@
 	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
 	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
 	xmlns:c="clr-namespace:Kangou.Custom;assembly=Kangou"
+	Title="Kangou Mensajero"
 	x:Class="Kangou.Pages.HomePage">
 	<ContentPage.ToolbarItems>
 		<ToolbarItem
-			Text="ON"
+			Icon="disabled.png"
 			Command="{Binding ToggleCommand}" />
 	</ContentPage.ToolbarItems>
 	<StackLayout

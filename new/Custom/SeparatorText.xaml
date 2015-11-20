@@ -21,8 +21,10 @@
 		VerticalOptions="Center" />
 	<Label
 		Grid.Column="1"
+		FontFamily="Roboto-Light"
+		FontSize="14"
+		TextColor="#666666"
 		Text="{Binding Text}"
-		FontSize="12"
 		XAlign="Center"
 		YAlign="Center" />
 	<BoxView

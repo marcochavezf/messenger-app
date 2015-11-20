@@ -10,34 +10,71 @@
 	xmlns:am="clr-namespace:AppCreator.Markup;assembly=AppCreator"
 	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
 	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
+	xmlns:c="clr-namespace:Kangou.Custom;assembly=Kangou"
+	BackgroundImage="loginBg.png"
 	AddStatusBarPadding="True"
 	x:Class="Kangou.Pages.LoginPage">
-	<StackLayout
-		Orientation="Vertical"
+	<RelativeLayout
 		VerticalOptions="FillAndExpand"
-		HorizontalOptions="FillAndExpand"
-		Padding="0"
-		Spacing="0">
-		<Label
-			Text="Inicia sesion"
-			HorizontalOptions="Center" />
-		<Button
-			Text="Iniciar con Facebook"
-			Command="{Binding FacebookCommand}"
-			HorizontalOptions="Center" />
-		<Button
-			Text="Iniciar con Google"
-			Command="{Binding GoogleCommand}"
-			HorizontalOptions="Center" />
-		<acc:Spacer
-			Space="50" />
-		<Label
-			Text="Inicia sesion"
-			HorizontalOptions="Center">
+		HorizontalOptions="FillAndExpand">
+		<Image
+			Source="Login.png"
+			RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.10}"
+			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.20}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.8}"
+			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.40}" />
+		<StackLayout
+			Orientation="Vertical"
+			Padding="10"
+			Spacing="0"
+			BackgroundColor="Transparent"
+			RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.10}"
+			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.28}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.8}"
+			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.40}">
+			<c:RobotoLLabel
+				Text="inicia sesión"
+				FontSize="24"
+				TextColor="#666666"
+				HorizontalOptions="Center" />
+			<acc:Spacer
+				Space="39" />
+			<c:OrangeButton
+				Text="iniciar con Facebook"
+				Command="{Binding FacebookCommand}"
+				HorizontalOptions="FillAndExpand" />
+			<acc:Spacer
+				Space="10" />
+			<c:OrangeButton
+				Text="iniciar con Google"
+				Command="{Binding GoogleCommand}"
+				HorizontalOptions="FillAndExpand" />
+			<acc:Spacer
+				Space="50" />
+		</StackLayout>
+		<c:RobotoLLabel
+			Text="crea una cuenta"
+			FontSize="20"
+			TextColor="#FFFFFF"
+			XAlign="Center"
+			RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.10}"
+			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.80}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.8}"
+			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.40}">
 			<Label.GestureRecognizers>
 				<TapGestureRecognizer
 					Command="{Binding RegisterCommand}" />
 			</Label.GestureRecognizers>
-		</Label>
-	</StackLayout>
+		</c:RobotoLLabel>
+		<c:RobotoLLabel
+			Text="version 1.blah"
+			Font="Roboto-Light"
+			FontSize="11"
+			TextColor="#999999"
+			XAlign="Center"
+			RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.10}"
+			RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.95}"
+			RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.8}"
+			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.40}" />
+	</RelativeLayout>
 </acp:BasePage>

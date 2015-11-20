@@ -3,15 +3,17 @@
 using Xamarin.Forms;
 using Kangou.Pages;
 using AppCreator.UI.Pages;
+using Kangou.Custom;
 
 namespace Kangou {
 	public class App : Application {
 		public App() {
 			MainPage = new MasterDetailPage {
-				Detail = new CustomNavPage(new HomePage()) { 
+				Detail = new OrangeNavPage(new HomePage()) { 
 					Title = "Kangou Mensajero",
 				},
 				Master = new MenuPage {
+					Icon = "menu.png",
 					Title = "---"
 				}
 			};
@@ -22,9 +24,9 @@ namespace Kangou {
 			MainPage = new CustomNavPage(new WaitingPage(true));
 			MainPage = new CustomNavPage(new MapPage(true));
 			MainPage = new CustomNavPage(new NewOrderPage());
-			MainPage = new WelcomePage();
-			MainPage = new CompleteProfilePage();
-			MainPage = new RegisterPage();
+			MainPage = new CustomNavPage(new WelcomePage());
+			MainPage = new CustomNavPage(new CompleteProfilePage());
+			MainPage = new CustomNavPage(new RegisterPage());
 			MainPage = new LoginPage();
 			MainPage = new MasterDetailPage {
 				Detail = new CustomNavPage(new HomePage()) { 
