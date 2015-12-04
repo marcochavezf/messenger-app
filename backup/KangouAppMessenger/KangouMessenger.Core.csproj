@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{30BF415F-033F-4BA5-8A12-C05735EA7957}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>KangouMessenger.Core</RootNamespace>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AssemblyName>KangouAppMessenger</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AssemblyName>KangouAppMessenger</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'iOS Distribution Ad Hoc|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iOS Distribution Ad Hoc</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>KangouMessenger.Core</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Ad-Hoc</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>KangouMessenger.Core</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="ViewModels\ClientSignatureViewModel.cs" />
+    <Compile Include="ViewModels\DropOffRouteViewModel.cs" />
+    <Compile Include="ViewModels\DropOffTimerViewModel.cs" />
+    <Compile Include="ViewModels\HelpViewModel.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
+    <Compile Include="ViewModels\PickUpRouteViewModel.cs" />
+    <Compile Include="ViewModels\PickUpTimerViewModel.cs" />
+    <Compile Include="ViewModels\ReceivingOrderViewModel.cs" />
+    <Compile Include="ViewModels\ReviewViewModel.cs" />
+    <Compile Include="ViewModels\WaitingOrderViewModel.cs" />
+    <Compile Include="Helpers\BusyMvxViewModel.cs" />
+    <Compile Include="Helpers\SocketEvents.cs" />
+    <Compile Include="Helpers\DataOrderManager.cs" />
+    <Compile Include="Helpers\Timer.cs" />
+    <Compile Include="Helpers\Coordinates.cs" />
+    <Compile Include="Helpers\KangouData.cs" />
+    <Compile Include="Webclient\KangouClient.cs" />
+    <Compile Include="Helpers\StringValidator.cs" />
+    <Compile Include="Helpers\StatusOrder.cs" />
+    <Compile Include="Services\LocationMessage.cs" />
+    <Compile Include="Config\Config.cs" />
+    <Compile Include="swp8\Bootstrap\CommunitySqlitePluginBootstrap.cs" />
+    <Compile Include="Services\DataStore\IDataService.cs" />
+    <Compile Include="Services\DataStore\DataService.cs" />
+    <Compile Include="Services\DataStore\CourierData.cs" />
+    <Compile Include="Webclient\JsonStructures\RetrieveUserIdResponse.cs" />
+    <Compile Include="Webclient\JsonStructures\RequestCourierAccessResponse.cs" />
+    <Compile Include="Webclient\JsonStructures\Order.cs" />
+    <Compile Include="Webclient\JsonStructures\HeartbeatResponse.cs" />
+    <Compile Include="Webclient\JsonStructures\AcceptInfoOrderResponse.cs" />
+    <Compile Include="Webclient\JsonStructures\GeneralResponse.cs" />
+    <Compile Include="Services\DataStore\InfoOrderData.cs" />
+    <Compile Include="Services\DataStore\ResumeOrderData.cs" />
+    <Compile Include="Webclient\JsonStructures\OrdersMapDensity.cs" />
+    <Compile Include="Helpers\GeoJsonParser.cs" />
+    <Compile Include="Webclient\JsonStructures\GeoJsonColonies.cs" />
+    <Compile Include="ViewModels\KangouBookWebViewModel.cs" />
+    <Compile Include="ViewModels\OrderDetailsViewModel.cs" />
+    <Compile Include="ViewModels\SignupViewModel.cs" />
+    <Compile Include="Webclient\JsonStructures\UserCourier.cs" />
+    <Compile Include="ViewModels\FormRegisterCourierViewModel.cs" />
+    <Compile Include="Webclient\JsonStructures\SaveCourierDataResponse.cs" />
+    <Compile Include="Webclient\GeneralWebClient.cs" />
+    <Compile Include="Webclient\GoogleClient.cs" />
+    <Compile Include="Webclient\JsonStructures\Google\GoogleMapsPlaceDetails.cs" />
+    <Compile Include="Webclient\JsonStructures\Google\GoogleMapsPlaceAutocompleteResponse.cs" />
+    <Compile Include="Helpers\S3\ConstantsS3.cs" />
+    <Compile Include="Helpers\S3\S3Utils.cs" />
+    <Compile Include="Helpers\StringFormater.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\packages\Xamarin.Insights.1.11.1\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.targets" Condition="Exists('..\packages\Xamarin.Insights.1.11.1\build\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Helpers\colonies.cdmx.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Cirrious.MvvmCross.Community.Plugins.Sqlite">
+      <HintPath>..\packages\MvvmCross.Community.Plugin.Sqlite.3.1.1\lib\portable-win+net45+MonoAndroid+MonoTouch+sl5+wp8\Cirrious.MvvmCross.Community.Plugins.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.CrossCore">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.CrossCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Localization">
+      <HintPath>..\packages\MvvmCross.HotTuna.CrossCore.3.5.1\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Messenger.3.5.1\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.Json">
+      <HintPath>..\packages\MvvmCross.HotTuna.Plugin.Json.3.5.1\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.Plugins.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Cirrious.MvvmCross">
+      <HintPath>..\packages\MvvmCross.HotTuna.MvvmCrossLibraries.3.5.1\lib\portable-win+net45+wp8+win8+wpa81\Cirrious.MvvmCross.dll</HintPath>
+    </Reference>
+    <Reference Include="ModernHttpClient">
+      <HintPath>..\..\ModernHttpClient\build\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.Portable.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net45+wp80+win8+wpa81+dnxcore50\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Insights">
+      <HintPath>..\packages\Xamarin.Insights.1.11.1\lib\portable-win+net45+wp80+windows8+wpa+MonoAndroid10+MonoTouch10\Xamarin.Insights.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLCrypto">
+      <HintPath>..\packages\PCLCrypto.1.0.2.15130\lib\portable-net40+sl50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\PCLCrypto.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.S3">
+      <HintPath>..\packages\AWSSDK.S3.3.1.3.1\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+xamarinios10+MonoTouch10\AWSSDK.S3.dll</HintPath>
+    </Reference>
+    <Reference Include="Validation">
+      <HintPath>..\packages\Validation.2.2.8\lib\portable-net45+dnxcore50+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.Core">
+      <HintPath>..\packages\AWSSDK.Core.3.1.3.0\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+xamarinios10+MonoTouch10\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.SecurityToken">
+      <HintPath>..\packages\AWSSDK.SecurityToken.3.1.0.2\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+xamarinios10+MonoTouch10\AWSSDK.SecurityToken.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.CognitoIdentity">
+      <HintPath>..\packages\AWSSDK.CognitoIdentity.3.1.0.3\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid10+xamarinios10+MonoTouch10\AWSSDK.CognitoIdentity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="Webclient\" />
+    <Folder Include="Services\" />
+    <Folder Include="Config\" />
+    <Folder Include="Services\DataStore\" />
+    <Folder Include="Webclient\JsonStructures\" />
+    <Folder Include="Helpers\GeoJsonFiles\" />
+    <Folder Include="Webclient\JsonStructures\Google\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Helpers\GeoJsonFiles\colonies.cdmx.geojson" />
+  </ItemGroup>
+</Project>

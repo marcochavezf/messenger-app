@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/scrollView"
+    android:minWidth="25px"
+    android:minHeight="25px">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2">
+        <TextView
+            android:text="Completa tu perfil"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView11"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+        <TextView
+            android:text="Datos Personales"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView12"
+            android:layout_gravity="center" />
+        <TextView
+            android:text="Nombre(s)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:layout_marginTop="20.0dp"
+            android:layout_marginLeft="20.0dp" />
+        <EditText
+            android:inputType="textCapSentences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/firstName"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            local:MvxBind="Text FirstName" />
+        <TextView
+            android:text="Apellido(s)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_marginTop="20.0dp"
+            android:layout_marginLeft="20.0dp" />
+        <EditText
+            android:inputType="textCapSentences"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lastName"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            local:MvxBind="Text LastName" />
+        <TextView
+            android:text="Teléfono (celular 10 dígitos)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:layout_marginRight="0.0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20.9dp" />
+        <EditText
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/phoneNumber"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            local:MvxBind="Text PhoneNumber" />
+        <TextView
+            android:text="Correo electrónico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:layout_marginTop="20.0dp"
+            android:layout_marginLeft="20dp" />
+        <EditText
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/email"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            local:MvxBind="Text Email" />
+        <TextView
+            android:text="Ciudad (escribe y selecciona una opción) "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView5"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/autoCompleteCity"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="20dp" />
+            <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:visibility="invisible"
+                android:indeterminateOnly="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/autoCompleteCityProgressBar"
+                android:layout_alignTop="@id/autoCompleteCity"
+                android:layout_alignBottom="@id/autoCompleteCity"
+                android:layout_alignRight="@id/autoCompleteCity"
+                android:layout_marginRight="5dp" />
+        </RelativeLayout>
+        <TextView
+            android:text="Foto (sonríe, que la comunidad te conozca)  "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView6"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <ViewSwitcher
+            android:id="@+id/selfieViewSwitcher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/selfieImageView"
+                android:layout_gravity="center" />
+            <ProgressBar
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="35dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:indeterminateOnly="true"
+                android:id="@+id/selfieProgressBar" />
+        </ViewSwitcher>
+        <Button
+            android:text="¡Tómate la selfie!"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/selfieButton"
+            android:textAllCaps="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <TextView
+            android:text="Identificación oficial (que sea legible para poder activarte)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <ViewSwitcher
+            android:id="@+id/identificationViewSwitcher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/identificationImageView"
+                android:layout_gravity="center" />
+            <ProgressBar
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="35dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:indeterminateOnly="true"
+                android:id="@+id/identificationProgressBar" />
+        </ViewSwitcher>
+        <Button
+            android:text="Échanos la poderosa, adjunta tu IFE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/identificationButton"
+            android:textAllCaps="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <TextView
+            android:text="Comprobante de domicilio (también que sea legible)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView7"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <ViewSwitcher
+            android:id="@+id/addressProofViewSwitcher"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@android:drawable/ic_menu_gallery"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:id="@+id/addressProofImageView"
+                android:layout_gravity="center" />
+            <ProgressBar
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="35dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:indeterminateOnly="true"
+                android:id="@+id/addressProofProgressBar" />
+        </ViewSwitcher>
+        <Button
+            android:text="Necesitamos saber dónde vives"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addressProofButton"
+            android:textAllCaps="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <TextView
+            android:text="¿Dónde te depositamos? (Sólo BBVA Bancomer)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView8"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center" />
+        <EditText
+            android:inputType="phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Número de tarjeta BBVA Bancomer"
+            android:id="@+id/cardToDepositEditText"
+            android:digits="01234 56789"
+            android:maxLength="19"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            local:MvxBind="Text CardToDeposit" />
+        <TextView
+            android:text="¿Cómo te mueves?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView9"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tableLayout1">
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:gravity="center_horizontal">
+                <ImageButton
+                    android:id="@+id/bikeButton"
+                    android:src="@drawable/biciSola"
+                    android:layout_column="0"
+                    android:layout_height="90dp"
+                    android:layout_width="90dp"
+                    android:layout_marginRight="0.0dp" />
+                <ImageButton
+                    android:id="@+id/motorbikeButton"
+                    android:src="@drawable/motoSola"
+                    android:layout_column="1"
+                    android:layout_height="90dp"
+                    android:layout_width="90dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp" />
+                <ImageButton
+                    android:id="@+id/carButton"
+                    android:src="@drawable/cocheSola"
+                    android:layout_column="2"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp" />
+            </TableRow>
+        </TableLayout>
+        <TextView
+            android:text="¿Terminaste o quieres guardar tu avance?"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView10"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="center" />
+        <Button
+            android:text="Guardar datos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/saveData"
+            android:textAllCaps="false"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+        <TextView
+            android:text="Al guardar los datos acepto el"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView10"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/tableLayout1">
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:gravity="center_horizontal">
+                <TextView
+                    android:text="aviso de privacidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/privacyPolicy"
+                    android:layout_gravity="center"
+                    android:textColor="#ff0000ee" />
+                <TextView
+                    android:text=" y los "
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView10"
+                    android:layout_gravity="center" />
+                <TextView
+                    android:text="terminos y condiciones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/termsAndConditions"
+                    android:layout_gravity="center"
+                    android:textColor="#ff0000ee" />
+            </TableRow>
+        </TableLayout>
+        <TextView
+            android:text="Cualquier duda o sugerencia envía un un correo a"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/helpEmailTextView"
+            android:layout_gravity="center" />
+        <Button
+            android:text="hola@kangou.mx"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/helpEmailButton"
+            android:background="@android:color/transparent"
+            android:textAllCaps="false"
+            android:textColor="#ff0000ee" />
+    </LinearLayout>
+</ScrollView>
