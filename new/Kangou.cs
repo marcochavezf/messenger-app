@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Kangou {
 	public class App : Application {
 		public App() {
-			if ((DateTime.Now - Database.Timestamp).TotalMinutes > 3600)
+			if ((DateTime.Now - Database.Timestamp).TotalHours > 1)
 				MainPage = new LoginPage();
 			else {
 				Task.Run(async () => {

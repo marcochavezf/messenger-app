@@ -69,11 +69,11 @@
 			RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.20}">
 			<Button
 				Text="Cancelar"
-				Command="{Binding CancelCommand}"
+				Command="{Binding RejectCommand}"
 				HorizontalOptions="StartAndExpand" />
 			<Button
 				Text="Aceptar"
-				Command="{Binding OkCommand}"
+				Command="{Binding AcceptCommand}"
 				HorizontalOptions="EndAndExpand" />
 		</StackLayout>
 	</RelativeLayout>

@@ -8,8 +8,6 @@ namespace Kangou.ViewModels {
 	// Este no es KangouViewModel para evitar recibir ordenes aqui.
 	public class NewOrderViewModel : BaseViewModel {
 		public OrderNotification Order { get; set; }
-		// Bahia de todos los Santos #74&#xD;&#xA;Col. Veronica Anzures&#xD;&#xA;Del. Miguel Hidalgo&#xD;&#xA;CP: 11300
-
 		public string SourceAddress { 
 			get {
 				return Order == null ? "" : Order.Source.ToString();
