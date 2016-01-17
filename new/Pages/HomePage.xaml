@@ -15,8 +15,11 @@
 	x:Class="Kangou.Pages.HomePage">
 	<ContentPage.ToolbarItems>
 		<ToolbarItem
-			Icon="disabled.png"
+			Icon="{Binding ToolbarImage}"
 			Command="{Binding ToggleCommand}" />
+		<ToolbarItem
+			Text="Test"
+			Command="{Binding TestCommand}" />
 	</ContentPage.ToolbarItems>
 	<StackLayout
 		Orientation="Vertical"

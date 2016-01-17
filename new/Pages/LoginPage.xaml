@@ -41,13 +41,15 @@
 				Space="39" />
 			<c:OrangeButton
 				Text="iniciar con Facebook"
-				Command="{Binding FacebookCommand}"
+				Command="{Binding SignInCommand}"
+				CommandParameter="facebook"
 				HorizontalOptions="FillAndExpand" />
 			<acc:Spacer
 				Space="10" />
 			<c:OrangeButton
 				Text="iniciar con Google"
-				Command="{Binding GoogleCommand}"
+				Command="{Binding SignInCommand}"
+				CommandParameter="google-oauth2"
 				HorizontalOptions="FillAndExpand" />
 			<acc:Spacer
 				Space="50" />

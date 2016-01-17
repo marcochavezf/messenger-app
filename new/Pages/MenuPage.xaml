@@ -22,17 +22,19 @@
 			Orientation="Vertical"
 			Padding="0, 30, 0, 0"
 			Spacing="10">
-			<c:RoundedImage
-				Source="http://lorempixel.com/200/200/cats/Foto/"
-				HorizontalOptions="Center" />
+			<ac:CircleImage
+				Source="{Binding Image}"
+				HorizontalOptions="Center"
+				WidthRequest="100"
+				HeightRequest="100" />
 			<acc:Spacer
 				Space="50" />
 			<c:RobotoLLabel
-				Text="Raul Jimenez"
+				Text="{Binding Name}"
 				FontSize="14"
 				HorizontalOptions="Center" />
 			<c:RobotoLLabel
-				Text="Rookie"
+				Text="{Binding Title}"
 				FontSize="10"
 				HorizontalOptions="Center" />
 			<acc:Spacer
@@ -53,22 +55,34 @@
 					<ColumnDefinition
 						Width="10*" />
 				</Grid.ColumnDefinitions>
-				<ac:VectorIcon
+				<accu:VectorIcon
 					Grid.Column="1"
 					Size="20"
-					Icon="fa-book"
+					Icon="fa-home"
 					Color="000000">
-				</ac:VectorIcon>
+					<accu:VectorIcon.GestureRecognizers>
+						<TapGestureRecognizer
+							Command="{Binding HomeCommand}" />
+					</accu:VectorIcon.GestureRecognizers>
+				</accu:VectorIcon>
 				<c:RobotoLLabel
-					Text="Kangou Book"
+					Text="Home"
 					Grid.Column="3">
+					<c:RobotoLLabel.GestureRecognizers>
+						<TapGestureRecognizer
+							Command="{Binding HomeCommand}" />
+					</c:RobotoLLabel.GestureRecognizers>
 				</c:RobotoLLabel>
-				<ac:VectorIcon
+				<accu:VectorIcon
 					Grid.Column="5"
 					Size="20"
 					Icon="fa-angle-right"
 					Color="000000">
-				</ac:VectorIcon>
+					<accu:VectorIcon.GestureRecognizers>
+						<TapGestureRecognizer
+							Command="{Binding BookCommand}" />
+					</accu:VectorIcon.GestureRecognizers>
+				</accu:VectorIcon>
 			</Grid>
 			<Grid
 				Padding="0">
@@ -86,22 +100,79 @@
 					<ColumnDefinition
 						Width="10*" />
 				</Grid.ColumnDefinitions>
-				<ac:VectorIcon
+				<accu:VectorIcon
 					Grid.Column="1"
 					Size="20"
-					Icon="fa-credit-card"
+					Icon="fa-book"
 					Color="000000">
-				</ac:VectorIcon>
+					<accu:VectorIcon.GestureRecognizers>
+						<TapGestureRecognizer
+							Command="{Binding BookCommand}" />
+					</accu:VectorIcon.GestureRecognizers>
+				</accu:VectorIcon>
 				<c:RobotoLLabel
-					Text="Kangou ID"
+					Text="Kangou Book"
 					Grid.Column="3">
+					<c:RobotoLLabel.GestureRecognizers>
+						<TapGestureRecognizer
+							Command="{Binding BookCommand}" />
+					</c:RobotoLLabel.GestureRecognizers>
 				</c:RobotoLLabel>
-				<ac:VectorIcon
+				<accu:VectorIcon
 					Grid.Column="5"
 					Size="20"
 					Icon="fa-angle-right"
 					Color="000000">
-				</ac:VectorIcon>
+					<accu:VectorIcon.GestureRecognizers>
+						<TapGestureRecognizer
+							Command="{Binding BookCommand}" />
+					</accu:VectorIcon.GestureRecognizers>
+				</accu:VectorIcon>
+			</Grid>
+			<Grid
+				Padding="0">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="2.5*" />
+					<ColumnDefinition
+						Width="10*" />
+					<ColumnDefinition
+						Width="2.5*" />
+					<ColumnDefinition
+						Width="75*" />
+					<ColumnDefinition
+						Width="2.5*" />
+					<ColumnDefinition
+						Width="10*" />
+				</Grid.ColumnDefinitions>
+				<accu:VectorIcon
+					Grid.Column="1"
+					Size="20"
+					Icon="fa-credit-card"
+					Color="000000">
+					<accu:VectorIcon.GestureRecognizers>
+						<TapGestureRecognizer
+							Command="{Binding IdCommand}" />
+					</accu:VectorIcon.GestureRecognizers>
+				</accu:VectorIcon>
+				<c:RobotoLLabel
+					Text="Kangou ID"
+					Grid.Column="3">
+					<c:RobotoLLabel.GestureRecognizers>
+						<TapGestureRecognizer
+							Command="{Binding IdCommand}" />
+					</c:RobotoLLabel.GestureRecognizers>
+				</c:RobotoLLabel>
+				<accu:VectorIcon
+					Grid.Column="5"
+					Size="20"
+					Icon="fa-angle-right"
+					Color="000000">
+					<accu:VectorIcon.GestureRecognizers>
+						<TapGestureRecognizer
+							Command="{Binding IdCommand}" />
+					</accu:VectorIcon.GestureRecognizers>
+				</accu:VectorIcon>
 			</Grid>
 		</StackLayout>
 		<Grid
@@ -124,24 +195,46 @@
 			</Grid.ColumnDefinitions>
 			<accu:VectorIcon
 				Icon="fa-sign-out"
-				Color="CCCCCC"
+				Color="FFFFFF"
 				Size="20"
-				Grid.Column="0" />
+				Grid.Column="0">
+				<accu:VectorIcon.GestureRecognizers>
+					<TapGestureRecognizer
+						Command="{Binding SignOutCommand}" />
+				</accu:VectorIcon.GestureRecognizers>
+			</accu:VectorIcon>
 			<c:RobotoLLabel
 				YAlign="Center"
 				Text="Cerrar sesion"
+				TextColor="White"
 				FontSize="14"
-				Grid.Column="1" />
+				Grid.Column="1">
+				<c:RobotoLLabel.GestureRecognizers>
+					<TapGestureRecognizer
+						Command="{Binding SignOutCommand}" />
+				</c:RobotoLLabel.GestureRecognizers>
+			</c:RobotoLLabel>
 			<accu:VectorIcon
 				Icon="fa-gear"
-				Color="CCCCCC"
+				Color="FFFFFF"
 				Size="20"
-				Grid.Column="3" />
+				Grid.Column="3">
+				<accu:VectorIcon.GestureRecognizers>
+					<TapGestureRecognizer
+						Command="{Binding SettingsCommand}" />
+				</accu:VectorIcon.GestureRecognizers>
+			</accu:VectorIcon>
 			<c:RobotoLLabel
 				YAlign="Center"
+				TextColor="White"
 				Text="Ajustes"
 				FontSize="14"
-				Grid.Column="4" />
+				Grid.Column="4">
+				<c:RobotoLLabel.GestureRecognizers>
+					<TapGestureRecognizer
+						Command="{Binding SettingsCommand}" />
+				</c:RobotoLLabel.GestureRecognizers>
+			</c:RobotoLLabel>
 		</Grid>
 	</RelativeLayout>
 </acp:BasePage>

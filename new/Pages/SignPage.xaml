@@ -11,15 +11,15 @@
 	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
 	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
 	xmlns:c="clr-namespace:Kangou.Custom;assembly=Kangou"
-	xmlns:acr="clr-namespace:Acr.XamForms.SignaturePad;assembly=Acr.XamForms.SignaturePad"
 	x:Class="Kangou.Pages.SignPage"
 	Title="Firma del cliente">
+<!--	xmlns:acr="clr-namespace:Acr.XamForms.SignaturePad;assembly=Acr.XamForms.SignaturePad"-->
 	<ContentPage.ToolbarItems>
 		<ToolbarItem
 			Text="ENVIAR"
 			Command="{Binding SendCommand}" />
 	</ContentPage.ToolbarItems>
-	<acr:SignaturePadView
+<!--	<acr:SignaturePadView
 		x:Name="padView"
 		BackgroundColor="#EEEEEE"
 		CaptionText="Por favor firma"
@@ -27,5 +27,5 @@
 		StrokeColor="Black"
 		StrokeWidth="2"
 		HorizontalOptions="FillAndExpand"
-		VerticalOptions="FillAndExpand" />
+		VerticalOptions="FillAndExpand" />-->
 </acp:BasePage>

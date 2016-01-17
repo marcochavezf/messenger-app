@@ -4,6 +4,8 @@ using Xamarin;
 using Xamarin.Forms.Platform.iOS;
 using Xamarin.Forms;
 using System;
+using Kangou.Interfaces;
+using FFImageLoading.Forms.Touch;
 
 namespace Kangou.iOS {
 	[Register("AppDelegate")]
@@ -17,6 +19,10 @@ namespace Kangou.iOS {
 			Xamarin.Calabash.Start();
 			#endif
 
+			var gps = DependencyService.Get<IGpsManager>();
+			gps.Start();
+
+			CachedImageRenderer.Init();
 			UINavigationBar.Appearance.SetTitleTextAttributes(new UITextAttributes {
 				Font = UIFont.FromName("Roboto-Light", (nfloat) 24),
 				TextColor = Color.FromHex("#666666").ToUIColor(),

@@ -32,7 +32,7 @@
 				Spacing="0"
 				BackgroundColor="#CCCCCC">
 				<c:RobotoLLabel
-					Text="Bahia de todos los Santos #74&#xD;&#xA;Col. Veronica Anzures&#xD;&#xA;Del. Miguel Hidalgo&#xD;&#xA;CP: 11300" />
+					Text="{Binding SourceAddress}" />
 			</StackLayout>
 			<c:SeparatorText
 				Text="¿Dónde entregar?" />
@@ -41,7 +41,7 @@
 				Spacing="0"
 				BackgroundColor="#CCCCCC">
 				<c:RobotoLLabel
-					Text="Rio Tiber #27&#xD;&#xA;Col Cuauhtemoc&#xD;&#xA;Del Cuauhtemoc&#xD;&#xA;CP: 06500" />
+					Text="{Binding DestinationAddress}" />
 			</StackLayout>
 			<StackLayout
 				Padding="0"
@@ -51,7 +51,7 @@
 					Text="Ganancia"
 					HorizontalOptions="StartAndExpand" />
 				<c:RobotoLLabel
-					Text="$ 15 MXN"
+					Text="{Binding FullIncome}"
 					HorizontalOptions="EndAndExpand"
 					XAlign="End"
 					FontAttributes="Bold" />
