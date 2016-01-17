@@ -42,7 +42,8 @@ namespace Kangou.ViewModels {
 						Name = "Juan Escutia",
 						Email = "juan@aventados.org",
 						Cellphone = "5513131313"
-					}
+					},
+					Income = 13M
 				}, "ORDER"));
 			}
 		}

@@ -2,6 +2,7 @@ using AppCreator.ViewModels;
 using Xamarin.Forms;
 using Kangou.Notifications;
 using Kangou.Pages;
+using Kangou.Custom;
 
 namespace Kangou.ViewModels {
 	public class KangouViewModel : BaseViewModel {
@@ -18,7 +19,7 @@ namespace Kangou.ViewModels {
 		}
 
 		async void OrderReceived(OrderNotification order) {
-			await Navigation.PushModalAsync(new NewOrderPage(order));
+			await Navigation.PushModalAsync(new SmallNavPage(new NewOrderPage(order)));
 		}
 	}
 	

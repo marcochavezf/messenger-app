@@ -12,13 +12,13 @@ namespace Kangou.ViewModels {
 
 		public string SourceAddress { 
 			get {
-				return Order.Source.ToString();
+				return Order == null ? "" : Order.Source.ToString();
 			}
 		}
 
 		public string DestinationAddress { 
 			get {
-				return Order.Destination.ToString();
+				return Order == null ? "" : Order.Destination.ToString();
 			}
 		}
 
@@ -31,7 +31,6 @@ namespace Kangou.ViewModels {
 		public ICommand	AcceptCommand {
 			get {
 				return new Command(async () => {
-
 					await Navigation.PopModalAsync();
 				});
 			}
@@ -39,10 +38,7 @@ namespace Kangou.ViewModels {
 
 		public ICommand	RejectCommand {
 			get {
-				return new Command(async () => {
-
-					await Navigation.PopModalAsync();
-				});
+				return new Command(async () => await Navigation.PopModalAsync());
 			}
 		}
 	}
