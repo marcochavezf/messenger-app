@@ -12,6 +12,24 @@ namespace Kangou.Json {
 		public JsonHelper() : base("https://kangou-stage.herokuapp.com/app/courier/v3/", false) {
 		}
 
+		public async void Test() {
+			var user = await RetrieveCourierData();
+			var save = await SaveCourierData(user);
+
+			if (!save.Success)
+				await AppCreator.Instances.Dialogs.AlertAsync(save.Message, "Kangou");
+
+			var userId = await RetrieveUserId("auth0", user.ProviderData.Id);
+			var access = await RequestCourierAccess(userId.UserId, "", "GCM" /* "iOS" */);
+
+			Task.Run(async () => {
+				await Heartbeat(userId.UserId, "", -98, 28);
+				await Task.Delay(5000);
+			});
+
+			var maps = await RetrieveMapDensityData();
+		}
+
 		public async Task StopSockets() {
 		}
 
@@ -28,8 +46,8 @@ namespace Kangou.Json {
 			return Get<DensityInfo>("orders/map/density");
 		}
 
-		public Task SaveCourierData(UserCourier courierData) {
-			return Post<UserCourier>("saveCourierData", null, courierData);
+		public Task<SaveUser> SaveCourierData(UserCourier courierData) {
+			return Post<SaveUser>("saveCourierData", null, courierData);
 		}
 
 		public Task<UserCourier> RetrieveCourierData() {
@@ -40,15 +58,15 @@ namespace Kangou.Json {
 			);
 		}
 
-		public Task RetrieveUserId(string provider, string providerDataId) {
-			return Post<object>("retrieveId", null, new {
+		public Task<RetrieveUserId> RetrieveUserId(string provider, string providerDataId) {
+			return Post<RetrieveUserId>("retrieveId", null, new {
 				provider, 
 				providerDataId
 			});
 		}
 
-		public Task RequestCourierAccess(string userId, string pushDeviceId, string pushDeviceService) {
-			return Post<object>("requestAccess", null, new {
+		public Task<RequestCourierAccess> RequestCourierAccess(string userId, string pushDeviceId, string pushDeviceService) {
+			return Post<RequestCourierAccess>("requestAccess", null, new {
 				userId,
 				pushDeviceId,
 				pushDeviceService

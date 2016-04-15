@@ -3,6 +3,19 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 
 namespace Kangou.Json {
+	public class BaseJsonObject {
+		[JsonProperty("success")]
+		public bool Success { get; set; }
+
+		[JsonProperty("message")]
+		public string Message { get; set; }
+	}
+
+	public class RequestCourierAccess : BaseJsonObject {
+		[JsonProperty("resumeOrder")]
+		public object ResumeOrder { get; set; }
+	}
+
 	public class AgeRange {
 		[JsonProperty("min")]
 		public int Min { get; set; }
@@ -231,6 +244,21 @@ namespace Kangou.Json {
 
 		[JsonProperty("id")]
 		public string Id { get; set; }
+	}
+
+	public class SaveUser : BaseJsonObject {
+		[JsonProperty("isRegisterCompleted")]
+		public bool IsRegisterCompleted { get; set; }
+	}
+
+	public class RetrieveUserId : BaseJsonObject
+	{
+
+		[JsonProperty("userId")]
+		public string UserId { get; set; }
+
+		[JsonProperty("email")]
+		public string Email { get; set; }
 	}
 
 	public class UserCourier {

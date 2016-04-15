@@ -11,21 +11,25 @@ using System.Threading.Tasks;
 namespace Kangou {
 	public class App : Application {
 		public App() {
+			Globals.Json.Test();
+
+			MainPage = new LoginPage();
+
 			if ((DateTime.Now - Database.Timestamp).TotalHours > 1)
 				MainPage = new LoginPage();
-			else {
-				Task.Run(async () => {
-					Globals.Courier = await Globals.Json.RetrieveCourierData();
-				}).Wait();
+			//else {
+			//	Task.Run(async () => {
+			//		Globals.Courier = await Globals.Json.RetrieveCourierData();
+			//	}).Wait();
 					
-				MainPage = Globals.MasterPage = new MasterDetailPage {
-					Detail = new SmallNavPage(new HomePage()),
-					Master = new MenuPage {
-						Icon = "menu.png",
-						Title = "---"
-					}
-				};
-			}
+			//	MainPage = Globals.MasterPage = new MasterDetailPage {
+			//		Detail = new SmallNavPage(new HomePage()),
+			//		Master = new MenuPage {
+			//			Icon = "menu.png",
+			//			Title = "---"
+			//		}
+			//	};
+			//}
 
 			return;
 
