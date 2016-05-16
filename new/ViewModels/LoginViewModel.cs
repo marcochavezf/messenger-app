@@ -28,8 +28,17 @@ namespace Kangou.ViewModels {
 						Database.Token.Set(userInfo.IdToken);
 						Database.AccessToken.Set(userInfo.Auth0AccessToken);
 
-						using (new LoadingWrapper(this, "Logging in..."))
+						using (new LoadingWrapper(this, "Logging in...")) {
 							Globals.Courier = await Globals.Json.RetrieveCourierData();
+							Globals.SavedUser = await Globals.Json.SaveCourierData(Globals.Courier);
+						}
+
+						if (!Globals.SavedUser.IsRegisterCompleted) {
+							await Alert("Kangou", Globals.SavedUser.Message);
+							await Navigation.PushModalAsync(new CustomNavPage(new CompleteProfilePage()));
+
+							return;
+						}
 
 						await Navigation.PushModalAsync((Globals.MasterPage = new MasterDetailPage {
 							Detail = new SmallNavPage(new HomePage()),

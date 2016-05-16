@@ -1,163 +1,76 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<acp:BasePage
-	x:TypeArguments="v:CompleteProfileViewModel"
-	xmlns="http://xamarin.com/schemas/2014/forms"
-	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-	xmlns:acp="clr-namespace:AppCreator.Pages;assembly=AppCreator"
-	xmlns:acc="clr-namespace:AppCreator.UI.Controls;assembly=AppCreator.UI"
-	xmlns:acvm="clr-namespace:AppCreator.ViewModels;assembly=AppCreator"
-	xmlns:accu="clr-namespace:AppCreator.Custom;assembly=AppCreator"
-	xmlns:am="clr-namespace:AppCreator.Markup;assembly=AppCreator"
-	xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator"
-	xmlns:c="clr-namespace:Kangou.Custom;assembly=Kangou"
-	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou"
-	Title="Completa tu perfil"
-	x:Class="Kangou.Pages.CompleteProfilePage">
+<acp:BasePage x:TypeArguments="v:CompleteProfileViewModel" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:acp="clr-namespace:AppCreator.Pages;assembly=AppCreator" xmlns:acc="clr-namespace:AppCreator.UI.Controls;assembly=AppCreator.UI" xmlns:acvm="clr-namespace:AppCreator.ViewModels;assembly=AppCreator" xmlns:accu="clr-namespace:AppCreator.Custom;assembly=AppCreator" xmlns:am="clr-namespace:AppCreator.Markup;assembly=AppCreator" xmlns:e="clr-namespace:AppCreator.Behaviors;assembly=AppCreator" xmlns:c="clr-namespace:Kangou.Custom;assembly=Kangou"
+	xmlns:v="clr-namespace:Kangou.ViewModels;assembly=Kangou" Title="Completa tu perfil" x:Class="Kangou.Pages.CompleteProfilePage">
 	<ScrollView>
-		<StackLayout
-			Orientation="Vertical"
-			Padding="30"
-			Spacing="5">
-			<c:SeparatorText
-				Text="Datos personales" />
-			<c:RobotoLLabel
-				FontSize="12"
-				TextColor="#666666"
-				Text="Nombre(s)"
-				HorizontalOptions="Start" />
-			<Entry
-				Placeholder=""
-				Text="{Binding Name}" />
-			<acc:Spacer
-				Space="10" />
-			<c:RobotoLLabel
-				FontSize="12"
-				TextColor="#666666"
-				Text="Apellido(s)"
-				HorizontalOptions="Start" />
-			<Entry
-				Placeholder=""
-				Text="{Binding Surnames}" />
-			<acc:Spacer
-				Space="10" />
-			<c:RobotoLLabel
-				FontSize="12"
-				TextColor="#666666"
-				Text="Telefono celular"
-				HorizontalOptions="Start" />
-			<Entry
-				Placeholder=""
-				Text="{Binding Cellphone}" />
-			<acc:Spacer
-				Space="10" />
-			<c:RobotoLLabel
-				FontSize="12"
-				TextColor="#666666"
-				Text="Correo electronico"
-				HorizontalOptions="Start" />
-			<Entry
-				Placeholder=""
-				Text="{Binding Email}" />
-			<acc:Spacer
-				Space="10" />
-			<c:RobotoLLabel
-				FontSize="12"
-				TextColor="#666666"
-				Text="País"
-				HorizontalOptions="Start" />
-			<acc:BindablePicker
-				ItemsSource="{Binding Countries}"
-				SelectedItem="{Binding Country}" />
-			<acc:Spacer
-				Space="10" />
-			<c:RobotoLLabel
-				FontSize="12"
-				TextColor="#666666"
-				Text="Estado"
-				HorizontalOptions="Start" />
-			<acc:BindablePicker
-				ItemsSource="{Binding States}"
-				SelectedItem="{Binding State}" />
-			<acc:Spacer
-				Space="10" />
-			<c:SeparatorText
-				Text="Foto" />
-			<Image
-				HeightRequest="100"
-				HorizontalOptions="Center"
-				Source="http://lorempixel.com/400/200/cats/Foto/">
+		<StackLayout Orientation="Vertical" Padding="30" Spacing="5">
+			<c:SeparatorText Text="Datos personales" />
+			<c:RobotoLLabel FontSize="12" TextColor="#666666" Text="Nombre(s)" HorizontalOptions="Start" />
+			<Entry Placeholder="" Text="{Binding Name}" />
+			<acc:Spacer Space="10" />
+			<c:RobotoLLabel FontSize="12" TextColor="#666666" Text="Apellido(s)" HorizontalOptions="Start" />
+			<Entry Placeholder="" Text="{Binding Surnames}" />
+			<acc:Spacer Space="10" />
+			<c:RobotoLLabel FontSize="12" TextColor="#666666" Text="Telefono celular" HorizontalOptions="Start" />
+			<Entry Placeholder="" Text="{Binding Cellphone}" />
+			<acc:Spacer Space="10" />
+			<c:RobotoLLabel FontSize="12" TextColor="#666666" Text="Correo electronico" HorizontalOptions="Start" />
+			<Entry Placeholder="" Text="{Binding Email}" />
+			<acc:Spacer Space="10" />
+			<c:RobotoLLabel FontSize="12" TextColor="#666666" Text="País" HorizontalOptions="Start" />
+			<acc:BindablePicker ItemsSource="{Binding Countries}" SelectedItem="{Binding Country}" />
+			<acc:Spacer Space="10" />
+			<c:RobotoLLabel FontSize="12" TextColor="#666666" Text="Estado" HorizontalOptions="Start" />
+			<acc:BindablePicker ItemsSource="{Binding States}" SelectedItem="{Binding State}" />
+			<acc:Spacer Space="10" />
+			<c:SeparatorText Text="Foto" />
+			<Image HeightRequest="100" HorizontalOptions="Center" Source="{Binding SelfieSource}">
 				<Image.GestureRecognizers>
-					<TapGestureRecognizer
-						Command="{Binding BlahCommand}" />
+					<TapGestureRecognizer Command="{Binding TakePicCommand}" CommandParameter="me" />
 				</Image.GestureRecognizers>
 			</Image>
-			<c:SeparatorText
-				Text="Comprobantes" />
-			<Image
-				HeightRequest="100"
-				HorizontalOptions="FillAndExpand"
-				Source="http://lorempixel.com/400/200/cats/La-INE/">
+			<c:SeparatorText Text="Comprobantes" />
+			<Image HeightRequest="100" HorizontalOptions="FillAndExpand" Source="{Binding SelfieSource}">
 				<Image.GestureRecognizers>
-					<TapGestureRecognizer
-						Command="{Binding BlahCommand}" />
+					<TapGestureRecognizer Command="{Binding TakePicCommand}" CommandParameter="INE" />
 				</Image.GestureRecognizers>
 			</Image>
-			<c:OrangeButton
-				Text="Echanos la poderosa, adjunta tu INE" />
-			<Image
-				HeightRequest="100"
-				HorizontalOptions="FillAndExpand"
-				Source="http://lorempixel.com/400/200/cats/Comprobante-Domicilio/" />
-			<c:OrangeButton
-				Text="Necesitamos saber donde vives..." />
-			<c:SeparatorText
-				Text="Donde te depositamos?" />
-			<c:RobotoLLabel
-				FontSize="12"
-				TextColor="#666666"
-				Text="Tarjeta Bancomer"
-				HorizontalOptions="Start" />
-			<Entry
-				Placeholder=""
-				Text="{Binding Card}"
-				Keyboard="Numeric" />
-			<acc:Spacer
-				Space="10" />
-			<c:SeparatorText
-				Text="Como te mueves?" />
-			<StackLayout
-				Orientation="Horizontal"
-				Padding="0"
-				Spacing="15">
-				<Image
-					HeightRequest="100"
-					Source="http://lorempixel.com/200/200/cats/Bici/">
-					<Image.GestureRecognizers>
-						<TapGestureRecognizer
-							Command="{Binding BlahCommand}" />
-					</Image.GestureRecognizers>
-				</Image>
-				<Image
-					HeightRequest="100"
-					Source="http://lorempixel.com/200/200/cats/Moto/">
-					<Image.GestureRecognizers>
-						<TapGestureRecognizer
-							Command="{Binding BlahCommand}" />
-					</Image.GestureRecognizers>
-				</Image>
-				<Image
-					HeightRequest="100"
-					Source="http://lorempixel.com/200/200/cats/Coche/">
-					<Image.GestureRecognizers>
-						<TapGestureRecognizer
-							Command="{Binding BlahCommand}" />
-					</Image.GestureRecognizers>
-				</Image>
+			<c:OrangeButton Text="Echanos la poderosa, adjunta tu INE" />
+			<Image HeightRequest="100" HorizontalOptions="FillAndExpand" Source="{Binding HomeSource}">
+				<Image.GestureRecognizers>
+					<TapGestureRecognizer Command="{Binding TakePicCommand}" CommandParameter="home" />
+				</Image.GestureRecognizers>
+			</Image>
+			<c:OrangeButton Text="Necesitamos saber donde vives..." />
+			<c:SeparatorText Text="Donde te depositamos?" />
+			<c:RobotoLLabel FontSize="12" TextColor="#666666" Text="Tarjeta Bancomer" HorizontalOptions="Start" />
+			<Entry Placeholder="" Text="{Binding Card}" Keyboard="Numeric" />
+			<acc:Spacer Space="10" />
+			<c:SeparatorText Text="Como te mueves?" />
+			<StackLayout Orientation="Horizontal" Padding="0" Spacing="15">
+				<Frame OutlineColor="{Binding BikeColor}" Padding="0" IsClippedToBounds="true">
+					<Image HeightRequest="100" Source="http://lorempixel.com/200/200/cats/Bici/">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Command="{Binding ChooseTransportCommand}" CommandParameter="bike" />
+						</Image.GestureRecognizers>
+					</Image>
+				</Frame>
+				<Frame OutlineColor="{Binding MotorbikeColor}" Padding="0" IsClippedToBounds="true">
+					<Image HeightRequest="100" Source="http://lorempixel.com/200/200/cats/Moto/">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Command="{Binding ChooseTransportCommand}" CommandParameter="motorbike" />
+						</Image.GestureRecognizers>
+					</Image>
+				</Frame>
+				<Frame OutlineColor="{Binding CarColor}" Padding="0" IsClippedToBounds="true">
+					<Image HeightRequest="100" Source="http://lorempixel.com/200/200/cats/Coche/">
+						<Image.GestureRecognizers>
+							<TapGestureRecognizer Command="{Binding ChooseTransportCommand}" CommandParameter="car" />
+						</Image.GestureRecognizers>
+					</Image>
+				</Frame>
 			</StackLayout>
-			<c:SeparatorText
-				Text="Terminaste?" />
-			<c:OrangeButton
-				Text="Finalizar registro" />
+			<c:SeparatorText Text="Terminaste?" />
+			<c:OrangeButton Text="Finalizar registro" Command="{Binding SubmitCommand}" />
 		</StackLayout>
 	</ScrollView>
 </acp:BasePage>

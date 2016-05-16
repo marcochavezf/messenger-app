@@ -17,6 +17,7 @@ namespace Kangou {
 
 			if ((DateTime.Now - Database.Timestamp).TotalHours > 1)
 				MainPage = new LoginPage();
+			
 			//else {
 			//	Task.Run(async () => {
 			//		Globals.Courier = await Globals.Json.RetrieveCourierData();

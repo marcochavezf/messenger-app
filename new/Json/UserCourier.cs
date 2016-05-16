@@ -286,6 +286,9 @@ namespace Kangou.Json {
 
 		[JsonProperty("providerData")]
 		public ProviderData ProviderData { get; set; }
+
+		[JsonProperty("dataCourier")]
+		public DataCourier DataCourier { get; set; }
 	}
 }
 

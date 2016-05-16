@@ -54,7 +54,7 @@
 			<acc:Spacer
 				Space="50" />
 		</StackLayout>
-		<c:RobotoLLabel
+		<!--<c:RobotoLLabel
 			Text="crea una cuenta"
 			FontSize="20"
 			TextColor="#FFFFFF"
@@ -67,7 +67,7 @@
 				<TapGestureRecognizer
 					Command="{Binding RegisterCommand}" />
 			</Label.GestureRecognizers>
-		</c:RobotoLLabel>
+		</c:RobotoLLabel>-->
 		<c:RobotoLLabel
 			Text="version 1.blah"
 			Font="Roboto-Light"

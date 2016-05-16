@@ -23,6 +23,8 @@ namespace Kangou {
 			}
 		}
 
+		public static SaveUser SavedUser { get; internal set; }
+
 		public static void Start() {
 			if (Started)
 				return;

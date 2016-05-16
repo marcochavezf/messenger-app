@@ -13,6 +13,8 @@ namespace Kangou.Json {
 		}
 
 		public async void Test() {
+			return;
+
 			var user = await RetrieveCourierData();
 			var save = await SaveCourierData(user);
 
